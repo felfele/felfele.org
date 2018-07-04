@@ -3522,6 +3522,44 @@ footer .row {
     color: #FFFFFF;
 }
 
+.avatar-block-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.avatar-block {
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.avatar {
+    /* make a square container */
+    width: 120px;
+    height: 120px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+}
+
+.gazso {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+    background-image: url('../images/avatars/gazso.jpg');
+}
+
+.vujevits {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+    background-image: url('../images/avatars/vujevits.jpg');
+}
 
 /* -------------------------------------------------------------------
  * responsive:

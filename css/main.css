@@ -3559,6 +3559,10 @@ footer .row {
     background-image: url('../images/avatars/vujevits.jpg');
 }
 
+.tron {
+    background-image: url('../images/avatars/tron.jpg');
+}
+
 .projects-container {
     display: flex;
     flex-direction: row;

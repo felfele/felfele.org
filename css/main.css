@@ -3552,13 +3552,25 @@ footer .row {
 }
 
 .gazso {
-    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
     background-image: url('../images/avatars/gazso.jpg');
 }
 
 .vujevits {
-    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
     background-image: url('../images/avatars/vujevits.jpg');
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projects-container h4 {
+    color: #ffffff;
+}
+
+.projects-container p {
+    max-width: 400px;
 }
 
 /* -------------------------------------------------------------------

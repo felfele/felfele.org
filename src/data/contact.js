@@ -1,8 +1,9 @@
-const data = {
-    twitter: 'https://twitter.com/_skris',
-    github: 'https://github.com/s-kris',
-    linkedin: 'https://www.linkedin.com/in/saikrishnam/',
-    email: null,
+export const contactData = {
+    twitter: 'https://twitter.com/felfeleapp',
+    email: 'hello@felfele.org',
 };
 
-export default data;
+export const businessData = {
+  'legal name': 'Sihtasutus Felfele',
+  address: 'Pärnu mnt 141, 11314 Tallinn, Estonia'
+};

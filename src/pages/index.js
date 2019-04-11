@@ -1,10 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Hemlet from 'react-helmet';
+import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
-import DisplayImage from './../assets/images/main_image.jpg';
 
 class SiteIndex extends React.Component {
     render() {
@@ -16,32 +15,43 @@ class SiteIndex extends React.Component {
 
         return (
             <Layout>
-                <Hemlet>
+                <Helmet>
                     <title>{siteTitle}</title>
                     <meta name="description" content={siteDescription} />
-                </Hemlet>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. At augue eget arcu dictum varius duis. Vestibulum
-                    lectus mauris ultrices eros in cursus turpis. Blandit
-                    volutpat maecenas volutpat blandit aliquam etiam. Sagittis
-                    purus sit amet volutpat. Nullam ac tortor vitae purus
-                    faucibus ornare suspendisse. Vulputate sapien nec sagittis
-                    aliquam malesuada. Quis imperdiet massa tincidunt nunc
-                    pulvinar sapien et ligula ullamcorper. Sit amet cursus sit
-                    amet dictum sit amet. Malesuada proin libero nunc consequat
-                    interdum varius sit amet. Sed egestas egestas fringilla
-                    phasellus faucibus scelerisque eleifend. Habitasse platea
-                    dictumst quisque sagittis. Sem viverra aliquet eget sit amet
-                    tellus cras adipiscing enim. Amet massa vitae tortor
-                    condimentum lacinia quis vel eros donec.
-                </p>
-                <img src={DisplayImage} alt={siteTitle} />
+                </Helmet>
+                <Section
+                    title='Welcome to the Felfele Foundation'
+                    body='We are a non-profit organization building services that gives you a similar level of privacy when you are with your friends and family in person.
+                        We believe in the future the cost of services will be marginal and it will be so easy to pay for it, that nobody will think about it anymore.
+                        We are building services where you are in control, and nobody can access, or stop you from accessing your data, not even us.'
+                />
+                <Section
+                    title='The Felfele Mobile App'
+                    body='We are a non-profit organization building services that gives you a similar level of privacy when you are with your friends and family in person.
+                        We believe in the future the cost of services will be marginal and it will be so easy to pay for it, that nobody will think about it anymore.
+                        We are building services where you are in control, and nobody can access, or stop you from accessing your data, not even us.
+                        Read our Manifesto here.'
+                />
+                <Section
+                    title='Are you interested in shaping the future with us?'
+                    body='The need for human communication is constant and technology enabled us to build tools to serve this need.
+                        Historically this evolved to practices that takes away our rights to privacy and control, because that was the only economic way to build these tools in a global scale.
+                        Fortunately there are better ways to achieve this now, which respect your privacy and let you stay in control.
+                        We commit to working towards this future by making new technologies and services available at a price that’s affordable for everyone.'
+                />
             </Layout>
         );
     }
 }
+
+const Section = ({ title, body }) => {
+    return (
+        <React.Fragment>
+            <h3>{title}</h3>
+            <p>{body}</p>
+        </React.Fragment>
+    );
+};
 
 export default SiteIndex;
 

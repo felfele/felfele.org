@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { rhythm } from '../utils/typography';
-import Header from '../components/Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -21,13 +20,15 @@ class Layout extends React.Component {
             ...importedStyle,
         };
         return (
-            <div style={finalStyle}>
-                <Header />
+            <div>
                 <Navbar />
-                <br />
-                {children}
-                <Footer />
+                <div style={finalStyle}>
+                    <br />
+                    {children}
+                    <Footer />
+                </div>
             </div>
+
         );
     }
 }

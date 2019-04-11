@@ -4,7 +4,8 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Layout from '../components/Layout';
-import contactData from './../data/contact';
+import { contactData, businessData } from './../data/contact';
+import { Row } from 'react-flexbox-grid';
 
 class Contact extends React.Component {
     render() {
@@ -21,22 +22,43 @@ class Contact extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Contact | ${siteTitle}`}
                 />
+                <Row around='xs'>
+                    <div>
+                        <h2>Contact</h2>
+                        <br />
 
-                <h2>Contact</h2>
-                <br />
+                        {Object.keys(contactData).map(key => {
+                            if (contactData[key]) {
+                                return (
+                                    <p>
+                                        <b>{key}: </b>
+                                        <a
+                                            href={contactData[key]}
+                                            target="_new"
+                                        >
+                                            {contactData[key]}
+                                        </a>
+                                    </p>
+                                );
+                            }
+                        })}
+                    </div>
+                    <div>
+                        <h2>Business Info</h2>
+                        <br />
 
-                {Object.keys(contactData).map(key => {
-                    if (contactData[key]) {
-                        return (
-                            <p>
-                                <b>{key}: </b>
-                                <a href={contactData[key]} target="_new">
-                                    {contactData[key]}
-                                </a>
-                            </p>
-                        );
-                    }
-                })}
+                        {Object.keys(businessData).map(key => {
+                            if (businessData[key]) {
+                                return (
+                                    <p>
+                                        <b>{key}: </b>
+                                        <r>{businessData[key]}</r>
+                                    </p>
+                                );
+                            }
+                        })}
+                    </div>
+                </Row>
             </Layout>
         );
     }

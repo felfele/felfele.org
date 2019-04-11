@@ -1,10 +1,9 @@
 module.exports = {
     siteMetadata: {
-        title: 'gatsby-minimal-portfolio-blog',
-        author: 'Sai Krishna',
-        description:
-            'GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.',
-        siteUrl: 'https://saikrishna.me',
+        title: 'Felfele Foundation',
+        author: 'Mark Vujevits',
+        description: 'Official website of the Felfele Foundation',
+        siteUrl: 'https://felfele.org',
     },
     pathPrefix: '/',
     plugins: [
@@ -55,7 +54,6 @@ module.exports = {
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: `src/assets/gatsby-icon.png`,
             },
         },
         `gatsby-plugin-offline`,

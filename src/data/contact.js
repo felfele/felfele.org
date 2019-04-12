@@ -4,6 +4,6 @@ export const contactData = {
 };
 
 export const businessData = {
-  'legal name': 'Sihtasutus Felfele',
-  address: 'Pärnu mnt 141, 11314 Tallinn, Estonia'
+  'legal name': 'Felfele SA',
+  address: 'Pärnu mnt 141 (Delta Plaza 13.k), 11314 Tallinn, Estonia'
 };

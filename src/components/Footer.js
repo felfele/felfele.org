@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { contactData } from './../data/contact';
 import { Link } from 'gatsby';
 
 export class Footer extends Component {
@@ -34,7 +33,7 @@ export class Footer extends Component {
                     <div style={styles.section}>
                         <div style={styles.sectionTitle}>Help</div>
                         <a href={'mailto:support@felfele.com'}>Support</a>
-                        <a href={contactData.github} target='_new'>
+                        <a href={'https://github.com/felfele/felfele/issues/new?assignees=&labels=bug%2C+todo&template=bug_report.md&title='} target='_new'>
                             File a Bug
                         </a>
                     </div>
@@ -43,9 +42,9 @@ export class Footer extends Component {
                         <Link to="/contact">
                             Contact
                         </Link>
-                        <Link to="/records">
+                        <a href="https://ariregister.rik.ee/index?lang=eng">
                             Public Records
-                        </Link>
+                        </a>
                         <Link to="/privacy-policy">
                             Privacy Policy
                         </Link>
@@ -74,7 +73,7 @@ const styles = {
         textTransform: 'uppercase',
         letterSpacing: 2,
         color: 'gray',
-        paddingTop: 30,
+        paddingTop: 100,
     },
     sectionsContainer: {
         display: 'flex',

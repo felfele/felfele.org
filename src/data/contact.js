@@ -1,5 +1,6 @@
 export const contactData = {
     twitter: 'https://twitter.com/felfeleapp',
+    gitter: 'https://gitter.im/felfele/purple-lounge',
     email: 'hello@felfele.org',
 };
 

@@ -42,6 +42,16 @@ class Contact extends React.Component {
                                 );
                             }
                         })}
+                        {
+                            <p>
+                                <b>slack: </b>
+                                <a
+                                    href='https://join.slack.com/t/felfele/shared_invite/enQtNTM1MjUwNTI1NzI5LTY5Yjg0YmVjN2MyN2MzMzc0Y2RkMGRiYzE0N2U0ZjgwNmYxMTQ3YjUwMDg1MGFiZTZlMWViZjU2MWJjY2Y0OTY'
+                                >
+                                    invitation
+                                </a>
+                        </p>
+                        }
                     </div>
                     <div>
                         <h2>Business Info</h2>

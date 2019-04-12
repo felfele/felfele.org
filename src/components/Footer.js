@@ -50,12 +50,6 @@ export class Footer extends Component {
                         </Link>
                     </div>
                 </div>
-                <div>
-                    Built with&nbsp;
-                    <a href='https://gatsbyjs.org' target='_blank'>
-                        GatsbyJS
-                    </a>
-                </div>
             </div>
         );
     }

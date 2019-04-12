@@ -56,9 +56,8 @@ export class Navbar extends Component {
                         }}
                     >
                         <MenuLink to={'/'}>Mission</MenuLink>
-                        <MenuLink to={'/portfolio'}>Projects</MenuLink>
-                        <MenuLink to={'/journey'}>Team</MenuLink>
-                        <MenuLink to={'/journey'}>Donate</MenuLink>
+                        <MenuLink to={'/team'}>Team</MenuLink>
+                        <MenuLink to={'/donate'}>Donate</MenuLink>
                         <MenuLink to={'/contact'}>Contact</MenuLink>
                         <MenuLink to={'/blog'}>Blog</MenuLink>
                     </div>

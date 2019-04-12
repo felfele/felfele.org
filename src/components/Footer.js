@@ -45,7 +45,7 @@ export class Footer extends Component {
                         <a href="https://ariregister.rik.ee/index?lang=eng">
                             Public Records
                         </a>
-                        <Link to="/privacy-policy">
+                        <Link to="/privacy">
                             Privacy Policy
                         </Link>
                     </div>

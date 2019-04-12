@@ -3,7 +3,6 @@ import React from 'react';
 // Import typefaces
 import 'typeface-roboto';
 
-import profilePic from './../assets/images/avatar.png';
 import { rhythm } from '../utils/typography';
 import bioData from './../data/bio';
 
@@ -16,7 +15,7 @@ class Bio extends React.Component {
                     marginBottom: rhythm(2.5),
                 }}
             >
-                <img
+                {/* <img
                     src={profilePic}
                     alt={`Sai Krishna`}
                     style={{
@@ -25,7 +24,7 @@ class Bio extends React.Component {
                         width: rhythm(2),
                         height: rhythm(2),
                     }}
-                />
+                /> */}
                 <p>{bioData}</p>
             </div>
         );

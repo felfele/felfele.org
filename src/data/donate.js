@@ -5,6 +5,7 @@ export const ethereumData = {
 export const bankingData = {
     'SWIFT/BIC': 'DEKTDE7GXXX',
     'IBAN': 'DE49 7001 1110 6054 6096 88',
+    'Account Holder': 'Sihtasutus Felfele',
     'Bank Address': `Handelsbank
 Elsenheimer Str. 41
 80687

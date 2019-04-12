@@ -23,9 +23,7 @@ class Donate extends React.Component {
                     title={`Donate | ${siteTitle}`}
                 />
                 <h2>Donate</h2>
-                <p style={{
-                        textAlign: 'center',
-                    }}>
+                <p>
                     We are a registered non-profit organization pledged to enable people to
                     communicate freely in the digital era, without having to worry about their privacy,
                     and the potential loss of their rights over the content they produce.
@@ -33,9 +31,9 @@ class Donate extends React.Component {
                     levels that literally every little bit counts. Donating $10 can be sufficient for securing
                     user data for 1000 people.
                 </p>
-                <Row around='xs'>
+                <Row>
                     <div>
-                        <h2>Bank Transfer</h2>
+                        <h3>Bank Transfer</h3>
                         <br />
                         {Object.keys(bankingData).map(key => {
                             if (bankingData[key]) {
@@ -49,7 +47,7 @@ class Donate extends React.Component {
                         })}
                     </div>
                     <div>
-                        <h2>Ethereum Transaction</h2>
+                        <h3>Ethereum Transaction</h3>
                         <br />
                         {Object.keys(ethereumData).map(key => {
                             if (ethereumData[key]) {

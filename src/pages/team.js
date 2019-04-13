@@ -65,7 +65,7 @@ const Avatar = ({ data }) => {
             />
             {Object.keys(data.data).map(key => {
                 if (data.data[key]) {
-                    return <p style={{ marginBottom: '1rem'}}>{data.data[key]}</p>;
+                    return <p style={{ marginBottom: '0.5rem' }}>{data.data[key]}</p>;
                 }
             })}
         </div>

@@ -1,10 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, Text } from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm } from './../utils/typography';
 import Logo from './../assets/images/icon-white-transparent.png'
 
 export class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0
+        };
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
         return (
             <div
@@ -32,8 +52,6 @@ export class Navbar extends Component {
                     <Link
                         to='/'
                         style={{
-                            textShadow: 'none',
-                            backgroundImage: 'none',
                             color: '#FFFFFF',
                             flexDirection: 'row',
                             display: 'flex',
@@ -42,13 +60,12 @@ export class Navbar extends Component {
                         }}
                     >
                         <img src={Logo} style={{ width: 70, height: 70, marginBottom: 0 }}/>
-                        <div style={{ fontFamily: 'Roboto', fontSize: 24, fontWeight: 500 }}>
+                        <div style={{ fontFamily: 'Roboto', fontSize: 24, fontWeight: 500, whiteSpace: 'nowrap' }}>
                             Felfele Foundation
                         </div>
                     </Link>
                     <div
                         style={{
-                            width: rhythm(24),
                             maxWidth: 400,
                             display: 'flex',
                             flexDirection: 'row',
@@ -75,6 +92,7 @@ const MenuLink = props => {
             {...props}
             style={{
                 color: '#FFFFFF',
+                paddingRight: 10,
             }}
         />
     );

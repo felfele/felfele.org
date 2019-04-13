@@ -40,7 +40,7 @@ export const teamData = {
     Viktor: {
         image: ViktorImage,
         data: {
-            name: 'Mark Vujevits',
+            name: 'Viktor Trón',
             title: 'Advisor',
             role: 'Ethereum Swarm',
         }

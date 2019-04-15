@@ -9,7 +9,6 @@
     "dependencies": {
         "gatsby": "^2.0.19",
         "gatsby-plugin-feed": "^2.0.8",
-        "gatsby-plugin-google-analytics": "^2.0.5",
         "gatsby-plugin-manifest": "^2.0.5",
         "gatsby-plugin-offline": "^2.0.5",
         "gatsby-plugin-react-helmet": "^3.0.0",
@@ -29,6 +28,7 @@
         "react": "^16.5.1",
         "react-dom": "^16.5.1",
         "react-flexbox-grid": "^2.1.2",
+        "react-hamburger-menu": "^1.1.1",
         "react-helmet": "^5.2.0",
         "react-icons": "^3.2.2",
         "react-responsive-modal": "^3.5.1",

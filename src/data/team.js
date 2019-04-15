@@ -5,26 +5,11 @@ import JuliImage from './../assets/images/juli.png'
 import DavidImage from './../assets/images/david.jpg'
 
 export const teamData = {
-    Juli: {
-        image: JuliImage,
-        data: {
-            name: 'Juli Pécsi',
-            title: 'Supervisory Board',
-            role: 'Marketing',
-        }
-    },
+
     Attila: {
         image: AttilaImage,
         data: {
             name: 'Attila Gazsó',
-            title: 'Managing Director',
-            role: 'Engineering',
-        }
-    },
-    Mark: {
-        image: MarkImage,
-        data: {
-            name: 'Mark Vujevits',
             title: 'Managing Director',
             role: 'Engineering',
         }
@@ -35,6 +20,22 @@ export const teamData = {
             name: 'David Gauquelin',
             title: 'Director of Product',
             role: 'Product & Design',
+        }
+    },
+    Mark: {
+        image: MarkImage,
+        data: {
+            name: 'Mark Vujevits',
+            title: 'Managing Director',
+            role: 'Engineering',
+        }
+    },
+    Juli: {
+        image: JuliImage,
+        data: {
+            name: 'Juli Pécsi',
+            title: 'Supervisory Board',
+            role: 'Marketing',
         }
     },
     Viktor: {

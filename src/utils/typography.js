@@ -1,8 +1,8 @@
 import Typography from 'typography';
 import Wordpress2016 from 'typography-theme-wordpress-2016';
 
-Wordpress2016.headerFontFamily = [ 'Roboto' ];
-Wordpress2016.bodyFontFamily = [ 'Roboto' ];
+Wordpress2016.headerFontFamily = [ 'Merriweather' ];
+Wordpress2016.bodyFontFamily = [ 'Merriweather' ];
 
 Wordpress2016.overrideThemeStyles = () => {
     return {

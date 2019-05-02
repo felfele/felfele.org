@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import typefaces
-import 'typeface-roboto';
+import 'typeface-merriweather';
 
 import { rhythm } from '../utils/typography';
 import bioData from './../data/bio';

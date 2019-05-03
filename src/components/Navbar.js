@@ -60,7 +60,7 @@ export class Navbar extends Component {
                         }}
                     >
                         <img src={Logo} style={{ width: 70, height: 70, marginBottom: 0 }}/>
-                        <div style={{ fontFamily: 'Merriweather', fontSize: 24, fontWeight: 500, whiteSpace: 'nowrap' }}>
+                        <div style={{ fontFamily: 'Roboto', fontSize: 24, fontWeight: 500, whiteSpace: 'nowrap' }}>
                             Felfele Foundation
                         </div>
                     </Link>

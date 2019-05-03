@@ -1,5 +1,7 @@
-import React, { Component, Text } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
+// import font file
+import 'typeface-roboto';
 
 import { rhythm } from './../utils/typography';
 import Logo from './../assets/images/icon-white-transparent.png'

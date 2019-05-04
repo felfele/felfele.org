@@ -7,6 +7,8 @@ import { rhythm } from './../utils/typography';
 import Logo from './../assets/images/icon-white-transparent.png'
 import { OverlayMenu } from './OverlayMenu';
 
+const WIDTH_THRESHOLD = 650;
+
 export class Navbar extends Component {
     constructor(props) {
         super(props);
@@ -38,7 +40,6 @@ export class Navbar extends Component {
                     alignItems: 'center',
                     backgroundColor: '#6200EA',
                     height: 80,
-                    minWidth: 400,
                 }}
             >
                 <div
@@ -64,11 +65,16 @@ export class Navbar extends Component {
                         }}
                     >
                         <img src={Logo} style={{ width: 70, height: 70, marginBottom: 0 }}/>
-                        <div style={{ fontFamily: 'Roboto', fontSize: 24, fontWeight: 500, whiteSpace: 'nowrap' }}>
+                        <div style={{
+                            fontFamily: 'Roboto',
+                            fontSize: this.state.width > 650 ? 24 : 20,
+                            fontWeight: 500,
+                            whiteSpace: 'nowrap'
+                        }}>
                             Felfele Foundation
                         </div>
                     </Link>
-                    {this.state.width > 650 ?
+                    {this.state.width > WIDTH_THRESHOLD ?
                     <div
                         style={{
                             maxWidth: 400,

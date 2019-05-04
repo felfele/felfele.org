@@ -1,5 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 import 'hamburgers/dist/hamburgers.css';
 import '../styles/hamburger-settings.css';
 
@@ -23,7 +22,6 @@ export class OverlayMenu extends React.Component {
             textDecoration: 'none'
         };
         return (
-            <Fade duration={2000}>
                 <button
                     style={{
                         margin: 0,
@@ -54,7 +52,7 @@ export class OverlayMenu extends React.Component {
                         }}
                         className={'open'}
                     >
-                        <Fade duration={500} left cascade>
+                        <div>
                             <ul
                                 style={{
                                     color: 'white',
@@ -91,10 +89,9 @@ export class OverlayMenu extends React.Component {
                                     </a>
                                 </li>
                             </ul>
-                        </Fade>
+                        </div>
                     </div>}
                 </button>
-            </Fade>
         );
     }
 }

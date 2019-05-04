@@ -38,6 +38,7 @@ export class Navbar extends Component {
                     alignItems: 'center',
                     backgroundColor: '#6200EA',
                     height: 80,
+                    minWidth: 400,
                 }}
             >
                 <div

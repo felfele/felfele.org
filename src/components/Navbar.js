@@ -36,7 +36,7 @@ export class Navbar extends Component {
                 style={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'center',
+                    justifyContent: 'space-around',
                     alignItems: 'center',
                     backgroundColor: '#6200EA',
                     height: 80,
@@ -49,8 +49,6 @@ export class Navbar extends Component {
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        marginLeft: `${rhythm(1.5)}`,
-                        marginRight: `${rhythm(1.5)}`,
                         maxWidth: '56rem',
                     }}
                 >
@@ -81,6 +79,7 @@ export class Navbar extends Component {
                             display: 'flex',
                             flexDirection: 'row',
                             justifyContent: 'space-between',
+                            paddingRight: 10,
                         }}
                     >
                         <MenuLink to={'/'}>Mission</MenuLink>

@@ -19,7 +19,8 @@ export class OverlayMenu extends React.Component {
     render() {
         const linkStyle = {
             color: 'white',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            fontSize: '2.75rem',
         };
         return (
                 <button
@@ -29,6 +30,7 @@ export class OverlayMenu extends React.Component {
                         height: '42px',
                         outline: 'none',
                         display: 'flex',
+                        paddingRight: 20,
                     }}
                     onClick={this.openReactMobileMenu}
                     className={`hamburger hamburger--spin ${this.state.menuIsOpen &&

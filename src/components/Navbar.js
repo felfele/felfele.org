@@ -5,6 +5,7 @@ import 'typeface-roboto';
 
 import { rhythm } from './../utils/typography';
 import Logo from './../assets/images/icon-white-transparent.png'
+import { OverlayMenu } from './OverlayMenu';
 
 export class Navbar extends Component {
     constructor(props) {
@@ -66,6 +67,7 @@ export class Navbar extends Component {
                             Felfele Foundation
                         </div>
                     </Link>
+                    {this.state.width > 650 ?
                     <div
                         style={{
                             maxWidth: 400,
@@ -79,7 +81,9 @@ export class Navbar extends Component {
                         <MenuLink to={'/donate'}>Donate</MenuLink>
                         <MenuLink to={'/contact'}>Contact</MenuLink>
                         <MenuLink to={'/blog'}>Blog</MenuLink>
-                    </div>
+                    </div> :
+                    <OverlayMenu/>
+                    }
                 </div>
             </div>
         );

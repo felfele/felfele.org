@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Felfele Foundation]]></title><description><![CDATA[Official website of the Felfele Foundation]]></description><link>https://felfele.org</link><generator>RSS for Node</generator><lastBuildDate>Sat, 04 May 2019 20:31:48 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[Test Page Title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…]]></description><link>https://felfele.org/test-page/</link><guid isPermaLink="false">https://felfele.org/test-page/</guid><content:encoded>&lt;!--- All of the above frontmatter fields are mandatory --&gt;
-&lt;h1&gt;Test Page Title&lt;/h1&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim…]]></description><link>https://felfele.org/blog/2019-01-02-hello-world/</link><guid isPermaLink="false">https://felfele.org/blog/2019-01-02-hello-world/</guid><pubDate>Wed, 02 Jan 2019 09:14:52 GMT</pubDate><content:encoded>&lt;!--- All of the above frontmatter fields are mandatory --&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Felfele Foundation]]></title><description><![CDATA[Official website of the Felfele Foundation]]></description><link>https://felfele.org</link><generator>RSS for Node</generator><lastBuildDate>Sat, 04 May 2019 20:56:16 GMT</lastBuildDate><item><title><![CDATA[🚀 Product Design Hackathon #1 🚀]]></title><description><![CDATA[We have organized our first product design hackathon on the 13th of September. This was a private, invite only event, we are still testing…]]></description><link>https://felfele.org/blog/hackathon/2019-01-02-hackathon/</link><guid isPermaLink="false">https://felfele.org/blog/hackathon/2019-01-02-hackathon/</guid><pubDate>Tue, 10 Jul 2018 14:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We have organized our first product design hackathon on the 13th of September. This was a private, invite only event, we are still testing our initial concepts in our network. The event was held at a very friendly coworking office / atelier, Flux Workspace, Budapest. The participants were of mixed background, designers, engineers, market research, QA, etc. The goal was to bring in some fresh thoughts regarding a number of topics, which were the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;find new ways of sharing&lt;/li&gt;
+&lt;li&gt;reinvent the timeline&lt;/li&gt;
+&lt;li&gt;handle multiple identities&lt;/li&gt;
+&lt;li&gt;explore content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-b2a60.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMFAQL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAYVy7zXFTM+4eQr/xAAdEAACAgEFAAAAAAAAAAAAAAABAgASEwMQESEi/9oACAEBAAEFAgWWNju97L6mmvYyxTwUYjb/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAAAAREhAhASMkH/2gAIAQEABj8CV0SskdWcZZSPCVpn/8QAHBAAAgMBAAMAAAAAAAAAAAAAAREAIVFBMWFx/9oACAEBAAE/IX1H0QyHBC7BPH4QjmGHxxRENU/cpd/phxUGOEVbgFts/9oADAMBAAIAAwAAABAgGPz/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EJ1qMf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAIAQIBAT8QvIxW1//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExgUFRcbHB/9oACAEBAAE/EBETSpM7mAhbQh2E18XFXEIkie8+1Dsetly1oZO8rBZd3omvzEqjY5CtQ0fIYSgVXVXef//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;collage2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-f8fb9.jpg&quot;
+        srcset=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-e8976.jpg 148w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-63df2.jpg 295w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-f8fb9.jpg 590w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-85e3d.jpg 885w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-d1924.jpg 1180w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-9452e.jpg 1770w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-b2a60.jpg 3264w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;After the Q&amp;#x26;A and some debate, 3 teams were formed, and we have started to work on the ideas around 8 o’clock. The brainstorming and the work lasted until 11pm, when we have gathered to show the results to each other.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-b2a60.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIEAQP/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/2gAMAwEAAhADEAAAAY8eXLnW2y6AbFz/AP/EABoQAQACAwEAAAAAAAAAAAAAAAEAAgMREiH/2gAIAQEAAQUCDzHUsWrpuvBcDRMd2ZHztn//xAAXEQADAQAAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/AdiGf//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8ByMR//8QAHhAAAgEDBQAAAAAAAAAAAAAAAAERAhAiAxIxQXH/2gAIAQEABj8Cfg8rYEKmE+RTp1G3oVv/xAAaEAADAQEBAQAAAAAAAAAAAAAAARFBITFh/9oACAEBAAE/IU8+PRaqf0VEYSm5pCpD1rOEVzLCtBx0ko8G1+n/2gAMAwEAAgADAAAAELc3fP/EABgRAQADAQAAAAAAAAAAAAAAAAABETEh/9oACAEDAQE/EIpxUsNP/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAExEBH/2gAIAQIBAT8QfWWiD//EAB4QAQADAQACAwEAAAAAAAAAAAEAESExQXFRYYHw/9oACAEBAAE/ELKhsA5yNyFu7r42VxXJ5ZIgs+yOaphx7a5ELp20kW0m8m4GP3+2NXUfIv3ECvs//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;collage3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-f8fb9.jpg&quot;
+        srcset=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-e8976.jpg 148w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-63df2.jpg 295w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-f8fb9.jpg 590w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-85e3d.jpg 885w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-d1924.jpg 1180w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-9452e.jpg 1770w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-b2a60.jpg 3264w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The bad news is that most of the video documentation got lost 😔&lt;/p&gt;
+&lt;p&gt;The good news is that we have decided to use the results of all 3 projects 😊&lt;/p&gt;
+&lt;p&gt;The first team to present took a really big challenge: how to handle multiple identities in a privacy conscious social app, taking into account the posting workflow. Sketch file &lt;a href=&quot;https://sketch.cloud/s/jrvGm/all/page-1/artboard-2&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 56.14285714285714%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;https://drive.google.com/file/d/1tq_94uxqrUC3GMOburVdEmUbwWxtAVB9/preview&quot; style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;The second team’s project was to reinvent the timeline, and spicing up the style as well. Check it out on &lt;a href=&quot;https://sketch.cloud/s/JJg0G/all/page-1/a4-copy-2&quot;&gt;sketch&lt;/a&gt;!&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 56.14285714285714%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;https://drive.google.com/file/d/1abRbMZkC2OipDOF3rhLY_6shFMkaWNSn/preview&quot; style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;The last team wanted to tackle the problem of news recommendation, which can be challenging on a new platform. &lt;a href=&quot;https://www.figma.com/file/RxcHzdWqS9jjP1FNdovUMVj1/Social-App-Feed?node-id=0%3A1&quot;&gt;Here&lt;/a&gt; you can check out the wireframe.&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 56.14285714285714%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;https://drive.google.com/file/d/1P2qtre-sFOAS-rfrNhh4yyEvW6Anwmry/preview&quot; style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;The energy was great throughout the evening, and we were happy with the results. Thanks again for everyone who participated, hopefully we will have some similar events in the future, we would be glad to see you again!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-67d16.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQb/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAABxc9YXQEck//EAB0QAAEDBQEAAAAAAAAAAAAAAAEAAgMREhMUISP/2gAIAQEAAQUC2ffKWIPZSQWyAodH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEBAQEAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AWY//8QAHhAAAQMEAwAAAAAAAAAAAAAAAQACERAhIjFBUXH/2gAIAQEABj8CLeNKQb9ITine1//EABkQAQADAQEAAAAAAAAAAAAAAAEAETEhQf/aAAgBAQABPyG1bOtiW62phbVSXSzcQy97PYZP/9oADAMBAAIAAwAAABDMD//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QDOMC3//EABgRAAIDAAAAAAAAAAAAAAAAAAABESEx/9oACAECAQE/ENtDkP/EABwQAQEAAwADAQAAAAAAAAAAAAERACExQXGBwf/aAAgBAQABPxAKkVNFB1wmh6ECd33SZNMQt0mMgarLPv7jlmK784j0A3n/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;participants&quot;
+        title=&quot;&quot;
+        src=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-f8fb9.jpg&quot;
+        srcset=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-e8976.jpg 148w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-63df2.jpg 295w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-f8fb9.jpg 590w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-85e3d.jpg 885w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-d1924.jpg 1180w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-9452e.jpg 1770w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-67d16.jpg 4896w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item></channel></rss>

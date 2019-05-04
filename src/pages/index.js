@@ -27,10 +27,7 @@ class SiteIndex extends React.Component {
                 />
                 <Section
                     title='The Felfele Mobile App'
-                    body='We are a non-profit organization building services that gives you a similar level of privacy when you are with your friends and family in person.
-                        We believe in the future the cost of services will be marginal and it will be so easy to pay for it, that nobody will think about it anymore.
-                        We are building services where you are in control, and nobody can access, or stop you from accessing your data, not even us.
-                        Read our Manifesto here.'
+                    body='A decentralized social network where people can exchange thoughts. without compromising their privacy. Built on top of Swarm, mobile first.'
                 />
                 <Section
                     title='Are you interested in shaping the future with us?'

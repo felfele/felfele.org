@@ -29,10 +29,8 @@ class Volunteer extends React.Component {
                     and the potential loss of their rights over the content they produce.
                     <br/><br/>
                     We don't collect any personal information or usage data about the visitors of this website
-                    or our other applications. One exception is the email address of our iOS beta users,
-                    because the Test Flight beta testing platform shares it with us automatically. Also users
-                    sending bug reports from the mobile application includes usage logs, but it's stripped from
-                    sensitive data.
+                    or our other applications. One exception is users sending us bug reports from the mobile application,
+                    which includes usage logs, but it's stripped from sensitive data, and it can be reviewed before sending.
                 </p>
             </Layout>
         );

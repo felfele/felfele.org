@@ -1,6 +1,6 @@
 ---
 title: "Releasing the Alpha"
-date: 2019-05-11T09:04:21+02:00
+date: 2019-05-10T09:04:21+02:00
 description: "We are proud to announce that the Felfele alpha release is out!"
 path: '/blog/alpha/'
 author: vujevits
@@ -9,12 +9,12 @@ type: post
 
 
 # The Alpha Release is Out!
-We are proud to announce that the Felfele alpha release is [out](https://felfele.com/app)! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)
+We are proud to announce that the Felfele alpha release is [out](/app)! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)
 
 ![](./user_group.png)
 
 ## So what can you expect from this alpha version?
-We are still just at our first alpha version, but we aimed to put together an app which can be useful as it is: you can post text and images, follow other people, re-share their posts, or follow blogs, news sites, reddit pages, via RSS feeds. Because we are not collecting private information, we cannot provide a search functionality of other users at the moment. You can send your channel’s link to your friends in a text message, or just open your profile and show your QR code to your friend, and they will be able to read it from the app. In our experience it's a fun method of building small communities. This is still a version which focuses on some technical foundations, it's by no means representative of the product which will be our public release. If you feel lost, have a look at the [user manual](https://felfele.com/blog/manual-1). It's possible you'll find usability issues we haven't thought of, bugs that we haven't discovered yet, even content loss is a possibility, at this point we cannot guarantee anything, it's better to treat your content ephemeral. Make sure to report the issues you experience!
+We are still just at our first alpha version, but we aimed to put together an app which can be useful as it is: you can post text and images, follow other people, re-share their posts, or follow blogs, news sites, reddit pages, via RSS feeds. Because we are not collecting private information, we cannot provide a search functionality of other users at the moment. You can send your channel’s link to your friends in a text message, or just open your profile and show your QR code to your friend, and they will be able to read it from the app. In our experience it's a fun method of building small communities. This is still a version which focuses on some technical foundations, it's by no means representative of the product which will be our public release. If you feel lost, have a look at the [user manual](/blog/manual-1). It's possible you'll find usability issues we haven't thought of, bugs that we haven't discovered yet, even content loss is a possibility, at this point we cannot guarantee anything, it's better to treat your content ephemeral. Make sure to report the issues you experience!
 
 
 ## Why are we doing this

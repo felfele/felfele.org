@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 // import font file
 import 'typeface-roboto';
 
-import { rhythm } from './../utils/typography';
 import Logo from './../assets/images/icon-white-transparent.png'
 import { OverlayMenu } from './OverlayMenu';
 
@@ -65,7 +64,7 @@ export class Navbar extends Component {
                         <img src={Logo} style={{ width: 70, height: 70, marginBottom: 0 }}/>
                         <div style={{
                             fontFamily: 'Roboto',
-                            fontSize: this.state.width > 650 ? 24 : 20,
+                            fontSize: this.state.width > WIDTH_THRESHOLD ? 24 : 20,
                             fontWeight: 500,
                             whiteSpace: 'nowrap'
                         }}>

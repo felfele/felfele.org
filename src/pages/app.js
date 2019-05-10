@@ -192,13 +192,20 @@ class App extends React.Component {
 export default App;
 
 const DownloadButton = () => (
-    <a href={isIOS ? APP_STORE_LINK : PLAY_STORE_LINK} target='_new'>
+    <a
+        style={{
+            color: '#4a4a4a',
+            fontSize: 12,
+            fontWeight: 'bold',
+        }}
+        href={isIOS ? APP_STORE_LINK : PLAY_STORE_LINK} target='_new'
+    >
         <div style={{
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
         }}>
-            <img src={Phone} style={{ margin: 0 }}/>
+            <img src={Phone} style={{ paddingRight: 4, margin: 0 }}/>
             GET THE APP
         </div>
         </a>

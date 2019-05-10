@@ -11,7 +11,6 @@ import Android from './../assets/android.png';
 import AppStore from './../assets/appstore.png';
 import Dollar from './../assets/dollar.png';
 import Twitter from './../assets/twitter-bird.png';
-import { Link } from 'gatsby';
 
 class App extends React.Component {
     render() {
@@ -104,7 +103,7 @@ class App extends React.Component {
                             justifyContent: 'space-evenly',
                         }}>
                             <Action
-                                href='https://github.com'
+                                href='https://testflight.apple.com/join/hWiCVkWz'
                                 imageProps={{
                                     src: AppStore,
                                     style: { width: 40, height: 40 }
@@ -113,7 +112,7 @@ class App extends React.Component {
                                 regularText='for iOS'
                             />
                             <Action
-                                href='https://github.com'
+                                href='https://play.google.com/store/apps/details?id=org.felfele.mobile'
                                 imageProps={{
                                     src: Android,
                                     style: { width: 40, height: 40 }

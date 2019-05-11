@@ -7,8 +7,6 @@ author: vujevits
 type: post
 ---
 
-
-# The Alpha Release is Out!
 We are proud to announce that the Felfele alpha release is [out](/app)! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)
 
 ![](./user_group.png)

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Layout from '../components/Layout';
-import { Row } from 'react-flexbox-grid';
 import { Link } from 'gatsby';
 
 class Volunteer extends React.Component {

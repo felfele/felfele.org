@@ -5,7 +5,6 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import { bankingData, ethereumData } from './../data/donate';
-import { Row } from 'react-flexbox-grid';
 
 class Donate extends React.Component {
     render() {
@@ -31,7 +30,12 @@ class Donate extends React.Component {
                     levels that literally every little bit counts. Donating $10 can be sufficient for securing
                     user data for 1000 people.
                 </p>
-                <Row>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                }}>
                     <div>
                         <h3>Bank Transfer</h3>
                         <br />
@@ -60,7 +64,7 @@ class Donate extends React.Component {
                             }
                         })}
                     </div>
-                </Row>
+                </div>
             </Layout>
         );
     }

@@ -5,7 +5,6 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import { contactData, businessData } from './../data/contact';
-import { Row } from 'react-flexbox-grid';
 
 class Contact extends React.Component {
     render() {
@@ -22,7 +21,12 @@ class Contact extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Contact | ${siteTitle}`}
                 />
-                <Row around='xs'>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                }}>
                     <div>
                         <h2>Contact</h2>
                         <br />
@@ -68,7 +72,7 @@ class Contact extends React.Component {
                             }
                         })}
                     </div>
-                </Row>
+                </div>
             </Layout>
         );
     }

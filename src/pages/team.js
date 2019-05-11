@@ -5,7 +5,6 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import { teamData } from './../data/team';
-import { Row } from 'react-flexbox-grid';
 import { rhythm } from '../utils/typography';
 
 class Team extends React.Component {
@@ -23,7 +22,12 @@ class Team extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Team | ${siteTitle}`}
                 />
-                <Row around='xs'>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                }}>
                     <div>
                         <h2>Team</h2>
                         <br />
@@ -41,7 +45,7 @@ class Team extends React.Component {
                             })}
                         </div>
                     </div>
-                </Row>
+                </div>
             </Layout>
         );
     }

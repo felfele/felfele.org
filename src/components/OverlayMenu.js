@@ -50,7 +50,7 @@ export class OverlayMenu extends React.Component {
                             left: 0,
                             backgroundSize: 'cover',
                             backgroundColor: 'black',
-                            opacity: 0.8,
+                            opacity: 0.9,
                         }}
                         className={'open'}
                     >

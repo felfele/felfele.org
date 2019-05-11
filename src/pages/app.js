@@ -5,6 +5,7 @@ import get from 'lodash/get';
 // import font file
 import 'typeface-roboto';
 import Screenshot from './../assets/images/screenshot.png';
+import ScreenshotMobile from './../assets/images/screenshot-mobile.png';
 import FelfeleLogo from './../assets/logo_with_text.svg';
 import Github from './../assets/github.png';
 import Android from './../assets/android.png';
@@ -174,7 +175,7 @@ class App extends React.Component {
                                             width: 229,
                                             height: 278,
                                         }}
-                                        src={Screenshot}
+                                        src={ScreenshotMobile}
                                     />
                                 </div>
 

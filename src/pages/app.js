@@ -14,16 +14,35 @@ import Dollar from './../assets/dollar.png';
 import Twitter from './../assets/twitter-bird.png';
 import Phone from './../assets/baseline-smartphone-24-px.svg'
 import {
-    BrowserView,
-    MobileOnlyView,
     isIOS,
-    isMobileOnly,
 } from 'react-device-detect';
 
 const APP_STORE_LINK = 'https://testflight.apple.com/join/hWiCVkWz';
 const PLAY_STORE_LINK = 'https://play.google.com/store/apps/details?id=org.felfele.mobile';
 
+const WIDTH_THRESHOLD = 1100;
+
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0
+        };
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
         const siteTitle = get(this, 'props.data.site.siteMetadata.title');
         const siteDescription = get(
@@ -31,7 +50,7 @@ class App extends React.Component {
             'props.data.site.siteMetadata.description'
         );
         return (
-            <div style={ !isMobileOnly ? {
+            <div style={ this.state.width > WIDTH_THRESHOLD ? {
                 paddingTop: 100,
                 paddingLeft: 130,
                 paddingRight: 130,
@@ -42,149 +61,144 @@ class App extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`App | ${siteTitle}`}
                 />
-                <BrowserView>
+                {this.state.width > WIDTH_THRESHOLD ?
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    fontFamily: 'Roboto',
+                }}>
+                    <div style={{
+                        flexDirection: 'column',
+                        flex: 1,
+                    }}>
+                        <img src={FelfeleLogo} style={{ paddingBottom: 70 }}/>
+                        <div style={{
+                            paddingBottom: 50,
+                            fontWeight: 900,
+                            fontSize: 70,
+                            lineHeight: 1.07,
+                        }}>
+                            <TaglineContent/>
+                        </div>
+                        <IntroTextContent/>
+                    </div>
                     <div style={{
                         display: 'flex',
-                        flexDirection: !isMobileOnly ? 'row' : 'column',
+                        flexDirection: 'column',
+                        flex: 1,
+                        justifyContent: 'space-between',
+                    }}>
+                        <div style={{
+                                    width: 473,
+                                    height: 573,
+                                    marginLeft: 60,
+                        }}>
+                            <img
+                                style={{
+                                    width: 473,
+                                    height: 573,
+                                }}
+                                src={Screenshot}
+                            />
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            width: 473,
+                            justifyContent: 'space-evenly',
+                        }}>
+                            <Action
+                                href={APP_STORE_LINK}
+                                imageProps={{
+                                    src: AppStore,
+                                    style: { width: 40, height: 40 }
+                                }}
+                                boldText='Download'
+                                regularText='for iOS'
+                            />
+                            <Action
+                                href={PLAY_STORE_LINK}
+                                imageProps={{
+                                    src: Android,
+                                    style: { width: 40, height: 40 }
+                                }}
+                                boldText='Download'
+                                regularText='for Android'
+                            />
+                            <Action
+                                href='https://github.com/felfele/felfele'
+                                imageProps={{
+                                    src: Github,
+                                    style: { width: 40, height: 40 }
+                                }}
+                                boldText='Contribute'
+                                regularText='on Github'
+                            />
+                            <Action
+                                href='https://twitter.com/felfeleapp'
+                                imageProps={{
+                                    src: Twitter,
+                                    style: { width: 40, height: 40 }
+                                }}
+                                boldText='Follow us'
+                                regularText='on Twitter'
+                            />
+                            <Action
+                                href='https://felfele.org/donate'
+                                imageProps={{
+                                    src: Dollar,
+                                    style: { width: 40, height: 40 }
+                                }}
+                                boldText='Make'
+                                regularText='a donation'
+                            />
+                        </div>
+                    </div>
+                </div> :
+                <div>
+                    <div style={{
+                        paddingBottom: 50,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                    }}>
+                        <img src={FelfeleLogo} style={{ marginBottom: 0 }}/>
+                        <DownloadButton/>
+                    </div>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
                         fontFamily: 'Roboto',
                     }}>
                         <div style={{
                             flexDirection: 'column',
                             flex: 1,
                         }}>
-                            <img src={FelfeleLogo} style={{ paddingBottom: 70 }}/>
                             <div style={{
-                                paddingBottom: 50,
-                                fontWeight: 900,
-                                fontSize: 70,
-                                lineHeight: 1.07,
+                                    paddingBottom: 30,
+                                    fontWeight: 900,
+                                    fontSize: 40,
+                                    lineHeight: 1.07,
                             }}>
                                 <TaglineContent/>
                             </div>
-                            <IntroTextContent/>
-                        </div>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            flex: 1,
-                            justifyContent: 'space-between',
-                        }}>
                             <div style={{
-                                        width: 473,
-                                        height: 573,
-                                        marginLeft: 60,
+                                        width: 229,
+                                        height: 278,
+                                        marginBottom: 30,
                             }}>
                                 <img
                                     style={{
-                                        width: 473,
-                                        height: 573,
+                                        width: 229,
+                                        height: 278,
                                     }}
-                                    src={Screenshot}
+                                    src={ScreenshotMobile}
                                 />
                             </div>
-                            <div style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                width: 473,
-                                justifyContent: 'space-evenly',
-                            }}>
-                                <Action
-                                    href={APP_STORE_LINK}
-                                    imageProps={{
-                                        src: AppStore,
-                                        style: { width: 40, height: 40 }
-                                    }}
-                                    boldText='Download'
-                                    regularText='for iOS'
-                                />
-                                <Action
-                                    href={PLAY_STORE_LINK}
-                                    imageProps={{
-                                        src: Android,
-                                        style: { width: 40, height: 40 }
-                                    }}
-                                    boldText='Download'
-                                    regularText='for Android'
-                                />
-                                <Action
-                                    href='https://github.com/felfele/felfele'
-                                    imageProps={{
-                                        src: Github,
-                                        style: { width: 40, height: 40 }
-                                    }}
-                                    boldText='Contribute'
-                                    regularText='on Github'
-                                />
-                                <Action
-                                    href='https://twitter.com/felfeleapp'
-                                    imageProps={{
-                                        src: Twitter,
-                                        style: { width: 40, height: 40 }
-                                    }}
-                                    boldText='Follow us'
-                                    regularText='on Twitter'
-                                />
-                                <Action
-                                    href='https://felfele.org/donate'
-                                    imageProps={{
-                                        src: Dollar,
-                                        style: { width: 40, height: 40 }
-                                    }}
-                                    boldText='Make'
-                                    regularText='a donation'
-                                />
-                            </div>
+                            <IntroTextContent/>
                         </div>
                     </div>
-                </BrowserView>
-                <MobileOnlyView>
-                    <div>
-                        <div style={{
-                            paddingBottom: 50,
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                        }}>
-                            <img src={FelfeleLogo} style={{ marginBottom: 0 }}/>
-                            <DownloadButton/>
-                        </div>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            fontFamily: 'Roboto',
-                        }}>
-                            <div style={{
-                                flexDirection: 'column',
-                                flex: 1,
-                            }}>
-                                <div style={{
-                                        paddingBottom: 30,
-                                        fontWeight: 900,
-                                        fontSize: 40,
-                                        lineHeight: 1.07,
-                                }}>
-                                    <TaglineContent/>
-                                </div>
-                                <div style={{
-                                            width: 229,
-                                            height: 278,
-                                            marginBottom: 30,
-                                }}>
-                                    <img
-                                        style={{
-                                            width: 229,
-                                            height: 278,
-                                        }}
-                                        src={ScreenshotMobile}
-                                    />
-                                </div>
-
-                                <IntroTextContent/>
-
-                            </div>
-                        </div>
-                    </div>
-                </MobileOnlyView>
+                </div>}
             </div>
         );
     }

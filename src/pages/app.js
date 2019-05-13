@@ -26,7 +26,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: window.innerWidth,
+            width: 0,
         };
     }
 
@@ -44,6 +44,7 @@ class App extends React.Component {
     }
 
     render() {
+        if (this.state.width === 0) return null;
         const siteTitle = get(this, 'props.data.site.siteMetadata.title');
         const siteDescription = get(
             this,

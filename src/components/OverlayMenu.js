@@ -1,6 +1,7 @@
 import React from 'react';
 import 'hamburgers/dist/hamburgers.css';
 import '../styles/hamburger-settings.css';
+import { menu } from '../data/menu';
 
 export class OverlayMenu extends React.Component {
     constructor(props) {
@@ -65,31 +66,16 @@ export class OverlayMenu extends React.Component {
                                     lineHeight: '4rem',
                                 }}
                             >
-                                <li>
-                                    <a style={linkStyle} href='/'>
-                                        Mission
-                                    </a>
-                                </li>
-                                <li>
-                                    <a style={linkStyle} href='/team'>
-                                        Team
-                                    </a>
-                                </li>
-                                <li>
-                                    <a style={linkStyle} href='/donate'>
-                                        Donate
-                                    </a>
-                                </li>
-                                <li>
-                                    <a style={linkStyle} href='/contact'>
-                                        Contact
-                                    </a>
-                                </li>
-                                <li>
-                                    <a style={linkStyle} href='/blog'>
-                                        Blog
-                                    </a>
-                                </li>
+                                {Object.keys(menu).map(key => {
+                                    const item = menu[key];
+                                    if (item) {
+                                        return (
+                                            <li>
+                                                <a style={linkStyle} href={item.path}>{item.label}</a>
+                                            </li>
+                                        );
+                                    }
+                                })}
                             </ul>
                         </div>
                     </div>}

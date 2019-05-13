@@ -39,10 +39,10 @@ class Team extends React.Component {
                             justifyContent: 'center',
                         }}>
                         {Object.keys(teamData).map(key => {
-                                if (teamData[key]) {
-                                    return <Avatar data={teamData[key]}/>;
-                                }
-                            })}
+                            if (teamData[key]) {
+                                return <Avatar data={teamData[key]}/>;
+                            }
+                        })}
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ import 'typeface-roboto';
 
 import Logo from './../assets/images/icon-white-transparent.png'
 import { OverlayMenu } from './OverlayMenu';
+import { menu } from '../data/menu';
 
 const WIDTH_THRESHOLD = 650;
 
@@ -81,11 +82,12 @@ export class Navbar extends Component {
                             paddingRight: 10,
                         }}
                     >
-                        <MenuLink to={'/'}>Mission</MenuLink>
-                        <MenuLink to={'/team'}>Team</MenuLink>
-                        <MenuLink to={'/donate'}>Donate</MenuLink>
-                        <MenuLink to={'/contact'}>Contact</MenuLink>
-                        <MenuLink to={'/blog'}>Blog</MenuLink>
+                        {Object.keys(menu).map(key => {
+                            const item = menu[key];
+                            if (item) {
+                                return <MenuLink to={item.path}>{item.label}</MenuLink>;
+                            }
+                        })}
                     </div> :
                     <OverlayMenu/>
                     }

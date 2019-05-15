@@ -16,7 +16,7 @@ We are still just at our first alpha version, but we aimed to put together an ap
 
 
 ## Why are we doing this
-We are tired of the exploitative nature of traditional social media, and the attention economy revolving our online activities. You can read more about our motivation here.
+We are tired of the exploitative nature of traditional social media, and the attention economy revolving our online activities.
 
 ## How to contribute
 Hopefully we will get to know a lot of people during the alpha. This was just our first milestone, and we welcome everyone who wishes to move our cause forward. You can [contribute](https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md) by reporting issues, or by opening pull requests! We are looking for volunteers for non-development tasks as well. And of course, if you cannot contribute with your time, you can always make a [donation](https://felfele.com/donation).

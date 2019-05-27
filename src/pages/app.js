@@ -6,7 +6,7 @@ import get from 'lodash/get';
 import 'typeface-roboto';
 import Screenshot from './../assets/images/screenshot.png';
 import ScreenshotMobile from './../assets/images/screenshot-mobile.png';
-import FelfeleLogo from './../assets/logo_with_text.svg';
+import FelfeleLogo from './../assets/Felfele_Horizontal.svg';
 import Github from './../assets/github.png';
 import Android from './../assets/android.png';
 import AppStore from './../assets/appstore.png';

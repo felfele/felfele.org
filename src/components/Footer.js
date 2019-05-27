@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import { rhythm } from '../utils/typography';
 import { WIDTH_THRESHOLD } from './Navbar';
+import Logo from '../assets/logo.svg';
 
 export class Footer extends Component {
     constructor(props) {
@@ -26,11 +27,20 @@ export class Footer extends Component {
 
     render() {
         return (
-            <div style={styles.rootContainer}>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: this.state.width > WIDTH_THRESHOLD ? '' : 'center',
+                fontSize: 10,
+                paddingTop: 40,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                maxWidth: rhythm(36),
+            }}>
                 <div style={{
                     display: 'flex',
-                    justifyContent: 'space-between',
-                    alignSelf: 'center',
+                    justifyContent: 'space-evenly',
                     flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
                     paddingBottom: 50,
                 }}>
@@ -99,6 +109,15 @@ export class Footer extends Component {
                             </Link>
                         </div>
                     </div>
+                    <div style={styles.sectionContainer}>
+                        <div style={{
+                            width: this.state.width > WIDTH_THRESHOLD ? 200 : 100,
+                            display: 'flex',
+                            justifyContent: 'flex-end'
+                        }}>
+                            <img src={Logo} style={{ marginBottom: 0, fill: '#6200EA' }}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
@@ -112,7 +131,6 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
         fontSize: 10,
         paddingTop: 40,
         marginLeft: 'auto',

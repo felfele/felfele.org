@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 // import font file
-import 'typeface-roboto';
+import 'typeface-nunito-sans';
+import { rhythm } from '../utils/typography';
 
-import Logo from './../assets/images/icon-white-transparent.png'
+import Logo from './../assets/Felfele_Horizontal.svg'
 import { OverlayMenu } from './OverlayMenu';
 import { menu } from '../data/menu';
 
-const WIDTH_THRESHOLD = 650;
+export const WIDTH_THRESHOLD = 650;
 
 export class Navbar extends Component {
     constructor(props) {
@@ -34,12 +35,12 @@ export class Navbar extends Component {
         return (
             <div
                 style={{
-                    width: '100%',
                     display: 'flex',
                     justifyContent: 'space-around',
                     alignItems: 'center',
-                    backgroundColor: '#6200EA',
-                    height: 80,
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    maxWidth: rhythm(36),
                 }}
             >
                 <div
@@ -49,7 +50,8 @@ export class Navbar extends Component {
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        maxWidth: '56rem',
+                        height: 80,
+                        maxWidth: rhythm(40),
                     }}
                 >
                     <Link
@@ -62,15 +64,7 @@ export class Navbar extends Component {
                             alignItems: 'center',
                         }}
                     >
-                        <img src={Logo} style={{ width: 70, height: 70, marginBottom: 0 }}/>
-                        <div style={{
-                            fontFamily: 'Roboto',
-                            fontSize: this.state.width > WIDTH_THRESHOLD ? 24 : 20,
-                            fontWeight: 500,
-                            whiteSpace: 'nowrap'
-                        }}>
-                            Felfele Foundation
-                        </div>
+                        <img src={Logo} style={{ width: 100, marginBottom: 0, fill: '#6200EA' }}/>
                     </Link>
                     {this.state.width > WIDTH_THRESHOLD ?
                     <div
@@ -104,7 +98,6 @@ const MenuLink = props => {
         <Link
             {...props}
             style={{
-                color: '#FFFFFF',
                 paddingRight: 10,
             }}
         />

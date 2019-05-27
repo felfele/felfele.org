@@ -3,6 +3,7 @@ import React from 'react';
 import { rhythm } from '../utils/typography';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { Ruler } from './Ruler';
 
 class Layout extends React.Component {
     render() {
@@ -11,8 +12,8 @@ class Layout extends React.Component {
         const defaultStyle = {
             marginLeft: 'auto',
             marginRight: 'auto',
-            maxWidth: rhythm(32),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            padding: 10,
+            maxWidth: rhythm(36),
         };
 
         const finalStyle = {
@@ -21,12 +22,13 @@ class Layout extends React.Component {
         };
         return (
             <div>
-                <Navbar />
+                <div style={finalStyle}><Navbar/></div>
+                <Ruler/>
                 <div style={finalStyle}>
-                    <br />
                     {children}
-                    <Footer />
                 </div>
+                <Ruler/>
+                <div style={finalStyle}><Footer/></div>
             </div>
 
         );

@@ -1,14 +1,20 @@
 import Typography from 'typography';
 import Wordpress2016 from 'typography-theme-wordpress-2016';
 
-Wordpress2016.headerFontFamily = [ 'Roboto' ];
-Wordpress2016.bodyFontFamily = [ 'Roboto' ];
+Wordpress2016.headerFontFamily = [ 'Young Serif' ];
+Wordpress2016.bodyFontFamily = [ 'Nunito Sans' ];
 
 Wordpress2016.overrideThemeStyles = () => {
     return {
-        'a': {
+        'a,h1,h2,h3,p,div': {
             boxShadow: `none`,
             color: '#6200EA',
+        },
+        'h1,h2,h3': {
+            fontFamily: 'YoungSerif',
+        },
+        'div': {
+            lineHeight: 1.35,
         },
     };
 };

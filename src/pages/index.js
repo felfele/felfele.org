@@ -4,8 +4,29 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
+import { WIDTH_THRESHOLD } from '../components/Navbar';
 
 class SiteIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0
+        };
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
         const siteTitle = get(this, 'props.data.site.siteMetadata.title');
         const siteDescription = get(
@@ -19,34 +40,56 @@ class SiteIndex extends React.Component {
                     <title>{siteTitle}</title>
                     <meta name="description" content={siteDescription} />
                 </Helmet>
-                <Section
-                    title='Welcome to the Felfele Foundation'
-                    body='We are a non-profit organization building services that gives you a similar level of privacy when you are with your friends and family in person.
-                        We believe in the future the cost of services will be marginal and it will be so easy to pay for it, that nobody will think about it anymore.
-                        We are building services where you are in control, and nobody can access, or stop you from accessing your data, not even us.'
+                <MainSection
+                    title='Socialize without compromise'
+                    body="We build services that empower anyone to communicate without being exploited - services that respect people's time, privacy and rights over their content."
                 />
-                <Section
-                    title='The Felfele Mobile App'
-                    body='A decentralized social network where people can exchange thoughts. without compromising their privacy. Built on top of Swarm, mobile first.'
-                />
-                <Section
-                    title='Are you interested in shaping the future with us?'
-                    body='The need for human communication is constant and technology enabled us to build tools to serve this need.
-                        Historically this evolved to practices that takes away our rights to privacy and control, because that was the only economic way to build these tools in a global scale.
-                        Fortunately there are better ways to achieve this now, which respect your privacy and let you stay in control.
-                        We commit to working towards this future by making new technologies and services available at a price that’s affordable for everyone.'
-                />
+                <div style={{
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+
+                }}>
+                    <Section
+                        title='People first'
+                        body='We focus on services that put people in control and empower free communication. We defend human attention adn privacy, not profit.'
+                    />
+                    <Section
+                        title='Self-sustaining'
+                        body='We use peer-to-peer storage and incentivize resource sharing to make structural consts trivial. No one has to trade their personal data.'
+                    />
+                    <Section
+                        title='Future-proof'
+                        body='A fully decentralized and open architecture makes the network stronger - no vulnerable hubs, no data loss, no downtime, and no censorship.'
+                    />
+                </div>
             </Layout>
         );
     }
 }
 
+const MainSection = ({ title, body }) => {
+    return (
+        <div>
+            <h1>{title}</h1>
+            <p>{body}</p>
+        </div>
+    );
+}
+
 const Section = ({ title, body }) => {
     return (
-        <React.Fragment>
-            <h3>{title}</h3>
+        <div style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            maxWidth: 300,
+        }}>
+            <h3 style={{ lineHeight: 0 }}>{title}</h3>
             <p>{body}</p>
-        </React.Fragment>
+        </div>
     );
 };
 

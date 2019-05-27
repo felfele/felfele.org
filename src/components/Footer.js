@@ -114,7 +114,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 10,
-        paddingTop: 100,
+        paddingTop: 40,
         marginLeft: 'auto',
         marginRight: 'auto',
         maxWidth: rhythm(36),

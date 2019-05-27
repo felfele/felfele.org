@@ -5,6 +5,9 @@ import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
 import { WIDTH_THRESHOLD } from '../components/Navbar';
+import { Button } from '../components/Button';
+import Phone from './../assets/baseline-smartphone-24-px.svg'
+import Heart from './../assets/heart.svg'
 
 class SiteIndex extends React.Component {
     constructor(props) {
@@ -42,7 +45,7 @@ class SiteIndex extends React.Component {
                 </Helmet>
                 <MainSection
                     title='Socialize without compromise'
-                    body="We build services that empower anyone to communicate without being exploited - services that respect people's time, privacy and rights over their content."
+                    body="We build services that empower anyone to communicate without being exploited — services that respect people's time, privacy and rights over their content."
                 />
                 <div style={{
                     flex: 1,
@@ -62,7 +65,27 @@ class SiteIndex extends React.Component {
                     />
                     <Section
                         title='Future-proof'
-                        body='A fully decentralized and open architecture makes the network stronger - no vulnerable hubs, no data loss, no downtime, and no censorship.'
+                        body='A fully decentralized and open architecture makes the network stronger — no vulnerable hubs, no data loss, no downtime, and no censorship.'
+                    />
+                </div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    paddingTop: 40,
+                    paddingBottom: 40,
+                }}>
+                    <Button
+                        target='/app'
+                        icon={Phone}
+                        label='Get the app'
+                        border={true}
+                    />
+                    <Button
+                        target='/donate'
+                        icon={Heart}
+                        label='Make a donation'
+                        border={true}
                     />
                 </div>
             </Layout>
@@ -73,8 +96,8 @@ class SiteIndex extends React.Component {
 const MainSection = ({ title, body }) => {
     return (
         <div>
-            <h1>{title}</h1>
-            <p>{body}</p>
+            <h1 style={{ fontSize: 54 }}>{title}</h1>
+            <p style={{ fontSize: 22 }}>{body}</p>
         </div>
     );
 }

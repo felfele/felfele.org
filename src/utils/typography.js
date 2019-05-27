@@ -13,6 +13,9 @@ Wordpress2016.overrideThemeStyles = () => {
         'h1,h2,h3': {
             fontFamily: 'YoungSerif',
         },
+        'h2,h3,p,div': {
+            fontWeight: 300,
+        },
         'div': {
             lineHeight: 1.35,
         },

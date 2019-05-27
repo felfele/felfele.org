@@ -28,7 +28,7 @@ class Team extends React.Component {
                     flexWrap: 'wrap',
                     justifyContent: 'space-between',
                 }}>
-                    <div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <h2>Team</h2>
                         <br />
                         <div style={{

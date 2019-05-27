@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 // import font file
 import 'typeface-nunito-sans';
+import 'typeface-youngserif';
 import { rhythm } from '../utils/typography';
 
 import Logo from './../assets/Felfele_Horizontal.svg'

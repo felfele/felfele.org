@@ -2,14 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-// import font file
-import 'typeface-roboto';
 import Screenshot from './../assets/images/screenshot.png';
 import ScreenshotMobile from './../assets/images/screenshot-mobile.png';
 import Layout from '../components/Layout';
 import { Button } from '../components/Button';
-import Phone from './../assets/baseline-smartphone-24-px.svg'
-import Heart from './../assets/heart.svg'
 import Android from './../assets/android.svg';
 import Apple from './../assets/apple.svg';
 

@@ -9,6 +9,7 @@ export const Button = ({ icon, label, target, border }) => {
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
+                    wrap: 'no-wrap',
                     border: border ? 'solid 1px rgba(98, 0, 234, 0.25)' : '',
                     padding: 12,
                     margin: 8,

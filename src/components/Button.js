@@ -8,11 +8,10 @@ export const Button = ({ icon, label, target, border }) => {
                 style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    alignItems: 'center',
+                    alignItems: 'end',
                     border: border ? 'solid 1px rgba(98, 0, 234, 0.25)' : '',
                     padding: 12,
                     margin: 8,
-                    lineHeight: 0,
                     fontSize: 16,
                 }}
             >

@@ -10,6 +10,9 @@ Wordpress2016.overrideThemeStyles = () => {
             boxShadow: `none`,
             color: '#6200EA',
         },
+        'a': {
+            fontWeight: 'bold',
+        },
         'h1,h2,h3': {
             fontFamily: 'YoungSerif',
         },

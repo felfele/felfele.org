@@ -6,16 +6,12 @@ import get from 'lodash/get';
 import 'typeface-roboto';
 import Screenshot from './../assets/images/screenshot.png';
 import ScreenshotMobile from './../assets/images/screenshot-mobile.png';
-import FelfeleLogo from './../assets/Felfele_Horizontal.svg';
-import Github from './../assets/github.png';
-import Android from './../assets/android.png';
-import AppStore from './../assets/appstore.png';
-import Dollar from './../assets/dollar.png';
-import Twitter from './../assets/twitter-bird.png';
+import Layout from '../components/Layout';
+import { Button } from '../components/Button';
 import Phone from './../assets/baseline-smartphone-24-px.svg'
-import {
-    isIOS,
-} from 'react-device-detect';
+import Heart from './../assets/heart.svg'
+import Android from './../assets/android.svg';
+import Apple from './../assets/apple.svg';
 
 const APP_STORE_LINK = 'https://testflight.apple.com/join/hWiCVkWz';
 const PLAY_STORE_LINK = 'https://play.google.com/store/apps/details?id=org.felfele.mobile';
@@ -51,12 +47,7 @@ class App extends React.Component {
             'props.data.site.siteMetadata.description'
         );
         return (
-            <div style={ this.state.width > WIDTH_THRESHOLD ? {
-                paddingTop: 100,
-                paddingLeft: 130,
-                paddingRight: 130,
-                paddingBottom: 100,
-            } : { padding: 20 }}>
+            <Layout>
                 <Helmet
                     htmlAttributes={{ lang: 'en' }}
                     meta={[{ name: 'description', content: siteDescription }]}
@@ -66,29 +57,24 @@ class App extends React.Component {
                 <div style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    fontFamily: 'Roboto',
+                    paddingTop: 30,
+                    paddingBottom: 50,
                 }}>
                     <div style={{
                         flexDirection: 'column',
                         flex: 1,
                     }}>
-                        <img src={FelfeleLogo} style={{ paddingBottom: 70 }}/>
-                        <div style={{
-                            paddingBottom: 50,
-                            fontWeight: 900,
-                            fontSize: 70,
-                            lineHeight: 1.07,
-                        }}>
-                            <TaglineContent/>
-                        </div>
+                        <TaglineContent/>
+                        <ButtonGroup/>
                         <IntroTextContent/>
                     </div>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
                         flex: 1,
-                        justifyContent: 'space-evenly',
+                        justifyContent: 'flex-start',
                         alignItems: 'center',
+                        paddingTop: 40,
                     }}>
                         <div style={{
                                     width: 473,
@@ -103,74 +89,13 @@ class App extends React.Component {
                                 src={Screenshot}
                             />
                         </div>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            width: 473,
-                            justifyContent: 'space-evenly',
-                        }}>
-                            <Action
-                                href={APP_STORE_LINK}
-                                imageProps={{
-                                    src: AppStore,
-                                    style: { width: 40, height: 40 }
-                                }}
-                                boldText='Download'
-                                regularText='for iOS'
-                            />
-                            <Action
-                                href={PLAY_STORE_LINK}
-                                imageProps={{
-                                    src: Android,
-                                    style: { width: 40, height: 40 }
-                                }}
-                                boldText='Download'
-                                regularText='for Android'
-                            />
-                            <Action
-                                href='https://github.com/felfele/felfele'
-                                imageProps={{
-                                    src: Github,
-                                    style: { width: 40, height: 40 }
-                                }}
-                                boldText='Contribute'
-                                regularText='on Github'
-                            />
-                            <Action
-                                href='https://twitter.com/felfeleapp'
-                                imageProps={{
-                                    src: Twitter,
-                                    style: { width: 40, height: 40 }
-                                }}
-                                boldText='Follow us'
-                                regularText='on Twitter'
-                            />
-                            <Action
-                                href='https://felfele.org/donate'
-                                imageProps={{
-                                    src: Dollar,
-                                    style: { width: 40, height: 40 }
-                                }}
-                                boldText='Make'
-                                regularText='a donation'
-                            />
-                        </div>
                     </div>
                 </div> :
                 <div>
                     <div style={{
-                        paddingBottom: 50,
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                    }}>
-                        <img src={FelfeleLogo} style={{ marginBottom: 0 }}/>
-                        <DownloadButton/>
-                    </div>
-                    <div style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        fontFamily: 'Roboto',
+                        paddingBottom: 50,
                     }}>
                         <div style={{
                             flexDirection: 'column',
@@ -197,50 +122,54 @@ class App extends React.Component {
                                     src={ScreenshotMobile}
                                 />
                             </div>
+                            <ButtonGroup/>
                             <IntroTextContent/>
                         </div>
                     </div>
                 </div>}
-            </div>
+            </Layout>
         );
     }
 }
 
 export default App;
 
-const DownloadButton = () => (
-    <a
-        style={{
-            color: '#4a4a4a',
-            fontSize: 12,
-            fontWeight: 'bold',
-        }}
-        href={isIOS ? APP_STORE_LINK : PLAY_STORE_LINK} target='_new'
-    >
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-        }}>
-            <img src={Phone} style={{ paddingRight: 4, margin: 0 }}/>
-            GET THE APP
-        </div>
-        </a>
-);
-
 const TaglineContent = () => (
-    <div>
+    <h1 style={{ fontSize: 54 }}>
         Nonprofit.<br/>
         Slow media.<br/>
         Decentralized.
+    </h1>
+);
+
+const ButtonGroup = () => (
+    <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        paddingTop: 20,
+        paddingBottom: 20,
+    }}>
+        <Button
+            target='/app'
+            icon={Apple}
+            label='Get for iOS'
+            border={true}
+        />
+        <Button
+            target='/donate'
+            icon={Android}
+            label='Get for Android'
+            border={true}
+        />
     </div>
 );
 
 const IntroTextContent = () => (
     <React.Fragment>
-        <div>
-            <b>Social media that doesn't suck.</b>
-        </div>
+        <h3>
+            Social media that doesn't suck.
+        </h3>
         <div style={{
             paddingBottom: 50,
         }}>
@@ -250,9 +179,6 @@ const IntroTextContent = () => (
             <a href='https://swarm.ethereum.org' target='_new'> Swarm</a> — technically eliminating any chance of fraud, censorship or third-party
             interference with your data. More broadly, we value human's attention time and
             intend to build a <a href='http://en.slow-media.net/manifesto' target='_new'>slow media</a> experience that's enriching and sustainable.
-        </div>
-        <div>
-            <b>Don’t be a stranger.</b>
         </div>
         <div>
             That's a long journey, and we're just at the beginning. If this resonates with you,

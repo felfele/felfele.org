@@ -11,8 +11,8 @@ export const Button = ({ icon, label, target, border }) => {
                     alignItems: 'center',
                     wrap: 'no-wrap',
                     border: border ? 'solid 1px rgba(98, 0, 234, 0.25)' : '',
-                    padding: 12,
-                    margin: 8,
+                    padding: border ? 12 : 0,
+                    margin: 6,
                     fontSize: 16,
                 }}
             >
@@ -20,20 +20,5 @@ export const Button = ({ icon, label, target, border }) => {
                 {label}
             </div>
         </Link>
-    );
-}
-
-export const ButtonWithBorder = ({ icon, label, target }) => {
-    return (
-        <div
-            style={{
-                border: 'solid 1px rgba(98, 0, 234, 0.25)',
-                padding: 12,
-                margin: 8,
-                lineHeight: 0,
-                fontSize: 16,
-            }}
-        >
-        </div>
     );
 }

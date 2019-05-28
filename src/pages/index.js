@@ -74,6 +74,7 @@ class SiteIndex extends React.Component {
                     justifyContent: 'center',
                     paddingTop: 40,
                     paddingBottom: 40,
+                    margin: -8,
                 }}>
                     <Button
                         target='/app'
@@ -96,7 +97,7 @@ class SiteIndex extends React.Component {
 const MainSection = ({ title, body }) => {
     return (
         <div>
-            <h1 style={{ fontSize: 54 }}>{title}</h1>
+            <h1 style={{ fontSize: 48 }}>{title}</h1>
             <p style={{ fontSize: 22 }}>{body}</p>
         </div>
     );

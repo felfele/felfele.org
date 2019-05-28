@@ -60,7 +60,7 @@ class App extends React.Component {
                         flexDirection: 'column',
                         flex: 1,
                     }}>
-                        <TaglineContent/>
+                        <TaglineContent fontSize={this.state.width > WIDTH_THRESHOLD ? 54 : 48}/>
                         <ButtonGroup/>
                         <IntroTextContent/>
                     </div>
@@ -130,8 +130,8 @@ class App extends React.Component {
 
 export default App;
 
-const TaglineContent = () => (
-    <h1 style={{ fontSize: 54 }}>
+const TaglineContent = ({ fontSize }) => (
+    <h1 style={{ fontSize }}>
         Nonprofit.<br/>
         Slow media.<br/>
         Decentralized.

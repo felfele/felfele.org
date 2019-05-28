@@ -44,6 +44,7 @@ class SiteIndex extends React.Component {
                     <meta name="description" content={siteDescription} />
                 </Helmet>
                 <MainSection
+                    fontSize={this.state.width > WIDTH_THRESHOLD ? 54 : 48}
                     title='Socialize without compromise'
                     body="We build services that empower anyone to communicate without being exploited — services that respect people's time, privacy and rights over their content."
                 />
@@ -94,10 +95,10 @@ class SiteIndex extends React.Component {
     }
 }
 
-const MainSection = ({ title, body }) => {
+const MainSection = ({ title, body, fontSize }) => {
     return (
         <div>
-            <h1 style={{ fontSize: 48 }}>{title}</h1>
+            <h1 style={{ fontSize }}>{title}</h1>
             <p style={{ fontSize: 22 }}>{body}</p>
         </div>
     );

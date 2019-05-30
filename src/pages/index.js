@@ -58,7 +58,7 @@ class SiteIndex extends React.Component {
                 }}>
                     <Section
                         title='People first'
-                        body='We focus on services that put people in control and empower free communication. We defend human attention adn privacy, not profit.'
+                        body='We focus on services that put people in control and empower free communication. We defend human attention and privacy, not profit.'
                     />
                     <Section
                         title='Self-sustaining'

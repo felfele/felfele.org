@@ -54,7 +54,7 @@ export class Navbar extends Component {
                             paddingRight: 10,
                         }}
                     >
-                        <Button icon={Phone} target='/app' label='Get the app'/>
+                        <Button icon={Phone} target='https://app.felfele.org' label='Get the app'/>
                         <Button target='/donate' label='Donate'/>
                     </div>
                 </div>
@@ -64,13 +64,3 @@ export class Navbar extends Component {
 }
 
 export default Navbar;
-
-const MenuLink = props => {
-    return (
-        <Link
-            {...props}
-            style={{
-            }}
-        />
-    );
-};

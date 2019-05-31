@@ -147,13 +147,13 @@ const ButtonGroup = () => (
         paddingBottom: 20,
     }}>
         <Button
-            target='/app'
+            target={APP_STORE_LINK}
             icon={Apple}
             label='Get for iOS'
             border={true}
         />
         <Button
-            target='/donate'
+            target={PLAY_STORE_LINK}
             icon={Android}
             label='Get for Android'
             border={true}

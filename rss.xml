@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Felfele Foundation]]></title><description><![CDATA[Official website of the Felfele Foundation]]></description><link>https://felfele.org</link><generator>RSS for Node</generator><lastBuildDate>Fri, 31 May 2019 10:13:02 GMT</lastBuildDate><item><title><![CDATA[Releasing the Alpha]]></title><description><![CDATA[We are proud to announce that the Felfele alpha release is  out ! It was quite a journey, with many risks, and a long to-do list: setting up…]]></description><link>https://felfele.org/blog/alpha/alpha/</link><guid isPermaLink="false">https://felfele.org/blog/alpha/alpha/</guid><pubDate>Fri, 10 May 2019 07:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We are proud to announce that the Felfele alpha release is &lt;a href=&quot;/app&quot;&gt;out&lt;/a&gt;! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Felfele Foundation]]></title><description><![CDATA[Official website of the Felfele Foundation]]></description><link>https://felfele.org</link><generator>RSS for Node</generator><lastBuildDate>Mon, 03 Jun 2019 11:33:09 GMT</lastBuildDate><item><title><![CDATA[Felfele ❤️ Swarm Orange Summit]]></title><description><![CDATA[We are back from Swarm Orange Summit Madrid edition, where we presented about how we use Ethereum Swarm to build a fully decentralized…]]></description><link>https://felfele.org/blog/sos/sos/</link><guid isPermaLink="false">https://felfele.org/blog/sos/sos/</guid><pubDate>Mon, 03 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;We are back from Swarm Orange Summit Madrid edition, where we presented about how we use Ethereum Swarm to build a fully decentralized, mobile-first social application.&lt;/p&gt;
+&lt;p&gt;Swarm Orange Summit is a yearly gathering where the core Swarm team and members of the community present about their work, and discuss the possible futures of the technology. If you are interested in decentralization, and you haven’t heard about Swarm yet, you should head to their &lt;a href=&quot;https://ethswarm.org&quot;&gt;website&lt;/a&gt; to learn about an incentivised p2p storage network! This year Epic Labs hosted the event in their Madrid office. Kudos to them for making it happen!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-01800.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAXoihu454z//xAAZEAACAwEAAAAAAAAAAAAAAAABAgAREgP/2gAIAQEAAQUCcR9CYhYlmtw3V7//xAAWEQEBAQAAAAAAAAAAAAAAAAAAISL/2gAIAQMBAT8BrT//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAhEh/9oACAECAQE/AcXF/8QAGhAAAgIDAAAAAAAAAAAAAAAAABABITFhcf/aAAgBAQAGPwKjK4Rpf//EABoQAQEBAAMBAAAAAAAAAAAAAAERACExQVH/2gAIAQEAAT8hClcuhICs6zPuAswk2Kw2fN//2gAMAwEAAgADAAAAEADP/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAERIXH/2gAIAQMBAT8QhaaMn//EABcRAAMBAAAAAAAAAAAAAAAAAAABIRH/2gAIAQIBAT8QdQxP/8QAGhABAQEBAQEBAAAAAAAAAAAAAREAITFRcf/aAAgBAQABPxAEzpKfMGQIrV5kUhn7qoEM87XIVgt9Vy2VqUhZv//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;attila present&quot;
+        title=&quot;&quot;
+        src=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-f8fb9.jpg&quot;
+        srcset=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-e8976.jpg 148w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-63df2.jpg 295w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-f8fb9.jpg 590w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-85e3d.jpg 885w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-d1924.jpg 1180w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-9452e.jpg 1770w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-01800.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;From the Felfele team Attila Gazso took the stage to &lt;a href=&quot;https://prezi.com/qhpiczkatr-r&quot;&gt;present&lt;/a&gt; about the current stage of our project. He talked about the motivation for building social network and the challanges we face. He introduced to the community the social APIs we build, which enables any application developer to interface with the social network. To demonstrate it, we built a &lt;a href=&quot;https://github.com/felfele/felfele/tree/master/src/cli&quot;&gt;command line tool&lt;/a&gt; to post updates and query data.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-b2a60.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAXBrHGBrmj//xAAYEAEBAQEBAAAAAAAAAAAAAAABAgADEf/aAAgBAQABBQKRN1IWp8dXOV83/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BV//EABkQAAIDAQAAAAAAAAAAAAAAAAARARAhMv/aAAgBAQAGPwJkytOadf/EABoQAQADAQEBAAAAAAAAAAAAAAEAETEhUWH/2gAIAQEAAT8hEsJRkphV6Tk1hyb4PxiM2vZ//9oADAMBAAIAAwAAABAo/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxBH/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qo//EAB0QAQEAAQQDAAAAAAAAAAAAAAERACExYZFxobH/2gAIAQEAAT8QlVpWEeRMBjusjfnBbpTHqkK+c9RaPmDi2IIFnWf/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;mighty wallet&quot;
+        title=&quot;&quot;
+        src=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-f8fb9.jpg&quot;
+        srcset=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-e8976.jpg 148w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-63df2.jpg 295w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-f8fb9.jpg 590w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-85e3d.jpg 885w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-d1924.jpg 1180w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-9452e.jpg 1770w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-b2a60.jpg 3264w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We hosted a lottery during the summit, where anyone could apply by &lt;a href=&quot;https://felfele.org/donate&quot;&gt;donating&lt;/a&gt; to the foundation. It was an exceptional present: a Mighty Wallet hand-drawn by our director of design, David. It’s a one of a kind item, and the happy winner was Adam Schmideg, from the Ethereum Foundation, congrats!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-99c36.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAIDAQQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgMB/9oADAMBAAIQAxAAAAFFumapImpTTFB1DVJr/8QAHRAAAgIBBQAAAAAAAAAAAAAAAQIEERIAEBMjMf/aAAgBAQABBQIocmQg41qT1uQKSyGewDSx649k8//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BQpp//8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAQ/9oACAECAQE/AWcS/8QAHRAAAgEEAwAAAAAAAAAAAAAAABEBAhAhMRIgYf/aAAgBAQAGPwLjOyn222RU2TkyLr//xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUEQcaGx/9oACAEBAAE/IQqg23DxduOo30zF7HfyCzJ+T3RLIyYyDuYd6XbHXl//2gAMAwEAAgADAAAAEADEvf/EABgRAQADAQAAAAAAAAAAAAAAAAEAEBEh/9oACAEDAQE/EBrkHKEE/8QAGREAAgMBAAAAAAAAAAAAAAAAAAEQESEx/9oACAECAQE/EMHUIbs//8QAHBABAAMBAAMBAAAAAAAAAAAAAQARIUExUZGB/9oACAEBAAE/EKOEfhdQnKFfk1W+o6tfRfUK0YsbcW2KzcFD1uywFgYPyX1ULFj2IB+KmiVMiwiLjjmWbAVzs//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;wallet winner&quot;
+        title=&quot;&quot;
+        src=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-f8fb9.jpg&quot;
+        srcset=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-e8976.jpg 148w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-63df2.jpg 295w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-f8fb9.jpg 590w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-85e3d.jpg 885w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-d1924.jpg 1180w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-9452e.jpg 1770w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-99c36.jpg 3024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Releasing the Alpha]]></title><description><![CDATA[We are proud to announce that the Felfele alpha release is  out ! It was quite a journey, with many risks, and a long to-do list: setting up…]]></description><link>https://felfele.org/blog/alpha/alpha/</link><guid isPermaLink="false">https://felfele.org/blog/alpha/alpha/</guid><pubDate>Fri, 10 May 2019 07:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We are proud to announce that the Felfele alpha release is &lt;a href=&quot;/app&quot;&gt;out&lt;/a&gt;! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;

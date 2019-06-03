@@ -17,6 +17,6 @@ From the Felfele team Attila Gazso took the stage to [present](https://prezi.com
 
 ![](./mighty-wallet.jpg)
 
-We hosted a lottery during the summit, where anyone could apply by [donating](https://felfele.org/donate) to the foundation. It was an exceptional present: a Mighty Wallet hand-drawn by our director of design, David. It's a one of a kind item, and the happy winner was Adam Schmideg, from the Ethereum Foundation, congrats!
+We hosted a lottery during the summit, where anyone could apply by [donating](https://felfele.org/donate) to the foundation. It was an exceptional present: a Mighty Wallet hand-drawn by our director of design, David. It's a one of a kind item, and the happy winner was [Adam Schmideg](https://twitter.com/terepauto), from the Ethereum Foundation, congrats!
 
 ![](./wallet-winner.jpg)

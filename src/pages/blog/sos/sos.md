@@ -5,6 +5,7 @@ description: "We are back from the Swarm Orange Summit Madrid edition, where we 
 path: '/blog/sos/'
 author: vujevits
 type: post
+featuredImage: './attila-present.jpg'
 ---
 
 We are back from Swarm Orange Summit Madrid edition, where we presented about how we use Ethereum Swarm to build a fully decentralized, mobile-first social application.

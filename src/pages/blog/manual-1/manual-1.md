@@ -5,6 +5,7 @@ description: ""
 path: '/blog/manual-1/'
 author: vujevits
 type: post
+featuredImage: './screenshot-mobile.png'
 ---
 
 

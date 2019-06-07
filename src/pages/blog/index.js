@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import Img from 'gatsby-image';
 
 import Layout from '../../components/Layout';
 import { rhythm } from '../../utils/typography';
@@ -40,6 +41,15 @@ class BlogIndex extends React.Component {
                                     {title}
                                 </Link>
                             </h3>
+                            {node.frontmatter.featuredImage != null &&
+                            <div style={{
+                                maxWidth: 500,
+                                paddingTop: 20,
+                                paddingBottom: 20,
+                            }}>
+                                <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                            </div>
+                            }
                             <small>{node.frontmatter.date}</small>
                             <p
                                 dangerouslySetInnerHTML={{
@@ -79,6 +89,13 @@ export const query = graphql`
                         title
                         path
                         type
+                        featuredImage {
+                            childImageSharp {
+                                fluid(maxWidth: 500) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                 }
             }

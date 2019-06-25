@@ -5,7 +5,6 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import { teamData } from './../data/team';
-import { rhythm } from '../utils/typography';
 
 class Team extends React.Component {
     render() {
@@ -26,10 +25,10 @@ class Team extends React.Component {
                     display: 'flex',
                     flexDirection: 'row',
                     flexWrap: 'wrap',
-                    justifyContent: 'space-between',
+                    justifyContent: 'center',
                 }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <h2>Team</h2>
+                        <h1 style={{ fontFamily: 'YoungSerif' }}>Team</h1>
                         <br />
                         <div style={{
                             display: 'flex',
@@ -61,15 +60,15 @@ const Avatar = ({ data }) => {
         }}>
             <img
                 style={{
-                    width: rhythm(4),
-                    height: rhythm(4),
-                    borderRadius: rhythm(2),
+                    width: 112,
+                    height: 112,
+                    borderRadius: 66,
                 }}
                 src={data.image}
             />
             {Object.keys(data.data).map(key => {
                 if (data.data[key]) {
-                    return <p style={{ marginBottom: '0.5rem' }}>{data.data[key]}</p>;
+                    return <p style={{ marginBottom: 0 }}>{data.data[key]}</p>;
                 }
             })}
         </div>

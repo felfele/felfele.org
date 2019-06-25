@@ -38,10 +38,7 @@
         "react-typography": "^0.16.13",
         "react-vertical-timeline-component": "^2.3.1",
         "typeface-nunito-sans": "0.0.72",
-        "typeface-youngserif": "0.0.0",
-        "typography": "^0.16.17",
-        "typography-theme-github": "^0.15.10",
-        "typography-theme-wordpress-2016": "^0.15.10"
+        "typeface-youngserif": "0.0.0"
     },
     "devDependencies": {
         "eslint": "^4.19.1",

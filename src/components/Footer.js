@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
-import { rhythm } from '../utils/typography';
 import { WIDTH_THRESHOLD } from './Navbar';
 import Logo from '../assets/logo.svg';
+import { UniversalLink } from './Button';
+import { APP_STORE_LINK, PLAY_STORE_LINK } from '../pages/app';
 
 export class Footer extends Component {
     constructor(props) {
@@ -32,11 +32,11 @@ export class Footer extends Component {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: this.state.width > WIDTH_THRESHOLD ? '' : 'center',
-                fontSize: 10,
+                fontSize: 12,
                 paddingTop: 40,
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                maxWidth: rhythm(36),
+                maxWidth: 1200,
             }}>
                 <div style={{
                     display: 'flex',
@@ -47,75 +47,79 @@ export class Footer extends Component {
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>PRODUCT</div>
                         <div style={styles.sectionContent}>
-                            <Link to="/donate">
+                            <SectionLink link={APP_STORE_LINK} target='_new'>
                                 Download for iOS
-                            </Link>
-                            <a href='https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md' target='_new'>
+                            </SectionLink>
+                            <SectionLink link={PLAY_STORE_LINK} target='_new'>
                                 Download for Android
-                            </a>
-                            <a href={'mailto:support@felfele.com'}>Support</a>
+                            </SectionLink>
+                            <SectionLink link={'mailto:support@felfele.com'}>Support</SectionLink>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>CONTRIBUTE</div>
                         <div style={styles.sectionContent}>
-                            <Link to="/donate">
+                            <SectionLink link="/donate">
                                 Make a donation
-                            </Link>
-                            <Link to="/volunteer">
+                            </SectionLink>
+                            <SectionLink link="/volunteer">
                                 Volunteer
-                            </Link>
+                            </SectionLink>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>DEVELOPERS</div>
                         <div style={styles.sectionContent}>
-                            <a href='https://github.com/felfele' target='_new'>
+                            <SectionLink link='https://github.com/felfele' target='_new'>
                                 Github
-                            </a>
-                            <a href='https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md' target='_new'>
+                            </SectionLink>
+                            <SectionLink link='https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md' target='_new'>
                                 Guidelines
-                            </a>
-                            <a href='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
+                            </SectionLink>
+                            <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
                                 Code of Conduct
-                            </a>
-                            <a href='https://gitter.im/felfele/purple-lounge' target='_new'>
+                            </SectionLink>
+                            <SectionLink link='https://gitter.im/felfele/purple-lounge' target='_new'>
                                 Gitter
-                            </a>
+                            </SectionLink>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>ABOUT US</div>
                         <div style={styles.sectionContent}>
-                            <Link to="/">
+                            <SectionLink link="/contact">
+                                Contact
+                            </SectionLink>
+                            <SectionLink link="/">
                                 Mission
-                            </Link>
-                            <Link to="/team">
+                            </SectionLink>
+                            <SectionLink link="/team">
                                 Core team
-                            </Link>
-                            <Link to="/blog">
+                            </SectionLink>
+                            <SectionLink link="/blog">
                                 Blog
-                            </Link>
+                            </SectionLink>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>LEGAL</div>
                         <div style={styles.sectionContent}>
-                            <a href="https://ariregister.rik.ee/index?lang=eng">
+                            <SectionLink link="https://ariregister.rik.ee/index?lang=eng">
                                 Public Records
-                            </a>
-                            <Link to="/privacy">
+                            </SectionLink>
+                            <SectionLink link="/privacy">
                                 Privacy Policy
-                            </Link>
+                            </SectionLink>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
                         <div style={{
                             width: this.state.width > WIDTH_THRESHOLD ? 200 : 100,
+                            marginTop: this.state.width > WIDTH_THRESHOLD ? 0 : 20,
                             display: 'flex',
-                            justifyContent: 'flex-end'
+                            justifyContent: this.state.width > WIDTH_THRESHOLD ? 'flex-end' : 'center',
                         }}>
-                            <img src={Logo} style={{ marginBottom: 0, fill: '#6200EA' }}/>
+                            <img width={23} src={Logo} style={{ marginBottom: 0, fill: '#6200EA' }}/>
                         </div>
                     </div>
                 </div>
@@ -126,17 +130,20 @@ export class Footer extends Component {
 
 export default Footer;
 
+const SectionLink = (props) => {
+    const { style, ...rest } = props;
+    return (
+        <UniversalLink
+            style={{
+                fontWeight: 600,
+                ...style,
+            }}
+            {...rest}
+        />
+    );
+};
+
 const styles = {
-    rootContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        fontSize: 10,
-        paddingTop: 40,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        maxWidth: rhythm(36),
-    },
     sectionContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -145,7 +152,9 @@ const styles = {
     sectionContent: {
         display: 'flex',
         flexDirection: 'column',
-        fontWeight: 600
+        fontWeight: 600,
+        fontSize: 14,
+        lineHeight: 1.5,
     },
     sectionTitle: {
         paddingBottom: 5,

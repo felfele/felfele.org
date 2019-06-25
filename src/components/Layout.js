@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { rhythm } from '../utils/typography';
+import '../styles/styles.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Ruler } from './Ruler';
@@ -12,8 +12,11 @@ class Layout extends React.Component {
         const defaultStyle = {
             marginLeft: 'auto',
             marginRight: 'auto',
-            padding: 10,
-            maxWidth: rhythm(36),
+            maxWidth: 1200,
+            fontFamily: 'Nunito Sans',
+            color: '#6200EA',
+            paddingRight: 10,
+            paddingLeft: 10,
         };
 
         const finalStyle = {
@@ -21,7 +24,7 @@ class Layout extends React.Component {
             ...importedStyle,
         };
         return (
-            <div>
+            <div style={{ margin: -8 }}>
                 <div style={finalStyle}><Navbar/></div>
                 <Ruler/>
                 <div style={finalStyle}>

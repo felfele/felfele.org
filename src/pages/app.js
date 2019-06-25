@@ -9,8 +9,8 @@ import { Button } from '../components/Button';
 import Android from './../assets/android.svg';
 import Apple from './../assets/apple.svg';
 
-const APP_STORE_LINK = 'https://testflight.apple.com/join/hWiCVkWz';
-const PLAY_STORE_LINK = 'https://play.google.com/store/apps/details?id=org.felfele.mobile';
+export const APP_STORE_LINK = 'https://testflight.apple.com/join/hWiCVkWz';
+export const PLAY_STORE_LINK = 'https://play.google.com/store/apps/details?id=org.felfele.mobile';
 
 const WIDTH_THRESHOLD = 1100;
 
@@ -60,7 +60,7 @@ class App extends React.Component {
                         flexDirection: 'column',
                         flex: 1,
                     }}>
-                        <TaglineContent fontSize={this.state.width > WIDTH_THRESHOLD ? 54 : 48}/>
+                        <TaglineContent fontSize={76}/>
                         <ButtonGroup/>
                         <IntroTextContent/>
                     </div>
@@ -103,7 +103,7 @@ class App extends React.Component {
                                     fontSize: 40,
                                     lineHeight: 1.07,
                             }}>
-                                <TaglineContent/>
+                                <TaglineContent fontSize={48}/>
                             </div>
                             <div style={{
                                         width: 229,
@@ -131,7 +131,13 @@ class App extends React.Component {
 export default App;
 
 const TaglineContent = ({ fontSize }) => (
-    <h1 style={{ fontSize }}>
+    <h1
+        style={{
+            fontSize: fontSize,
+            fontFamily: 'YoungSerif',
+            lineHeight: 1.18,
+        }}
+    >
         Nonprofit.<br/>
         Slow media.<br/>
         Decentralized.
@@ -147,13 +153,13 @@ const ButtonGroup = () => (
         paddingBottom: 20,
     }}>
         <Button
-            target={APP_STORE_LINK}
+            link={APP_STORE_LINK}
             icon={Apple}
             label='Get for iOS'
             border={true}
         />
         <Button
-            target={PLAY_STORE_LINK}
+            link={PLAY_STORE_LINK}
             icon={Android}
             label='Get for Android'
             border={true}
@@ -163,12 +169,19 @@ const ButtonGroup = () => (
 
 const IntroTextContent = () => (
     <React.Fragment>
-        <h3>
+        <h3
+            style={{
+                fontFamily: 'YoungSerif',
+                fontSize: 27,
+            }}
+        >
             Social media that doesn't suck.
         </h3>
-        <div style={{
-            paddingBottom: 50,
-        }}>
+        <div
+            style={{
+                paddingBottom: 50,
+            }}
+        >
             As a nonprofit, we have no incentive to sell your data. Guaranteeing your
             privacy and rights over your content is at the core of our <a href='/'>foundation</a>. Felfele
             relies on a decentralized and fully encrypted content distribution platform called

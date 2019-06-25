@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Layout from '../components/Layout';
-import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -22,23 +21,11 @@ class BlogPostTemplate extends React.Component {
                 />
                 <Link to="/blog">&larr; Blog</Link>
                 <h1>{post.frontmatter.title}</h1>
-                <br />
-                <p
-                    style={{
-                        ...scale(-1 / 5),
-                        display: 'block',
-                        marginBottom: rhythm(1),
-                        marginTop: rhythm(-1),
-                    }}
-                >
+                <p>
                     {post.frontmatter.date}
                 </p>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <hr
-                    style={{
-                        marginBottom: rhythm(1),
-                    }}
-                />
+                <hr/>
                 <ul
                     style={{
                         display: 'flex',

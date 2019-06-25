@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
 
 import Layout from '../../components/Layout';
-import { rhythm } from '../../utils/typography';
 
 class BlogIndex extends React.Component {
     render() {
@@ -29,11 +28,7 @@ class BlogIndex extends React.Component {
                         get(node, 'frontmatter.title') || node.frontmatter.path;
                     return (
                         <div key={node.frontmatter.path}>
-                            <h3
-                                style={{
-                                    marginBottom: rhythm(1 / 4),
-                                }}
-                            >
+                            <h3>
                                 <Link
                                     style={{ boxShadow: 'none' }}
                                     to={node.frontmatter.path}

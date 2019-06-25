@@ -20,7 +20,6 @@ export class OverlayMenu extends React.Component {
     render() {
         const linkStyle = {
             color: 'white',
-            textDecoration: 'none',
             fontSize: '2.75rem',
         };
         return (

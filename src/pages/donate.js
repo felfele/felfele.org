@@ -21,28 +21,44 @@ class Donate extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Donate | ${siteTitle}`}
                 />
-                <h2>Donate</h2>
-                <p>
-                    We are a registered non-profit organization pledged to enable people to
-                    communicate freely in the digital era, without having to worry about their privacy,
-                    and the potential loss of their rights over the content they produce.
-                    The cost of maintaining the infrastructure to operate such services decreased to
-                    levels that literally every little bit counts. Donating $10 can be sufficient for securing
-                    user data for 1000 people.
-                </p>
                 <div style={{
                     display: 'flex',
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                }}>
+                    flexDirection: 'column',
+                    paddingBottom: 50,
+                    alignItems: 'center',
+                    textAlign: 'center',
+                }}
+                >
+
+                    <h1 style={{
+                        fontSize: 76,
+                        fontFamily: 'YoungSerif',
+                        marginBottom: 0,
+                    }}
+                    >
+                        Make a donation
+                    </h1>
+                    <p style={{
+                        fontSize: 27,
+                        fontWeight: 'normal',
+                        marginTop: 0,
+                    }}>
+                        We are proudly nonprofit and we stand for uncompromised social media.
+                        We build Felfele because we care and it’s thanks to people like you that we can continue developing it.
+                    </p>
                     <div>
-                        <h3>Bank Transfer</h3>
+                        <h3 style={{
+                            fontFamily: 'YoungSerif',
+                            fontSize: 27,
+                            marginBottom: 0,
+                        }}>
+                            Bank Transfer
+                        </h3>
                         <br />
                         {Object.keys(bankingData).map(key => {
                             if (bankingData[key]) {
                                 return (
-                                    <p>
+                                    <p style={{ fontSize: 18, margin: 0 }}>
                                         <b>{key}: </b>
                                         <r>{bankingData[key]}</r>
                                     </p>
@@ -51,12 +67,18 @@ class Donate extends React.Component {
                         })}
                     </div>
                     <div>
-                        <h3>Ethereum Transaction</h3>
+                    <h3 style={{
+                            fontFamily: 'YoungSerif',
+                            fontSize: 27,
+                            marginBottom: 0,
+                        }}>
+                            Ethereum Transaction
+                        </h3>
                         <br />
                         {Object.keys(ethereumData).map(key => {
                             if (ethereumData[key]) {
                                 return (
-                                    <p>
+                                    <p style={{ fontSize: 18, margin: 0 }}>
                                         <b>{key}: </b>
                                         <r>{ethereumData[key]}</r>
                                     </p>

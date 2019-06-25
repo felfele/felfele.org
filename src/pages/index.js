@@ -44,7 +44,7 @@ class SiteIndex extends React.Component {
                     <meta name="description" content={siteDescription} />
                 </Helmet>
                 <MainSection
-                    fontSize={this.state.width > WIDTH_THRESHOLD ? 54 : 48}
+                    fontSize={this.state.width > WIDTH_THRESHOLD ? 76 : 48}
                     title='Socialize without compromise'
                     body="We build services that empower anyone to communicate without being exploited — services that respect people's time, privacy and rights over their content."
                 />
@@ -53,7 +53,7 @@ class SiteIndex extends React.Component {
                     display: 'flex',
                     flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
                     justifyContent: 'space-between',
-                    alignItems: 'center',
+                    alignItems:  this.state.width > WIDTH_THRESHOLD ? 'normal' : 'center',
 
                 }}>
                     <Section
@@ -75,16 +75,15 @@ class SiteIndex extends React.Component {
                     justifyContent: 'center',
                     paddingTop: 40,
                     paddingBottom: 40,
-                    margin: -8,
                 }}>
                     <Button
-                        target='/app'
+                        link='/app'
                         icon={Phone}
                         label='Get the app'
                         border={true}
                     />
                     <Button
-                        target='/donate'
+                        link='/donate'
                         icon={Heart}
                         label='Make a donation'
                         border={true}
@@ -97,9 +96,32 @@ class SiteIndex extends React.Component {
 
 const MainSection = ({ title, body, fontSize }) => {
     return (
-        <div>
-            <h1 style={{ fontSize }}>{title}</h1>
-            <p style={{ fontSize: 22 }}>{body}</p>
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+            }}
+        >
+            <h1
+                style={{
+                    fontSize: fontSize,
+                    fontFamily: 'YoungSerif',
+                    textAlign: 'center',
+                    marginBottom: 0,
+                }}
+            >
+                {title}
+            </h1>
+            <p
+                style={{
+                    fontSize: 27,
+                    marginTop: 0,
+                    textAlign: 'center'
+                }}
+            >
+                {body}
+            </p>
         </div>
     );
 }
@@ -110,9 +132,18 @@ const Section = ({ title, body }) => {
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            maxWidth: 300,
+            maxWidth: 370,
         }}>
-            <h3 style={{ lineHeight: 0 }}>{title}</h3>
+            <h3
+                style={{
+                    lineHeight: 0,
+                    fontSize: 27,
+                    fontFamily: 'YoungSerif',
+                    marginBottom: 12,
+                }}
+            >
+                {title}
+            </h3>
             <p>{body}</p>
         </div>
     );

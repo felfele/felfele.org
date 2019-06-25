@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 // import font file
 import 'typeface-nunito-sans';
 import 'typeface-youngserif';
-import { rhythm } from '../utils/typography';
 
 import Logo from './../assets/Felfele_Horizontal.svg'
 import Phone from './../assets/baseline-smartphone-24-px.svg'
@@ -20,7 +19,6 @@ export class Navbar extends Component {
                     alignItems: 'center',
                     marginLeft: 'auto',
                     marginRight: 'auto',
-                    maxWidth: rhythm(36),
                 }}
             >
                 <div
@@ -30,8 +28,7 @@ export class Navbar extends Component {
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        height: 80,
-                        maxWidth: rhythm(40),
+                        height: 90,
                     }}
                 >
                     <Link
@@ -54,8 +51,21 @@ export class Navbar extends Component {
                             paddingRight: 10,
                         }}
                     >
-                        <Button icon={Phone} target='https://app.felfele.org' label='Get the app'/>
-                        <Button target='/donate' label='Donate'/>
+                        <Button
+                            icon={Phone}
+                            link='https://app.felfele.org'
+                            label='Get the app'
+                            style={{
+                                fontWeight: 600,
+                            }}
+                        />
+                        <Button
+                            link='/donate'
+                            label='Donate'
+                            style={{
+                                fontWeight: 600,
+                            }}
+                        />
                     </div>
                 </div>
             </div>

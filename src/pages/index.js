@@ -62,7 +62,7 @@ class SiteIndex extends React.Component {
                     />
                     <Section
                         title='Self-sustaining'
-                        body='We use peer-to-peer storage and incentivize resource sharing to make structural consts trivial. No one has to trade their personal data.'
+                        body='We use peer-to-peer storage and incentivize resource sharing to make structural costs trivial. No one has to trade their personal data.'
                     />
                     <Section
                         title='Future-proof'

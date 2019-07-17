@@ -14,6 +14,8 @@ Last week I participated three days at the Swarm Hack Week 2019 at Lake Balaton,
 
 Of course we were brainstorming and discussing new, sometimes crazy ideas about this decentralized world. These all are my impressions and it's not what the Swarm team is committed to build. Still I wanted to write down some of these ideas before I forget them, knowing that some of them are not really mature or feasible at the moment, but maybe this might inspire someone.
 
+![](./swarmteam.jpeg)
+
 ### BZZ Nonce One Time Protocol
 
 Sharing between different devices, platforms and app can be difficult, because everything requires some kind of pairing process (proof of mutual trust) before sharing and that generates friction. At the minimum you have to exchange phone numbers, then agree on an app that you both use, possibly you have to download that app, add someone as friend and after that you can send photos.

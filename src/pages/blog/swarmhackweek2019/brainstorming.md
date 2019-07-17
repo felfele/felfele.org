@@ -5,10 +5,8 @@ description: "Last week we were brainstorming at the Swarm Hack Week 2019 at Lak
 path: '/blog/swarmhackweek2019/'
 author: agazso
 type: post
-featuredImage: './swarm-team.jpeg'
+featuredImage: './swarmteam.jpeg'
 ---
-
-## Swarm Hack Week Brainstorming 2019
 
 Last week I participated three days at the Swarm Hack Week 2019 at Lake Balaton, Hungary. My goal was to do discovery work on the [mobile build of the Swarm codebase](https://github.com/ethersphere/user-stories/issues/27) for the Felfele app. I met new people from the Swarm team, learned about their current roadmap to 1.0. It was great to see the focus on implementing incentivisation because that means Swarm is becoming production ready and people can start developing new applications with novel business models on the platform.
 

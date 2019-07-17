@@ -20,11 +20,26 @@ class BlogPostTemplate extends React.Component {
                     title={`${post.frontmatter.title} | ${siteTitle}`}
                 />
                 <Link to="/blog">&larr; Blog</Link>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                    }}
+                >
                 <h1>{post.frontmatter.title}</h1>
                 <p>
                     {post.frontmatter.date}
                 </p>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        maxWidth: 800,
+                    }}
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                />
                 <hr/>
                 <ul
                     style={{
@@ -50,6 +65,7 @@ class BlogPostTemplate extends React.Component {
                         )}
                     </li>
                 </ul>
+                </div>
             </Layout>
         );
     }

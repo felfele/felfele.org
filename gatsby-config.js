@@ -21,8 +21,10 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 590,
+                            maxWidth: 500,
+                            wrapperStyle: 'width: 500px;',
                         },
+
                     },
                     {
                         resolve: `gatsby-remark-responsive-iframe`,
@@ -34,6 +36,7 @@ module.exports = {
                     'gatsby-remark-prismjs',
                     'gatsby-remark-copy-linked-files',
                     'gatsby-remark-smartypants',
+                    '@weknow/gatsby-remark-twitter',
                 ],
             },
         },

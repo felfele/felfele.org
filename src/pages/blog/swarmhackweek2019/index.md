@@ -61,3 +61,7 @@ Then it would be possible to do many kind of conversions between different apps 
 ### Conclusion
 
 Some of this may seem far fetched as of now, but the possibilities can be seen already and we at Felfele really believes that the decentralized future is not only going to be more private and fair but at the same time it will be able to offer better user experience and control to the people as well. Let's buidl together!
+
+Continue the conversation on twitter
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here is our latest blogpost about what we could achieve with <a href="https://twitter.com/ethswarm?ref_src=twsrc%5Etfw">@ethswarm</a>! A recap of interesting discussions with <a href="https://twitter.com/zeligf?ref_src=twsrc%5Etfw">@zeligf</a> <a href="https://twitter.com/jssr?ref_src=twsrc%5Etfw">@jssr</a> and others, regarding a <a href="https://twitter.com/hashtag/decentralized?src=hash&amp;ref_src=twsrc%5Etfw">#decentralized</a> future.<a href="https://t.co/w2LKzFvzln">https://t.co/w2LKzFvzln</a></p>&mdash; felfele (@felfeleapp) <a href="https://twitter.com/felfeleapp/status/1151872129278906368?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote>

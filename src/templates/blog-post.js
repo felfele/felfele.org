@@ -27,44 +27,44 @@ class BlogPostTemplate extends React.Component {
                         flexDirection: 'column',
                     }}
                 >
-                <h1>{post.frontmatter.title}</h1>
-                <p>
-                    {post.frontmatter.date}
-                </p>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        maxWidth: 800,
-                    }}
-                    dangerouslySetInnerHTML={{ __html: post.html }}
-                />
-                <hr/>
-                <ul
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-between',
-                        listStyle: 'none',
-                        padding: 0,
-                    }}
-                >
-                    <li>
-                        {previous && (
-                            <Link to={previous.frontmatter.path} rel="prev">
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <Link to={next.frontmatter.path} rel="next">
-                                {next.frontmatter.title} →
-                            </Link>
-                        )}
-                    </li>
-                </ul>
+                    <h1>{post.frontmatter.title}</h1>
+                    <p>
+                        {post.frontmatter.date}
+                    </p>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            maxWidth: 800,
+                        }}
+                        dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
+                    <hr/>
+                    <ul
+                        style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            justifyContent: 'space-between',
+                            listStyle: 'none',
+                            padding: 0,
+                        }}
+                    >
+                        <li>
+                            {previous && (
+                                <Link to={previous.frontmatter.path} rel="prev">
+                                    ← {previous.frontmatter.title}
+                                </Link>
+                            )}
+                        </li>
+                        <li>
+                            {next && (
+                                <Link to={next.frontmatter.path} rel="next">
+                                    {next.frontmatter.title} →
+                                </Link>
+                            )}
+                        </li>
+                    </ul>
                 </div>
             </Layout>
         );

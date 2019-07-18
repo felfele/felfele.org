@@ -22,38 +22,69 @@ class BlogIndex extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Blog | ${siteTitle}`}
                 />
-                <h2>Blog</h2>
-                {posts.map(({ node }) => {
-                    const title =
-                        get(node, 'frontmatter.title') || node.frontmatter.path;
-                    return (
-                        <div key={node.frontmatter.path}>
-                            <h3>
-                                <Link
-                                    style={{ boxShadow: 'none' }}
-                                    to={node.frontmatter.path}
-                                >
-                                    {title}
-                                </Link>
-                            </h3>
-                            {node.frontmatter.featuredImage != null &&
-                            <div style={{
-                                maxWidth: 500,
-                                paddingTop: 20,
-                                paddingBottom: 20,
-                            }}>
-                                <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid}/>
-                            </div>
-                            }
-                            <small>{node.frontmatter.date}</small>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: node.excerpt,
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <h1
+                        style={{
+                            fontSize: 76,
+                            fontFamily: 'YoungSerif',
+                            marginBottom: 0,
+                        }}
+                    >
+                        Blog
+                    </h1>
+                    {posts.map(({ node }) => {
+                        const title =
+                            get(node, 'frontmatter.title') || node.frontmatter.path;
+                        return (
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    flexDirection: 'column',
+                                    maxWidth: 800,
                                 }}
-                            />
-                        </div>
-                    );
-                })}
+                                key={node.frontmatter.path}
+                            >
+                                <h3
+                                    style={{
+                                        fontFamily: 'YoungSerif',
+                                        fontSize: 27,
+                                        marginBottom: 0,
+                                    }}
+                                >
+                                    <Link
+                                        style={{ boxShadow: 'none' }}
+                                        to={node.frontmatter.path}
+                                    >
+                                        {title}
+                                    </Link>
+                                </h3>
+                                {node.frontmatter.featuredImage != null &&
+                                <div style={{
+                                    maxWidth: 500,
+                                    width: 500,
+                                    paddingTop: 20,
+                                    paddingBottom: 20,
+                                }}>
+                                    <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                                </div>
+                                }
+                                <small>{node.frontmatter.date}</small>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: node.excerpt,
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
             </Layout>
         );
     }

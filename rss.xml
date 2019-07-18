@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Felfele Foundation]]></title><description><![CDATA[Official website of the Felfele Foundation]]></description><link>https://felfele.org</link><generator>RSS for Node</generator><lastBuildDate>Thu, 18 Jul 2019 05:24:35 GMT</lastBuildDate><item><title><![CDATA[Swarm Hack Week 2019 Brainstorming]]></title><description><![CDATA[Last week I participated three days at the Swarm Hack Week 2019 at Lake Balaton, Hungary. My goal was to do discovery work on the  mobile…]]></description><link>https://felfele.org/blog/swarmhackweek2019/brainstorming/</link><guid isPermaLink="false">https://felfele.org/blog/swarmhackweek2019/brainstorming/</guid><pubDate>Wed, 17 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last week I participated three days at the Swarm Hack Week 2019 at Lake Balaton, Hungary. My goal was to do discovery work on the &lt;a href=&quot;https://github.com/ethersphere/user-stories/issues/27&quot;&gt;mobile build of the Swarm codebase&lt;/a&gt; for the Felfele app. I met new people from the Swarm team, learned about their current roadmap to 1.0. It was great to see the focus on implementing incentivisation because that means Swarm is becoming production ready and people can start developing new applications with novel business models on the platform.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Felfele Foundation]]></title><description><![CDATA[Official website of the Felfele Foundation]]></description><link>https://felfele.org</link><generator>RSS for Node</generator><lastBuildDate>Thu, 18 Jul 2019 15:00:23 GMT</lastBuildDate><item><title><![CDATA[Swarm Hack Week 2019 Brainstorming]]></title><description><![CDATA[Last week I participated three days at the Swarm Hack Week 2019 at Lake Balaton, Hungary. My goal was to do discovery work on the  mobile…]]></description><link>https://felfele.org/blog/swarmhackweek2019/</link><guid isPermaLink="false">https://felfele.org/blog/swarmhackweek2019/</guid><pubDate>Wed, 17 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last week I participated three days at the Swarm Hack Week 2019 at Lake Balaton, Hungary. My goal was to do discovery work on the &lt;a href=&quot;https://github.com/ethersphere/user-stories/issues/27&quot;&gt;mobile build of the Swarm codebase&lt;/a&gt; for the Felfele app. I met new people from the Swarm team, learned about their current roadmap to 1.0. It was great to see the focus on implementing incentivisation because that means Swarm is becoming production ready and people can start developing new applications with novel business models on the platform.&lt;/p&gt;
 &lt;p&gt;Of course we were brainstorming and discussing new, sometimes crazy ideas about this decentralized world. These all are my impressions and it’s not what the Swarm team is committed to build. Still I wanted to write down some of these ideas before I forget them, knowing that some of them are not really mature or feasible at the moment, but maybe this might inspire someone.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-cf7b5.jpeg&quot;
+    href=&quot;/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-c1ff7.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -11,7 +11,7 @@
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -22,14 +22,14 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;swarmteam&quot;
         title=&quot;&quot;
-        src=&quot;/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-c4f4f.jpeg&quot;
-        srcset=&quot;/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-c713e.jpeg 125w,
-/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-5f760.jpeg 250w,
-/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-c4f4f.jpeg 500w,
-/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-f2b95.jpeg 750w,
-/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-e9c15.jpeg 1000w,
-/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-735f7.jpeg 1500w,
-/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-cf7b5.jpeg 4096w&quot;
+        src=&quot;/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-b0c9e.jpeg&quot;
+        srcset=&quot;/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-f36df.jpeg 125w,
+/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-4a0b6.jpeg 250w,
+/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-b0c9e.jpeg 500w,
+/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-8a2fd.jpeg 750w,
+/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-219ba.jpeg 1000w,
+/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-35975.jpeg 1500w,
+/static/swarmteam-6842e2bddce30a03480cb6cad4d70f75-c1ff7.jpeg 4096w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;
@@ -63,17 +63,9 @@
 &lt;p&gt;Some of this may seem far fetched as of now, but the possibilities can be seen already and we at Felfele really believes that the decentralized future is not only going to be more private and fair but at the same time it will be able to offer better user experience and control to the people as well. Let’s buidl together!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Felfele ❤️ Swarm Orange Summit]]></title><description><![CDATA[We are back from Swarm Orange Summit Madrid edition, where we presented about how we use Ethereum Swarm to build a fully decentralized…]]></description><link>https://felfele.org/blog/sos/</link><guid isPermaLink="false">https://felfele.org/blog/sos/</guid><pubDate>Mon, 03 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;We are back from Swarm Orange Summit Madrid edition, where we presented about how we use Ethereum Swarm to build a fully decentralized, mobile-first social application.&lt;/p&gt;
 &lt;p&gt;Swarm Orange Summit is a yearly gathering where the core Swarm team and members of the community present about their work, and discuss the possible futures of the technology. If you are interested in decentralization, and you haven’t heard about Swarm yet, you should head to their &lt;a href=&quot;https://ethswarm.org&quot;&gt;website&lt;/a&gt; to learn about an incentivised p2p storage network! This year Epic Labs hosted the event in their Madrid office. Kudos to them for making it happen!&lt;/p&gt;
 &lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-a4d32.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -84,34 +76,24 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;attila present&quot;
         title=&quot;&quot;
-        src=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-c4f4f.jpg&quot;
-        srcset=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-c713e.jpg 125w,
-/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-5f760.jpg 250w,
-/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-c4f4f.jpg 500w,
-/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-f2b95.jpg 750w,
-/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-e9c15.jpg 1000w,
-/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-735f7.jpg 1500w,
-/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-a4d32.jpg 4032w&quot;
+        src=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-b0c9e.jpg&quot;
+        srcset=&quot;/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-f36df.jpg 125w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-4a0b6.jpg 250w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-b0c9e.jpg 500w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-8a2fd.jpg 750w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-219ba.jpg 1000w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-35975.jpg 1500w,
+/static/attila-present-dce0e4b07d0d60cb9a97c0cd04416276-6a121.jpg 4032w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/p&gt;
 &lt;p&gt;From the Felfele team Attila Gazso took the stage to &lt;a href=&quot;https://prezi.com/qhpiczkatr-r&quot;&gt;present&lt;/a&gt; about the current stage of our project. He talked about the motivation for building social network and the challanges we face. He introduced to the community the social APIs we build, which enables any application developer to interface with the social network. To demonstrate it, we built a &lt;a href=&quot;https://github.com/felfele/felfele/tree/master/src/cli&quot;&gt;command line tool&lt;/a&gt; to post updates and query data.&lt;/p&gt;
 &lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-6bddc.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -122,34 +104,24 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;mighty wallet&quot;
         title=&quot;&quot;
-        src=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-c4f4f.jpg&quot;
-        srcset=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-c713e.jpg 125w,
-/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-5f760.jpg 250w,
-/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-c4f4f.jpg 500w,
-/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-f2b95.jpg 750w,
-/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-e9c15.jpg 1000w,
-/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-735f7.jpg 1500w,
-/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-6bddc.jpg 3264w&quot;
+        src=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-b0c9e.jpg&quot;
+        srcset=&quot;/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-f36df.jpg 125w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-4a0b6.jpg 250w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-b0c9e.jpg 500w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-8a2fd.jpg 750w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-219ba.jpg 1000w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-35975.jpg 1500w,
+/static/mighty-wallet-9535fb9773e66523a11b9725dd6b81bc-45988.jpg 3264w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/p&gt;
 &lt;p&gt;We hosted a lottery during the summit, where anyone could apply by &lt;a href=&quot;https://felfele.org/donate&quot;&gt;donating&lt;/a&gt; to the foundation. It was an exceptional present: a Mighty Wallet hand-drawn by our director of design, David. It’s a one of a kind item, and the happy winner was &lt;a href=&quot;https://twitter.com/terepauto&quot;&gt;Adam Schmideg&lt;/a&gt;, from the Ethereum Foundation, congrats!&lt;/p&gt;
 &lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-43942.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -160,66 +132,22 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;wallet winner&quot;
         title=&quot;&quot;
-        src=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-c4f4f.jpg&quot;
-        srcset=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-c713e.jpg 125w,
-/static/wallet-winner-2ceffd94b3637651898183990e373088-5f760.jpg 250w,
-/static/wallet-winner-2ceffd94b3637651898183990e373088-c4f4f.jpg 500w,
-/static/wallet-winner-2ceffd94b3637651898183990e373088-f2b95.jpg 750w,
-/static/wallet-winner-2ceffd94b3637651898183990e373088-e9c15.jpg 1000w,
-/static/wallet-winner-2ceffd94b3637651898183990e373088-735f7.jpg 1500w,
-/static/wallet-winner-2ceffd94b3637651898183990e373088-43942.jpg 3024w&quot;
+        src=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-b0c9e.jpg&quot;
+        srcset=&quot;/static/wallet-winner-2ceffd94b3637651898183990e373088-f36df.jpg 125w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-4a0b6.jpg 250w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-b0c9e.jpg 500w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-8a2fd.jpg 750w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-219ba.jpg 1000w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-35975.jpg 1500w,
+/static/wallet-winner-2ceffd94b3637651898183990e373088-49e58.jpg 3024w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/p&gt;
 &lt;p&gt;Continue the conversation on twitter&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Published a short summary of &lt;a href=&quot;https://twitter.com/hashtag/swarmOrangeSummit?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#swarmOrangeSummit&lt;/a&gt;, thanks again &lt;a href=&quot;https://twitter.com/epiclabs_io?ref_src=twsrc%5Etfw&quot;&gt;@epiclabs_io&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/ethswarm?ref_src=twsrc%5Etfw&quot;&gt;@ethswarm&lt;/a&gt; for organizing! &lt;a href=&quot;https://t.co/KNivMKOtlP&quot;&gt;https://t.co/KNivMKOtlP&lt;/a&gt;&lt;/p&gt;&amp;mdash; felfele (@felfeleapp) &lt;a href=&quot;https://twitter.com/felfeleapp/status/1135510832861843457?ref_src=twsrc%5Etfw&quot;&gt;June 3, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-</content:encoded></item><item><title><![CDATA[Releasing the Alpha]]></title><description><![CDATA[We are proud to announce that the Felfele alpha release is  out ! It was quite a journey, with many risks, and a long to-do list: setting up…]]></description><link>https://felfele.org/blog/alpha/</link><guid isPermaLink="false">https://felfele.org/blog/alpha/</guid><pubDate>Fri, 10 May 2019 07:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We are proud to announce that the Felfele alpha release is &lt;a href=&quot;/app&quot;&gt;out&lt;/a&gt;! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/user_group-0de4b92c7318e9b53dda3cd44886a281-13b9c.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 400px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAADnklEQVQozwGTA2z8ACsTFlMoGXw7GJlmO9G2nbOLZ45UG6duJKBqHotQGHE9Fm07EGMyFGEzC8ajQsy8kcCxoNe+u7WupIFvZAAoFxg0GhZGJhaDYjnHtY61mXClczOsey6fcCecaiigcDjOq3GzjE6IWCRwRhRNMQpVOxt5VC9fRx1AJxIATz0nKh8aKR8XQC0hiWo7h2g7elUmdFEogGdGrI1Xw6Ry8efTvqyRg1sxKxoXJxcWdV0yf2o2hWs3VkQoAEs0IysjGTMuHj0wHlhFJWZKLZprOaVyPZKMf5yhm6emnsKqk6B8WXRIIkouHTwdE2hNLFo8JFlCJU5IMAB3WTBUOiRkQSNoUCuZhFWAZEOQYzLHlVCRhnCjmYauopDAqYyvgVBYNSAtFxRpPBszIRUMBhA9IhOXbjoAlXQ6iF83o2s6tI5Z8NqZwax/gVw+pnQ/QyUcqXZFpn5Vto9akXZHNB8TOSYcVTMaMx4TBQQPIRURXEIlAJVvMbGobczEhubMiunao7GwlW5TONStb5h8SLiTPLmRQ8+pWMycVYZaKHhIIE0pEhQLDxYSEyMqHSMpHwCJYjprVjVCLRuqhU2TdUhTQSdqTTGjgFKac0S3klC+nU6jg0HUsmCPd0FbORdmPRcYDxEZFhZHTStSTisAwJxgwKFtdmFCaVQugmA8k209uY1JmG45o4FWrY1WuplX1L9+xrNuqoA8m2ggZUIbGhQQHhwWLSQXKSMXANyyX97GkuTNl2pVNKF8ZdWmabF9IdOlS/TqqNPBeIlyPLGgW6iUV4pXIK54JYZyPC8uHy4fEBoWERkYEQDJs4ini1KKdER3YUKwcEuwbjblwlH+337//8vh0Ke6o4ahkmeCdEh3UCeXZiJTUitkbktqYypQUB1AQBoA/vKLvrFufnZXwZZyr0gkmEElpFkmm1w3yZx/9uvL/PPd6ebLamNBKiERMi0dQ0sqWGdJV183VFUbZGMkAOjDJPLbWOTMkX07J2UfEIUvG3ojFWo4Ir2XU+7bi/DqrPDqpsCpU392RFtePlhlPkhWPTlDL1M/FmxDEwCMaB3YrRiJVRJNEhJXHhRdHhRoIROPUivazYymbUTdx2r8/MvXxlenp0dOVjNBTS0qNCMyQCpkRhxHKBEAVDweiGgeVCQWRxQTSxgSRxQRTRsSZiYUaiUTfEET7eqr////+/vP2dqQk51UjY9HKjEcLjkmMSYYJhYP+kJlnsRSexgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;user group&quot;
-        title=&quot;&quot;
-        src=&quot;/static/user_group-0de4b92c7318e9b53dda3cd44886a281-13b9c.png&quot;
-        srcset=&quot;/static/user_group-0de4b92c7318e9b53dda3cd44886a281-3e388.png 125w,
-/static/user_group-0de4b92c7318e9b53dda3cd44886a281-fbb64.png 250w,
-/static/user_group-0de4b92c7318e9b53dda3cd44886a281-13b9c.png 400w&quot;
-        sizes=&quot;(max-width: 400px) 100vw, 400px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;h2 id=&quot;so-what-can-you-expect-from-this-alpha-version&quot;&gt;&lt;a href=&quot;#so-what-can-you-expect-from-this-alpha-version&quot; aria-label=&quot;so what can you expect from this alpha version permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;So what can you expect from this alpha version?&lt;/h2&gt;
-&lt;p&gt;We are still just at our first alpha version, but we aimed to put together an app which can be useful as it is: you can post text and images, follow other people, re-share their posts, or follow blogs, news sites, reddit pages, via RSS feeds. Because we are not collecting private information, we cannot provide a search functionality of other users at the moment. You can send your channel’s link to your friends in a text message, or just open your profile and show your QR code to your friend, and they will be able to read it from the app. In our experience it’s a fun method of building small communities. This is still a version which focuses on some technical foundations, it’s by no means representative of the product which will be our public release. If you feel lost, have a look at the &lt;a href=&quot;/blog/manual-1&quot;&gt;user manual&lt;/a&gt;. It’s possible you’ll find usability issues we haven’t thought of, bugs that we haven’t discovered yet, even content loss is a possibility, at this point we cannot guarantee anything, it’s better to treat your content ephemeral. Make sure to report the issues you experience!&lt;/p&gt;
-&lt;h2 id=&quot;why-are-we-doing-this&quot;&gt;&lt;a href=&quot;#why-are-we-doing-this&quot; aria-label=&quot;why are we doing this permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Why are we doing this&lt;/h2&gt;
-&lt;p&gt;We are tired of the exploitative nature of traditional social media, and the attention economy revolving our online activities.&lt;/p&gt;
-&lt;h2 id=&quot;how-to-contribute&quot;&gt;&lt;a href=&quot;#how-to-contribute&quot; aria-label=&quot;how to contribute permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to contribute&lt;/h2&gt;
-&lt;p&gt;Hopefully we will get to know a lot of people during the alpha. This was just our first milestone, and we welcome everyone who wishes to move our cause forward. You can &lt;a href=&quot;https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md&quot;&gt;contribute&lt;/a&gt; by reporting issues, or by opening pull requests! We are looking for volunteers for non-development tasks as well. And of course, if you cannot contribute with your time, you can always make a &lt;a href=&quot;https://felfele.com/donation&quot;&gt;donation&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;whats-next&quot;&gt;&lt;a href=&quot;#whats-next&quot; aria-label=&quot;whats next permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What’s next?&lt;/h2&gt;
-&lt;p&gt;Currently your channel (your posts) in the application can be viewed by anyone who has the link to it. The address cannot be guessed, and it’s not indexed by any search engine, but if you share it with someone, it can be re-shared, so we advise to treat it as a public channel. This is the first thing we are planning to address in our next milestone, enabling the app to generate encrypted content, where only the people can read it who you have specifically shared it with.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Felfele User Manual 1.0.0]]></title><description><![CDATA[If you are interested in the feature set of the Felfele mobile app, you are at the right place. If you haven’t downloaded the app yet, you…]]></description><link>https://felfele.org/blog/manual-1/</link><guid isPermaLink="false">https://felfele.org/blog/manual-1/</guid><pubDate>Fri, 10 May 2019 07:04:21 GMT</pubDate><content:encoded>&lt;p&gt;If you are interested in the feature set of the Felfele mobile app, you are at the right place. If you haven’t downloaded the app yet, you can do it &lt;a href=&quot;/app&quot;&gt;here&lt;/a&gt;. For more information about the release, check out the &lt;a href=&quot;/blog/alpha&quot;&gt;announcement&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Published a short summary of &lt;a href=&quot;https://twitter.com/hashtag/swarmOrangeSummit?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#swarmOrangeSummit&lt;/a&gt;, thanks again &lt;a href=&quot;https://twitter.com/epiclabs_io?ref_src=twsrc%5Etfw&quot;&gt;@epiclabs_io&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/ethswarm?ref_src=twsrc%5Etfw&quot;&gt;@ethswarm&lt;/a&gt; for organizing! &lt;a href=&quot;https://t.co/KNivMKOtlP&quot;&gt;https://t.co/KNivMKOtlP&lt;/a&gt;&lt;/p&gt;&amp;mdash; felfele (@felfeleapp) &lt;a href=&quot;https://twitter.com/felfeleapp/status/1135510832861843457?ref_src=twsrc%5Etfw&quot;&gt;June 3, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content:encoded></item><item><title><![CDATA[Felfele User Manual 1.0.0]]></title><description><![CDATA[If you are interested in the feature set of the Felfele mobile app, you are at the right place. If you haven’t downloaded the app yet, you…]]></description><link>https://felfele.org/blog/manual-1/</link><guid isPermaLink="false">https://felfele.org/blog/manual-1/</guid><pubDate>Fri, 10 May 2019 07:04:21 GMT</pubDate><content:encoded>&lt;p&gt;If you are interested in the feature set of the Felfele mobile app, you are at the right place. If you haven’t downloaded the app yet, you can do it &lt;a href=&quot;/app&quot;&gt;here&lt;/a&gt;. For more information about the release, check out the &lt;a href=&quot;/blog/alpha&quot;&gt;announcement&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;table-of-contents&quot;&gt;&lt;a href=&quot;#table-of-contents&quot; aria-label=&quot;table of contents permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Table of Contents&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;#onboarding&quot;&gt;Onboarding&lt;/a&gt;&lt;/li&gt;
@@ -265,7 +193,48 @@ The channels are displayed here in sections: Channels you follow, Your channels,
 &lt;h2 id=&quot;addchannel&quot;&gt;&lt;a href=&quot;#addchannel&quot; aria-label=&quot;addchannel permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AddChannel&lt;/h2&gt;
 &lt;p&gt;This is the place where you can read someone’s QR code to start following their feed, or pasting a link if you have received it in a text message. &lt;/p&gt;
 &lt;h2 id=&quot;explore&quot;&gt;&lt;a href=&quot;#explore&quot; aria-label=&quot;explore permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Explore&lt;/h2&gt;
-&lt;p&gt;We have included some popular channels from reddit and other sources, organized in categories, so you can start following some topics immediately. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[🚀 Product Design Hackathon #1 🚀]]></title><description><![CDATA[We have organized our first product design hackathon on the 13th of September. This was a private, invite only event, we are still testing…]]></description><link>https://felfele.org/blog/hackathon/</link><guid isPermaLink="false">https://felfele.org/blog/hackathon/</guid><pubDate>Tue, 10 Jul 2018 14:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We have organized our first product design hackathon on the 13th of September. This was a private, invite only event, we are still testing our initial concepts in our network. The event was held at a very friendly coworking office / atelier, Flux Workspace, Budapest. The participants were of mixed background, designers, engineers, market research, QA, etc. The goal was to bring in some fresh thoughts regarding a number of topics, which were the following:&lt;/p&gt;
+&lt;p&gt;We have included some popular channels from reddit and other sources, organized in categories, so you can start following some topics immediately. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Releasing the Alpha]]></title><description><![CDATA[We are proud to announce that the Felfele alpha release is  out ! It was quite a journey, with many risks, and a long to-do list: setting up…]]></description><link>https://felfele.org/blog/alpha/</link><guid isPermaLink="false">https://felfele.org/blog/alpha/</guid><pubDate>Fri, 10 May 2019 07:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We are proud to announce that the Felfele alpha release is &lt;a href=&quot;/app&quot;&gt;out&lt;/a&gt;! It was quite a journey, with many risks, and a long to-do list: setting up the Foundation, create proof of concept versions, iterating, redesigning. But we had a lot of support. We are thankful for all the people who helped us, some with ideas and being there when we needed someone to talk to, but also coding, working on design materials, or testing the early versions of the application. We even had a pre-alpha release event, where we introduced the app to a bunch of people, making it the first group user test as well. Important usability issues and bugs were found, and fixed :-)&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/user_group-0de4b92c7318e9b53dda3cd44886a281-cc395.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 400px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAADnklEQVQozwGTA2z8ACsTFlMoGXw7GJlmO9G2nbOLZ45UG6duJKBqHotQGHE9Fm07EGMyFGEzC8ajQsy8kcCxoNe+u7WupIFvZAAoFxg0GhZGJhaDYjnHtY61mXClczOsey6fcCecaiigcDjOq3GzjE6IWCRwRhRNMQpVOxt5VC9fRx1AJxIATz0nKh8aKR8XQC0hiWo7h2g7elUmdFEogGdGrI1Xw6Ry8efTvqyRg1sxKxoXJxcWdV0yf2o2hWs3VkQoAEs0IysjGTMuHj0wHlhFJWZKLZprOaVyPZKMf5yhm6emnsKqk6B8WXRIIkouHTwdE2hNLFo8JFlCJU5IMAB3WTBUOiRkQSNoUCuZhFWAZEOQYzLHlVCRhnCjmYauopDAqYyvgVBYNSAtFxRpPBszIRUMBhA9IhOXbjoAlXQ6iF83o2s6tI5Z8NqZwax/gVw+pnQ/QyUcqXZFpn5Vto9akXZHNB8TOSYcVTMaMx4TBQQPIRURXEIlAJVvMbGobczEhubMiunao7GwlW5TONStb5h8SLiTPLmRQ8+pWMycVYZaKHhIIE0pEhQLDxYSEyMqHSMpHwCJYjprVjVCLRuqhU2TdUhTQSdqTTGjgFKac0S3klC+nU6jg0HUsmCPd0FbORdmPRcYDxEZFhZHTStSTisAwJxgwKFtdmFCaVQugmA8k209uY1JmG45o4FWrY1WuplX1L9+xrNuqoA8m2ggZUIbGhQQHhwWLSQXKSMXANyyX97GkuTNl2pVNKF8ZdWmabF9IdOlS/TqqNPBeIlyPLGgW6iUV4pXIK54JYZyPC8uHy4fEBoWERkYEQDJs4ini1KKdER3YUKwcEuwbjblwlH+337//8vh0Ke6o4ahkmeCdEh3UCeXZiJTUitkbktqYypQUB1AQBoA/vKLvrFufnZXwZZyr0gkmEElpFkmm1w3yZx/9uvL/PPd6ebLamNBKiERMi0dQ0sqWGdJV183VFUbZGMkAOjDJPLbWOTMkX07J2UfEIUvG3ojFWo4Ir2XU+7bi/DqrPDqpsCpU392RFtePlhlPkhWPTlDL1M/FmxDEwCMaB3YrRiJVRJNEhJXHhRdHhRoIROPUivazYymbUTdx2r8/MvXxlenp0dOVjNBTS0qNCMyQCpkRhxHKBEAVDweiGgeVCQWRxQTSxgSRxQRTRsSZiYUaiUTfEET7eqr////+/vP2dqQk51UjY9HKjEcLjkmMSYYJhYP+kJlnsRSexgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;user group&quot;
+        title=&quot;&quot;
+        src=&quot;/static/user_group-0de4b92c7318e9b53dda3cd44886a281-cc395.png&quot;
+        srcset=&quot;/static/user_group-0de4b92c7318e9b53dda3cd44886a281-7e629.png 125w,
+/static/user_group-0de4b92c7318e9b53dda3cd44886a281-2294f.png 250w,
+/static/user_group-0de4b92c7318e9b53dda3cd44886a281-cc395.png 400w&quot;
+        sizes=&quot;(max-width: 400px) 100vw, 400px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;so-what-can-you-expect-from-this-alpha-version&quot;&gt;&lt;a href=&quot;#so-what-can-you-expect-from-this-alpha-version&quot; aria-label=&quot;so what can you expect from this alpha version permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;So what can you expect from this alpha version?&lt;/h2&gt;
+&lt;p&gt;We are still just at our first alpha version, but we aimed to put together an app which can be useful as it is: you can post text and images, follow other people, re-share their posts, or follow blogs, news sites, reddit pages, via RSS feeds. Because we are not collecting private information, we cannot provide a search functionality of other users at the moment. You can send your channel’s link to your friends in a text message, or just open your profile and show your QR code to your friend, and they will be able to read it from the app. In our experience it’s a fun method of building small communities. This is still a version which focuses on some technical foundations, it’s by no means representative of the product which will be our public release. If you feel lost, have a look at the &lt;a href=&quot;/blog/manual-1&quot;&gt;user manual&lt;/a&gt;. It’s possible you’ll find usability issues we haven’t thought of, bugs that we haven’t discovered yet, even content loss is a possibility, at this point we cannot guarantee anything, it’s better to treat your content ephemeral. Make sure to report the issues you experience!&lt;/p&gt;
+&lt;h2 id=&quot;why-are-we-doing-this&quot;&gt;&lt;a href=&quot;#why-are-we-doing-this&quot; aria-label=&quot;why are we doing this permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Why are we doing this&lt;/h2&gt;
+&lt;p&gt;We are tired of the exploitative nature of traditional social media, and the attention economy revolving our online activities.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-contribute&quot;&gt;&lt;a href=&quot;#how-to-contribute&quot; aria-label=&quot;how to contribute permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to contribute&lt;/h2&gt;
+&lt;p&gt;Hopefully we will get to know a lot of people during the alpha. This was just our first milestone, and we welcome everyone who wishes to move our cause forward. You can &lt;a href=&quot;https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md&quot;&gt;contribute&lt;/a&gt; by reporting issues, or by opening pull requests! We are looking for volunteers for non-development tasks as well. And of course, if you cannot contribute with your time, you can always make a &lt;a href=&quot;https://felfele.com/donation&quot;&gt;donation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;whats-next&quot;&gt;&lt;a href=&quot;#whats-next&quot; aria-label=&quot;whats next permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What’s next?&lt;/h2&gt;
+&lt;p&gt;Currently your channel (your posts) in the application can be viewed by anyone who has the link to it. The address cannot be guessed, and it’s not indexed by any search engine, but if you share it with someone, it can be re-shared, so we advise to treat it as a public channel. This is the first thing we are planning to address in our next milestone, enabling the app to generate encrypted content, where only the people can read it who you have specifically shared it with.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[🚀 Product Design Hackathon #1 🚀]]></title><description><![CDATA[We have organized our first product design hackathon on the 13th of September. This was a private, invite only event, we are still testing…]]></description><link>https://felfele.org/blog/hackathon/</link><guid isPermaLink="false">https://felfele.org/blog/hackathon/</guid><pubDate>Tue, 10 Jul 2018 14:04:21 GMT</pubDate><content:encoded>&lt;p&gt;We have organized our first product design hackathon on the 13th of September. This was a private, invite only event, we are still testing our initial concepts in our network. The event was held at a very friendly coworking office / atelier, Flux Workspace, Budapest. The participants were of mixed background, designers, engineers, market research, QA, etc. The goal was to bring in some fresh thoughts regarding a number of topics, which were the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;find new ways of sharing&lt;/li&gt;
 &lt;li&gt;reinvent the timeline&lt;/li&gt;
@@ -275,7 +244,7 @@ The channels are displayed here in sections: Channels you follow, Your channels,
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-6bddc.jpg&quot;
+    href=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-45988.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -283,7 +252,7 @@ The channels are displayed here in sections: Channels you follow, Your channels,
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -294,14 +263,14 @@ The channels are displayed here in sections: Channels you follow, Your channels,
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;collage2&quot;
         title=&quot;&quot;
-        src=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-c4f4f.jpg&quot;
-        srcset=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-c713e.jpg 125w,
-/static/collage2-789ec497c21f21278cb3229ac81e5d74-5f760.jpg 250w,
-/static/collage2-789ec497c21f21278cb3229ac81e5d74-c4f4f.jpg 500w,
-/static/collage2-789ec497c21f21278cb3229ac81e5d74-f2b95.jpg 750w,
-/static/collage2-789ec497c21f21278cb3229ac81e5d74-e9c15.jpg 1000w,
-/static/collage2-789ec497c21f21278cb3229ac81e5d74-735f7.jpg 1500w,
-/static/collage2-789ec497c21f21278cb3229ac81e5d74-6bddc.jpg 3264w&quot;
+        src=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-b0c9e.jpg&quot;
+        srcset=&quot;/static/collage2-789ec497c21f21278cb3229ac81e5d74-f36df.jpg 125w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-4a0b6.jpg 250w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-b0c9e.jpg 500w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-8a2fd.jpg 750w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-219ba.jpg 1000w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-35975.jpg 1500w,
+/static/collage2-789ec497c21f21278cb3229ac81e5d74-45988.jpg 3264w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;
@@ -313,7 +282,7 @@ The channels are displayed here in sections: Channels you follow, Your channels,
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-6bddc.jpg&quot;
+    href=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-45988.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -321,7 +290,7 @@ The channels are displayed here in sections: Channels you follow, Your channels,
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -332,14 +301,14 @@ The channels are displayed here in sections: Channels you follow, Your channels,
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;collage3&quot;
         title=&quot;&quot;
-        src=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-c4f4f.jpg&quot;
-        srcset=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-c713e.jpg 125w,
-/static/collage3-b910f5f40f111cadc293d5bfb901f707-5f760.jpg 250w,
-/static/collage3-b910f5f40f111cadc293d5bfb901f707-c4f4f.jpg 500w,
-/static/collage3-b910f5f40f111cadc293d5bfb901f707-f2b95.jpg 750w,
-/static/collage3-b910f5f40f111cadc293d5bfb901f707-e9c15.jpg 1000w,
-/static/collage3-b910f5f40f111cadc293d5bfb901f707-735f7.jpg 1500w,
-/static/collage3-b910f5f40f111cadc293d5bfb901f707-6bddc.jpg 3264w&quot;
+        src=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-b0c9e.jpg&quot;
+        srcset=&quot;/static/collage3-b910f5f40f111cadc293d5bfb901f707-f36df.jpg 125w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-4a0b6.jpg 250w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-b0c9e.jpg 500w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-8a2fd.jpg 750w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-219ba.jpg 1000w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-35975.jpg 1500w,
+/static/collage3-b910f5f40f111cadc293d5bfb901f707-45988.jpg 3264w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;
@@ -398,7 +367,7 @@ The channels are displayed here in sections: Channels you follow, Your channels,
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-85f38.jpg&quot;
+    href=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-e5a0f.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -406,7 +375,7 @@ The channels are displayed here in sections: Channels you follow, Your channels,
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; width: 500px; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 500px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -417,14 +386,14 @@ The channels are displayed here in sections: Channels you follow, Your channels,
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;participants&quot;
         title=&quot;&quot;
-        src=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-c4f4f.jpg&quot;
-        srcset=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-c713e.jpg 125w,
-/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-5f760.jpg 250w,
-/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-c4f4f.jpg 500w,
-/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-f2b95.jpg 750w,
-/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-e9c15.jpg 1000w,
-/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-735f7.jpg 1500w,
-/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-85f38.jpg 4896w&quot;
+        src=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-b0c9e.jpg&quot;
+        srcset=&quot;/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-f36df.jpg 125w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-4a0b6.jpg 250w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-b0c9e.jpg 500w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-8a2fd.jpg 750w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-219ba.jpg 1000w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-35975.jpg 1500w,
+/static/participants-2a9c20fe667ec34754a13b9be45c2bcb-e5a0f.jpg 4896w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
       /&gt;
     &lt;/span&gt;

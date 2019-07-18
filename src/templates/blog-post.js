@@ -59,7 +59,7 @@ class BlogPostTemplate extends React.Component {
                             maxWidth: 800,
                             width: this.state.width - 20,
                             textAlign: 'center',
-                            color: '#21004',
+                            color: '#21004F',
                         }}
                         dangerouslySetInnerHTML={{ __html: post.html }}
                     />

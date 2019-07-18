@@ -7,6 +7,26 @@ import Img from 'gatsby-image';
 import Layout from '../../components/Layout';
 
 class BlogIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0
+        };
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
         const siteTitle = get(this, 'props.data.site.siteMetadata.title');
         const siteDescription = get(
@@ -68,7 +88,7 @@ class BlogIndex extends React.Component {
                                 {node.frontmatter.featuredImage != null &&
                                 <div style={{
                                     maxWidth: 500,
-                                    width: 500,
+                                    width: this.state.width > 520 ? 500 : this.state.width - 20,
                                     paddingTop: 20,
                                     paddingBottom: 20,
                                 }}>

@@ -25,4 +25,5 @@ We hosted a lottery during the summit, where anyone could apply by [donating](ht
 
 Continue the conversation on twitter
 
-https://twitter.com/felfeleapp/status/1135510832861843457
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Published a short summary of <a href="https://twitter.com/hashtag/swarmOrangeSummit?src=hash&amp;ref_src=twsrc%5Etfw">#swarmOrangeSummit</a>, thanks again <a href="https://twitter.com/epiclabs_io?ref_src=twsrc%5Etfw">@epiclabs_io</a> and <a href="https://twitter.com/ethswarm?ref_src=twsrc%5Etfw">@ethswarm</a> for organizing! <a href="https://t.co/KNivMKOtlP">https://t.co/KNivMKOtlP</a></p>&mdash; felfele (@felfeleapp) <a href="https://twitter.com/felfeleapp/status/1135510832861843457?ref_src=twsrc%5Etfw">June 3, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

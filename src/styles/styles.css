@@ -10,3 +10,7 @@ a:hover { /* Mouse over link  */
 a:active { /* Selected link  */
     color:#6200EA;
 }
+
+.twitter-tweet.twitter-tweet-rendered {
+    margin: auto !important;
+}

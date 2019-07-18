@@ -6,6 +6,26 @@ import get from 'lodash/get';
 import Layout from '../components/Layout';
 
 class BlogPostTemplate extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0
+        };
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = get(this.props, 'data.site.siteMetadata.title');
@@ -25,6 +45,7 @@ class BlogPostTemplate extends React.Component {
                         display: 'flex',
                         alignItems: 'center',
                         flexDirection: 'column',
+                        flexBasis: 'auto',
                     }}
                 >
                     <h1>{post.frontmatter.title}</h1>
@@ -33,10 +54,12 @@ class BlogPostTemplate extends React.Component {
                     </p>
                     <div
                         style={{
-                            display: 'flex',
-                            flexDirection: 'column',
                             alignItems: 'center',
+                            justifyItems: 'center',
                             maxWidth: 800,
+                            width: this.state.width - 20,
+                            textAlign: 'center',
+                            color: '#21004',
                         }}
                         dangerouslySetInnerHTML={{ __html: post.html }}
                     />

@@ -107,8 +107,8 @@ export class Footer extends Component {
                             <SectionLink link="https://ariregister.rik.ee/index?lang=eng">
                                 Public Records
                             </SectionLink>
-                            <SectionLink link="/privacy">
-                                Privacy Policy
+                            <SectionLink link="/legal">
+                                Terms & Privacy Policy
                             </SectionLink>
                         </div>
                     </div>

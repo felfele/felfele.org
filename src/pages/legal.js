@@ -26,7 +26,7 @@ class Volunteer extends React.Component {
                     }}>
                     Felfele is designed to never collect or store any sensitive information.
                     User-generated content in Felfele cannot be accessed by us or other third
-                    parties because they are always end-to-end encrypted, private, and secure.
+                    parties because it is always end-to-end encrypted, private, and secure.
                     Our Terms of Service and Privacy Policy are available below.
                     <br/><br/>
                     <ul style={{
@@ -227,7 +227,7 @@ class Volunteer extends React.Component {
                     <h3>Contact Us</h3>
                     If you have questions about our Privacy Policy please contact us at&nbsp;
                     <a href="mailto:hello@felfele.org">hello@felfele.org</a>. Attn: Sihtasutus Felfele,
-                    Harju maakond, Tallinn, Kesklinna linnaosa, Pärnu mnt 141-(Delta Plaza 13.k), 11314,
+                    Harju maakond, Tallinn, Kesklinna linnaosa, Pärnu mnt 141-(Delta Plaza 13.k), 11314,
                     Estonia.
 
                     <br/>

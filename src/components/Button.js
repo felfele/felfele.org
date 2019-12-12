@@ -53,7 +53,7 @@ const InnerButton = ({ icon, label, border, style }) => {
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                wrap: 'no-wrap',
+                whiteSpace: 'nowrap',
                 border: border ? 'solid 1px rgba(98, 0, 234, 0.25)' : '',
                 padding: border ? 12 : 0,
                 fontWeight: 600,

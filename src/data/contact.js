@@ -1,5 +1,5 @@
 export const contactData = {
-    twitter: 'https://twitter.com/felfeleapp',
+    twitter: 'https://twitter.com/FelfeleOrg',
     email: 'hello@felfele.org',
 };
 

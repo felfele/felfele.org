@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Jost;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/Jost-700.ttf") format("truetype");
+    font-display: swap;
+}

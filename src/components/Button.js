@@ -54,15 +54,15 @@ const InnerButton = ({ icon, label, border, style }) => {
                 flexDirection: 'row',
                 alignItems: 'center',
                 whiteSpace: 'nowrap',
-                border: border ? 'solid 1px rgba(98, 0, 234, 0.25)' : '',
+                border: border ? 'solid 1px rgba(128, 128, 128, 0.25)' : '',
                 padding: border ? 12 : 0,
                 fontWeight: 600,
                 margin: 6,
-                fontSize: 16,
+                fontSize: 14,
                 ...style,
             }}
         >
-            <img src={icon} height={16} style={{ paddingRight: 4, margin: 0, color: '#6200EA' }}/>
+            <img src={icon} height={16} style={{ paddingRight: 4, margin: 0, color: '#000000' }}/>
             {label}
         </div>
     );

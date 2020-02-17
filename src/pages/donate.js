@@ -32,7 +32,7 @@ class Donate extends React.Component {
 
                     <h1 style={{
                         fontSize: 76,
-                        fontFamily: 'YoungSerif',
+                        fontFamily: 'Jost',
                         marginBottom: 0,
                     }}
                     >
@@ -48,7 +48,7 @@ class Donate extends React.Component {
                     </p>
                     <div>
                         <h3 style={{
-                            fontFamily: 'YoungSerif',
+                            fontFamily: 'Jost',
                             fontSize: 27,
                             marginBottom: 0,
                         }}>
@@ -68,7 +68,7 @@ class Donate extends React.Component {
                     </div>
                     <div>
                     <h3 style={{
-                            fontFamily: 'YoungSerif',
+                            fontFamily: 'Jost',
                             fontSize: 27,
                             marginBottom: 0,
                         }}>

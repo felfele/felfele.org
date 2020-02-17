@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
                     <h1
                         style={{
                             fontSize: 76,
-                            fontFamily: 'YoungSerif',
+                            fontFamily: 'Jost',
                             marginBottom: 0,
                         }}
                     >
@@ -73,7 +73,7 @@ class BlogIndex extends React.Component {
                             >
                                 <h3
                                     style={{
-                                        fontFamily: 'YoungSerif',
+                                        fontFamily: 'Jost',
                                         fontSize: 27,
                                         marginBottom: 0,
                                     }}

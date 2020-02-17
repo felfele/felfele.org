@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 // import font file
 import 'typeface-nunito-sans';
-import 'typeface-youngserif';
 
 import Logo from './../assets/Felfele_Horizontal.svg'
 import Phone from './../assets/baseline-smartphone-24-px.svg'
@@ -41,7 +40,7 @@ export class Navbar extends Component {
                             alignItems: 'center',
                         }}
                     >
-                        <img src={Logo} style={{ width: 100, marginBottom: 0, fill: '#6200EA' }}/>
+                        <img src={Logo} style={{ width: 100, marginBottom: 0, fill: '#000000' }}/>
                     </Link>
                     <div
                         style={{
@@ -53,15 +52,15 @@ export class Navbar extends Component {
                     >
                         <Button
                             icon={Phone}
-                            link='https://app.felfele.org'
-                            label='Get the app'
+                            link='/niche'
+                            label='NICHE'
                             style={{
                                 fontWeight: 600,
                             }}
                         />
                         <Button
-                            link='/donate'
-                            label='Donate'
+                            link='/lab'
+                            label='LAB'
                             style={{
                                 fontWeight: 600,
                             }}

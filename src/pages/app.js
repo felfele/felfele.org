@@ -134,7 +134,7 @@ const TaglineContent = ({ fontSize }) => (
     <h1
         style={{
             fontSize: fontSize,
-            fontFamily: 'YoungSerif',
+            fontFamily: 'Jost',
             lineHeight: 1.18,
         }}
     >
@@ -171,7 +171,7 @@ const IntroTextContent = () => (
     <React.Fragment>
         <h3
             style={{
-                fontFamily: 'YoungSerif',
+                fontFamily: 'Jost',
                 fontSize: 27,
             }}
         >

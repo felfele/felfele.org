@@ -28,7 +28,7 @@ class Team extends React.Component {
                     justifyContent: 'center',
                 }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <h1 style={{ fontFamily: 'YoungSerif' }}>Team</h1>
+                        <h1 style={{ fontFamily: 'Jost' }}>Team</h1>
                         <br />
                         <div style={{
                             display: 'flex',

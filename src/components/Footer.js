@@ -47,68 +47,33 @@ export class Footer extends Component {
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>PRODUCT</div>
                         <div style={styles.sectionContent}>
-                            <SectionLink link={APP_STORE_LINK} target='_new'>
-                                Download for iOS
+                            <SectionLink link="/niche">
+                                Niche app
                             </SectionLink>
-                            <SectionLink link={PLAY_STORE_LINK} target='_new'>
-                                Download for Android
+                            <SectionLink link="/lab">
+                                Felfele Lab
                             </SectionLink>
-                            <SectionLink link={'mailto:support@felfele.com'}>Support</SectionLink>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
                         <div style={styles.sectionTitle}>CONTRIBUTE</div>
                         <div style={styles.sectionContent}>
-                            <SectionLink link="/donate">
-                                Make a donation
-                            </SectionLink>
-                            <SectionLink link="/volunteer">
-                                Volunteer
-                            </SectionLink>
-                        </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>DEVELOPERS</div>
-                        <div style={styles.sectionContent}>
                             <SectionLink link='https://github.com/felfele' target='_new'>
                                 Github
                             </SectionLink>
-                            <SectionLink link='https://github.com/felfele/felfele/blob/master/CONTRIBUTING.md' target='_new'>
-                                Guidelines
+                            <SectionLink link="/donate">
+                                Make a donation
+                            </SectionLink>
+                        </div>
+                    </div>
+                    <div style={styles.sectionContainer}>
+                        <div style={styles.sectionTitle}>FOUNDATION</div>
+                        <div style={styles.sectionContent}>
+                            <SectionLink link='/about'>
+                                About &amp; contact
                             </SectionLink>
                             <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
                                 Code of Conduct
-                            </SectionLink>
-                            <SectionLink link='https://gitter.im/felfele/purple-lounge' target='_new'>
-                                Gitter
-                            </SectionLink>
-                        </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>ABOUT US</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link="/contact">
-                                Contact
-                            </SectionLink>
-                            <SectionLink link="/">
-                                Mission
-                            </SectionLink>
-                            <SectionLink link="/team">
-                                Core team
-                            </SectionLink>
-                            <SectionLink link="/blog">
-                                Blog
-                            </SectionLink>
-                        </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>LEGAL</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link="https://ariregister.rik.ee/index?lang=eng">
-                                Public Records
-                            </SectionLink>
-                            <SectionLink link="/legal">
-                                Terms & Privacy Policy
                             </SectionLink>
                         </div>
                     </div>
@@ -119,7 +84,7 @@ export class Footer extends Component {
                             display: 'flex',
                             justifyContent: this.state.width > WIDTH_THRESHOLD ? 'flex-end' : 'center',
                         }}>
-                            <img width={23} src={Logo} style={{ marginBottom: 0, fill: '#6200EA' }}/>
+                            <img width={23} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
                         </div>
                     </div>
                 </div>
@@ -135,7 +100,7 @@ const SectionLink = (props) => {
     return (
         <UniversalLink
             style={{
-                fontWeight: 600,
+                fontWeight: 500,
                 ...style,
             }}
             {...rest}

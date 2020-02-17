@@ -1,14 +1,14 @@
 a { /* Unvisited link  */
-    color:#6200EA;
+    color:#000000;
 }
 a:visited { /* Visited link  */
-    color:#6200EA;
+    color:#000000;
 }
 a:hover { /* Mouse over link  */
-    color:#6200EA;
+    color:#000000;
 }
 a:active { /* Selected link  */
-    color:#6200EA;
+    color:#000000;
 }
 
 .twitter-tweet.twitter-tweet-rendered {

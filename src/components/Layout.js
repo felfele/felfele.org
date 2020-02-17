@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../styles/styles.css';
+import '../styles/fonts.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Ruler } from './Ruler';
@@ -12,9 +13,9 @@ class Layout extends React.Component {
         const defaultStyle = {
             marginLeft: 'auto',
             marginRight: 'auto',
-            maxWidth: 1200,
+            maxWidth: 1160,
             fontFamily: 'Nunito Sans',
-            color: '#6200EA',
+            color: 'black',
             paddingRight: 10,
             paddingLeft: 10,
         };
@@ -26,7 +27,6 @@ class Layout extends React.Component {
         return (
             <div style={{ margin: -8 }}>
                 <div style={finalStyle}><Navbar/></div>
-                <Ruler/>
                 <div style={finalStyle}>
                     {children}
                 </div>

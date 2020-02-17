@@ -44,9 +44,9 @@ class SiteIndex extends React.Component {
                     <meta name="description" content={siteDescription} />
                 </Helmet>
                 <MainSection
-                    fontSize={this.state.width > WIDTH_THRESHOLD ? 76 : 48}
-                    title='Socialize without compromise'
-                    body="We build services that empower anyone to communicate without being exploited — services that respect people's time, privacy and rights over their content."
+                    fontSize={this.state.width > WIDTH_THRESHOLD ? 50 : 48}
+                    title='SOCIALIZE WITHOUT COMPROMISE'
+                    body="Our nonprofit foundation builds and supports products that let humans connect, share, and inspire each other, without being exploited by technology."
                 />
                 <div style={{
                     flex: 1,
@@ -57,36 +57,16 @@ class SiteIndex extends React.Component {
 
                 }}>
                     <Section
-                        title='People first'
-                        body='We focus on services that put people in control and empower free communication. We defend human attention and privacy, not profit.'
+                        title='NOT FOR PROFIT'
+                        body='Seeking profit while building social media often leads to decisions and compromises that we refuse to make. We value freedom and the satisfaction to work on projects with positive social impact over quick profits.'
                     />
                     <Section
-                        title='Self-sustaining'
-                        body='We use peer-to-peer storage and incentivize resource sharing to make structural costs trivial. No one has to trade their personal data.'
+                        title='OPEN SOURCE'
+                        body='We’re developing open protocols and libraries for building decentralized social applications. By sharing our work, we hope to inspire other people, ease collaboration, and support similar projects.'
                     />
                     <Section
-                        title='Future-proof'
-                        body='A fully decentralized and open architecture makes the network stronger — no vulnerable hubs, no data loss, no downtime, and no censorship.'
-                    />
-                </div>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    paddingTop: 40,
-                    paddingBottom: 40,
-                }}>
-                    <Button
-                        link='/app'
-                        icon={Phone}
-                        label='Get the app'
-                        border={true}
-                    />
-                    <Button
-                        link='/donate'
-                        icon={Heart}
-                        label='Make a donation'
-                        border={true}
+                        title='INDEPENDENT'
+                        body='We believe in small and independent communities. In the spirit of the early internet, we intend to bring some freedom and diversity in spaces currently dominated by Orwellian tech giants.'
                     />
                 </div>
             </Layout>
@@ -106,7 +86,7 @@ const MainSection = ({ title, body, fontSize }) => {
             <h1
                 style={{
                     fontSize: fontSize,
-                    fontFamily: 'YoungSerif',
+                    fontFamily: 'Jost',
                     textAlign: 'center',
                     marginBottom: 0,
                 }}
@@ -115,7 +95,7 @@ const MainSection = ({ title, body, fontSize }) => {
             </h1>
             <p
                 style={{
-                    fontSize: 27,
+                    fontSize: 30,
                     marginTop: 0,
                     textAlign: 'center'
                 }}
@@ -137,8 +117,8 @@ const Section = ({ title, body }) => {
             <h3
                 style={{
                     lineHeight: 0,
-                    fontSize: 27,
-                    fontFamily: 'YoungSerif',
+                    fontSize: 21,
+                    fontFamily: 'Jost',
                     marginBottom: 12,
                 }}
             >

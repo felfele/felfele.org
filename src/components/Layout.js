@@ -11,13 +11,8 @@ class Layout extends React.Component {
         const { children } = this.props;
         const importedStyle = this.props.style;
         const defaultStyle = {
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: 1160,
             fontFamily: 'Nunito Sans',
             color: 'black',
-            paddingRight: 10,
-            paddingLeft: 10,
         };
 
         const finalStyle = {
@@ -29,9 +24,9 @@ class Layout extends React.Component {
                 <div style={finalStyle}><Navbar/></div>
                 <div style={finalStyle}>
                     {children}
+                    <Ruler/>
+                    <Footer/>
                 </div>
-                <Ruler/>
-                <div style={finalStyle}><Footer/></div>
             </div>
 
         );

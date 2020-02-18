@@ -52,12 +52,12 @@ const InnerButton = ({ icon, label, border, style }) => {
             style={{
                 display: 'flex',
                 flexDirection: 'row',
-                alignItems: 'center',
+                alignItems: 'flex-start',
                 whiteSpace: 'nowrap',
-                border: border ? 'solid 1px rgba(128, 128, 128, 0.25)' : '',
+                border: border ? 'solid 1px rgb(0, 0, 0)' : '',
                 padding: border ? 12 : 0,
                 fontWeight: 600,
-                margin: 6,
+                marginTop: 6,
                 fontSize: 14,
                 ...style,
             }}
@@ -69,9 +69,10 @@ const InnerButton = ({ icon, label, border, style }) => {
 }
 
 const WeblinkWrapper = (props) => {
+    const { link, children, ...rest } = props;
     return (
-        <ExternalLink href={props.link}>
-            {props.children}
+        <ExternalLink href={link} {...rest}>
+            {children}
         </ExternalLink>
     )
 }

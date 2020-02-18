@@ -6,7 +6,7 @@ import 'typeface-nunito-sans';
 import Logo from './../assets/Felfele_Horizontal.svg'
 import Phone from './../assets/baseline-smartphone-24-px.svg'
 import { Button } from './Button';
-export const WIDTH_THRESHOLD = 650;
+import { CONTENT_MAX_WIDTH } from '../data/style';
 
 export class Navbar extends Component {
     render() {
@@ -18,6 +18,9 @@ export class Navbar extends Component {
                     alignItems: 'center',
                     marginLeft: 'auto',
                     marginRight: 'auto',
+                    paddingLeft: 20,
+                    paddingRight: 20,
+                    maxWidth: CONTENT_MAX_WIDTH,
                 }}
             >
                 <div

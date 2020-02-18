@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { WIDTH_THRESHOLD } from './Navbar';
+import { WIDTH_THRESHOLD } from '../data/style';
 import Logo from '../assets/logo.svg';
 import { UniversalLink } from './Button';
+import { Colors } from '../data/style';
 import { APP_STORE_LINK, PLAY_STORE_LINK } from '../pages/app';
 
 export class Footer extends Component {
@@ -37,44 +38,52 @@ export class Footer extends Component {
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 maxWidth: 1200,
+                backgroundColor: Colors.BACKGROUND_COLOR,
             }}>
                 <div style={{
                     display: 'flex',
-                    justifyContent: 'space-evenly',
+                    justifyContent: 'space-between',
                     flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
                     paddingBottom: 50,
                 }}>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>PRODUCT</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link="/niche">
-                                Niche app
-                            </SectionLink>
-                            <SectionLink link="/lab">
-                                Felfele Lab
-                            </SectionLink>
+                    <div style={{
+                        display: 'flex',
+                        flex: 0.6,
+                        justifyContent: 'space-evenly',
+                        flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
+                    }}>
+                        <div style={styles.sectionContainer}>
+                            <div style={styles.sectionTitle}>PRODUCT</div>
+                            <div style={styles.sectionContent}>
+                                <SectionLink link="/niche">
+                                    Niche app
+                                </SectionLink>
+                                <SectionLink link="/lab">
+                                    Felfele Lab
+                                </SectionLink>
+                            </div>
                         </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>CONTRIBUTE</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link='https://github.com/felfele' target='_new'>
-                                Github
-                            </SectionLink>
-                            <SectionLink link="/donate">
-                                Make a donation
-                            </SectionLink>
+                        <div style={styles.sectionContainer}>
+                            <div style={styles.sectionTitle}>CONTRIBUTE</div>
+                            <div style={styles.sectionContent}>
+                                <SectionLink link='https://github.com/felfele' target='_new'>
+                                    Github
+                                </SectionLink>
+                                <SectionLink link="/donate">
+                                    Make a donation
+                                </SectionLink>
+                            </div>
                         </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>FOUNDATION</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link='/about'>
-                                About &amp; contact
-                            </SectionLink>
-                            <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
-                                Code of Conduct
-                            </SectionLink>
+                        <div style={styles.sectionContainer}>
+                            <div style={styles.sectionTitle}>FOUNDATION</div>
+                            <div style={styles.sectionContent}>
+                                <SectionLink link='/about'>
+                                    About &amp; contact
+                                </SectionLink>
+                                <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
+                                    Code of Conduct
+                                </SectionLink>
+                            </div>
                         </div>
                     </div>
                     <div style={styles.sectionContainer}>
@@ -123,5 +132,7 @@ const styles = {
     },
     sectionTitle: {
         paddingBottom: 5,
+        fontFamily: 'Jost',
+        fontWeight: 100,
     },
 };

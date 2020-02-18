@@ -4,4 +4,4 @@ export const Colors = {
 };
 
 export const CONTENT_MAX_WIDTH = 1160;
-export const WIDTH_THRESHOLD = 650;
+export const WIDTH_THRESHOLD = CONTENT_MAX_WIDTH + 10 / 2;

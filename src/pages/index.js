@@ -3,15 +3,14 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 
-import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
 import { CONTENT_MAX_WIDTH, WIDTH_THRESHOLD, Colors } from '../data/style';
 import { Button } from '../components/Button';
-import Phone from './../assets/baseline-smartphone-24-px.svg'
-import Heart from './../assets/heart.svg'
 import { Ruler } from '../components/Ruler';
 import Footer from '../components/Footer';
 import Illustration from '../assets/images/felfele-illustration.png';
+import NicheLogoImage from '../assets/images/niche-logo-image.png';
+import FelfeleLabImage from '../assets/images/felfele-lab-image.png'
 
 const Row = ({width, children}) => (
     <div style={{
@@ -63,7 +62,7 @@ class SiteIndex extends React.Component {
             <div style={{
                 fontFamily: 'Nunito Sans',
                 color: 'black',
-                margin: -8,
+                // margin: -8,
             }}>
                 <Helmet>
                     <title>{siteTitle}</title>
@@ -98,29 +97,39 @@ class SiteIndex extends React.Component {
                             text='Niche is a decentralized sharing application empowering private communities to share content with absolute privacy, in a calm and fully customizable environment.'
                             link='/niche'
                             label='LEARN MORE'
+                            image={NicheLogoImage}
                         />
+                        <SectionSeparator/>
                         <SectionWithImageAndLink
                             title='EXPERIMENT &amp; COLLABORATE'
                             text='We share our work openly in our product lab. Anyone can access our Github repositories along with other product experiments that might be inspiring to you.'
                             link='/lab'
                             label='CHECK FELFELE LAB'
+                            image={FelfeleLabImage}
                         />
                     </Row>
+
+                    <Ruler/>
+
                     <Row width={this.state.width}>
                         <Section
                             title='NOT FOR PROFIT'
                             body='Seeking profit while building social media often leads to decisions and compromises that we refuse to make. We value freedom and the satisfaction to work on projects with positive social impact over quick profits.'
                         />
+                        <SectionSeparator/>
                         <Section
                             title='OPEN SOURCE'
                             body='We’re developing open protocols and libraries for building decentralized social applications. By sharing our work, we hope to inspire other people, ease collaboration, and support similar projects.'
                         />
+                        <SectionSeparator/>
                         <Section
                             title='INDEPENDENT'
                             body='We believe in small and independent communities. In the spirit of the early internet, we intend to bring some freedom and diversity in spaces currently dominated by Orwellian tech giants.'
                         />
                     </Row>
+
                     <Ruler/>
+
                     <Footer/>
                 </div>
             </div>
@@ -191,6 +200,12 @@ const Section = ({ title, body }) => {
     );
 };
 
+const SectionSeparator = () => <div style={{
+    width: 40,
+    height: 40,
+}}></div>;
+
+
 const SectionWithImageAndLink = ({ title, text, image, link, label}) => {
     return (
         <div style={{
@@ -200,6 +215,7 @@ const SectionWithImageAndLink = ({ title, text, image, link, label}) => {
             maxWidth: 560,
             alignItems: 'flex-start',
         }}>
+            <img src={image} width={560} />
             <h3
                 style={{
                     lineHeight: 0,

@@ -49,7 +49,7 @@ export class Footer extends Component {
                     <div style={{
                         display: 'flex',
                         flex: 0.6,
-                        justifyContent: 'space-evenly',
+                        justifyContent: 'space-between',
                         flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
                     }}>
                         <div style={styles.sectionContainer}>

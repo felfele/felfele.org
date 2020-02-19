@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import Image from 'gatsby-image';
 
 import Navbar from '../components/Navbar';
 import { CONTENT_MAX_WIDTH, WIDTH_THRESHOLD, Colors } from '../data/style';
@@ -12,13 +13,15 @@ import Illustration from '../assets/images/felfele-illustration.png';
 import NicheLogoImage from '../assets/images/niche-logo-image.png';
 import FelfeleLabImage from '../assets/images/felfele-lab-image.png'
 
+const PADDING_SIZE_EXPRESSION = 'min(max(80px, 12.5vw), 40px)';
+
 const Row = ({width, children}) => (
     <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: 20,
         paddingRight: 20,
-        paddingTop: 80,
+        paddingTop: PADDING_SIZE_EXPRESSION,
         maxWidth: CONTENT_MAX_WIDTH,
         flex: 1,
         display: 'flex',
@@ -57,12 +60,23 @@ class SiteIndex extends React.Component {
             this,
             'props.data.site.siteMetadata.description'
         );
+        const nicheLogoImageFluid = get(
+            this,
+            'props.data.nicheLogoImage.childImageSharp.fluid'
+        );
+        const felfeleLabImage = get(
+            this,
+            'props.data.felfeleLabImage.childImageSharp.fluid'
+        );
+        const felfeleIllustration = get(
+            this,
+            'props.data.felfeleIllustration.childImageSharp.fluid'
+        );
 
         return (
             <div style={{
                 fontFamily: 'Nunito Sans',
                 color: 'black',
-                // margin: -8,
             }}>
                 <Helmet>
                     <title>{siteTitle}</title>
@@ -76,15 +90,16 @@ class SiteIndex extends React.Component {
                     flexDirection: 'row',
                 }}>
                     <div>
-                        <img src={Illustration} style={{
-                            width: 552,
-                            height: 492,
+                        <Image fluid={felfeleIllustration} style={{
+                            maxWidth: 552,
+                            maxHeight: 492,
+                            width: '80vw',
                         }}
                         />
                     </div>
                 </div>
                 <MainSection
-                    fontSize={this.state.width > WIDTH_THRESHOLD ? 50 : 48}
+                    fontSize={this.state.width > WIDTH_THRESHOLD ? 50 : 30}
                     title='SOCIALIZE WITHOUT COMPROMISE'
                     body="Our nonprofit foundation builds and supports products that let humans connect, share, and inspire each other, without being exploited by technology."
                 />
@@ -97,7 +112,7 @@ class SiteIndex extends React.Component {
                             text='Niche is a decentralized sharing application empowering private communities to share content with absolute privacy, in a calm and fully customizable environment.'
                             link='/niche'
                             label='LEARN MORE'
-                            image={NicheLogoImage}
+                            image={nicheLogoImageFluid}
                         />
                         <SectionSeparator/>
                         <SectionWithImageAndLink
@@ -105,7 +120,7 @@ class SiteIndex extends React.Component {
                             text='We share our work openly in our product lab. Anyone can access our Github repositories along with other product experiments that might be inspiring to you.'
                             link='/lab'
                             label='CHECK FELFELE LAB'
-                            image={FelfeleLabImage}
+                            image={nicheLogoImageFluid}
                         />
                     </Row>
 
@@ -146,12 +161,10 @@ const MainSection = ({ title, body, fontSize }) => {
                 alignItems: 'center',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingLeft: 20,
-                paddingRight: 20,
-                paddingBottom: 80,
+                paddingBottom: PADDING_SIZE_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
                 backgroundColor: Colors.HEAD_BACKGROUND_COLOR,
-                width: '100%',
+                width: '87.5%',
             }}
         >
             <h1
@@ -166,8 +179,8 @@ const MainSection = ({ title, body, fontSize }) => {
             </h1>
             <p
                 style={{
-                    fontSize: 30,
-                    marginTop: 0,
+                    fontSize: 'min(max(18px, 4vw), 30px)',
+                    paddingTop: 10,
                     textAlign: 'center'
                 }}
             >
@@ -207,6 +220,7 @@ const SectionSeparator = () => <div style={{
 
 
 const SectionWithImageAndLink = ({ title, text, image, link, label}) => {
+    console.log('SectionWithImageAndLink', {title, image});
     return (
         <div style={{
             flex: 1,
@@ -215,22 +229,30 @@ const SectionWithImageAndLink = ({ title, text, image, link, label}) => {
             maxWidth: 560,
             alignItems: 'flex-start',
         }}>
-            <img src={image} width={560} />
-            <h3
-                style={{
-                    lineHeight: 0,
-                    fontSize: 21,
-                    fontFamily: 'Jost',
-                    marginBottom: 12,
-                }}
+            <Image fluid={image} style={{ width: '100vw', maxWidth: 560, height: 'auto' }} />
+            <div style={{
+                paddingLeft: '6.75vw',
+                paddingRight: '6.75vw',
+            }}
             >
-                {title}
-            </h3>
-            <p>{text}</p>
+                <h3
+                    style={{
+                        fontSize: 21,
+                        fontFamily: 'Jost',
+                        marginBottom: 12,
+                    }}
+                >
+                    {title}
+                </h3>
+                <p>{text}</p>
+            </div>
             <Button
                 link={link}
                 label={label}
                 border={true}
+                style={{
+                    marginLeft: '6.75vw',
+                }}
             />
         </div>
     );
@@ -244,6 +266,36 @@ export const query = graphql`
             siteMetadata {
                 title
                 description
+            }
+        }
+        nicheLogoImage: file(
+            relativePath: { eq: "niche-logo-image.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        felfeleLabImage: file(
+            relativePath: { eq: "felfele-lab-image.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        felfeleIllustration: file(
+            relativePath: { eq: "felfele-illustration.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
             }
         }
     }

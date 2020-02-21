@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
+import { graphql } from 'gatsby';
+
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
-import { Ruler } from '../components/Ruler';
-import { Footer } from '../components/Footer';
 
 import { bankingData, ethereumData } from '../data/donate';
 

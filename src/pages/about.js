@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { graphql } from 'gatsby';
+
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';

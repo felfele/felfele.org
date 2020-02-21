@@ -54,7 +54,7 @@
     "main": "n/a",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/felfele/felfele.com.git"
+        "url": "git+https://github.com/felfele/felfele.org.git"
     },
     "scripts": {
         "dev": "gatsby develop",

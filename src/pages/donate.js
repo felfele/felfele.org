@@ -64,10 +64,6 @@ export const Donate = ({data}) => (
                     data={ethereumData}
                 />
             </Row>
-
-            <Ruler />
-
-            <Footer/>
         </BottomPart>
     </Fragment>
 )

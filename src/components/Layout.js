@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import '../styles/styles.css';
 import '../styles/fonts.css';
@@ -20,15 +20,12 @@ class Layout extends React.Component {
             ...importedStyle,
         };
         return (
-            <div style={{ margin: -8 }}>
-                <div style={finalStyle}><Navbar/></div>
-                <div style={finalStyle}>
-                    {children}
-                    <Ruler/>
-                    <Footer/>
-                </div>
-            </div>
-
+            <Fragment>
+                <Navbar/>
+                {children}
+                <Ruler/>
+                <Footer/>
+            </Fragment>
         );
     }
 }

@@ -85,9 +85,6 @@ export const Footer = ({}) => {
                             <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
                                 Code of Conduct
                             </SectionLink>
-                            <SectionLink link='/legal'>
-                                Legal
-                            </SectionLink>
                         </div>
                     </div>
                     {

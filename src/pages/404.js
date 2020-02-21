@@ -1,38 +1,17 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import React, { Fragment } from 'react';
+import { TopPart } from '../components/TopPart';
+import { BottomPart } from '../components/BottomPart';
 
-class NotFoundPage extends React.Component {
-    render() {
-        return (
-            <Layout location={this.props.location}>
-                <h1>Not Found</h1>
-                <p>You just hit a route that doesn&#39;t exist....</p>
-                <div
-                    style={{
-                        width: '100%',
-                        height: 0,
-                        paddingBottom: '70%',
-                        position: 'relative',
-                    }}
-                >
-                    <iframe
-                        src="https://giphy.com/embed/OK27wINdQS5YQ"
-                        width="100%"
-                        height="100%"
-                        style={{ position: 'absolute' }}
-                        frameBorder={0}
-                        className="giphy-embed"
-                        allowFullScreen
-                    />
-                </div>
-                <p>
-                    <a href="https://giphy.com/gifs/mind-seinfeild-OK27wINdQS5YQ">
-                        via GIPHY
-                    </a>
-                </p>
-            </Layout>
-        );
-    }
-}
+const NotFoundPage = () => (
+    <Fragment>
+        <TopPart
+            pageTitle='Not found'
+            title='Not Found'
+            subTitle='You just hit a page that doesn&#39;t exist....'
+        />
+        <BottomPart ruler={false}>
+        </BottomPart>
+    </Fragment>
+)
 
 export default NotFoundPage;

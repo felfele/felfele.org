@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { CONTENT_MAX_WIDTH } from '../data/style';
+import { Footer } from '../components/Footer';
+import { Ruler } from '../components/Ruler';
 
 const Legal = ({}) => (
     <Fragment>

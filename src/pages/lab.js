@@ -2,9 +2,7 @@ import React, { Fragment } from 'react';
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
-import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
-import { Ruler } from '../components/Ruler';
-import { Footer } from '../components/Footer';
+import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
 
 export const Lab = ({data}) => (
     <Fragment>
@@ -49,10 +47,6 @@ export const Lab = ({data}) => (
                     label='GITHUB'
                 />
             </Row>
-
-            <Ruler />
-
-            <Footer/>
         </BottomPart>
     </Fragment>
 )

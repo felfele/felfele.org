@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import Image from 'gatsby-image';
 
 import { Button } from './Button';
+import { WIDTH_THRESHOLD } from '../data/style';
 
 export const Section = ({ title, body }) => (
     <div style={{
@@ -28,14 +29,14 @@ export const SectionSeparator = () => <div style={{
 }}></div>
 
 export const SectionWithImageAndLink = ({ title, text, image, link, label }) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
+    const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
     const marginLeft = isMobile ? 20 : 0;
     return (
         <div style={{
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            maxWidth: 560,
+            maxWidth: 480,
             alignItems: 'flex-start',
         }}>
             {image &&
@@ -43,7 +44,7 @@ export const SectionWithImageAndLink = ({ title, text, image, link, label }) => 
                     fluid={image}
                     style={{
                         width: '100vw',
-                        maxWidth: 560,
+                        maxWidth: 480,
                         height: 'auto',
                         marginBottom: 20,
                     }}

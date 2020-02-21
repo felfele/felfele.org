@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 
 import { Ruler } from '../components/Ruler';
-import Footer from '../components/Footer';
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
@@ -52,10 +51,6 @@ const SiteIndex = ({ data }) => (
                     body='We believe in small and independent communities. In the spirit of the early internet, we intend to bring some freedom and diversity in spaces currently dominated by Orwellian tech giants.'
                 />
             </Row>
-
-            <Ruler/>
-
-            <Footer/>
         </BottomPart>
     </Fragment>
 )

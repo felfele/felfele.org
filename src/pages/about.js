@@ -2,9 +2,7 @@ import React, { Fragment } from 'react';
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
-import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
-import { Ruler } from '../components/Ruler';
-import { Footer } from '../components/Footer';
+import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
 import { UniversalLink } from '../components/Button';
 import GithubIcon from '../assets/github.png';
 import TwitterIcon from '../assets/twitter-bird.png';
@@ -97,7 +95,10 @@ export const Lab = ({data}) => (
                     icon={TwitterIcon}
                     text='Official letters or postcards can be sent to our legal address:'
                     label={
-                        <p>
+                        <p style={{
+                            padding: 0,
+                            margin: 0,
+                        }}>
                             Felfele SA
                             <br/>
                             Pärnu mnt 141 (Delta Plaza 13.k)
@@ -107,10 +108,6 @@ export const Lab = ({data}) => (
                     }
                 />
             </Row>
-
-            <Ruler />
-
-            <Footer/>
         </BottomPart>
     </Fragment>
 )

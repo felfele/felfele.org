@@ -4,4 +4,6 @@ export const Colors = {
 };
 
 export const CONTENT_MAX_WIDTH = 1160;
-export const WIDTH_THRESHOLD = CONTENT_MAX_WIDTH + 10 / 2;
+export const WIDTH_THRESHOLD = 992;
+
+export const PADDING_SIZE_CSS_EXPRESSION = 'min(max(80px, 12.5vw), 40px)';

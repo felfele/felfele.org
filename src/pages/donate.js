@@ -1,105 +1,116 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import get from 'lodash/get';
+import React, { Fragment } from 'react';
+import { TopPart } from '../components/TopPart';
+import { BottomPart } from '../components/BottomPart';
+import { Row } from '../components/Row';
+import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
+import { Ruler } from '../components/Ruler';
+import { Footer } from '../components/Footer';
+import { UniversalLink } from '../components/Button';
+import GithubIcon from '../assets/github.png';
+import TwitterIcon from '../assets/twitter-bird.png';
 
-import Layout from '../components/Layout';
-import { bankingData, ethereumData } from './../data/donate';
+import { bankingData, ethereumData } from '../data/donate';
 
-class Donate extends React.Component {
-    render() {
-        const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-        const siteDescription = get(
-            this,
-            'props.data.site.siteMetadata.description'
-        );
+const ContactSection = ({icon, text, link, label}) => (
+    <div style={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: 260,
+        alignItems: 'flex-start',
+    }}>
+        <img
+            src={icon}
+            style={{
+                width: '40px',
+                height: '40px',
+                paddingBottom: 20,
+            }}
+        />
+        <h3 style={{
+            fontSize: 18,
+            fontFamily: 'Nunito Sans',
+            fontWeight: 'normal',
+            marginBottom: 12,
+        }}>
+            {text}
+        </h3>
+        { link
+            ? <UniversalLink link={link}>{label}</UniversalLink>
+            : label
+        }
+    </div>
+)
 
-        return (
-            <Layout>
-                <Helmet
-                    htmlAttributes={{ lang: 'en' }}
-                    meta={[{ name: 'description', content: siteDescription }]}
-                    title={`Donate | ${siteTitle}`}
-                />
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    paddingBottom: 50,
-                    alignItems: 'center',
-                    textAlign: 'center',
-                }}
-                >
-
-                    <h1 style={{
-                        fontSize: 76,
-                        fontFamily: 'Jost',
-                        marginBottom: 0,
-                    }}
-                    >
-                        Make a donation
-                    </h1>
+const DonateInfo = ({title, data}) => (
+    <div>
+        <h3 style={{
+            fontFamily: 'Jost',
+            fontSize: 27,
+            marginBottom: 0,
+        }}>
+            {title}
+        </h3>
+        <br />
+        {Object.keys(data).map(key => {
+            if (data[key]) {
+                return (
                     <p style={{
-                        fontSize: 27,
-                        fontWeight: 'normal',
-                        marginTop: 0,
+                        fontSize: 18,
+                        margin: 0,
+                        wordBreak: 'break-word',
+                        paddingBottom: 10,
                     }}>
-                        We are proudly nonprofit and we stand for uncompromised social media.
-                        We build Felfele because we care and it’s thanks to people like you that we can continue developing it.
+                        <b>{key}: </b>
+                        <br/>
+                        <r>{data[key]}</r>
                     </p>
-                    <div>
-                        <h3 style={{
-                            fontFamily: 'Jost',
-                            fontSize: 27,
-                            marginBottom: 0,
-                        }}>
-                            Bank Transfer
-                        </h3>
-                        <br />
-                        {Object.keys(bankingData).map(key => {
-                            if (bankingData[key]) {
-                                return (
-                                    <p style={{ fontSize: 18, margin: 0 }}>
-                                        <b>{key}: </b>
-                                        <r>{bankingData[key]}</r>
-                                    </p>
-                                );
-                            }
-                        })}
-                    </div>
-                    <div>
-                    <h3 style={{
-                            fontFamily: 'Jost',
-                            fontSize: 27,
-                            marginBottom: 0,
-                        }}>
-                            Ethereum Transaction
-                        </h3>
-                        <br />
-                        {Object.keys(ethereumData).map(key => {
-                            if (ethereumData[key]) {
-                                return (
-                                    <p style={{ fontSize: 18, margin: 0 }}>
-                                        <b>{key}: </b>
-                                        <r>{ethereumData[key]}</r>
-                                    </p>
-                                );
-                            }
-                        })}
-                    </div>
-                </div>
-            </Layout>
-        );
-    }
-}
+                );
+            }
+        })}
+    </div>
+)
+
+export const Donate = ({data}) => (
+    <Fragment>
+        <TopPart
+            fluidImage={data.donateIllustration.childImageSharp.fluid}
+            pageTitle='Donate'
+            title='MAKE A DONATION'
+            subTitle='We’ve been lucky enough to get this far with the help of a network of friends, and by investing our own resources. In other words, giving us money is good for your karma.'
+        />
+        <BottomPart>
+            <Row>
+                <DonateInfo
+                    title='BANK TRANSFER'
+                    data={bankingData}
+                />
+                <SectionSeparator/>
+                <DonateInfo
+                    title='ETHEREUM TRANSACTION'
+                    data={ethereumData}
+                />
+            </Row>
+
+            <Ruler />
+
+            <Footer/>
+        </BottomPart>
+    </Fragment>
+)
 
 export default Donate;
 
 export const query = graphql`
     query {
-        site {
-            siteMetadata {
-                title
-                description
+        donateIllustration: file(
+            relativePath: { eq: "donate-illustration.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
             }
         }
     }

@@ -1,28 +1,15 @@
 import React from 'react';
-import { CONTENT_MAX_WIDTH, WIDTH_THRESHOLD, PADDING_SIZE_CSS_EXPRESSION } from '../data/style';
+import { useMediaQuery } from 'react-responsive'
 
-export class Row extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            width: 0
-        };
-    }
+import {
+    CONTENT_MAX_WIDTH,
+    QUERY_FOR_MOBILE_AND_TABLET,
+    PADDING_SIZE_CSS_EXPRESSION
+} from '../data/style';
 
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
-    updateWindowDimensions = () => {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
-    }
-
-    render = () => (
+export const Row = ({children}) => {
+    const isTabletOrMobile = useMediaQuery({ query: QUERY_FOR_MOBILE_AND_TABLET })
+    return (
         <div style={{
             marginLeft: 'auto',
             marginRight: 'auto',
@@ -32,11 +19,12 @@ export class Row extends React.Component {
             maxWidth: CONTENT_MAX_WIDTH,
             flex: 1,
             display: 'flex',
-            flexDirection: this.state.width > WIDTH_THRESHOLD ? 'row' : 'column',
+            flexDirection: isTabletOrMobile ? 'column' : 'row',
             justifyContent: 'space-between',
-            alignItems: this.state.width > WIDTH_THRESHOLD ? 'normal' : 'center',
+            alignItems: isTabletOrMobile ? 'center' : 'normal',
         }}>
-            {this.props.children}
+            {children}
         </div>
-        )
+
+    )
 }

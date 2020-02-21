@@ -67,20 +67,23 @@ export const TopPart = ({ fluidImage, pageTitle, title, subTitle }) => {
             </Helmet>
 
             <Navbar />
-            <div style={{
-                flex: 1,
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'row',
-            }}>
-                <div>
-                    <Image fluid={fluidImage} style={{
-                        maxWidth: 552,
-                        maxHeight: 492,
-                        width: '80vw',
-                    }} />
-                </div>
-            </div>
+            {
+                fluidImage &&
+                    <div style={{
+                        flex: 1,
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'row',
+                    }}>
+                        <div>
+                            <Image fluid={fluidImage} style={{
+                                maxWidth: 552,
+                                maxHeight: 492,
+                                width: '80vw',
+                            }} />
+                        </div>
+                    </div>
+            }
             <MainSection title={title} subTitle={subTitle} />
         </Fragment>
     )

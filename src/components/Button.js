@@ -24,6 +24,7 @@ const ExternalLink = (props) => {
                 ...style,
             }}
             {...rest}
+            target="_new"
         >
             {children}
         </a>

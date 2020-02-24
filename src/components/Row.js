@@ -3,14 +3,12 @@ import { useMediaQuery } from 'react-responsive'
 
 import {
     CONTENT_MAX_WIDTH,
-    QUERY_FOR_MOBILE_AND_TABLET,
     PADDING_SIZE_CSS_EXPRESSION,
     WIDTH_THRESHOLD
 } from '../data/style';
 
 export const Row = ({children}) => {
     const isTabletOrMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
-    console.log('Row', {isTabletOrMobile})
     return (
         <div style={{
             marginLeft: 'auto',

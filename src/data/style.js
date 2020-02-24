@@ -1,6 +1,8 @@
 export const Colors = {
     HEAD_BACKGROUND_COLOR: 'white',
     BACKGROUND_COLOR: '#f9f9f9',
+    MOBILE_MENU_TITLE: '#757575',
+    MOBILE_MENU_SEPARATOR: '#DDDDDD',
 }
 
 export const CONTENT_MAX_WIDTH = 1160

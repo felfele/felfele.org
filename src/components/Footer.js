@@ -2,8 +2,8 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../assets/logo.svg';
-import { UniversalLink } from './Button';
 import { Colors } from '../data/style';
+import Menu from './Menu';
 
 const LogoContainer = ({isMobile}) => {
     return (
@@ -25,7 +25,6 @@ const LogoContainer = ({isMobile}) => {
 
 export const Footer = ({}) => {
     const isMobile = useMediaQuery({ maxWidth: 767 })
-    console.log('Footer', {isMobile})
     return (
         <div style={{
             display: 'flex',
@@ -54,39 +53,11 @@ export const Footer = ({}) => {
                     {
                         isMobile && <LogoContainer isMobile={isMobile} />
                     }
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>PRODUCT</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link="/niche">
-                                Niche app
-                            </SectionLink>
-                            <SectionLink link="/lab">
-                                Felfele Lab
-                            </SectionLink>
-                        </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>CONTRIBUTE</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link='https://github.com/felfele' target='_new'>
-                                Github
-                            </SectionLink>
-                            <SectionLink link="/donate">
-                                Make a donation
-                            </SectionLink>
-                        </div>
-                    </div>
-                    <div style={styles.sectionContainer}>
-                        <div style={styles.sectionTitle}>FOUNDATION</div>
-                        <div style={styles.sectionContent}>
-                            <SectionLink link='/about'>
-                                About &amp; contact
-                            </SectionLink>
-                            <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' target='_new'>
-                                Code of Conduct
-                            </SectionLink>
-                        </div>
-                    </div>
+                    <Menu
+                        sectionContainerStyle={styles.sectionContainer}
+                        sectionTitleStyle={styles.sectionTitle}
+                        sectionContentStyle={styles.sectionContent}
+                    />
                     {
                         !isMobile && <LogoContainer isMobile={isMobile} />
                     }
@@ -97,19 +68,6 @@ export const Footer = ({}) => {
 }
 
 export default Footer;
-
-const SectionLink = (props) => {
-    const { style, ...rest } = props;
-    return (
-        <UniversalLink
-            style={{
-                fontWeight: 500,
-                ...style,
-            }}
-            {...rest}
-        />
-    );
-};
 
 const styles = {
     sectionContainer: {

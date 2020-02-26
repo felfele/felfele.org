@@ -121,7 +121,7 @@ module.exports = {
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: "src/assets/images/logo.png",
+                icon: "src/assets/images/felfele-icon.png",
             },
         },
         `gatsby-plugin-offline`,

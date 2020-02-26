@@ -15,8 +15,14 @@ export const Lab = ({data}) => (
             pageTitle='Lab'
             subTitle='Here are some work-in-progress, and unpolished experiments. Everything is open source, so feel free to play with these, improve them or use in your own apps.'
             style={{
-                background: 'linear-gradient(black, white)',
-                backgroundImage: `url(${LabBackgroundImage})`,
+                background: `black`,
+                backgroundImage: `
+                    linear-gradient(
+                        rgba(0,0,0,0),
+                        rgba(0,0,0,1)
+                    ),
+                    url(${LabBackgroundImage})
+                `,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'repeat',
             }}

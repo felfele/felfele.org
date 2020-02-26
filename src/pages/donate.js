@@ -7,6 +7,7 @@ import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
 
 import { bankingData, ethereumData } from '../data/donate';
+import { Colors } from '../data/style';
 
 const DonateInfo = ({title, data}) => (
     <div
@@ -51,6 +52,9 @@ export const Donate = ({data}) => (
             pageTitle='Donate'
             title='MAKE A DONATION'
             subTitle='We’ve been lucky enough to get this far with the help of a network of friends, and by investing our own resources. In other words, giving us money is good for your karma.'
+            style={{
+                backgroundColor: Colors.DONATE_PAGE_BACKGROUND,
+            }}
         />
         <BottomPart>
             <Row>

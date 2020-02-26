@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
 import { PADDING_SIZE_CSS_EXPRESSION, CONTENT_MAX_WIDTH, Colors } from '../data/style'
 
-const MainSection = ({ title, subTitle }) => {
+const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
     return (
         <div
             style={{
@@ -16,7 +16,7 @@ const MainSection = ({ title, subTitle }) => {
                 marginRight: 'auto',
                 paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
-                backgroundColor: Colors.HEAD_BACKGROUND_COLOR,
+                // backgroundColor: Colors.HEAD_BACKGROUND_COLOR,
                 width: '87.5%',
             }}
         >
@@ -27,6 +27,7 @@ const MainSection = ({ title, subTitle }) => {
                         fontFamily: 'Jost',
                         textAlign: 'center',
                         marginBottom: 0,
+                        color: textColor,
                     }}
                 >
                     {title}
@@ -36,7 +37,8 @@ const MainSection = ({ title, subTitle }) => {
                 style={{
                     fontSize: 'min(max(18px, 4vw), 30px)',
                     paddingTop: 10,
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    color: textColor,
                 }}
             >
                 {subTitle}
@@ -45,7 +47,15 @@ const MainSection = ({ title, subTitle }) => {
     )
 }
 
-export const TopPart = ({ fluidImage, pageTitle, title, subTitle }) => {
+export const TopPart = ({
+    fluidImage,
+    pageTitle,
+    title,
+    subTitle,
+    style,
+    imgStyle,
+    textColor,
+}) => {
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -70,27 +80,36 @@ export const TopPart = ({ fluidImage, pageTitle, title, subTitle }) => {
                 style={{
                     width: '100%',
                     backgroundColor: 'white',
+                    ...style,
                 }}
             >
-                <Navbar />
+                <Navbar textColor={textColor} />
                 {
                     fluidImage &&
                         <div style={{
                             flex: 1,
                             display: 'flex',
-                            justifyContent: 'center',
                             flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            ...imgStyle,
                         }}>
                             <div>
-                                <Image fluid={fluidImage} style={{
-                                    maxWidth: 552,
-                                    maxHeight: 492,
-                                    width: '80vw',
-                                }} />
+                                <Image
+                                    fluid={fluidImage}
+                                    style={{
+                                        maxWidth: 552,
+                                        maxHeight: 450,
+                                        width: '80vw',
+                                    }}
+                                    imgStyle={{
+                                        objectFit: 'contain',
+                                    }}
+                                />
                             </div>
                         </div>
                 }
-                <MainSection title={title} subTitle={subTitle} />
+                <MainSection title={title} subTitle={subTitle} textColor={textColor} />
             </div>
         </Fragment>
     )

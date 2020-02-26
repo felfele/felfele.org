@@ -7,7 +7,10 @@ import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
 import { UniversalLink } from '../components/Button';
 import GithubIcon from '../assets/github.png';
-import TwitterIcon from '../assets/twitter-bird.png';
+import TwitterIcon from '../assets/twitter.svg';
+import SlackIcon from '../assets/slack.svg';
+import AirmailIcon from '../assets/airmail.png';
+import { Colors } from '../data/style';
 
 const ContactSection = ({icon, text, link, label}) => (
     <div style={{
@@ -22,7 +25,7 @@ const ContactSection = ({icon, text, link, label}) => (
             style={{
                 width: '40px',
                 height: '40px',
-                paddingBottom: 20,
+                paddingBottom: 10,
             }}
         />
         <h3 style={{
@@ -40,12 +43,15 @@ const ContactSection = ({icon, text, link, label}) => (
     </div>
 )
 
-export const Lab = ({data}) => (
+export const About = ({data}) => (
     <Fragment>
         <TopPart
-            fluidImage={data.felfeleLabImage.childImageSharp.fluid}
+            fluidImage={data.felfeleLogoImage.childImageSharp.fluid}
             pageTitle='About'
             subTitle='Felfele is a nonprofit foundation ran by a small, independent, and distributed team. We build and support decentralized social apps with an emphasis on freedom and privacy.'
+            style={{
+                backgroundColor: Colors.ABOUT_PAGE_BACKGROUND,
+            }}
         />
         <BottomPart>
             <Row>
@@ -80,7 +86,7 @@ export const Lab = ({data}) => (
                 />
                 <SectionSeparator/>
                 <ContactSection
-                    icon={GithubIcon}
+                    icon={SlackIcon}
                     text='We use Slack on a daily basis, you can have a look there.'
                     link='https://join.slack.com/t/felfele/shared_invite/enQtNTM1MjUwNTI1NzI5LTY5Yjg0YmVjN2MyN2MzMzc0Y2RkMGRiYzE0N2U0ZjgwNmYxMTQ3YjUwMDg1MGFiZTZlMWViZjU2MWJjY2Y0OTY'
                     label='Join our workspace'
@@ -94,7 +100,7 @@ export const Lab = ({data}) => (
                 />
                 <SectionSeparator/>
                 <ContactSection
-                    icon={TwitterIcon}
+                    icon={AirmailIcon}
                     text='Official letters or postcards can be sent to our legal address:'
                     label={
                         <p style={{
@@ -114,16 +120,16 @@ export const Lab = ({data}) => (
     </Fragment>
 )
 
-export default Lab;
+export default About;
 
 export const query = graphql`
     query {
-        felfeleLabImage: file(
-            relativePath: { eq: "felfele-lab-image.png" },
+        felfeleLogoImage: file(
+            relativePath: { eq: "felfele-logo-with-pattern.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
+                fluid(maxWidth: 732, maxHeight: 900, quality: 100) {
                     ...GatsbyImageSharpFluid_noBase64
                 }
             }

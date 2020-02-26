@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/images/felfele-icon.svg';
 import { Colors } from '../data/style';
 import Menu from './Menu';
 

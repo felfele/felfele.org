@@ -16,7 +16,6 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
                 marginRight: 'auto',
                 paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
-                // backgroundColor: Colors.HEAD_BACKGROUND_COLOR,
                 width: '87.5%',
             }}
         >

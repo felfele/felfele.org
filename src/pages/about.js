@@ -49,8 +49,8 @@ export const About = ({data}) => (
             fluidImage={data.felfeleLogoImage.childImageSharp.fluid}
             pageTitle='About'
             subTitle='Felfele is a nonprofit foundation ran by a small, independent, and distributed team. We build and support decentralized social apps with an emphasis on freedom and privacy.'
-            style={{
-                backgroundColor: Colors.ABOUT_PAGE_BACKGROUND,
+            imgStyle={{
+                maxHeight: 300,
             }}
         />
         <BottomPart>
@@ -129,7 +129,7 @@ export const query = graphql`
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {
-                fluid(maxWidth: 732, maxHeight: 900, quality: 100) {
+                fluid(maxWidth: 244, maxHeight: 300, quality: 100) {
                     ...GatsbyImageSharpFluid_noBase64
                 }
             }

@@ -6,6 +6,7 @@ import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
+import { Colors } from '../data/style';
 
 const SiteIndex = ({ data }) => (
     <Fragment>
@@ -13,6 +14,9 @@ const SiteIndex = ({ data }) => (
             fluidImage={data.felfeleIllustration.childImageSharp.fluid}
             title='SOCIALIZE WITHOUT COMPROMISE'
             subTitle="Our nonprofit foundation builds and supports products that let humans connect, share, and inspire each other, without being exploited by technology."
+            style={{
+                backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
+            }}
         />
         <BottomPart>
             <Row>
@@ -80,7 +84,7 @@ export const query = graphql`
             }
         }
         felfeleIllustration: file(
-            relativePath: { eq: "felfele-illustration.png" },
+            relativePath: { eq: "main-illustration.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

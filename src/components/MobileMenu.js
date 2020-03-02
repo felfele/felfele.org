@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import { Menu } from './Menu';
 import { Colors } from '../data/style';
-import FelfeleLogoImage from '../assets/Felfele_Horizontal.svg'
+import Logo from './../assets/images/felfele-logo.svg'
 
 export class MobileMenu extends Component {
     state = {
@@ -69,7 +69,7 @@ export class MobileMenu extends Component {
                                 alignItems: 'center',
                             }}
                         >
-                            <img src={FelfeleLogoImage} style={{ width: 100, marginBottom: 0, fill: '#000000' }}/>
+                            <img src={Logo} style={{ width: 100, marginBottom: 0, fill: '#000000' }}/>
                         </Link>
                     </div>
 

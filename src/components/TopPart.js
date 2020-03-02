@@ -91,7 +91,6 @@ export const TopPart = ({
                             flexDirection: 'row',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            ...imgStyle,
                         }}>
                             <div>
                                 <Image
@@ -100,6 +99,7 @@ export const TopPart = ({
                                         maxWidth: 552,
                                         maxHeight: 450,
                                         width: '80vw',
+                                        ...imgStyle,
                                     }}
                                     imgStyle={{
                                         objectFit: 'contain',

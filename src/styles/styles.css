@@ -1,6 +1,10 @@
 * {
     font-family: 'Nunito Sans';
-    color: 'black';
+    color: black;
+}
+
+html {
+    font-size: 100%;
 }
 
 body {
@@ -25,3 +29,4 @@ a:active { /* Selected link  */
 .twitter-tweet.twitter-tweet-rendered {
     margin: auto !important;
 }
+

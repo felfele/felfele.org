@@ -22,11 +22,12 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
             {title &&
                 <h1
                     style={{
-                        fontSize: 'min(50px, max(30px, 10vw))',
+                        color: textColor,
+                        paddingTop: 20,
                         fontFamily: 'Jost',
                         textAlign: 'center',
                         marginBottom: 0,
-                        color: textColor,
+                        fontSize: '2.0rem',
                     }}
                 >
                     {title}
@@ -34,10 +35,10 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
             }
             <p
                 style={{
-                    fontSize: 'min(max(18px, 4vw), 30px)',
                     paddingTop: 10,
                     textAlign: 'center',
                     color: textColor,
+                    fontSize: '1.2rem',
                 }}
             >
                 {subTitle}

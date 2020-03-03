@@ -9,7 +9,6 @@ import Phone from './../assets/baseline-smartphone-24-px.svg'
 import { Button } from './Button';
 import { CONTENT_MAX_WIDTH } from '../data/style';
 import MobileMenu from './MobileMenu';
-import HamburgerImage from '../assets/hamburger.png';
 import Tool from '../assets/tool.svg';
 
 const Navbar = ({textColor = '#000000'}) => {
@@ -49,18 +48,17 @@ const Navbar = ({textColor = '#000000'}) => {
                 >
                     <img src={Logo} style={{ width: 100, marginBottom: 0, fill: textColor }}/>
                 </Link>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        paddingRight: 10,
-                    }}
-                >
                 {
                     isMobile
-                    ? <MobileMenu src={HamburgerImage} />
-                    : <Fragment>
+                    ? <MobileMenu />
+                    : <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                            paddingRight: 10,
+                        }}
+                    >
                         <Button
                             icon={Phone}
                             link='/niche'
@@ -80,9 +78,8 @@ const Navbar = ({textColor = '#000000'}) => {
                                 paddingLeft: 30,
                             }}
                         />
-                    </Fragment>
+                    </div>
                 }
-                </div>
             </div>
         </div>
     )

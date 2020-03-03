@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Modal from 'react-responsive-modal';
 import { Link } from 'gatsby';
 
 import { Menu } from './Menu';
 import { Colors } from '../data/style';
 import Logo from './../assets/images/felfele-logo.svg'
+import MobileMenuImage from '../assets/mobileMenu.svg';
+import MobileCloseImage from '../assets/mobileClose.svg';
 
 export class MobileMenu extends Component {
     state = {
@@ -20,13 +22,13 @@ export class MobileMenu extends Component {
     };
 
     render() {
-        const { title, src } = this.props;
+        const { title } = this.props;
         return (
-            <div>
+            <Fragment>
                 <Modal
                     open={this.state.open}
                     onClose={this.closeModal}
-                    showCloseIcon={true}
+                    showCloseIcon={false}
                     styles={{
                         overlay: {
                             padding: 0,
@@ -47,7 +49,7 @@ export class MobileMenu extends Component {
                     <div
                         style={{
                             display: 'flex',
-                            width: '100%',
+                            flex: 1,
                             flexDirection: 'row',
                             justifyContent: 'space-between',
                             alignItems: 'center',
@@ -71,6 +73,13 @@ export class MobileMenu extends Component {
                         >
                             <img src={Logo} style={{ width: 100, marginBottom: 0, fill: '#000000' }}/>
                         </Link>
+
+                        <img
+                            src={MobileCloseImage}
+                            alt='Close menu'
+                            onClick={this.closeModal}
+                        />
+
                     </div>
 
                     <div
@@ -113,17 +122,11 @@ export class MobileMenu extends Component {
 
                 </Modal>
                 <img
-                    src={src}
+                    src={MobileMenuImage}
                     alt={title}
-                    style={{
-                        width: 20,
-                        height: 16,
-                    }}
-                    onClick={() => {
-                        this.openModal();
-                    }}
+                    onClick={this.openModal}
                 />
-            </div>
+            </Fragment>
         );
     }
 }

@@ -8,7 +8,8 @@ import {
 } from '../data/style';
 
 export const Row = ({children}) => {
-    const isTabletOrMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
+    const isDesktop = useMediaQuery({ minWidth: WIDTH_THRESHOLD })
+    console.log('Row', {isTabletOrMobile});
     return (
         <div style={{
             marginLeft: 'auto',
@@ -19,9 +20,9 @@ export const Row = ({children}) => {
             maxWidth: CONTENT_MAX_WIDTH,
             flex: 1,
             display: 'flex',
-            flexDirection: isTabletOrMobile ? 'column' : 'row',
+            flexDirection: isDesktop ? 'row' : 'column',
             justifyContent: 'space-between',
-            alignItems: isTabletOrMobile ? 'center' : 'normal',
+            alignItems: isDesktop ? 'normal' : 'center',
         }}>
             {children}
         </div>

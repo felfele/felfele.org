@@ -9,7 +9,6 @@ import {
 
 export const Row = ({children}) => {
     const isDesktop = useMediaQuery({ minWidth: WIDTH_THRESHOLD })
-    console.log('Row', {isTabletOrMobile});
     return (
         <div style={{
             marginLeft: 'auto',

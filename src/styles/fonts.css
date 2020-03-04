@@ -5,3 +5,11 @@
     src: url("../fonts/Jost-700.ttf") format("truetype");
     font-display: swap;
 }
+
+@font-face {
+    font-family: Jost;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/Jost-500-Medium.ttf") format("truetype");
+    font-display: swap;
+}

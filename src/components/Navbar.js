@@ -64,7 +64,8 @@ const Navbar = ({textColor = '#000000'}) => {
                             link='/niche'
                             label='NICHE'
                             style={{
-                                fontWeight: 600,
+                                fontWeight: 500,
+                                fontFamily: 'Jost',
                                 color: textColor,
                             }}
                         />
@@ -73,7 +74,8 @@ const Navbar = ({textColor = '#000000'}) => {
                             link='/lab'
                             label='LAB'
                             style={{
-                                fontWeight: 600,
+                                fontWeight: 500,
+                                fontFamily: 'Jost',
                                 color: textColor,
                                 paddingLeft: 30,
                             }}

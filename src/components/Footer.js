@@ -17,7 +17,7 @@ const LogoContainer = ({isMobile}) => {
                 display: 'flex',
                 justifyContent: isMobile ? 'center' : 'flex-end',
             }}>
-                <img width={23} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
+                <img width={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
             </div>
         </div>
     )
@@ -78,13 +78,13 @@ const styles = {
     sectionContent: {
         display: 'flex',
         flexDirection: 'column',
-        fontWeight: 600,
+        fontWeight: 500,
         fontSize: 14,
         lineHeight: 1.5,
     },
     sectionTitle: {
         paddingBottom: 5,
         fontFamily: 'Jost',
-        fontWeight: 100,
+        fontWeight: 500,
     },
 };

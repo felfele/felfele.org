@@ -33,7 +33,8 @@ const Navbar = ({textColor = '#000000'}) => {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    height: 90,
+                    height: 40,
+                    marginTop: '4vmax',
                 }}
             >
                 <Link

@@ -12,13 +12,36 @@ const SiteIndex = ({ data }) => (
     <Fragment>
         <TopPart
             fluidImage={data.felfeleIllustration.childImageSharp.fluid}
-            title='SOCIALIZE WITHOUT COMPROMISE'
-            subTitle="Our nonprofit foundation builds and supports products that let humans connect, share, and inspire each other, without being exploited by technology."
+            subTitle="We build and support products that let people connect and inspire each other, without being exploited by technology."
             style={{
                 backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
             }}
+            imgStyle={{
+                maxWidth: 692,
+                maxHeight: 760,
+                marginTop: 80,
+            }}
         />
         <BottomPart>
+            <Row>
+                <Section
+                    title='NOT FOR PROFIT'
+                    body='Seeking profit while building social media often leads to decisions and compromises that we refuse to make. We value freedom and the satisfaction to work on projects with positive social impact over quick profits.'
+                />
+                <SectionSeparator/>
+                <Section
+                    title='OPEN SOURCE'
+                    body='We’re developing open protocols and libraries for building decentralized social applications. By sharing our work, we hope to inspire other people, ease collaboration, and support similar projects.'
+                />
+                <SectionSeparator/>
+                <Section
+                    title='INDEPENDENT'
+                    body='We believe in small and independent communities. In the spirit of the early internet, we intend to bring some freedom and diversity in spaces currently dominated by Orwellian tech giants.'
+                />
+            </Row>
+
+            <Ruler/>
+
             <Row>
                 <SectionWithImageAndLink
                     title='GET OUR APP'
@@ -34,25 +57,6 @@ const SiteIndex = ({ data }) => (
                     link='/lab'
                     label='CHECK FELFELE LAB'
                     image={data.felfeleLabImage.childImageSharp.fluid}
-                />
-            </Row>
-
-            <Ruler/>
-
-            <Row>
-                <Section
-                    title='NOT FOR PROFIT'
-                    body='Seeking profit while building social media often leads to decisions and compromises that we refuse to make. We value freedom and the satisfaction to work on projects with positive social impact over quick profits.'
-                />
-                <SectionSeparator/>
-                <Section
-                    title='OPEN SOURCE'
-                    body='We’re developing open protocols and libraries for building decentralized social applications. By sharing our work, we hope to inspire other people, ease collaboration, and support similar projects.'
-                />
-                <SectionSeparator/>
-                <Section
-                    title='INDEPENDENT'
-                    body='We believe in small and independent communities. In the spirit of the early internet, we intend to bring some freedom and diversity in spaces currently dominated by Orwellian tech giants.'
                 />
             </Row>
         </BottomPart>

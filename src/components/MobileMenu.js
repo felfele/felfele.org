@@ -53,9 +53,11 @@ export class MobileMenu extends Component {
                             flexDirection: 'row',
                             justifyContent: 'space-between',
                             alignItems: 'center',
-                            height: 90,
+                            height: 40,
+                            marginTop: '4vmax',
                             paddingLeft: 20,
                             paddingRight: 20,
+                            paddingBottom: 20,
                             borderBottomColor: Colors.MOBILE_MENU_SEPARATOR,
                             borderBottomWidth: 1,
                             borderBottomStyle: 'solid',
@@ -71,7 +73,7 @@ export class MobileMenu extends Component {
                                 alignItems: 'center',
                             }}
                         >
-                            <img src={Logo} style={{ width: 100, marginBottom: 0, fill: '#000000' }}/>
+                            <img src={Logo} style={{ width: 118, marginBottom: 0, fill: '#000000' }}/>
                         </Link>
 
                         <img

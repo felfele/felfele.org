@@ -38,7 +38,9 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
                     paddingTop: 10,
                     textAlign: 'center',
                     color: textColor,
-                    fontSize: '1.2rem',
+                    fontFamily: 'Jost',
+                    fontWeight: 500,
+                    fontSize: '2.4vmax',
                 }}
             >
                 {subTitle}

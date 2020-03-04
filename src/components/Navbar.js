@@ -46,7 +46,7 @@ const Navbar = ({textColor = '#000000'}) => {
                         alignItems: 'center',
                     }}
                 >
-                    <img src={Logo} style={{ width: 100, marginBottom: 0, fill: textColor }}/>
+                    <img src={Logo} style={{ width: 118, marginBottom: 0, fill: textColor }}/>
                 </Link>
                 {
                     isMobile

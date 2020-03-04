@@ -152,6 +152,7 @@ const Top = ({fluidImage}) => (
             <div style={{
                 padding: 0,
                 margin: 0,
+                paddingLeft: 10,
                 width: 109,
                 height: 30,
             }}>
@@ -203,21 +204,21 @@ const Niche = ({ data }) => (
                     padding: 0,
                     backgroundColor: Colors.NICHE_BLACK,
                     display: 'flex',
-                    height: 168,
+                    height: '14.1vmin',
                 }}></div>
                 <div style={{
                     margin: 0,
                     padding: 0,
                     backgroundColor: Colors.NICHE_PINK,
                     display: 'flex',
-                    height: 461,
+                    height: '55vmin',
                 }}></div>
                 <div style={{
                     margin: 0,
                     padding: 0,
                     backgroundColor: Colors.BACKGROUND_COLOR,
                     display: 'flex',
-                    height: 151,
+                    height: '14vmin',
                 }}></div>
             </div>
             <div style={{
@@ -238,7 +239,7 @@ const Niche = ({ data }) => (
                         style={{
                             maxWidth: 1000,
                             maxHeight: 800,
-                            width: '80vw',
+                            width: '80vmin',
                         }}
                         imgStyle={{
                             objectFit: 'contain',
@@ -329,6 +330,7 @@ const Niche = ({ data }) => (
                         marginRight: 'auto',
                         alignItems: 'center',
                         marginTop: 50,
+                        display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'stretch'
                     }}
@@ -341,7 +343,8 @@ const Niche = ({ data }) => (
                             borderBottomLeftRadius: 9,
                             borderTopLeftRadius: 9,
                             height: 43,
-                            width: 400,
+                            maxWidth: 400,
+                            flex: 1,
                             padding: 0,
                             margin: 0,
                             paddingLeft: 20,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { PADDING_SIZE_CSS_EXPRESSION } from '../data/style.js'
 
-export const Ruler = () => (
+export const Ruler = ({style}) => (
     <div style={{
             height: 1,
             maxWidth: 1160,
@@ -11,6 +11,7 @@ export const Ruler = () => (
             marginRight: 'auto',
             alignItem: 'center',
             backgroundColor: 'rgba(128, 128, 128, 0.25)',
+            ...style,
         }}
     />
 )

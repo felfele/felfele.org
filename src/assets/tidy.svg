@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="60px" viewBox="0 0 46 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Tidy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Niche" transform="translate(-139.000000, -1914.000000)" stroke="#FF9E9E">
+            <g id="Tidy" transform="translate(140.000000, 1915.000000)">
+                <path d="M44,53 C44,55.75 41.75,58 39,58 L5,58 C2.25,58 0,55.75 0,53 L0,5 C0,2.25 2.25,0 5,0 L39,0 C41.75,0 44,2.25 44,5 L44,53 Z" id="Stroke-1"></path>
+                <path d="M0,20 L44,20" id="Stroke-3"></path>
+                <path d="M0,38 L44,38" id="Stroke-5"></path>
+                <polygon id="Stroke-7" points="26 10 18 10 14 6 30 6"></polygon>
+                <polygon id="Stroke-9" points="26 30 18 30 14 26 30 26"></polygon>
+                <polygon id="Stroke-11" points="26 48 18 48 14 44 30 44"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

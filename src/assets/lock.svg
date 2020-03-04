@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="60px" viewBox="0 0 42 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Lock</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 60 42 60 42 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Niche" transform="translate(-939.000000, -2161.000000)">
+            <g id="Lock" transform="translate(939.000000, 2161.000000)">
+                <path d="M22,38 C22,38.553 21.552,39 21,39 C20.447,39 20,38.553 20,38 C20,37.447 20.447,37 21,37 C21.552,37 22,37.447 22,38 Z" id="Stroke-1" stroke="#FF9E9E"></path>
+                <path d="M21,39 L21,46.566" id="Stroke-3" stroke="#FF9E9E" stroke-linecap="round"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-6"></g>
+                <polygon id="Stroke-5" stroke="#FF9E9E" mask="url(#mask-2)" points="1 59 41 59 41 25 1 25"></polygon>
+                <path d="M35,25 L35,16 C35,8.34 29,1 21,1 C13,1 7,8.34 7,16 L7,25" id="Stroke-7" stroke="#FF9E9E" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -39,6 +39,7 @@
         "react-responsive-modal": "^3.6.0",
         "react-typography": "^0.16.19",
         "react-vertical-timeline-component": "^2.5.0",
+        "typeface-karla": "0.0.72",
         "typeface-nunito-sans": "0.0.72",
         "typeface-youngserif": "0.0.75"
     },

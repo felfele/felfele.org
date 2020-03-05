@@ -7,19 +7,17 @@ import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
 import { Colors } from '../data/style';
+import { Illustration } from '../components/Illustration';
+
+import MainIllustration from '../assets/main-illustration.svg'
 
 const SiteIndex = ({ data }) => (
     <Fragment>
         <TopPart
-            fluidImage={data.felfeleIllustration.childImageSharp.fluid}
-            subTitle="We build and support products that let people connect and inspire each other, without being exploited by technology."
+            icon={<Illustration src={MainIllustration} style={{ maxWidth: 692 }} />}
+            subTitle="We build products that let people connect and inspire each other, without being exploited by technology."
             style={{
                 backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
-            }}
-            imgStyle={{
-                maxWidth: 692,
-                maxHeight: 760,
-                marginTop: 80,
             }}
         />
         <BottomPart>
@@ -79,16 +77,6 @@ export const query = graphql`
         }
         felfeleLabImage: file(
             relativePath: { eq: "felfele-lab-image.png" },
-            sourceInstanceName: { eq: "images" }
-            ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
-        }
-        felfeleIllustration: file(
-            relativePath: { eq: "main-illustration.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

@@ -20,7 +20,7 @@ export const Row = ({children}) => {
             flex: 1,
             display: 'flex',
             flexDirection: isDesktop ? 'row' : 'column',
-            justifyContent: 'space-between',
+            justifyContent: 'stretch',
             alignItems: isDesktop ? 'normal' : 'center',
         }}>
             {children}

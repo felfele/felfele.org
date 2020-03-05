@@ -5,6 +5,24 @@ import Image from 'gatsby-image';
 import { Button } from './Button';
 import { WIDTH_THRESHOLD } from '../data/style';
 
+const H3 = ({ children, style }) => (
+    <h3 style={{
+        fontSize: 21,
+        fontFamily: 'Jost',
+        marginTop: 0,
+        marginBottom: 5,
+        ...style,
+    }}>{children}</h3>
+)
+
+const P = ({ children, style }) => (
+    <p style={{
+        marginTop: 0,
+        marginBottom: 0,
+        ...style,
+    }}>{children}</p>
+)
+
 export const Section = ({ title, body }) => (
     <div style={{
         flex: 1,
@@ -12,20 +30,16 @@ export const Section = ({ title, body }) => (
         flexDirection: 'column',
         maxWidth: 370,
     }}>
-        <h3 style={{
-            fontSize: 21,
-            fontFamily: 'Jost',
-            marginBottom: 12,
-        }}>
-            {title}
-        </h3>
-        <p>{body}</p>
+        <H3>{title}</H3>
+        <P>{body}</P>
     </div>
 )
 
 export const SectionSeparator = () => <div style={{
-    width: 40,
-    height: 40,
+    minWidth: 40,
+    maxWidth: 40,
+    minHeight: 40,
+    maxHeight: 40,
 }}></div>
 
 export const SectionWithImageAndLink = ({ title, text, image, link, label }) => {
@@ -36,17 +50,17 @@ export const SectionWithImageAndLink = ({ title, text, image, link, label }) => 
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            maxWidth: 480,
+            maxWidth: 540,
             alignItems: 'flex-start',
         }}>
             {image &&
                 <Image
                     fluid={image}
                     style={{
-                        width: '100vw',
-                        maxWidth: 480,
+                        width: isMobile ? '100vw' : '40vw',
+                        maxWidth: 540,
                         height: 'auto',
-                        marginBottom: 20,
+                        marginBottom: 15,
                     }}
                 />
             }
@@ -54,14 +68,8 @@ export const SectionWithImageAndLink = ({ title, text, image, link, label }) => 
                 paddingBottom: 20,
                 marginLeft,
             }}>
-                <h3 style={{
-                    fontSize: 21,
-                    fontFamily: 'Jost',
-                    marginBottom: 12,
-                }}>
-                    {title}
-                </h3>
-                <p>{text}</p>
+                <H3>{title}</H3>
+                <P>{text}</P>
             </div>
             <Button link={link} label={label} border={true} style={{
                 marginLeft,

@@ -6,11 +6,14 @@ import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
 import { UniversalLink } from '../components/Button';
+
 import GithubIcon from '../assets/github.png';
 import TwitterIcon from '../assets/twitter.svg';
 import SlackIcon from '../assets/slack.svg';
-import AirmailIcon from '../assets/airmail.png';
-import { Colors } from '../data/style';
+import MailboxIcon from '../assets/mailbox.svg';
+
+import FelfeleLogo from '../assets/images/felfele-icon.svg'
+import { Illustration } from '../components/Illustration';
 
 const ContactSection = ({icon, text, link, label}) => (
     <div style={{
@@ -43,15 +46,12 @@ const ContactSection = ({icon, text, link, label}) => (
     </div>
 )
 
-export const About = ({data}) => (
+export const About = ({}) => (
     <Fragment>
         <TopPart
-            fluidImage={data.felfeleLogoImage.childImageSharp.fluid}
+            icon={<Illustration src={FelfeleLogo} style={{maxWidth: 300}} />}
             pageTitle='About'
-            subTitle='Felfele is a nonprofit foundation ran by a small, independent, and distributed team. We build and support decentralized social apps with an emphasis on freedom and privacy.'
-            imgStyle={{
-                maxHeight: 300,
-            }}
+            subTitle='We are a nonprofit foundation ran by a small, independent, and distributed team defending privacy and freedom of expression.'
         />
         <BottomPart>
             <Row>
@@ -100,7 +100,7 @@ export const About = ({data}) => (
                 />
                 <SectionSeparator/>
                 <ContactSection
-                    icon={AirmailIcon}
+                    icon={MailboxIcon}
                     text='Official letters or postcards can be sent to our legal address:'
                     label={
                         <p style={{
@@ -121,18 +121,3 @@ export const About = ({data}) => (
 )
 
 export default About;
-
-export const query = graphql`
-    query {
-        felfeleLogoImage: file(
-            relativePath: { eq: "felfele-logo-with-pattern.png" },
-            sourceInstanceName: { eq: "images" }
-            ) {
-            childImageSharp {
-                fluid(maxWidth: 244, maxHeight: 300, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
-        }
-    }
-`;

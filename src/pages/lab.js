@@ -5,16 +5,22 @@ import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
+import { Illustration } from '../components/Illustration'
+
+import FelfeleLabLogo from '../assets/felfele-lab-logo.svg'
 
 export const Lab = ({data}) => (
     <Fragment>
         <TopPart
-            fluidImage={data.felfeleLabImage.childImageSharp.fluid}
-            pageTitle='Lab'
-            subTitle='Here are some work-in-progress, and unpolished experiments. Everything is open source, so feel free to play with these, improve them or use in your own apps.'
-            imgStyle={{
-                minHeight: 400,
+            icon={<Illustration src={FelfeleLabLogo} style={{
+                maxHeight: 50,
+            }} />}
+            iconStyle={{
+                marginTop: 100,
+                marginBottom: 100,
             }}
+            pageTitle='Lab'
+            subTitle='Where we share work-in-progress and unpolished experiments. Everything is open source, so feel free to use or contribute. '
         />
         <BottomPart>
             <Row>

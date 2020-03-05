@@ -7,7 +7,8 @@ import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
 
 import { bankingData, ethereumData } from '../data/donate';
-import { Colors } from '../data/style';
+
+import ColorFacesIllustration from '../assets/color-faces-illustration.svg'
 
 const DonateInfo = ({title, data}) => (
     <div
@@ -17,7 +18,7 @@ const DonateInfo = ({title, data}) => (
     >
         <h3 style={{
             fontFamily: 'Jost',
-            fontSize: 27,
+            fontSize: 21,
             marginBottom: 0,
         }}>
             {title}
@@ -29,7 +30,7 @@ const DonateInfo = ({title, data}) => (
                     <p
                         key={key}
                         style={{
-                            fontSize: 18,
+                            fontSize: 14,
                             margin: 0,
                             wordBreak: 'break-word',
                             paddingBottom: 10,
@@ -48,10 +49,10 @@ const DonateInfo = ({title, data}) => (
 export const Donate = ({data}) => (
     <Fragment>
         <TopPart
-            fluidImage={data.donateIllustration.childImageSharp.fluid}
+            icon={<img src={ColorFacesIllustration} />}
             pageTitle='Donate'
             title='MAKE A DONATION'
-            subTitle='We’ve been lucky enough to get this far with the help of a network of friends, and by investing our own resources. In other words, giving us money is good for your karma.'
+            subTitle='We’ve been lucky enough to get this far with the help of of friends, and by investing our own resources. Boost your karma.'
         />
         <BottomPart>
             <Row>
@@ -70,18 +71,3 @@ export const Donate = ({data}) => (
 )
 
 export default Donate;
-
-export const query = graphql`
-    query {
-        donateIllustration: file(
-            relativePath: { eq: "donate-illustration.png" },
-            sourceInstanceName: { eq: "images" }
-            ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
-        }
-    }
-`;

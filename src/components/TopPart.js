@@ -27,7 +27,8 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
                         fontFamily: 'Jost',
                         textAlign: 'center',
                         marginBottom: 0,
-                        fontSize: '2.0rem',
+                        fontWeight: 700,
+                        fontSize: '4.3vmax',
                     }}
                 >
                     {title}
@@ -50,12 +51,12 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
 }
 
 export const TopPart = ({
-    fluidImage,
+    icon,
+    iconStyle,
     pageTitle,
     title,
     subTitle,
     style,
-    imgStyle,
     textColor,
 }) => {
     const data = useStaticQuery(graphql`
@@ -87,27 +88,18 @@ export const TopPart = ({
             >
                 <Navbar textColor={textColor} />
                 {
-                    fluidImage &&
+                    icon &&
                         <div style={{
                             flex: 1,
                             display: 'flex',
                             flexDirection: 'row',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            marginTop: 80,
+                            ...iconStyle,
                         }}>
                             <div>
-                                <Image
-                                    fluid={fluidImage}
-                                    style={{
-                                        maxWidth: 552,
-                                        maxHeight: 450,
-                                        width: '80vw',
-                                        ...imgStyle,
-                                    }}
-                                    imgStyle={{
-                                        objectFit: 'contain',
-                                    }}
-                                />
+                                {icon}
                             </div>
                         </div>
                 }

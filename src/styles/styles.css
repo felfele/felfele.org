@@ -30,3 +30,16 @@ a:active { /* Selected link  */
     margin: auto !important;
 }
 
+@media all and (max-width: 992) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media all and (min-width: 992) {
+    .grid {
+        flex-direction: row;
+        align-items: unset;
+    }
+}

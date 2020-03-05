@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
-import Image from 'gatsby-image';
 import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
 import { PADDING_SIZE_CSS_EXPRESSION, CONTENT_MAX_WIDTH, Colors } from '../data/style'
@@ -50,15 +49,7 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
     )
 }
 
-export const TopPart = ({
-    icon,
-    iconStyle,
-    pageTitle,
-    title,
-    subTitle,
-    style,
-    textColor,
-}) => {
+export const HelmetWithMetadata = ({pageTitle}) => {
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -73,38 +64,50 @@ export const TopPart = ({
         ? pageTitle + ' | ' + data.site.siteMetadata.title
         : data.site.siteMetadata.title
     return (
-        <Fragment>
-            <Helmet>
-                <title>{htmlTitle}</title>
-                <meta name="description" content={data.site.siteMetadata.description} />
-            </Helmet>
-
-            <div
-                style={{
-                    width: '100%',
-                    backgroundColor: 'white',
-                    ...style,
-                }}
-            >
-                <Navbar textColor={textColor} />
-                {
-                    icon &&
-                        <div style={{
-                            flex: 1,
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            marginTop: 80,
-                            ...iconStyle,
-                        }}>
-                            <div>
-                                {icon}
-                            </div>
-                        </div>
-                }
-                <MainSection title={title} subTitle={subTitle} textColor={textColor} />
-            </div>
-        </Fragment>
+        <Helmet>
+            <title>{htmlTitle}</title>
+            <meta name="description" content={data.site.siteMetadata.description} />
+        </Helmet>
     )
 }
+
+export const TopPart = ({
+    icon,
+    iconStyle,
+    pageTitle,
+    title,
+    subTitle,
+    style,
+    textColor,
+}) => (
+    <Fragment>
+        <HelmetWithMetadata pageTitle={pageTitle} />
+
+        <div
+            style={{
+                width: '100%',
+                backgroundColor: 'white',
+                ...style,
+            }}
+        >
+            <Navbar textColor={textColor} />
+            {
+                icon &&
+                    <div style={{
+                        flex: 1,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        marginTop: 80,
+                        ...iconStyle,
+                    }}>
+                        <div>
+                            {icon}
+                        </div>
+                    </div>
+            }
+            <MainSection title={title} subTitle={subTitle} textColor={textColor} />
+        </div>
+    </Fragment>
+)

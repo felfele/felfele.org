@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../assets/images/felfele-icon.svg';
@@ -17,7 +18,9 @@ const LogoContainer = ({isMobile}) => {
                 display: 'flex',
                 justifyContent: isMobile ? 'center' : 'flex-end',
             }}>
-                <img width={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
+                <Link to='/'>
+                    <img width={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
+                </Link>
             </div>
         </div>
     )

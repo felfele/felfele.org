@@ -40,9 +40,6 @@ export const Menu = (props) => {
                     <SectionLink link='/about' style={sectionLinkStyle}>
                         About &amp; contact
                     </SectionLink>
-                    <SectionLink link='https://github.com/felfele/felfele/blob/master/CODE_OF_CONDUCT.md' style={sectionLinkStyle} target='_new'>
-                        Code of Conduct
-                    </SectionLink>
                 </div>
             </div>
         </Fragment>

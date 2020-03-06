@@ -24,7 +24,7 @@ const P = ({ children, style }) => (
 )
 
 export const Section = ({ title, body }) => (
-    <div style={{
+    <section style={{
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
@@ -32,7 +32,7 @@ export const Section = ({ title, body }) => (
     }}>
         <H3>{title}</H3>
         <P>{body}</P>
-    </div>
+    </section>
 )
 
 export const SectionSeparator = () => <div style={{
@@ -46,7 +46,7 @@ export const SectionWithImageAndLink = ({ title, text, image, link, label }) => 
     const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
     const marginLeft = isMobile ? 20 : 0;
     return (
-        <div style={{
+        <section style={{
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
@@ -74,6 +74,6 @@ export const SectionWithImageAndLink = ({ title, text, image, link, label }) => 
             <Button link={link} label={label} border={true} style={{
                 marginLeft,
             }} />
-        </div>
+        </section>
     )
 }

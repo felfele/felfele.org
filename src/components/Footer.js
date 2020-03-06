@@ -29,7 +29,7 @@ const LogoContainer = ({isMobile}) => {
 export const Footer = ({}) => {
     const isMobile = useMediaQuery({ maxWidth: 767 })
     return (
-        <div style={{
+        <footer style={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -66,7 +66,7 @@ export const Footer = ({}) => {
                     }
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }
 

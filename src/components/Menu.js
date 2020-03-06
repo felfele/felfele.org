@@ -12,38 +12,38 @@ export const Menu = (props) => {
         <Fragment>
             <div style={sectionContainerStyle}>
                 <div style={sectionTitleStyle}>PRODUCT</div>
-                <div style={sectionContentStyle}>
+                <nav style={sectionContentStyle}>
                     <SectionLink link="/niche" style={sectionLinkStyle}>
                         Niche app
                     </SectionLink>
                     <SectionLink link="/lab" style={sectionLinkStyle}>
                         Felfele Lab
                     </SectionLink>
-                </div>
+                </nav>
             </div>
 
             <div style={sectionContainerStyle}>
                 <div style={sectionTitleStyle}>CONTRIBUTE</div>
-                <div style={sectionContentStyle}>
+                <nav style={sectionContentStyle}>
                     <SectionLink link='https://github.com/felfele' style={sectionLinkStyle} target='_new'>
                         Github
                     </SectionLink>
                     <SectionLink link="/donate" style={sectionLinkStyle}>
                         Make a donation
                     </SectionLink>
-                </div>
+                </nav>
             </div>
 
             <div style={sectionContainerStyle}>
                 <div style={sectionTitleStyle}>FOUNDATION</div>
-                <div style={sectionContentStyle}>
+                <nav style={sectionContentStyle}>
                     <SectionLink link='/' style={sectionLinkStyle}>
                         Mission
                     </SectionLink>
                     <SectionLink link='/about' style={sectionLinkStyle}>
                         About &amp; contact
                     </SectionLink>
-                </div>
+                </nav>
             </div>
         </Fragment>
     );

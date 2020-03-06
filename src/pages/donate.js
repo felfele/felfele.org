@@ -14,7 +14,7 @@ const DonateInfo = ({title, data}) => (
     <div
         style={{
             flexDirection: 'column',
-            flex: 0.5,
+            flex: 1,
             maxWidth: '80vw',
         }}
     >

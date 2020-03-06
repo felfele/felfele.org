@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
-import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
+import { SectionSeparator, SectionWithMultipleButtons } from '../components/Section';
 import { Illustration } from '../components/Illustration'
 
 import FelfeleLabLogo from '../assets/felfele-lab-logo.svg'
@@ -24,38 +24,72 @@ export const Lab = ({data}) => (
         />
         <BottomPart>
             <Row>
-                <SectionWithImageAndLink
+                <SectionWithMultipleButtons
                     title='NICHE BETA (Next release)'
                     text='Work-in-progress for the next release of Niche.'
                     image={data.nicheBetaImage.childImageSharp.fluid}
-                    link='https://swapchat.felfele.org'
-                    label='TRY IN TESTFLIGHT'
+                    buttons={[
+                        {
+                            link: 'https://swapchat.felfele.org',
+                            label: 'TRY IN TESTFLIGHT',
+                        },
+                        {
+                            link: 'https://github.com/felfele/felfele',
+                            label: 'GITHUB',
+                        },
+                    ]}
                 />
                 <SectionSeparator/>
-                <SectionWithImageAndLink
+                <SectionWithMultipleButtons
                     title='FEEDS'
                     text='We wanted a mobile, completely free and independent RSS reader with no algorithmic timeline—like in the good ol’ days—so we built it.'
                     image={data.feedsImage.childImageSharp.fluid}
-                    link='https://github.com/felfele/feeds'
-                    label='GITHUB'
+                    buttons={[
+                        {
+                            link: 'https://testflight.apple.com/join/icUTHYbo',
+                            label: 'FOR iOS',
+                        },
+                        {
+                            link: 'https://play.google.com/apps/testing/org.felfele.feeds',
+                            label: 'FOR ANDROID',
+                        },
+                        {
+                            link: 'https://github.com/felfele/feeds',
+                            label: 'GITHUB',
+                        },
+                    ]}
                 />
             </Row>
 
             <Row>
-                <SectionWithImageAndLink
+                <SectionWithMultipleButtons
                     title='SWAPCHAT'
                     text='A disposable, end-to-end encrypted, and completely anonymous chat DApp that was built during the Swarm Hack Week 2019 in Madrid.'
                     image={data.swapchatImage.childImageSharp.fluid}
                     link='https://swapchat.felfele.org'
                     label='WEBSITE'
+                    buttons={[
+                        {
+                            link: 'https://swapchat.felfele.org',
+                            label: 'WEBSITE',
+                        },
+                        {
+                            link: 'https://github.com/felfele/swapchat',
+                            label: 'GITHUB',
+                        },
+                    ]}
                 />
                 <SectionSeparator/>
-                <SectionWithImageAndLink
+                <SectionWithMultipleButtons
                     title='FELFELE ON GITHUB'
                     text='Access all our repositories on Github'
                     image={data.githubImage.childImageSharp.fluid}
-                    link='https://github.com/felfele'
-                    label='GITHUB'
+                    buttons={[
+                        {
+                            link: 'https://github.com/felfele',
+                            label: 'GITHUB'
+                        },
+                    ]}
                 />
             </Row>
         </BottomPart>

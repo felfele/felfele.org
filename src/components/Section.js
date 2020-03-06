@@ -23,16 +23,22 @@ const P = ({ children, style }) => (
     }}>{children}</p>
 )
 
-export const Section = ({ title, body }) => (
+const SectionBase = ({children, style}) => (
     <section style={{
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
         maxWidth: '80vw',
-    }}>
+        ...style,
+    }}>{children}
+    </section>
+)
+
+export const Section = ({ title, body }) => (
+    <SectionBase>
         <H3>{title}</H3>
         <P>{body}</P>
-    </section>
+    </SectionBase>
 )
 
 export const SectionSeparator = () => <div style={{
@@ -42,17 +48,16 @@ export const SectionSeparator = () => <div style={{
     maxHeight: 40,
 }}></div>
 
-export const SectionWithImageAndLink = ({ title, text, image, link, label }) => {
+const SectionWithImage = ({title, text, image, children}) => {
     const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
     const marginLeft = isMobile ? 20 : 0;
     return (
-        <section style={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            maxWidth: 540,
-            alignItems: 'flex-start',
-        }}>
+        <SectionBase
+            style={{
+                maxWidth: 540,
+                alignItems: 'flex-start',
+            }}
+        >
             {image &&
                 <Image
                     fluid={image}
@@ -65,15 +70,44 @@ export const SectionWithImageAndLink = ({ title, text, image, link, label }) => 
                 />
             }
             <div style={{
-                paddingBottom: 20,
                 marginLeft,
+                paddingBottom: 20,
             }}>
                 <H3>{title}</H3>
                 <P>{text}</P>
             </div>
-            <Button link={link} label={label} border={true} style={{
+            <div style={{
                 marginLeft,
-            }} />
-        </section>
+                display: 'flex',
+                flexDirection: isMobile ? 'column' : 'row',
+            }}>
+            {children}
+            </div>
+        </SectionBase>
+    )
+}
+
+export const SectionWithImageAndLink = ({ title, text, image, link, label }) => {
+    return (
+        <SectionWithImage title={title} text={text} image={image}>
+            <Button link={link} label={label} border={true} />
+        </SectionWithImage>
+    )
+}
+
+export const SectionWithMultipleButtons = ({ title, text, image, buttons }) => {
+    return (
+        <SectionWithImage title={title} text={text} image={image}>
+            {buttons.map(button =>
+                <Button
+                    link={button.link}
+                    label={button.label}
+                    border={true}
+                    style={{
+                        marginRight: 10,
+                        marginBottom: 10,
+                    }}
+                />)}
+        </SectionWithImage>
     )
 }

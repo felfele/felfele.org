@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 
 export const UniversalLink = (props) => {
@@ -32,40 +32,40 @@ const ExternalLink = (props) => {
 }
 
 export const Button = (props) => {
-    if (/^\/(?!\/)/.test(props.link)) {
+    const {link, style, border, ...rest} = props
+    const linkStyle = {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        whiteSpace: 'nowrap',
+        border: border ? 'solid 1px rgb(0, 0, 0)' : '',
+        padding: border ? 12 : 0,
+        fontWeight: 700,
+        fontSize: 14,
+        ...style,
+    }
+    if (/^\/(?!\/)/.test(link)) {
         return (
-            <InternalLink link={props.link}>
-                <InnerButton {...props}/>
+            <InternalLink link={link} style={linkStyle}>
+                <InnerButton {...rest}/>
             </InternalLink>
         )
     } else {
         return (
-            <WeblinkWrapper link={props.link}>
-                <InnerButton {...props}/>
+            <WeblinkWrapper link={link} style={linkStyle}>
+                <InnerButton {...rest}/>
             </WeblinkWrapper>
         )
     }
 }
 
-const InnerButton = ({ icon, label, border, style }) => {
+const InnerButton = ({ icon, label }) => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                whiteSpace: 'nowrap',
-                border: border ? 'solid 1px rgb(0, 0, 0)' : '',
-                padding: border ? 12 : 0,
-                fontWeight: 700,
-                fontSize: 14,
-                ...style,
-            }}
-        >
+        <Fragment>
             <img src={icon} height={16} style={{ paddingRight: 4, margin: 0, color: '#000000' }}/>
             {label}
-        </div>
+        </Fragment>
     );
 }
 

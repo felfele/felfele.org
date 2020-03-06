@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
 import { PADDING_SIZE_CSS_EXPRESSION, CONTENT_MAX_WIDTH, Colors } from '../data/style'
 
-const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
+const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
     return (
         <div
             style={{
@@ -16,6 +16,7 @@ const MainSection = ({ title, subTitle, textColor = '#000000' }) => {
                 paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
                 width: '87.5%',
+                ...style,
             }}
         >
             {title &&
@@ -79,6 +80,7 @@ export const TopPart = ({
     subTitle,
     style,
     textColor,
+    titleStyle,
 }) => (
     <Fragment>
         <HelmetWithMetadata pageTitle={pageTitle} />
@@ -107,7 +109,7 @@ export const TopPart = ({
                         </div>
                     </div>
             }
-            <MainSection title={title} subTitle={subTitle} textColor={textColor} />
+            <MainSection title={title} subTitle={subTitle} textColor={textColor} style={titleStyle} />
         </div>
     </Fragment>
 )

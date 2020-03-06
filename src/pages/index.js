@@ -6,19 +6,103 @@ import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
-import { Colors } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH } from '../data/style';
 import { Illustration } from '../components/Illustration';
 
 import MainIllustration from '../assets/main-illustration.svg'
 
+const HeroImage = ({ image }) => (
+    <div style={{
+        position: 'relative',
+    }}>
+        <div>
+            <div style={{
+                margin: 0,
+                padding: 0,
+                backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
+                display: 'flex',
+                height: '68vmin',
+            }}></div>
+            <div style={{
+                margin: 0,
+                padding: 0,
+                backgroundColor: Colors.BACKGROUND_COLOR,
+                display: 'flex',
+                height: '22vmin',
+            }}></div>
+        </div>
+        <div style={{
+            zIndex: 1,
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100%',
+        }}>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+            }}
+            >
+                {image}
+            </div>
+        </div>
+    </div>
+)
+
+const ResponsiveDiv = ({style, children}) => (
+    <div
+        style={{
+            maxWidth: CONTENT_MAX_WIDTH,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            ...style,
+        }}
+    >{children}</div>
+)
+
+const Title = ({children}) => (
+    <div style={{
+        width: '100%',
+        margin: 0,
+        padding: 0,
+        backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
+    }}>
+        <ResponsiveDiv style={{
+            backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
+            paddingBottom: 80,
+        }}>
+            <h1 style={{
+                margin: 0,
+                textAlign: 'center',
+                fontFamily: 'Jost',
+                fontWeight: 'bold',
+                fontSize: 'calc(1.2rem + 1.5vmin)',
+            }}>{children}</h1>
+        </ResponsiveDiv>
+    </div>
+)
+
 const SiteIndex = ({ data }) => (
     <Fragment>
         <TopPart
-            icon={<Illustration src={MainIllustration} style={{ maxWidth: 692 }} title='Illustration by Ailadi — ailadi.com'/>}
-            subTitle="We build products that let people connect and inspire each other, without being exploited by technology."
             style={{
                 backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
             }}
+        />
+        <Title>We build products that let people connect and inspire each other, without being exploited by technology.</Title>
+        <HeroImage
+            image={
+                <Illustration
+                    src={MainIllustration}
+                    style={{
+                        maxWidth: 692,
+                        height: '80.2vmin',
+                        width: '90vmin',
+                    }}
+                    title='Illustration by Ailadi — ailadi.com'
+                />
+            }
         />
         <BottomPart>
             <Row>

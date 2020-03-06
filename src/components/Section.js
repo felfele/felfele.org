@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import Image from 'gatsby-image';
 
 import { Button } from './Button';
-import { WIDTH_THRESHOLD } from '../data/style';
+import { WIDTH_THRESHOLD, CONTENT_MAX_WIDTH } from '../data/style';
 
 const H3 = ({ children, style }) => (
     <h3 style={{
@@ -51,10 +51,11 @@ export const SectionSeparator = () => <div style={{
 const SectionWithImage = ({title, text, image, children}) => {
     const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
     const marginLeft = isMobile ? 20 : 0;
+    const maxWidth = (CONTENT_MAX_WIDTH - 40) / 2
     return (
         <SectionBase
             style={{
-                maxWidth: 540,
+                maxWidth,
                 alignItems: 'flex-start',
             }}
         >
@@ -63,7 +64,7 @@ const SectionWithImage = ({title, text, image, children}) => {
                     fluid={image}
                     style={{
                         width: isMobile ? '100vw' : '40vw',
-                        maxWidth: 540,
+                        maxWidth,
                         height: 'auto',
                         marginBottom: 15,
                     }}

@@ -63,7 +63,7 @@ const SectionWithImage = ({title, text, image, children}) => {
                 <Image
                     fluid={image}
                     style={{
-                        width: isMobile ? '100vw' : '40vw',
+                        width: isMobile ? '100vw' : '49vw',
                         maxWidth,
                         height: 'auto',
                         marginBottom: 15,

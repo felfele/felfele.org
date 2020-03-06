@@ -43,3 +43,8 @@ a:active { /* Selected link  */
         align-items: unset;
     }
 }
+
+.grid {
+    flex-direction: row;
+    align-items: unset;
+}

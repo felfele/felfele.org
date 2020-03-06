@@ -14,6 +14,7 @@ const DonateInfo = ({title, data}) => (
     <div
         style={{
             flexDirection: 'column',
+            flex: 0.5,
         }}
     >
         <h3 style={{
@@ -49,7 +50,7 @@ const DonateInfo = ({title, data}) => (
 export const Donate = ({data}) => (
     <Fragment>
         <TopPart
-            icon={<img src={ColorFacesIllustration} />}
+            icon={<img src={ColorFacesIllustration} title='Illustration by Ailadi — ailadi.com' />}
             pageTitle='Donate'
             title='MAKE A DONATION'
             subTitle='We’ve been lucky enough to get this far with the help of of friends, and by investing our own resources. Boost your karma.'

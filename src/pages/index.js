@@ -14,7 +14,7 @@ import MainIllustration from '../assets/main-illustration.svg'
 const SiteIndex = ({ data }) => (
     <Fragment>
         <TopPart
-            icon={<Illustration src={MainIllustration} style={{ maxWidth: 692 }} />}
+            icon={<Illustration src={MainIllustration} style={{ maxWidth: 692 }} title='Illustration by Ailadi — ailadi.com'/>}
             subTitle="We build products that let people connect and inspire each other, without being exploited by technology."
             style={{
                 backgroundColor: Colors.INDEX_PAGE_BACKGROUND,

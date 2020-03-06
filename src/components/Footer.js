@@ -19,7 +19,7 @@ const LogoContainer = ({isMobile}) => {
                 justifyContent: isMobile ? 'center' : 'flex-end',
             }}>
                 <Link to='/'>
-                    <img width={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
+                    <img height={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
                 </Link>
             </div>
         </div>

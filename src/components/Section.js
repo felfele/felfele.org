@@ -28,7 +28,7 @@ export const Section = ({ title, body }) => (
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        maxWidth: 370,
+        maxWidth: '80vw',
     }}>
         <H3>{title}</H3>
         <P>{body}</P>

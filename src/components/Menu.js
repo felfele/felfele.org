@@ -37,6 +37,9 @@ export const Menu = (props) => {
             <div style={sectionContainerStyle}>
                 <div style={sectionTitleStyle}>FOUNDATION</div>
                 <div style={sectionContentStyle}>
+                    <SectionLink link='/' style={sectionLinkStyle}>
+                        Mission
+                    </SectionLink>
                     <SectionLink link='/about' style={sectionLinkStyle}>
                         About &amp; contact
                     </SectionLink>

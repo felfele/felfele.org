@@ -88,7 +88,7 @@ export const About = ({}) => (
                 <ContactSection
                     icon={SlackIcon}
                     text='We use Slack on a daily basis, you can have a look there.'
-                    link='https://join.slack.com/t/felfele/shared_invite/enQtNTM1MjUwNTI1NzI5LTY5Yjg0YmVjN2MyN2MzMzc0Y2RkMGRiYzE0N2U0ZjgwNmYxMTQ3YjUwMDg1MGFiZTZlMWViZjU2MWJjY2Y0OTY'
+                    link='https://join.slack.com/t/felfele/shared_invite/zt-clseo486-L~kgODYDt1HKPUfmlAuxrA'
                     label='Join our workspace'
                 />
                 <SectionSeparator/>

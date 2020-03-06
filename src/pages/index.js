@@ -71,13 +71,17 @@ const Title = ({children}) => (
         <ResponsiveDiv style={{
             backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
             paddingBottom: 80,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
         }}>
             <h1 style={{
                 margin: 0,
                 textAlign: 'center',
                 fontFamily: 'Jost',
                 fontWeight: 'bold',
-                fontSize: 'calc(1.2rem + 1.5vmin)',
+                fontSize: 'calc(1.2rem + 1.8vw)',
+                maxWidth: '90vw',
             }}>{children}</h1>
         </ResponsiveDiv>
     </div>

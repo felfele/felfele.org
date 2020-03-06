@@ -28,7 +28,7 @@ const Section = ({ icon, title, body }) => (
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        maxWidth: 360,
+        maxWidth: '84vw',
     }}>
         <div style={{
             width: 60,
@@ -74,63 +74,69 @@ const MainSection = ({title, body}) => (
             marginRight: 'auto',
         }}
     >
-        <p style={{
-            fontFamily: 'YoungSerif',
-            fontSize: 50,
+        <H1 style={{
             color: 'black',
-            maxWidth: 760,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: 80,
-            textAlign: 'center',
+            marginTop: '3vmin',
         }}>{title}
-        </p>
+        </H1>
 
-        <p style={{
-            fontFamily: 'Karla',
-            fontSize: 30,
+        <H2 style={{
             color: 'black',
-            maxWidth: 760,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: 80,
-            textAlign: 'center',
+            marginTop: '3vmin',
         }}>{body}
-        </p>
+        </H2>
 
     </div>
+)
+
+const H1 = ({style, children}) => (
+    <h1 style={{
+        fontFamily: 'YoungSerif',
+        fontWeight: 500,
+        fontSize: 'calc(1.2rem + 2.7vmin)',
+        color: 'white',
+        maxWidth: '84vw',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+        ...style,
+    }}>{children}
+    </h1>
+)
+
+const H2 = ({style, children}) => (
+    <h2 style={{
+        fontFamily: 'Karla',
+        fontWeight: 500,
+        fontSize: 'calc(1.1rem + 1.0vmin)',
+        color: Colors.NICHE_PINK,
+        maxWidth: '84vw',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+        ...style,
+    }}>{children}
+    </h2>
 )
 
 const TopText = ({title, body}) => (
     <div>
-        <p style={{
-            fontFamily: 'YoungSerif',
-            fontSize: 50,
+        <H1 style={{
             color: 'white',
-            maxWidth: 760,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: 80,
-            textAlign: 'center',
+            marginTop: '3vmax',
         }}>{title}
-        </p>
+        </H1>
 
-        <p style={{
-            fontFamily: 'Karla',
-            fontSize: 30,
+        <H2 style={{
             color: Colors.NICHE_PINK,
-            maxWidth: 760,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: 20,
-            marginBottom: 85,
-            textAlign: 'center',
+            marginTop: '3vmax',
+            marginBottom: '5vmin',
         }}>{body}
-        </p>
+        </H2>
     </div>
 )
 
-const Top = ({fluidImage}) => (
+const Top = ({}) => (
     <div style={{
         margin: 0,
         padding: 0,
@@ -139,7 +145,6 @@ const Top = ({fluidImage}) => (
     }}>
         <ResponsiveDiv
             style={{
-                minHeight: 300,
                 flex: 1,
                 flexDirection: 'column',
             }}
@@ -150,9 +155,9 @@ const Top = ({fluidImage}) => (
                     flex: 1,
                     display: 'flex',
                     justifyContent: 'space-between',
-                    alignItems: 'center',
+                    alignItems: 'flex-end',
                     height: 40,
-                    marginTop: 65,
+                    marginTop: '4vmax',
                 }}
             >
                 <div style={{
@@ -235,8 +240,6 @@ const HeroImage = ({ fluidImage }) => (
                 <Image
                     fluid={fluidImage}
                     style={{
-                        maxWidth: 1000,
-                        maxHeight: 800,
                         width: '80vmin',
                     }}
                     imgStyle={{
@@ -262,7 +265,7 @@ const Subscribe = () => (
             fontFamily: 'Karla',
             fontSize: 18,
             color: 'black',
-            maxWidth: 760,
+            maxWidth: '84vw',
             marginLeft: 'auto',
             marginRight: 'auto',
             marginTop: 80,
@@ -272,14 +275,14 @@ const Subscribe = () => (
 
         <div
             style={{
-                maxWidth: 560,
+                maxWidth: Math.floor(CONTENT_MAX_WIDTH * 0.6),
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                alignItems: 'center',
                 marginTop: 50,
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'stretch'
+                justifyContent: 'center',
+                alignItems: 'center',
             }}
         >
             <input
@@ -290,8 +293,9 @@ const Subscribe = () => (
                     borderBottomLeftRadius: 9,
                     borderTopLeftRadius: 9,
                     height: 43,
-                    maxWidth: 400,
-                    flex: 1,
+                    maxWidth: '80vw',
+                    minWidth: 160,
+                    flex: 0.7,
                     padding: 0,
                     margin: 0,
                     paddingLeft: 20,
@@ -303,7 +307,8 @@ const Subscribe = () => (
             />
             <input
                 style={{
-                    width: 124,
+                    maxWidth: '10vw',
+                    minWidth: 100,
                     height: 45,
                     fontFamily: 'Karla',
                     fontSize: 18,
@@ -313,7 +318,9 @@ const Subscribe = () => (
                     borderBottomRightRadius: 9,
                     borderTopRightRadius: 9,
                     cursor: 'pointer',
+                    flex: 0.3,
                     padding: 0,
+                    margin: 0,
                 }}
                 value='Subscribe'
                 type='submit'

@@ -30,6 +30,11 @@ a:active { /* Selected link  */
     margin: auto !important;
 }
 
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
 @media all and (max-width: 992) {
     .grid {
         flex-direction: column;

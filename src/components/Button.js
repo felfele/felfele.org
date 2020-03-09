@@ -45,15 +45,16 @@ export const Button = (props) => {
         fontSize: 14,
         ...style,
     }
+    const className = border ? 'button' : undefined
     if (/^\/(?!\/)/.test(link)) {
         return (
-            <InternalLink link={link} style={linkStyle}>
+            <InternalLink className={className} link={link} style={linkStyle}>
                 <InnerButton {...rest}/>
             </InternalLink>
         )
     } else {
         return (
-            <WeblinkWrapper link={link} style={linkStyle}>
+            <WeblinkWrapper className={className} link={link} style={linkStyle}>
                 <InnerButton {...rest}/>
             </WeblinkWrapper>
         )
@@ -72,7 +73,7 @@ const InnerButton = ({ icon, label }) => {
 const WeblinkWrapper = (props) => {
     const { link, children, ...rest } = props;
     return (
-        <ExternalLink href={link} {...rest}>
+        <ExternalLink className={props.className} href={link} {...rest}>
             {children}
         </ExternalLink>
     )
@@ -81,6 +82,7 @@ const WeblinkWrapper = (props) => {
 const InternalLink = (props) => {
     return (
         <Link
+            className={props.className}
             to={props.link}
             style={{
                 textDecoration: 'none',

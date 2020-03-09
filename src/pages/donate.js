@@ -7,7 +7,7 @@ import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
 
 import { bankingData, ethereumData } from '../data/donate';
-
+import { PADDING_SIZE_CSS_EXPRESSION } from '../data/style'
 import ColorFacesIllustration from '../assets/color-faces-illustration.svg'
 
 const DonateInfo = ({title, data}) => (
@@ -48,10 +48,28 @@ const DonateInfo = ({title, data}) => (
     </div>
 )
 
+const DonateIllustration = ({}) => (
+    <div
+        style={{
+            background: 'white',
+            backgroundImage: `url(${ColorFacesIllustration})`,
+            backgroundRepeat: 'repeat-x',
+            width: '100vw',
+            height: 231,
+            position: 'relative',
+        }}
+        title='Illustration by Ailadi — ailadi.com'
+    >
+    </div>
+)
+
 export const Donate = ({data}) => (
     <Fragment>
         <TopPart
-            icon={<img src={ColorFacesIllustration} title='Illustration by Ailadi — ailadi.com' />}
+            icon={<DonateIllustration />}
+            iconStyle={{
+                marginTop: PADDING_SIZE_CSS_EXPRESSION,
+            }}
             pageTitle='Donate'
             title='MAKE A DONATION'
             subTitle='We’ve been lucky enough to get this far with the help of of friends, and by investing our own resources. Boost your karma.'

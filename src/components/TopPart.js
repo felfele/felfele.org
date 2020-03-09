@@ -4,6 +4,70 @@ import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
 import { PADDING_SIZE_CSS_EXPRESSION, CONTENT_MAX_WIDTH, Colors } from '../data/style'
 
+const TitleContainer = ({ children, style }) => (
+    <div
+        style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: CONTENT_MAX_WIDTH,
+            width: '87.5%',
+            ...style,
+        }}
+    >{children}
+    </div>
+)
+
+const Title = ({ title, style }) => (
+    <Fragment>
+    {
+        title &&
+            <TitleContainer style={style} >
+                <h1
+                    style={{
+                        color: 'black',
+                        fontFamily: 'Jost',
+                        textAlign: 'center',
+                        marginTop: 0,
+                        marginBottom: 0,
+                        paddingTop: PADDING_SIZE_CSS_EXPRESSION,
+                        fontWeight: 700,
+                        fontSize: 'calc(1.2rem + 2.4vmin)',
+                    }}
+                >
+                    {title}
+                </h1>
+            </TitleContainer>
+    }
+    </Fragment>
+)
+
+const SubTitle = ({ subTitle, style }) => (
+    <Fragment>
+    {
+        subTitle &&
+            <TitleContainer style={style} >
+                <h2
+                    style={{
+                        paddingTop: PADDING_SIZE_CSS_EXPRESSION,
+                        textAlign: 'center',
+                        color: 'black',
+                        fontFamily: 'Jost',
+                        fontWeight: 500,
+                        fontSize: 'calc(1.1rem + 1.7vmin)',
+                        marginBottom: 0,
+                        marginTop: 0,
+                    }}
+                >
+                    {subTitle}
+                </h2>
+            </TitleContainer>
+    }
+    </Fragment>
+)
+
 const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
     return (
         <div
@@ -13,7 +77,6 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
                 alignItems: 'center',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingTop: PADDING_SIZE_CSS_EXPRESSION,
                 paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
                 width: '87.5%',
@@ -93,10 +156,12 @@ export const TopPart = ({
             style={{
                 width: '100%',
                 backgroundColor: 'white',
+                paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
                 ...style,
             }}
         >
             <Navbar textColor={textColor} />
+            <Title title={title} style={titleStyle} />
             {
                 icon &&
                     <div style={{
@@ -105,7 +170,7 @@ export const TopPart = ({
                         flexDirection: 'row',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        marginTop: 80,
+                        marginTop: PADDING_SIZE_CSS_EXPRESSION,
                         ...iconStyle,
                     }}>
                         <div>
@@ -113,9 +178,7 @@ export const TopPart = ({
                         </div>
                     </div>
             }
-            {(title || subTitle) &&
-                <MainSection title={title} subTitle={subTitle} textColor={textColor} style={titleStyle} />
-            }
+            <SubTitle subTitle={subTitle} style={titleStyle} />
         </div>
     </Fragment>
 )

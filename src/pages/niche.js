@@ -4,7 +4,7 @@ import Image from 'gatsby-image';
 
 import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
-import { Colors, CONTENT_MAX_WIDTH } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH, NICHE_VERTICAL_PADDING, PADDING_HALF_SIZE_CSS_EXPRESSION } from '../data/style';
 import { Ruler } from '../components/Ruler';
 
 import TidyIcon from '../assets/tidy.svg'
@@ -268,7 +268,7 @@ const Subscribe = () => (
             maxWidth: '84vw',
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginTop: 80,
+            marginTop: NICHE_VERTICAL_PADDING,
             textAlign: 'center',
         }}>Niche is currently under development by Felfele, a non-profit foundation building decentralized social apps with an emphasis on freedom and privacy. If you’d like to be notified about releases and get early access you can subscribe to our mailing list.
         </p>
@@ -278,7 +278,7 @@ const Subscribe = () => (
                 maxWidth: Math.floor(CONTENT_MAX_WIDTH * 0.6),
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                marginTop: 50,
+                marginTop: PADDING_HALF_SIZE_CSS_EXPRESSION,
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -429,7 +429,7 @@ const Niche = ({ data }) => (
 
             <Ruler
                 style={{
-                    marginTop: 100,
+                    marginTop: NICHE_VERTICAL_PADDING,
                 }}
             />
 
@@ -437,7 +437,7 @@ const Niche = ({ data }) => (
 
             <Ruler
                 style={{
-                    marginTop: 80,
+                    marginTop: NICHE_VERTICAL_PADDING,
                 }}
             />
 

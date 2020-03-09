@@ -7,7 +7,7 @@ import {
     WIDTH_THRESHOLD
 } from '../data/style';
 
-export const Row = ({children}) => {
+export const Row = ({children, paddingTop}) => {
     const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
     const mobileStyle = isMobile
         ? {
@@ -23,7 +23,7 @@ export const Row = ({children}) => {
             style={{
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingTop: PADDING_SIZE_CSS_EXPRESSION,
+                paddingTop: paddingTop || PADDING_SIZE_CSS_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
                 flex: 1,
                 display: 'flex',

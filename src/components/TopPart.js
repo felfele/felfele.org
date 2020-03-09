@@ -110,7 +110,9 @@ export const TopPart = ({
                         </div>
                     </div>
             }
-            <MainSection title={title} subTitle={subTitle} textColor={textColor} style={titleStyle} />
+            {(title || subTitle) &&
+                <MainSection title={title} subTitle={subTitle} textColor={textColor} style={titleStyle} />
+            }
         </div>
     </Fragment>
 )

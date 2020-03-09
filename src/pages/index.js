@@ -6,7 +6,7 @@ import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
-import { Colors, CONTENT_MAX_WIDTH } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH, PADDING_SIZE_CSS_EXPRESSION } from '../data/style';
 import { Illustration } from '../components/Illustration';
 
 import MainIllustration from '../assets/main-illustration.svg'
@@ -66,6 +66,7 @@ const Title = ({children}) => (
         width: '100%',
         margin: 0,
         padding: 0,
+        paddingTop: PADDING_SIZE_CSS_EXPRESSION,
         backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
     }}>
         <ResponsiveDiv style={{

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'gatsby-image';
 
-import { Button } from './Button';
+import { Button, UniversalLink } from './Button';
 import { WIDTH_THRESHOLD, CONTENT_MAX_WIDTH } from '../data/style';
 
 const H3 = ({ children, style }) => (
@@ -48,7 +48,16 @@ export const SectionSeparator = () => <div style={{
     maxHeight: 40,
 }}></div>
 
-const SectionWithImage = ({title, text, image, children}) => {
+const LinkWrapper = ({link, children}) => (
+    <Fragment>
+        { link
+            ? <UniversalLink link={link}>{children}</UniversalLink>
+            : children
+        }
+    </Fragment>
+)
+
+const SectionWithImage = ({title, text, image, link, children}) => {
     const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
     const marginLeft = isMobile ? 20 : 0;
     const maxWidth = (CONTENT_MAX_WIDTH - 40) / 2
@@ -60,15 +69,17 @@ const SectionWithImage = ({title, text, image, children}) => {
             }}
         >
             {image &&
-                <Image
-                    fluid={image}
-                    style={{
-                        width: isMobile ? '100vw' : '49vw',
-                        maxWidth,
-                        height: 'auto',
-                        marginBottom: 15,
-                    }}
-                />
+                <LinkWrapper link={link}>
+                    <Image
+                        fluid={image}
+                        style={{
+                            width: isMobile ? '100vw' : '49vw',
+                            maxWidth,
+                            height: 'auto',
+                            marginBottom: 15,
+                        }}
+                    />
+                </LinkWrapper>
             }
             <div style={{
                 marginLeft,
@@ -90,15 +101,15 @@ const SectionWithImage = ({title, text, image, children}) => {
 
 export const SectionWithImageAndLink = ({ title, text, image, link, label }) => {
     return (
-        <SectionWithImage title={title} text={text} image={image}>
+        <SectionWithImage title={title} text={text} image={image} link={link}>
             <Button link={link} label={label} border={true} />
         </SectionWithImage>
     )
 }
 
-export const SectionWithMultipleButtons = ({ title, text, image, buttons }) => {
+export const SectionWithMultipleButtons = ({ title, text, image, link, buttons }) => {
     return (
-        <SectionWithImage title={title} text={text} image={image}>
+        <SectionWithImage title={title} text={text} image={image} link={link} >
             {buttons.map(button =>
                 <Button
                     link={button.link}

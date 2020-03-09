@@ -13,6 +13,7 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
                 alignItems: 'center',
                 marginLeft: 'auto',
                 marginRight: 'auto',
+                paddingTop: PADDING_SIZE_CSS_EXPRESSION,
                 paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
                 maxWidth: CONTENT_MAX_WIDTH,
                 width: '87.5%',
@@ -23,9 +24,9 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
                 <h1
                     style={{
                         color: textColor,
-                        paddingTop: 20,
                         fontFamily: 'Jost',
                         textAlign: 'center',
+                        marginTop: 0,
                         marginBottom: 0,
                         fontWeight: 700,
                         fontSize: 'calc(1.2rem + 2.4vmin)',
@@ -34,19 +35,21 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
                     {title}
                 </h1>
             }
-            <h2
-                style={{
-                    paddingTop: 10,
-                    textAlign: 'center',
-                    color: textColor,
-                    fontFamily: 'Jost',
-                    fontWeight: 500,
-                    fontSize: 'calc(1.1rem + 1.7vmin)',
-                    marginBottom: 0,
-                }}
-            >
-                {subTitle}
-            </h2>
+            {subTitle &&
+                <h2
+                    style={{
+                        paddingTop: 10,
+                        textAlign: 'center',
+                        color: textColor,
+                        fontFamily: 'Jost',
+                        fontWeight: 500,
+                        fontSize: 'calc(1.1rem + 1.7vmin)',
+                        marginBottom: 0,
+                    }}
+                >
+                    {subTitle}
+                </h2>
+            }
         </div>
     )
 }

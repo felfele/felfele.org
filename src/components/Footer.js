@@ -57,7 +57,10 @@ export const Footer = ({}) => {
                         isMobile && <LogoContainer isMobile={isMobile} />
                     }
                     <Menu
-                        sectionContainerStyle={styles.sectionContainer}
+                        sectionContainerStyle={{
+                            ...styles.sectionContainer,
+                            paddingTop: isMobile ? 20 : 0,
+                        }}
                         sectionTitleStyle={styles.sectionTitle}
                         sectionContentStyle={styles.sectionContent}
                     />
@@ -77,6 +80,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         padding: 0,
+        paddingBottom: 20,
     },
     sectionContent: {
         display: 'flex',

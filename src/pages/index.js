@@ -61,41 +61,14 @@ const ResponsiveDiv = ({style, children}) => (
     >{children}</div>
 )
 
-const Title = ({children}) => (
-    <div style={{
-        width: '100%',
-        margin: 0,
-        padding: 0,
-        paddingTop: PADDING_SIZE_CSS_EXPRESSION,
-        backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
-    }}>
-        <ResponsiveDiv style={{
-            backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
-            paddingBottom: 80,
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-        }}>
-            <h1 style={{
-                margin: 0,
-                textAlign: 'center',
-                fontFamily: 'Jost',
-                fontWeight: 'bold',
-                fontSize: 'calc(1.2rem + 1.8vw)',
-                maxWidth: '90vw',
-            }}>{children}</h1>
-        </ResponsiveDiv>
-    </div>
-)
-
 const SiteIndex = ({ data }) => (
     <Fragment>
         <TopPart
             style={{
                 backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
             }}
+            title='We build products that let people connect and inspire each other, without being exploited by technology.'
         />
-        <Title>We build products that let people connect and inspire each other, without being exploited by technology.</Title>
         <HeroImage
             image={
                 <Illustration

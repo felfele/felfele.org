@@ -28,7 +28,7 @@ const HeroImage = ({ image }) => (
                 padding: 0,
                 backgroundColor: Colors.BACKGROUND_COLOR,
                 display: 'flex',
-                height: '22vmin',
+                height: '10vmin',
             }}></div>
         </div>
         <div style={{

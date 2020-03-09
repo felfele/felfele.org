@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
 
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
 import { UniversalLink } from '../components/Button';
+import { Ruler } from '../components/Ruler'
 
 import GithubIcon from '../assets/github.png';
 import TwitterIcon from '../assets/twitter.svg';
@@ -76,6 +76,8 @@ export const About = ({}) => (
                     label='MAKE A DONATION'
                 />
             </Row>
+
+            <Ruler/>
 
             <Row>
                 <ContactSection

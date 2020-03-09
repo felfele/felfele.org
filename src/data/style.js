@@ -12,6 +12,6 @@ export const Colors = {
 export const CONTENT_MAX_WIDTH = 1160
 export const WIDTH_THRESHOLD = 992
 
-export const PADDING_SIZE_CSS_EXPRESSION = '40px'
+export const PADDING_SIZE_CSS_EXPRESSION = 'calc(1.4rem + 5.4vmin)'
 
 export const QUERY_FOR_MOBILE_AND_TABLET = `(max-width: ${WIDTH_THRESHOLD}px)`

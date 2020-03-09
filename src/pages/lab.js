@@ -20,7 +20,7 @@ export const Lab = ({data}) => (
                 marginBottom: 100,
             }}
             pageTitle='Lab'
-            subTitle='Where we share work-in-progress and unpolished experiments. Everything is open source, so feel free to use or contribute. '
+            subTitle='Check our work-in-progress and unpolished experiments. Everything is open source, so feel free to use or contribute.'
         />
         <BottomPart>
             <Row>

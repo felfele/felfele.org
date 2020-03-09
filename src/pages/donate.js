@@ -59,7 +59,7 @@ export const Donate = ({data}) => (
         <BottomPart>
             <Row>
                 <DonateInfo
-                    title='BANK TRANSFER'
+                    title='BANK TRANSFER (EUR)'
                     data={bankingData}
                 />
                 <SectionSeparator/>

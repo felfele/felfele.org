@@ -28,24 +28,25 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
                         textAlign: 'center',
                         marginBottom: 0,
                         fontWeight: 700,
-                        fontSize: '4.3vmax',
+                        fontSize: 'calc(1.2rem + 2.4vmin)',
                     }}
                 >
                     {title}
                 </h1>
             }
-            <p
+            <h2
                 style={{
                     paddingTop: 10,
                     textAlign: 'center',
                     color: textColor,
                     fontFamily: 'Jost',
                     fontWeight: 500,
-                    fontSize: '2.4vmax',
+                    fontSize: 'calc(1.1rem + 1.7vmin)',
+                    marginBottom: 0,
                 }}
             >
                 {subTitle}
-            </p>
+            </h2>
         </div>
     )
 }

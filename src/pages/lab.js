@@ -16,8 +16,7 @@ export const Lab = ({data}) => (
                 maxHeight: 50,
             }} />}
             iconStyle={{
-                marginTop: 100,
-                marginBottom: 100,
+                marginTop: 'calc(6.0rem + 10.0vmin)'
             }}
             pageTitle='Lab'
             subTitle='Check our work-in-progress and unpolished experiments. Everything is open source, so feel free to use or contribute.'

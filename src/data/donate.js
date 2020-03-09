@@ -3,12 +3,11 @@ export const ethereumData = {
 };
 
 export const bankingData = {
-    'SWIFT/BIC': 'DEKTDE7GXXX',
-    'IBAN': 'DE49 7001 1110 6054 6096 88',
+    'SWIFT/BIC': 'TRWIBEB1XXX',
+    'IBAN': 'BE53 9670 3205 7553',
     'Account Holder': 'Sihtasutus Felfele',
-    'Bank Address': `Handelsbank
-Elsenheimer Str. 41
-80687
-München
-Germany`,
+    'Bank Address': `TransferWise Europe SA
+Square de Meeûs 38 bte 40
+Brussels 1000
+Belgium`,
 };

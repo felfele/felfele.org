@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { PADDING_SIZE_CSS_EXPRESSION } from '../data/style.js'
+import { VERTICAL_PADDING } from '../data/style.js'
 
 export const Ruler = ({style}) => (
     <div style={{
             height: 1,
             maxWidth: 1160,
-            marginTop: PADDING_SIZE_CSS_EXPRESSION,
+            marginTop: VERTICAL_PADDING,
             marginLeft: 'auto',
             marginRight: 'auto',
             alignItem: 'center',

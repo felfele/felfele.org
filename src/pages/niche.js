@@ -4,7 +4,14 @@ import Image from 'gatsby-image';
 
 import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
-import { Colors, CONTENT_MAX_WIDTH, NICHE_VERTICAL_PADDING, PADDING_HALF_SIZE_CSS_EXPRESSION } from '../data/style';
+import {
+    Colors,
+    CONTENT_MAX_WIDTH,
+    NICHE_VERTICAL_PADDING,
+    VERTICAL_HALF_PADDING,
+    VERTICAL_PADDING,
+    PADDING_CSS_EXPRESSION,
+} from '../data/style';
 import { Ruler } from '../components/Ruler';
 
 import TidyIcon from '../assets/tidy.svg'
@@ -21,6 +28,8 @@ import FelfeleLogo from '../assets/images/felfele-logo.svg'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
+
+const calcVerticalSize = (unit) => `calc((${PADDING_CSS_EXPRESSION}) / 80 * ${unit})`
 
 const Section = ({ icon, title, body }) => (
     <div style={{
@@ -76,13 +85,16 @@ const MainSection = ({title, body}) => (
     >
         <H1 style={{
             color: 'black',
-            marginTop: '3vmin',
+            marginTop: VERTICAL_PADDING,
+            marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
+            fontSize: 'calc(1.2rem + 2.86vmin)',
         }}>{title}
         </H1>
 
         <H2 style={{
             color: 'black',
-            marginTop: '3vmin',
+            marginTop: 0,
+            marginBottom: 0,
         }}>{body}
         </H2>
 
@@ -93,9 +105,9 @@ const H1 = ({style, children}) => (
     <h1 style={{
         fontFamily: 'YoungSerif',
         fontWeight: 500,
-        fontSize: 'calc(1.2rem + 2.7vmin)',
+        fontSize: 'calc(1.3rem + 4.6vmin)',
         color: 'white',
-        maxWidth: '84vw',
+        maxWidth: '94vw',
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
@@ -269,6 +281,7 @@ const Subscribe = () => (
             marginLeft: 'auto',
             marginRight: 'auto',
             marginTop: NICHE_VERTICAL_PADDING,
+            marginBottom: calcVerticalSize(50),
             textAlign: 'center',
         }}>Niche is currently under development by Felfele, a non-profit foundation building decentralized social apps with an emphasis on freedom and privacy. If you’d like to be notified about releases and get early access you can subscribe to our mailing list.
         </p>
@@ -278,7 +291,7 @@ const Subscribe = () => (
                 maxWidth: Math.floor(CONTENT_MAX_WIDTH * 0.6),
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                marginTop: PADDING_HALF_SIZE_CSS_EXPRESSION,
+                marginTop: VERTICAL_HALF_PADDING,
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -288,6 +301,7 @@ const Subscribe = () => (
             <input
                 style={{
                     borderColor: Colors.NICHE_PINK,
+                    backgroundColor: Colors.BACKGROUND_COLOR,
                     borderWidth: 1,
                     borderStyle: 'solid',
                     borderBottomLeftRadius: 9,
@@ -330,12 +344,13 @@ const Subscribe = () => (
 
         <p style={{
             fontFamily: 'Karla',
-            fontSize: 18,
+            fontSize: 14,
             color: 'black',
             maxWidth: 760,
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginTop: 25,
+            marginTop: calcVerticalSize(25),
+            marginBottom: 0,
             textAlign: 'center',
         }}>We will never spam or share your email with anyone else.
         </p>
@@ -346,11 +361,13 @@ const Footer = () => (
     <div
         style={{
             display: 'flex',
-            justifyContent: 'space-around',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
             alignItems: 'center',
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginTop: 50,
+            marginTop: VERTICAL_HALF_PADDING,
+            marginBottom: VERTICAL_PADDING,
             paddingLeft: 20,
             paddingRight: 20,
             maxWidth: CONTENT_MAX_WIDTH,
@@ -363,16 +380,34 @@ const Footer = () => (
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                height: 90,
             }}
         >
             <Link to='/niche'>
-                <img src={NichePinkLogo} style={{ width: 100, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
+                <img src={NichePinkLogo} style={{ width: 92, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
             </Link>
             <Link to='/'>
                 <img src={FelfeleLogo} style={{ width: 100, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
             </Link>
         </div>
+        <p
+            style={{
+                fontFamily: 'Karla',
+                fontSize: 14,
+                alignSelf: 'flex-end',
+                padding: 0,
+                paddingTop: `calc((${PADDING_CSS_EXPRESSION}) / 4)`,
+                margin: 0,
+            }}
+        >Niche is an open-source project supported by the&nbsp;
+        <a
+            href='https://felfele.org/'
+            style={{
+                fontFamily: 'Karla',
+                fontSize: 14,
+            }}
+        >Felfele Foundation</a>
+        .
+        </p>
     </div>
 )
 
@@ -422,7 +457,7 @@ const Niche = ({ data }) => (
                 <SectionSeparator/>
                 <Section
                     icon={LockIcon}
-                    title='Piece of mind'
+                    title='Peace of mind'
                     body='Everything shared with Niche is end-to-end encrypted, meaning that no one can ever access your content, except the people you explicitly share it with.'
                 />
             </Row>

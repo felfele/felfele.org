@@ -7,7 +7,7 @@ import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
 
 import { bankingData, ethereumData } from '../data/donate';
-import { PADDING_SIZE_CSS_EXPRESSION } from '../data/style'
+import { VERTICAL_PADDING } from '../data/style'
 import ColorFacesIllustration from '../assets/color-faces-illustration.svg'
 
 const DonateInfo = ({title, data}) => (
@@ -68,7 +68,7 @@ export const Donate = ({data}) => (
         <TopPart
             icon={<DonateIllustration />}
             iconStyle={{
-                marginTop: PADDING_SIZE_CSS_EXPRESSION,
+                marginTop: VERTICAL_PADDING,
             }}
             pageTitle='Donate'
             title='MAKE A DONATION'

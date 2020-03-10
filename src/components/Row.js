@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import {
     CONTENT_MAX_WIDTH,
-    PADDING_SIZE_CSS_EXPRESSION,
+    VERTICAL_PADDING,
     WIDTH_THRESHOLD
 } from '../data/style';
 
@@ -23,7 +23,7 @@ export const Row = ({children, paddingTop}) => {
             style={{
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingTop: paddingTop || PADDING_SIZE_CSS_EXPRESSION,
+                paddingTop: paddingTop || VERTICAL_PADDING,
                 maxWidth: CONTENT_MAX_WIDTH,
                 flex: 1,
                 display: 'flex',

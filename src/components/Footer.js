@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../assets/images/felfele-icon.svg';
-import { Colors, CONTENT_MAX_WIDTH, PADDING_SIZE_CSS_EXPRESSION } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING } from '../data/style';
 import Menu from './Menu';
 
 const LogoContainer = ({isMobile}) => {
@@ -35,7 +35,7 @@ export const Footer = ({}) => {
             justifyContent: 'center',
             alignItems: isMobile ? 'center' : '',
             fontSize: 12,
-            paddingTop: PADDING_SIZE_CSS_EXPRESSION,
+            paddingTop: VERTICAL_PADDING,
             marginLeft: 'auto',
             marginRight: 'auto',
             maxWidth: CONTENT_MAX_WIDTH,

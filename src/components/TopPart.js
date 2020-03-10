@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
-import { PADDING_SIZE_CSS_EXPRESSION, CONTENT_MAX_WIDTH, Colors } from '../data/style'
+import { VERTICAL_PADDING, CONTENT_MAX_WIDTH, Colors } from '../data/style'
 
 const TitleContainer = ({ children, style }) => (
     <div
@@ -32,7 +32,7 @@ const Title = ({ title, style }) => (
                         textAlign: 'center',
                         marginTop: 0,
                         marginBottom: 0,
-                        paddingTop: PADDING_SIZE_CSS_EXPRESSION,
+                        paddingTop: VERTICAL_PADDING,
                         fontWeight: 700,
                         fontSize: 'calc(1.2rem + 2.4vmin)',
                     }}
@@ -51,7 +51,7 @@ const SubTitle = ({ subTitle, style }) => (
             <TitleContainer style={style} >
                 <h2
                     style={{
-                        paddingTop: PADDING_SIZE_CSS_EXPRESSION,
+                        paddingTop: VERTICAL_PADDING,
                         textAlign: 'center',
                         color: 'black',
                         fontFamily: 'Jost',
@@ -77,7 +77,7 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
                 alignItems: 'center',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
+                paddingBottom: VERTICAL_PADDING,
                 maxWidth: CONTENT_MAX_WIDTH,
                 width: '87.5%',
                 ...style,
@@ -156,7 +156,7 @@ export const TopPart = ({
             style={{
                 width: '100%',
                 backgroundColor: 'white',
-                paddingBottom: PADDING_SIZE_CSS_EXPRESSION,
+                paddingBottom: VERTICAL_PADDING,
                 ...style,
             }}
         >
@@ -170,7 +170,7 @@ export const TopPart = ({
                         flexDirection: 'row',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        marginTop: PADDING_SIZE_CSS_EXPRESSION,
+                        marginTop: VERTICAL_PADDING,
                         ...iconStyle,
                     }}>
                         <div>

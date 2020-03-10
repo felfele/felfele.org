@@ -47,7 +47,8 @@
         "eslint": "^4.19.1",
         "eslint-plugin-react": "^7.18.3",
         "gh-pages": "^1.2.0",
-        "prettier": "^1.19.1"
+        "prettier": "^1.19.1",
+        "serve": "^11.3.0"
     },
     "homepage": "https://felfele.org",
     "keywords": [],
@@ -68,6 +69,7 @@
         "deploy": "gatsby build && gh-pages -d public",
         "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
         "check": "npm run lint && npm run build",
-        "clean": "gatsby clean"
+        "clean": "gatsby clean",
+        "serve": "serve -l 8000 public"
     }
 }

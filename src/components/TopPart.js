@@ -68,55 +68,6 @@ const SubTitle = ({ subTitle, style }) => (
     </Fragment>
 )
 
-const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
-    return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                paddingBottom: VERTICAL_PADDING,
-                maxWidth: CONTENT_MAX_WIDTH,
-                width: '87.5%',
-                ...style,
-            }}
-        >
-            {title &&
-                <h1
-                    style={{
-                        color: textColor,
-                        fontFamily: 'Jost',
-                        textAlign: 'center',
-                        marginTop: 0,
-                        marginBottom: 0,
-                        fontWeight: 700,
-                        fontSize: 'calc(1.2rem + 2.4vmin)',
-                    }}
-                >
-                    {title}
-                </h1>
-            }
-            {subTitle &&
-                <h2
-                    style={{
-                        paddingTop: 10,
-                        textAlign: 'center',
-                        color: textColor,
-                        fontFamily: 'Jost',
-                        fontWeight: 500,
-                        fontSize: 'calc(1.1rem + 1.7vmin)',
-                        marginBottom: 0,
-                    }}
-                >
-                    {subTitle}
-                </h2>
-            }
-        </div>
-    )
-}
-
 export const HelmetWithMetadata = ({pageTitle, link}) => {
     const data = useStaticQuery(graphql`
         query {
@@ -135,6 +86,7 @@ export const HelmetWithMetadata = ({pageTitle, link}) => {
         <Helmet link={link}>
             <title>{htmlTitle}</title>
             <meta name="description" content={data.site.siteMetadata.description} />
+            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         </Helmet>
     )
 }

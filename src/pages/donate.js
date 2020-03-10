@@ -8,7 +8,7 @@ import { SectionSeparator } from '../components/Section';
 
 import { bankingData, ethereumData } from '../data/donate';
 import { VERTICAL_PADDING } from '../data/style'
-import ColorFacesIllustration from '../assets/color-faces-illustration.svg'
+import ColorFacesIllustration from '../assets/ColorfacesWithMargin.svg'
 
 const DonateInfo = ({title, data}) => (
     <div
@@ -55,7 +55,7 @@ const DonateIllustration = ({}) => (
             backgroundImage: `url(${ColorFacesIllustration})`,
             backgroundRepeat: 'repeat-x',
             width: '100vw',
-            height: 231,
+            height: 251,
             position: 'relative',
         }}
         title='Illustration by Ailadi — ailadi.com'

@@ -13,6 +13,7 @@ import {
     PADDING_CSS_EXPRESSION,
 } from '../data/style';
 import { Ruler } from '../components/Ruler';
+import { HelmetWithMetadata } from '../components/TopPart'
 
 import TidyIcon from '../assets/tidy.svg'
 import FocusIcon from '../assets/focus.svg'
@@ -413,6 +414,9 @@ const Footer = () => (
 
 const Niche = ({ data }) => (
     <Fragment>
+        <HelmetWithMetadata
+            pageTitle='Niche'
+        />
         <Top />
         <HeroImage fluidImage={data.nichePhoneMockups.childImageSharp.fluid} />
         <div style={{

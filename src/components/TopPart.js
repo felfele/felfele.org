@@ -117,7 +117,7 @@ const MainSection = ({ title, subTitle, textColor = '#000000', style }) => {
     )
 }
 
-export const HelmetWithMetadata = ({pageTitle}) => {
+export const HelmetWithMetadata = ({pageTitle, link}) => {
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -132,7 +132,7 @@ export const HelmetWithMetadata = ({pageTitle}) => {
         ? pageTitle + ' | ' + data.site.siteMetadata.title
         : data.site.siteMetadata.title
     return (
-        <Helmet>
+        <Helmet link={link}>
             <title>{htmlTitle}</title>
             <meta name="description" content={data.site.siteMetadata.description} />
         </Helmet>

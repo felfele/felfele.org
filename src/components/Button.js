@@ -41,8 +41,9 @@ export const Button = (props) => {
         whiteSpace: 'nowrap',
         border: border ? 'solid 1px rgb(0, 0, 0)' : '',
         padding: border ? 12 : 0,
-        fontWeight: 700,
+        fontWeight: 500,
         fontSize: 14,
+        fontFamily: 'Jost',
         ...style,
     }
     const className = border ? 'button' : undefined

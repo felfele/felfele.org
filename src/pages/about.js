@@ -40,7 +40,14 @@ const ContactSection = ({icon, text, link, label}) => (
             {text}
         </h3>
         { link
-            ? <UniversalLink link={link}>{label}</UniversalLink>
+            ? <UniversalLink
+                link={link}
+                style={{
+                    fontFamily: 'Jost',
+                    fontWeight: 500,
+                    fontSize: 14,
+                }}
+            >{label}</UniversalLink>
             : label
         }
     </div>
@@ -108,6 +115,10 @@ export const About = ({}) => (
                         <p style={{
                             padding: 0,
                             margin: 0,
+                            marginBlockStart: 0,
+                            fontFamily: 'Jost',
+                            fontWeight: 500,
+                            fontSize: 14,
                         }}>
                             Felfele SA
                             <br/>

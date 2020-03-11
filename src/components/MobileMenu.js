@@ -124,6 +124,7 @@ export class MobileMenu extends Component {
 
                 </Modal>
                 <img
+                    className='mobile'
                     src={MobileMenuImage}
                     alt={title}
                     onClick={this.openModal}

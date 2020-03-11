@@ -89,6 +89,7 @@ const MainSection = ({title, body}) => (
             marginTop: VERTICAL_PADDING,
             marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
             fontSize: 'calc(1.2rem + 2.86vmin)',
+            maxWidth: '84vw',
         }}>{title}
         </H1>
 
@@ -111,7 +112,6 @@ const H1 = ({style, children}) => (
         maxWidth: '94vw',
         marginLeft: 'auto',
         marginRight: 'auto',
-        textAlign: 'center',
         ...style,
     }}>{children}
     </h1>
@@ -126,7 +126,6 @@ const H2 = ({style, children}) => (
         maxWidth: '84vw',
         marginLeft: 'auto',
         marginRight: 'auto',
-        textAlign: 'center',
         ...style,
     }}>{children}
     </h2>
@@ -136,14 +135,17 @@ const TopText = ({title, body}) => (
     <div>
         <H1 style={{
             color: 'white',
-            marginTop: '3vmax',
+            textAlign: 'center',
+            marginTop: calcVerticalSize(40),
+            marginBottom: calcVerticalSize(10),
         }}>{title}
         </H1>
 
         <H2 style={{
             color: Colors.NICHE_PINK,
-            marginTop: '3vmax',
-            marginBottom: '5vmin',
+            textAlign: 'center',
+            marginTop: 0,
+            marginBottom: calcVerticalSize(80),
         }}>{body}
         </H2>
     </div>
@@ -283,7 +285,6 @@ const Subscribe = () => (
             marginRight: 'auto',
             marginTop: NICHE_VERTICAL_PADDING,
             marginBottom: calcVerticalSize(50),
-            textAlign: 'center',
         }}>Niche is currently under development by Felfele, a non-profit foundation building decentralized social apps with an emphasis on freedom and privacy. If you’d like to be notified about releases and get early access you can subscribe to our mailing list.
         </p>
 

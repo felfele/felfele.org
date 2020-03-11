@@ -29,45 +29,46 @@ const LogoContainer = ({isMobile}) => {
 export const Footer = ({}) => {
     const isMobile = useMediaQuery({ maxWidth: 767 })
     return (
-        <footer style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: isMobile ? 'center' : '',
-            fontSize: 12,
-            paddingTop: VERTICAL_PADDING,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: CONTENT_MAX_WIDTH,
-            backgroundColor: Colors.BACKGROUND_COLOR,
-        }}>
-            <div style={{
+        <footer
+            style={{
                 display: 'flex',
-                justifyContent: 'space-between',
-                flexDirection: isMobile ? 'column' : 'row',
-                paddingBottom: 50,
-            }}>
-                <div style={{
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: isMobile ? 'center' : 'unset',
+                fontSize: 12,
+                paddingTop: VERTICAL_PADDING,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                paddingLeft: 20,
+                paddingRight: 20,
+                maxWidth: CONTENT_MAX_WIDTH,
+                backgroundColor: Colors.BACKGROUND_COLOR,
+            }}
+        >
+            <div
+                className='footer'
+                style={{
                     display: 'flex',
                     flex: 1,
+                    alignItems: 'flex-start',
                     justifyContent: 'space-between',
-                    flexDirection: isMobile ? 'column' : 'row',
-                }}>
-                    {
-                        isMobile && <LogoContainer isMobile={isMobile} />
-                    }
-                    <Menu
-                        sectionContainerStyle={{
-                            ...styles.sectionContainer,
-                            paddingTop: isMobile ? 20 : 0,
-                        }}
-                        sectionTitleStyle={styles.sectionTitle}
-                        sectionContentStyle={styles.sectionContent}
-                    />
-                    {
-                        !isMobile && <LogoContainer isMobile={isMobile} />
-                    }
-                </div>
+                    paddingBottom: 50,
+                }}
+            >
+                {
+                    isMobile && <LogoContainer isMobile={isMobile} />
+                }
+                <Menu
+                    sectionContainerStyle={{
+                        ...styles.sectionContainer,
+                        paddingTop: isMobile ? 20 : 0,
+                    }}
+                    sectionTitleStyle={styles.sectionTitle}
+                    sectionContentStyle={styles.sectionContent}
+                />
+                {
+                    !isMobile && <LogoContainer isMobile={isMobile} />
+                }
             </div>
         </footer>
     );

@@ -1,8 +1,13 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
+
+import '../styles/styles.css';
+import '../styles/fonts.css';
+
 import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
 import { VERTICAL_PADDING, CONTENT_MAX_WIDTH, Colors } from '../data/style'
+
 
 const TitleContainer = ({ children, style }) => (
     <div
@@ -29,7 +34,6 @@ const Title = ({ title, style }) => (
                     style={{
                         color: 'black',
                         fontFamily: 'Jost',
-                        textAlign: 'center',
                         marginTop: 0,
                         marginBottom: 0,
                         paddingTop: VERTICAL_PADDING,
@@ -52,7 +56,6 @@ const SubTitle = ({ subTitle, style }) => (
                 <h2
                     style={{
                         paddingTop: VERTICAL_PADDING,
-                        textAlign: 'center',
                         color: 'black',
                         fontFamily: 'Jost',
                         fontWeight: 500,

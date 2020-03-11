@@ -72,8 +72,8 @@ const SectionWithImage = ({title, text, image, link, children}) => {
                 <LinkWrapper link={link}>
                     <Image
                         fluid={image}
+                        className='main-image'
                         style={{
-                            width: isMobile ? '100vw' : '49vw',
                             maxWidth,
                             height: 'auto',
                             marginBottom: 15,

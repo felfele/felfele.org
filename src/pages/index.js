@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 
-import { Ruler } from '../components/Ruler';
 import { TopPart } from '../components/TopPart';
+import { Ruler } from '../components/Ruler';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
@@ -48,17 +48,6 @@ const HeroImage = ({ image }) => (
             </div>
         </div>
     </div>
-)
-
-const ResponsiveDiv = ({style, children}) => (
-    <div
-        style={{
-            maxWidth: CONTENT_MAX_WIDTH,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            ...style,
-        }}
-    >{children}</div>
 )
 
 const SiteIndex = ({ data }) => (

@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive'
 // import font file
 import 'typeface-nunito-sans';
 
@@ -49,10 +49,11 @@ const Navbar = ({textColor = '#000000'}) => {
                 >
                     <img src={Logo} style={{ width: 118, marginBottom: 0, fill: textColor }}/>
                 </Link>
-                {
-                    isMobile
-                    ? <MobileMenu />
-                    : <div
+                {isMobile
+                ?
+                    <MobileMenu />
+                :
+                    <div
                         style={{
                             display: 'flex',
                             flexDirection: 'row',

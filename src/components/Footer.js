@@ -3,25 +3,19 @@ import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../assets/images/felfele-icon.svg';
-import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, MIN_SECTION_PADDING } from '../data/style';
 import Menu from './Menu';
 
 const LogoContainer = ({isMobile}) => {
     return (
         <div style={{
             ...styles.sectionContainer,
-            flex: 0.7,
+            flexGrow: 0.5,
+            alignItems: isMobile ? 'center' : 'flex-end'
         }}>
-            <div style={{
-                minWidth: isMobile ? 100 : 200,
-                marginTop: isMobile ? 20 : 0,
-                display: 'flex',
-                justifyContent: isMobile ? 'center' : 'flex-end',
-            }}>
                 <Link to='/'>
                     <img height={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
                 </Link>
-            </div>
         </div>
     )
 }
@@ -39,8 +33,8 @@ export const Footer = ({}) => {
                 paddingTop: VERTICAL_PADDING,
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingLeft: 20,
-                paddingRight: 20,
+                paddingLeft: MIN_SECTION_PADDING,
+                paddingRight: MIN_SECTION_PADDING,
                 maxWidth: CONTENT_MAX_WIDTH,
                 backgroundColor: Colors.BACKGROUND_COLOR,
             }}
@@ -50,7 +44,7 @@ export const Footer = ({}) => {
                 style={{
                     display: 'flex',
                     flex: 1,
-                    alignItems: 'flex-start',
+                    alignItems: isMobile ? 'center' : 'flex-start',
                     justifyContent: 'space-between',
                     paddingBottom: 50,
                 }}
@@ -80,12 +74,14 @@ const styles = {
     sectionContainer: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'inherit',
         padding: 0,
         paddingBottom: 20,
     },
     sectionContent: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'inherit',
         fontWeight: 500,
         fontSize: 14,
         lineHeight: 1.5,

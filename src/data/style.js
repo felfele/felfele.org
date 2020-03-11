@@ -16,5 +16,6 @@ export const PADDING_CSS_EXPRESSION = '1.4rem + 5.4vmin'
 export const VERTICAL_PADDING = `calc(${PADDING_CSS_EXPRESSION})`
 export const VERTICAL_HALF_PADDING = `calc((${PADDING_CSS_EXPRESSION}) / 2)`
 export const NICHE_VERTICAL_PADDING = `calc((${PADDING_CSS_EXPRESSION}) * 1.5)`
+export const MIN_SECTION_PADDING = 20
 
 export const QUERY_FOR_MOBILE_AND_TABLET = `(max-width: ${WIDTH_THRESHOLD}px)`

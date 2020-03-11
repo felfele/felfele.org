@@ -7,7 +7,7 @@ import 'typeface-nunito-sans';
 import Logo from './../assets/images/felfele-logo.svg'
 import Phone from './../assets/baseline-smartphone-24-px.svg'
 import { Button } from './Button';
-import { CONTENT_MAX_WIDTH } from '../data/style';
+import { CONTENT_MAX_WIDTH, MIN_SECTION_PADDING } from '../data/style';
 import MobileMenu from './MobileMenu';
 import Tool from '../assets/tool.svg';
 
@@ -21,8 +21,8 @@ const Navbar = ({textColor = '#000000'}) => {
                 alignItems: 'center',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                paddingLeft: 20,
-                paddingRight: 20,
+                paddingLeft: MIN_SECTION_PADDING,
+                paddingRight: MIN_SECTION_PADDING,
                 maxWidth: CONTENT_MAX_WIDTH,
             }}
         >

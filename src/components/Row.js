@@ -3,6 +3,7 @@ import React from 'react';
 import {
     CONTENT_MAX_WIDTH,
     VERTICAL_PADDING,
+    MIN_SECTION_PADDING,
 } from '../data/style';
 
 export const Row = ({children, paddingTop}) => (
@@ -11,8 +12,8 @@ export const Row = ({children, paddingTop}) => (
         style={{
             marginLeft: 'auto',
             marginRight: 'auto',
-            paddingLeft: 20,
-            paddingRight: 20,
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
             paddingTop: paddingTop || VERTICAL_PADDING,
             maxWidth: CONTENT_MAX_WIDTH,
             flex: 1,

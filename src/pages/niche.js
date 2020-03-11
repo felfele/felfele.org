@@ -11,6 +11,7 @@ import {
     VERTICAL_HALF_PADDING,
     VERTICAL_PADDING,
     PADDING_CSS_EXPRESSION,
+    MIN_SECTION_PADDING,
 } from '../data/style';
 import { Ruler } from '../components/Ruler';
 import { HelmetWithMetadata } from '../components/TopPart'
@@ -320,7 +321,7 @@ const Subscribe = () => (
                     flex: 0.7,
                     padding: 0,
                     margin: 0,
-                    paddingLeft: 20,
+                    paddingLeft: MIN_SECTION_PADDING,
                     fontFamily: 'Karla',
                     fontSize: 18,
                     color: '#00000077',
@@ -380,8 +381,8 @@ const Footer = () => (
             marginRight: 'auto',
             marginTop: VERTICAL_HALF_PADDING,
             marginBottom: VERTICAL_PADDING,
-            paddingLeft: 20,
-            paddingRight: 20,
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
             maxWidth: CONTENT_MAX_WIDTH,
         }}
     >

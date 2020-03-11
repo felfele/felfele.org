@@ -3,7 +3,7 @@ import Modal from 'react-responsive-modal';
 import { Link } from 'gatsby';
 
 import { Menu } from './Menu';
-import { Colors } from '../data/style';
+import { Colors, MIN_SECTION_PADDING } from '../data/style';
 import Logo from './../assets/images/felfele-logo.svg'
 import MobileMenuImage from '../assets/mobileMenu.svg';
 import MobileCloseImage from '../assets/mobileClose.svg';
@@ -55,8 +55,8 @@ export class MobileMenu extends Component {
                             alignItems: 'center',
                             height: 40,
                             marginTop: '4vmax',
-                            paddingLeft: 20,
-                            paddingRight: 20,
+                            paddingLeft: MIN_SECTION_PADDING,
+                            paddingRight: MIN_SECTION_PADDING,
                             paddingBottom: 20,
                             borderBottomColor: Colors.MOBILE_MENU_SEPARATOR,
                             borderBottomWidth: 1,

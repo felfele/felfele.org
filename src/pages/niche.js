@@ -265,6 +265,11 @@ const HeroImage = ({ fluidImage }) => (
     </div>
 )
 
+const subscribeEmail = () => {
+    const email = document.getElementById('subscribe-input').value
+    alert(`Hello ${email}!\n\n` + 'You are successfully subscribed.\n' + 'We will never spam or share your email with anyone else.')
+}
+
 const Subscribe = () => (
     <div
         style={{
@@ -307,6 +312,8 @@ const Subscribe = () => (
                     borderStyle: 'solid',
                     borderBottomLeftRadius: 9,
                     borderTopLeftRadius: 9,
+                    borderTopRightRadius: 0,
+                    borderBottomRightRadius: 0,
                     height: 43,
                     maxWidth: '80vw',
                     minWidth: 160,
@@ -319,8 +326,9 @@ const Subscribe = () => (
                     color: '#00000077',
                 }}
                 placeholder='Your email address'
+                id='subscribe-input'
             />
-            <input
+            <div
                 style={{
                     maxWidth: '10vw',
                     minWidth: 100,
@@ -336,10 +344,13 @@ const Subscribe = () => (
                     flex: 0.3,
                     padding: 0,
                     margin: 0,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
                 }}
-                value='Subscribe'
-                type='submit'
-            />
+                onClick={subscribeEmail}
+            >Subscribe</div>
 
         </div>
 

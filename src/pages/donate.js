@@ -10,12 +10,21 @@ import { bankingData, ethereumData } from '../data/donate';
 import { VERTICAL_PADDING } from '../data/style'
 import ColorFacesIllustration from '../assets/ColorfacesWithMargin.svg'
 
+const DataWithNewlines = ({data}) => <Fragment>
+    {
+        data
+        .split('\n')
+        .map(line => <Fragment>{line}<br/></Fragment>)
+    }
+</Fragment>
+
 const DonateInfo = ({title, data}) => (
     <div
         style={{
             flexDirection: 'column',
             flex: 1,
             maxWidth: '80vw',
+            width: '50vw',
         }}
     >
         <h3 style={{
@@ -40,7 +49,7 @@ const DonateInfo = ({title, data}) => (
                     >
                         <b>{key}: </b>
                         <br/>
-                        {data[key]}
+                        <DataWithNewlines data={data[key]} />
                     </p>
                 );
             }

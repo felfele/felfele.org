@@ -59,6 +59,7 @@ const DonateInfo = ({title, data}) => (
 
 const DonateIllustration = ({}) => (
     <div
+        className='main-image'
         style={{
             background: 'white',
             backgroundImage: `url(${ColorFacesIllustration})`,

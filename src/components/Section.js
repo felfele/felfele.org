@@ -72,7 +72,7 @@ const SectionWithImage = ({title, text, image, link, children}) => {
                 <LinkWrapper link={link}>
                     <Image
                         fluid={image}
-                        className='main-image'
+                        className='section-image'
                         style={{
                             maxWidth,
                             height: 'auto',

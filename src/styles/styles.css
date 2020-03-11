@@ -58,7 +58,7 @@ a:active { /* Selected link  */
     display: block;
 }
 
-.main-image {
+.section-image {
     width: 46vw;
 }
 
@@ -83,6 +83,10 @@ h2 {
     h2 {
         text-align: left;
     }
+
+    .main-image {
+        zoom: 50%;
+    }
 }
 
 @media all and (max-width: 992px) {
@@ -100,7 +104,7 @@ h2 {
         display: none;
     }
 
-    .main-image {
+    .section-image {
         width: 100vw;
     }
 }

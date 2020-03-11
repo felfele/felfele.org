@@ -201,7 +201,7 @@ const Top = ({}) => (
                 justifyContent: 'center',
                 marginTop: 85,
             }}>
-                <img src={NichePinkBigIcon} />
+                <img src={NichePinkBigIcon} className='main-image' />
             </div>
             <TopText
                 title='Socialize without compromise'

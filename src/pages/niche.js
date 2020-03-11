@@ -135,15 +135,14 @@ const TopText = ({title, body}) => (
     <div>
         <H1 style={{
             color: 'white',
-            textAlign: 'center',
             marginTop: calcVerticalSize(40),
             marginBottom: calcVerticalSize(10),
+            maxWidth: '84vw',
         }}>{title}
         </H1>
 
         <H2 style={{
             color: Colors.NICHE_PINK,
-            textAlign: 'center',
             marginTop: 0,
             marginBottom: calcVerticalSize(80),
         }}>{body}

@@ -6,10 +6,13 @@ import { Ruler } from '../components/Ruler';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
-import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, VERTICAL_HALF_PADDING, MIN_SECTION_PADDING } from '../data/style';
 import { Illustration } from '../components/Illustration';
+import { calcVerticalSize } from '../utils/calc'
 
 import MainIllustration from '../assets/main-illustration.svg'
+import { SubscribeFooter } from '../components/SubscribeFooter';
+import { SubscribeInput } from '../components/SubscribeInput';
 
 const HeroImage = ({ image }) => (
     <div style={{
@@ -50,6 +53,68 @@ const HeroImage = ({ image }) => (
     </div>
 )
 
+const Subscribe = () => (
+    <div
+        style={{
+            width: '100%',
+            backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
+        }}
+    >
+        <div
+            style={{
+                flexDirection: 'column',
+                alignItems: 'center',
+                maxWidth: CONTENT_MAX_WIDTH,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+            }}
+        >
+
+            <p style={{
+                fontFamily: 'Jost',
+                fontSize: 18,
+                color: 'black',
+                maxWidth: '84vw',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                marginTop: 0,
+                marginBottom: 0,
+                textAlign: 'center',
+            }}>GET NEWS &amp; EARLY ACCESS TO OUR APPS
+            </p>
+
+            <SubscribeInput
+                id='index-subscribe'
+                style={{
+                    marginTop: calcVerticalSize(18),
+                }}
+                inputStyle={{
+                    borderColor: 'white',
+                    backgroundColor: 'white',
+                }}
+                buttonStyle={{
+                    backgroundColor: 'black',
+                }}
+            />
+
+            <p style={{
+                fontFamily: 'Nunito Sans',
+                fontSize: 14,
+                color: 'black',
+                maxWidth: 760,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                marginTop: calcVerticalSize(19),
+                marginBottom: 0,
+                paddingBottom: VERTICAL_HALF_PADDING,
+                textAlign: 'center',
+            }}>We will never spam or share your email with anyone else.
+            </p>
+        </div>
+    </div>
+)
+
+
 const SiteIndex = ({ data }) => (
     <Fragment>
         <TopPart
@@ -58,6 +123,7 @@ const SiteIndex = ({ data }) => (
             }}
             title='We build products that let people connect and inspire each other, without being exploited by technology.'
         />
+        <Subscribe />
         <HeroImage
             image={
                 <Illustration

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../assets/images/felfele-icon.svg';
-import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, MIN_SECTION_PADDING } from '../data/style';
+import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, MIN_SECTION_PADDING, VERTICAL_HALF_PADDING } from '../data/style';
 import Menu from './Menu';
 
 const LogoContainer = ({isMobile}) => {
@@ -31,6 +31,7 @@ export const Footer = ({}) => {
                 alignItems: isMobile ? 'center' : 'unset',
                 fontSize: 12,
                 paddingTop: VERTICAL_PADDING,
+                paddingBottom: VERTICAL_HALF_PADDING,
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 paddingLeft: MIN_SECTION_PADDING,
@@ -46,7 +47,6 @@ export const Footer = ({}) => {
                     flex: 1,
                     alignItems: isMobile ? 'center' : 'flex-start',
                     justifyContent: 'space-between',
-                    paddingBottom: 50,
                 }}
             >
                 {

@@ -7,6 +7,7 @@ export const Colors = {
     DONATE_PAGE_BACKGROUND: '#CEFFA5',
     NICHE_PINK: '#FF9E9E',
     NICHE_BLACK: '#212121',
+    SUBSCRIBE_FOOTER_BACKGROUND_COLOR: 'black',
 }
 
 export const CONTENT_MAX_WIDTH = 1160

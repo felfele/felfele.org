@@ -15,6 +15,10 @@ import {
 } from '../data/style';
 import { Ruler } from '../components/Ruler';
 import { HelmetWithMetadata } from '../components/TopPart'
+import { SubscribeFooter } from '../components/SubscribeFooter';
+import { SubscribeInput } from '../components/SubscribeInput'
+
+import { calcVerticalSize } from '../utils/calc'
 
 import TidyIcon from '../assets/tidy.svg'
 import FocusIcon from '../assets/focus.svg'
@@ -30,8 +34,6 @@ import FelfeleLogo from '../assets/images/felfele-logo.svg'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
-
-const calcVerticalSize = (unit) => `calc((${PADDING_CSS_EXPRESSION}) / 80 * ${unit})`
 
 const Section = ({ icon, title, body }) => (
     <div style={{
@@ -139,13 +141,14 @@ const TopText = ({title, body}) => (
             marginTop: calcVerticalSize(40),
             marginBottom: calcVerticalSize(10),
             maxWidth: '84vw',
+            fontSize: 'calc(1.7rem + 4.0vmin)',
         }}>{title}
         </H1>
 
         <H2 style={{
             color: Colors.NICHE_PINK,
+            fontSize: 'calc(0.81rem + 1.58vmin)',
             marginTop: 0,
-            marginBottom: calcVerticalSize(80),
         }}>{body}
         </H2>
     </div>
@@ -178,36 +181,36 @@ const Top = ({}) => (
                 <div style={{
                     padding: 0,
                     margin: 0,
-                    paddingLeft: 10,
-                    width: 109,
-                    height: 30,
+                    paddingLeft: MIN_SECTION_PADDING,
                 }}>
                     <Link to='/niche'>
-                        <img src={NichePinkLogo} width={109} height={30}/>
+                        <img src={NichePinkLogo} className='niche-image' />
                     </Link>
                 </div>
                 <div style={{
                     padding: 0,
                     margin: 0,
-                    width: 109,
-                    height: 15,
+                    paddingRight: MIN_SECTION_PADDING,
                 }}>
                     <Link to='/'>
-                        <img src={ByFelfeleLogo} />
+                        <img src={ByFelfeleLogo} className='image' />
                     </Link>
                 </div>
             </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginTop: 85,
-            }}>
-                <img src={NichePinkBigIcon} className='main-image' />
+            <div
+                className='layout'
+                style={{
+                    display: 'flex',
+                    marginTop: VERTICAL_PADDING,
+                }}
+            >
+                <img src={NichePinkBigIcon} className='image' />
             </div>
             <TopText
                 title='Socialize without compromise'
                 body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them.'
             />
+            <SubscribeTop />
         </ResponsiveDiv>
     </div>
 )
@@ -266,12 +269,10 @@ const HeroImage = ({ fluidImage }) => (
     </div>
 )
 
-const subscribeEmail = () => {
-    const email = document.getElementById('subscribe-input').value
-    alert(`Hello ${email}!\n\n` + 'You are successfully subscribed.\n' + 'We will never spam or share your email with anyone else.')
-}
+const FONT_SIZE_D18_M14 = 'calc(0.77rem + 0.53vmin)'
+const FONT_SIZE_D14_M12 = 'calc(0.67rem + 0.53vmin)'
 
-const Subscribe = () => (
+const SubscribeTop = () => (
     <div
         style={{
             flexDirection: 'column',
@@ -281,79 +282,76 @@ const Subscribe = () => (
             marginRight: 'auto',
         }}
     >
-        <p style={{
-            fontFamily: 'Karla',
-            fontSize: 18,
-            color: 'black',
-            maxWidth: '84vw',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: NICHE_VERTICAL_PADDING,
-            marginBottom: calcVerticalSize(50),
-        }}>Niche is currently under development by Felfele, a non-profit foundation building decentralized social apps with an emphasis on freedom and privacy. If you’d like to be notified about releases and get early access you can subscribe to our mailing list.
-        </p>
-
-        <div
+        <p
+            className='para'
             style={{
-                maxWidth: Math.floor(CONTENT_MAX_WIDTH * 0.6),
+                fontFamily: 'Karla',
+                fontSize: FONT_SIZE_D18_M14,
+                color: '#F9F9F9',
+                maxWidth: '84vw',
+                width: 760,
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                marginTop: VERTICAL_HALF_PADDING,
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
+                marginTop: calcVerticalSize(48),
+                marginBottom: calcVerticalSize(20),
             }}
-        >
-            <input
-                style={{
-                    borderColor: Colors.NICHE_PINK,
-                    backgroundColor: Colors.BACKGROUND_COLOR,
-                    borderWidth: 1,
-                    borderStyle: 'solid',
-                    borderBottomLeftRadius: 9,
-                    borderTopLeftRadius: 9,
-                    borderTopRightRadius: 0,
-                    borderBottomRightRadius: 0,
-                    height: 43,
-                    maxWidth: '80vw',
-                    minWidth: 160,
-                    flex: 0.7,
-                    padding: 0,
-                    margin: 0,
-                    paddingLeft: MIN_SECTION_PADDING,
-                    fontFamily: 'Karla',
-                    fontSize: 18,
-                    color: '#00000077',
-                }}
-                placeholder='Your email address'
-                id='subscribe-input'
-            />
-            <div
-                style={{
-                    maxWidth: '10vw',
-                    minWidth: 100,
-                    height: 45,
-                    fontFamily: 'Karla',
-                    fontSize: 18,
-                    backgroundColor: Colors.NICHE_PINK,
-                    color: 'white',
-                    border: 'none',
-                    borderBottomRightRadius: 9,
-                    borderTopRightRadius: 9,
-                    cursor: 'pointer',
-                    flex: 0.3,
-                    padding: 0,
-                    margin: 0,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-                onClick={subscribeEmail}
-            >Subscribe</div>
+        >GET NEWS &amp; EARLY ACCESS
+        </p>
 
-        </div>
+        <SubscribeInput
+            id='niche-top-subscribe'
+            inputStyle={{
+                borderColor: 'white',
+                fontSize: FONT_SIZE_D18_M14,
+            }}
+            buttonStyle={{
+                fontSize: FONT_SIZE_D18_M14,
+            }}
+        />
+
+        <p
+            className='para layout'
+            style={{
+                fontFamily: 'Karla',
+                fontSize: FONT_SIZE_D14_M12,
+                color: '#9B9B9B',
+                maxWidth: 760,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                marginTop: calcVerticalSize(20),
+                marginBottom: NICHE_VERTICAL_PADDING,
+            }}>We will never spam or share your email.
+        </p>
+    </div>
+)
+
+const SubscribeBottom = () => (
+    <div
+        style={{
+            flexDirection: 'column',
+            alignItems: 'center',
+            maxWidth: CONTENT_MAX_WIDTH,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+        }}
+    >
+        <p
+            className='para'
+            style={{
+                fontFamily: 'Karla',
+                fontSize: 18,
+                color: 'black',
+                maxWidth: '84vw',
+                width: 760,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                marginTop: NICHE_VERTICAL_PADDING,
+                marginBottom: calcVerticalSize(50),
+            }}
+        >Niche is currently under development by Felfele, a non-profit foundation building decentralized social apps with an emphasis on freedom and privacy. If you’d like to be notified about releases and get early access you can subscribe to our mailing list.
+        </p>
+
+        <SubscribeInput id='niche-bottom-subscribe' />
 
         <p style={{
             fontFamily: 'Karla',
@@ -387,40 +385,40 @@ const Footer = () => (
         }}
     >
         <div
+            className='footer'
             style={{
                 display: 'flex',
                 width: '100%',
-                flexDirection: 'row',
                 justifyContent: 'space-between',
-                alignItems: 'center',
             }}
         >
             <Link to='/niche'>
-                <img src={NichePinkLogo} style={{ width: 92, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
+                <img src={NichePinkLogo} style={{ width: 91, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
             </Link>
+            <p
+                style={{
+                    fontFamily: 'Karla',
+                    fontSize: 14,
+                    alignSelf: 'flex-end',
+                    padding: 0,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    margin: 0,
+                }}
+            >Niche is an open-source project supported by the&nbsp;
+                <a
+                    href='https://felfele.org/'
+                    style={{
+                        fontFamily: 'Karla',
+                        fontSize: 14,
+                    }}
+                >Felfele Foundation</a>
+            .
+            </p>
             <Link to='/'>
-                <img src={FelfeleLogo} style={{ width: 100, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
+                <img src={FelfeleLogo} style={{ height: 40, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
             </Link>
         </div>
-        <p
-            style={{
-                fontFamily: 'Karla',
-                fontSize: 14,
-                alignSelf: 'flex-end',
-                padding: 0,
-                paddingTop: `calc((${PADDING_CSS_EXPRESSION}) / 4)`,
-                margin: 0,
-            }}
-        >Niche is an open-source project supported by the&nbsp;
-        <a
-            href='https://felfele.org/'
-            style={{
-                fontFamily: 'Karla',
-                fontSize: 14,
-            }}
-        >Felfele Foundation</a>
-        .
-        </p>
     </div>
 )
 
@@ -484,7 +482,7 @@ const Niche = ({ data }) => (
                 }}
             />
 
-            <Subscribe />
+            <SubscribeBottom />
 
             <Ruler
                 style={{
@@ -494,6 +492,7 @@ const Niche = ({ data }) => (
 
             <Footer />
         </div>
+        <SubscribeFooter/>
     </Fragment>
 )
 

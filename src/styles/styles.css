@@ -70,6 +70,26 @@ h2 {
     text-align: center;
 }
 
+.subscribe-footer {
+    align-items: flex-end;
+}
+
+.para {
+    text-align: center;
+}
+
+.image {
+    zoom: 100%;
+}
+
+.niche-image {
+    zoom: 60%;
+}
+
+.layout {
+    justify-content: center;
+}
+
 @media all and (max-width: 767px) {
     .footer {
         flex-direction: column;
@@ -86,6 +106,28 @@ h2 {
 
     .main-image {
         zoom: 50%;
+    }
+
+    .image {
+        zoom: 70%;
+    }
+
+    .niche-image {
+        zoom: 40%;
+    }
+
+    .layout {
+        justify-content: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .subscribe-footer {
+        align-items: flex-start;
+    }
+
+    .para {
+        text-align: start;
     }
 }
 

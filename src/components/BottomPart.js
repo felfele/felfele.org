@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Colors } from '../data/style';
 import { Ruler } from './Ruler';
 import Footer from './Footer';
+import { SubscribeFooter } from './SubscribeFooter';
 
 export const BottomPart = ({ children, ruler = true }) => (
-    <div style={{
-        backgroundColor: Colors.BACKGROUND_COLOR,
-    }}>
-        {children}
-        {ruler && <Ruler/>}
+    <Fragment>
+        <div style={{
+            backgroundColor: Colors.BACKGROUND_COLOR,
+        }}>
+            {children}
+            {ruler && <Ruler/>}
 
-        <Footer/>
-    </div>
+            <Footer/>
+        </div>
+        <SubscribeFooter/>
+    </Fragment>
 )

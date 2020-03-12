@@ -40,6 +40,10 @@ a:active { /* Selected link  */
     background-color: black;
 }
 
+input {
+    -webkit-appearance: none;
+}
+
 input:focus {
     outline: none;
 }

@@ -67,6 +67,8 @@ const Subscribe = () => (
         style={{
             width: '100%',
             backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
         }}
     >
         <div
@@ -80,7 +82,7 @@ const Subscribe = () => (
         >
 
             <p
-                className='para layout'
+                className='para'
                 style={{
                     fontFamily: 'Jost',
                     fontSize: FONT_SIZE_D18_M12,
@@ -112,7 +114,7 @@ const Subscribe = () => (
             />
 
             <p
-                className='para layout'
+                className='para'
                 style={{
                     fontFamily: 'Nunito Sans',
                     fontSize: FONT_SIZE_D14_M10,

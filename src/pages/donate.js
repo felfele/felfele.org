@@ -57,7 +57,7 @@ const DonateInfo = ({title, data}) => (
 
 const DonateIllustration = ({}) => (
     <div
-        className='main-image'
+        className='donate-image'
         style={{
             background: 'white',
             backgroundImage: `url(${ColorFacesIllustration})`,
@@ -80,7 +80,7 @@ export const Donate = ({data}) => (
             }}
             pageTitle='Donate'
             title='MAKE A DONATION'
-            subTitle='We’ve been lucky enough to get this far with the help of of friends, and by investing our own resources. Boost your karma.'
+            subTitle='We’ve been lucky enough to get this far with the help of friends, and by investing our own resources. Boost your karma.'
         />
         <BottomPart>
             <Row>

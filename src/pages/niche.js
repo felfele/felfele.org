@@ -36,6 +36,7 @@ import FelfeleLogo from '../assets/images/felfele-logo.svg'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
+import { MobileOnly, DesktopOnly } from '../components/Responsive';
 
 const Section = ({ icon, title, body }) => (
     <div
@@ -202,7 +203,7 @@ const Top = ({}) => (
                     paddingRight: MIN_SECTION_PADDING,
                 }}>
                     <Link to='/'>
-                        <img src={ByFelfeleLogo} className='image' />
+                        <img src={ByFelfeleLogo} className='by-felfele-image' />
                     </Link>
                 </div>
             </div>
@@ -213,7 +214,7 @@ const Top = ({}) => (
                     marginTop: VERTICAL_PADDING,
                 }}
             >
-                <img src={NichePinkBigIcon} className='image' />
+                <img src={NichePinkBigIcon} className='niche-logo-image' />
             </div>
             <TopText
                 title='Socialize without compromise'

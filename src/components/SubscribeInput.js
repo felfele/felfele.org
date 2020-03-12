@@ -18,7 +18,7 @@ export const SubscribeInput = ({
     height = 43,
 }) => (
     <div
-        className='layout'
+        // className='layout'
         style={{
             maxWidth: Math.floor(CONTENT_MAX_WIDTH * 0.6),
             marginLeft: 'auto',

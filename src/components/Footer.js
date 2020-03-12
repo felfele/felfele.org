@@ -4,9 +4,7 @@ import { Link } from 'gatsby'
 import Logo from '../assets/images/felfele-icon.svg';
 import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, MIN_SECTION_PADDING, VERTICAL_HALF_PADDING } from '../data/style';
 import Menu from './Menu';
-
-const MobileOnly = ({children, style}) => <div className='mobile-only' style={style}>{children}</div>
-const DesktopOnly = ({children, style}) => <div className='desktop-only' style={style}>{children}</div>
+import { MobileOnly, DesktopOnly } from './Responsive'
 
 const LogoContainer = ({isMobile}) => {
     return (

@@ -55,7 +55,7 @@ const ContactSection = ({icon, text, link, label}) => (
 export const About = ({}) => (
     <Fragment>
         <TopPart
-            icon={<Illustration src={FelfeleLogo} style={{maxWidth: 300}} className='main-image' />}
+            icon={<Illustration src={FelfeleLogo} style={{maxWidth: 300}} className='about-logo-image' />}
             pageTitle='About'
             subTitle='We are a nonprofit foundation ran by a small, independent, and distributed team defending privacy and freedom of expression.'
         />

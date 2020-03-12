@@ -67,8 +67,6 @@ const Subscribe = () => (
         style={{
             width: '100%',
             backgroundColor: Colors.INDEX_PAGE_BACKGROUND,
-            paddingLeft: MIN_SECTION_PADDING,
-            paddingRight: MIN_SECTION_PADDING,
         }}
     >
         <div
@@ -78,6 +76,8 @@ const Subscribe = () => (
                 maxWidth: CONTENT_MAX_WIDTH,
                 marginLeft: 'auto',
                 marginRight: 'auto',
+                paddingLeft: MIN_SECTION_PADDING,
+                paddingRight: MIN_SECTION_PADDING,
             }}
         >
 

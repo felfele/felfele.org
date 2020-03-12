@@ -15,10 +15,8 @@ export const SubscribeInput = ({
     inputStyle,
     buttonStyle,
     label = 'Subscribe',
-    height = 43,
 }) => (
     <div
-        // className='layout'
         style={{
             maxWidth: Math.floor(CONTENT_MAX_WIDTH * 0.6),
             marginLeft: 'auto',
@@ -32,6 +30,7 @@ export const SubscribeInput = ({
         }}
     >
         <input
+            className='subscribe'
             style={{
                 borderColor: Colors.NICHE_PINK,
                 backgroundColor: Colors.BACKGROUND_COLOR,
@@ -44,7 +43,6 @@ export const SubscribeInput = ({
                 borderLeftWidth: 1,
                 borderTopWidth: 1,
                 borderRightWidth: 0,
-                height,
                 maxWidth: '80vw',
                 minWidth: 160,
                 flex: 0.7,
@@ -60,10 +58,10 @@ export const SubscribeInput = ({
             id={id}
         />
         <div
+            className='subscribe'
             style={{
                 maxWidth: '10vw',
                 minWidth: 100,
-                height: height + 2,
                 fontFamily: 'Karla',
                 fontSize: 18,
                 backgroundColor: Colors.NICHE_PINK,

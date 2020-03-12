@@ -80,6 +80,10 @@ h2 {
     align-items: flex-end;
 }
 
+.niche-footer {
+    align-items: center;
+}
+
 .para {
     text-align: center;
 }
@@ -110,6 +114,14 @@ h2 {
 
 .mobile-only {
     display: none;
+}
+
+input.subscribe {
+    height: 43px;
+}
+
+div.subscribe {
+    height: 45px;
 }
 
 @media all and (max-width: 767px) {
@@ -164,6 +176,10 @@ h2 {
         align-items: flex-start;
     }
 
+    .niche-footer {
+        align-items: flex-start;
+    }
+
     .para {
         text-align: start;
     }
@@ -178,6 +194,14 @@ h2 {
 
     .mobile-padding-top-10 {
         padding-top: 10px;
+    }
+
+    input.subscribe {
+        height: 34px;
+    }
+
+    div.subscribe {
+        height: 36px;
     }
 }
 

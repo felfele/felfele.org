@@ -117,7 +117,6 @@ const H1 = ({style, children}) => (
         fontWeight: 500,
         fontSize: 'calc(1.3rem + 4.6vmin)',
         color: 'white',
-        maxWidth: '94vw',
         marginLeft: 'auto',
         marginRight: 'auto',
         ...style,
@@ -131,7 +130,6 @@ const H2 = ({style, children}) => (
         fontWeight: 500,
         fontSize: 'calc(1.1rem + 1.0vmin)',
         color: Colors.NICHE_PINK,
-        maxWidth: '84vw',
         marginLeft: 'auto',
         marginRight: 'auto',
         ...style,
@@ -147,7 +145,6 @@ const TopText = ({title, body}) => (
             marginBottom: calcVerticalSize(10),
             marginLeft: 0,
             marginRight: 0,
-            maxWidth: '84vw',
             fontSize: 'calc(1.7rem + 4.0vmin)',
         }}>{title}
         </H1>
@@ -157,7 +154,7 @@ const TopText = ({title, body}) => (
             fontSize: 'calc(0.81rem + 1.58vmin)',
             marginTop: 0,
             marginLeft: 0,
-            marginRigth: 0,
+            marginRight: 0,
         }}>{body}
         </H2>
     </div>
@@ -344,7 +341,7 @@ const Footer = () => (
         }}
     >
         <div
-            className='footer'
+            className='footer niche-footer'
             style={{
                 display: 'flex',
                 width: '100%',

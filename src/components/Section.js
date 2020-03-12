@@ -24,13 +24,14 @@ const P = ({ children, style }) => (
 )
 
 const SectionBase = ({children, style}) => (
-    <section style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        maxWidth: '80vw',
-        ...style,
-    }}>{children}
+    <section
+        style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            // maxWidth: '80vw',
+            ...style,
+        }}>{children}
     </section>
 )
 
@@ -58,13 +59,10 @@ const LinkWrapper = ({link, children}) => (
 )
 
 const SectionWithImage = ({title, text, image, link, children}) => {
-    const isMobile = useMediaQuery({ maxWidth: WIDTH_THRESHOLD })
-    const marginLeft = isMobile ? 20 : 0;
     const maxWidth = (CONTENT_MAX_WIDTH - 40) / 2
     return (
         <SectionBase
             style={{
-                maxWidth,
                 alignItems: 'flex-start',
             }}
         >
@@ -81,18 +79,22 @@ const SectionWithImage = ({title, text, image, link, children}) => {
                     />
                 </LinkWrapper>
             }
-            <div style={{
-                marginLeft,
-                paddingBottom: 20,
-            }}>
+            <div
+                className={image ? 'layout' : undefined}
+                style={{
+                    paddingBottom: 20,
+                }}
+            >
                 <H3>{title}</H3>
                 <P>{text}</P>
             </div>
-            <div style={{
-                marginLeft,
-                display: 'flex',
-                flexDirection: isMobile ? 'column' : 'row',
-            }}>
+            <div
+                className={image ? 'grid layout' : undefined}
+                style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                }}
+            >
             {children}
             </div>
         </SectionBase>

@@ -6,12 +6,21 @@ import { Ruler } from '../components/Ruler';
 import { BottomPart } from '../components/BottomPart';
 import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator, Section } from '../components/Section';
-import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, VERTICAL_HALF_PADDING, MIN_SECTION_PADDING } from '../data/style';
+import {
+    Colors,
+    CONTENT_MAX_WIDTH,
+    VERTICAL_PADDING,
+    VERTICAL_HALF_PADDING,
+    MIN_SECTION_PADDING,
+    FONT_SIZE_D14_M12,
+    FONT_SIZE_D18_M12,
+    FONT_SIZE_D14_M10,
+    FONT_SIZE_D18_M14,
+} from '../data/style';
 import { Illustration } from '../components/Illustration';
 import { calcVerticalSize } from '../utils/calc'
 
 import MainIllustration from '../assets/main-illustration.svg'
-import { SubscribeFooter } from '../components/SubscribeFooter';
 import { SubscribeInput } from '../components/SubscribeInput';
 
 const HeroImage = ({ image }) => (
@@ -70,17 +79,16 @@ const Subscribe = () => (
             }}
         >
 
-            <p style={{
-                fontFamily: 'Jost',
-                fontSize: 18,
-                color: 'black',
-                maxWidth: '84vw',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                marginTop: 0,
-                marginBottom: 0,
-                textAlign: 'center',
-            }}>GET NEWS &amp; EARLY ACCESS TO OUR APPS
+            <p
+                className='para layout'
+                style={{
+                    fontFamily: 'Jost',
+                    fontSize: FONT_SIZE_D18_M12,
+                    color: 'black',
+                    marginTop: 0,
+                    marginBottom: 0,
+                }}
+            >GET NEWS &amp; EARLY ACCESS TO OUR APPS
             </p>
 
             <SubscribeInput
@@ -91,24 +99,29 @@ const Subscribe = () => (
                 inputStyle={{
                     borderColor: 'white',
                     backgroundColor: 'white',
+                    borderRadius: 0,
+                    fontSize: FONT_SIZE_D18_M14,
                 }}
                 buttonStyle={{
                     backgroundColor: 'black',
+                    borderRadius: 0,
+                    fontFamily: 'Jost',
+                    fontSize: FONT_SIZE_D14_M12,
                 }}
+                label='SUBSCRIBE'
             />
 
-            <p style={{
-                fontFamily: 'Nunito Sans',
-                fontSize: 14,
-                color: 'black',
-                maxWidth: 760,
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                marginTop: calcVerticalSize(19),
-                marginBottom: 0,
-                paddingBottom: VERTICAL_HALF_PADDING,
-                textAlign: 'center',
-            }}>We will never spam or share your email with anyone else.
+            <p
+                className='para layout'
+                style={{
+                    fontFamily: 'Nunito Sans',
+                    fontSize: FONT_SIZE_D14_M10,
+                    color: '#00000077',
+                    marginTop: calcVerticalSize(19),
+                    marginBottom: 0,
+                    paddingBottom: VERTICAL_HALF_PADDING,
+                }}
+            >We will never spam or share your email with anyone else.
             </p>
         </div>
     </div>

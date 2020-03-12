@@ -40,6 +40,12 @@ a:active { /* Selected link  */
     background-color: black;
 }
 
+input:focus {
+    outline: none;
+}
+
+/* Responsive classes ***********************************************/
+
 .grid {
     flex-direction: row;
     align-items: unset;
@@ -90,6 +96,18 @@ h2 {
     justify-content: center;
 }
 
+.image-layout {
+    justify-content: center;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
 @media all and (max-width: 767px) {
     .footer {
         flex-direction: column;
@@ -122,12 +140,28 @@ h2 {
         padding-right: 20px;
     }
 
+    .image-layout {
+        justify-content: flex-start;
+    }
+
     .subscribe-footer {
         align-items: flex-start;
     }
 
     .para {
         text-align: start;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-padding-top-10 {
+        padding-top: 10px;
     }
 }
 

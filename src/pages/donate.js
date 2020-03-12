@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
 
 import { TopPart } from '../components/TopPart';
 import { BottomPart } from '../components/BottomPart';
@@ -23,8 +22,7 @@ const DonateInfo = ({title, data}) => (
         style={{
             flexDirection: 'column',
             flex: 1,
-            maxWidth: '80vw',
-            width: '50vw',
+            alignSelf: 'stretch',
         }}
     >
         <h3 style={{

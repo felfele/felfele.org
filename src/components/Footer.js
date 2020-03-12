@@ -1,18 +1,22 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'gatsby'
-import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../assets/images/felfele-icon.svg';
 import { Colors, CONTENT_MAX_WIDTH, VERTICAL_PADDING, MIN_SECTION_PADDING, VERTICAL_HALF_PADDING } from '../data/style';
 import Menu from './Menu';
 
+const MobileOnly = ({children, style}) => <div className='mobile-only' style={style}>{children}</div>
+const DesktopOnly = ({children, style}) => <div className='desktop-only' style={style}>{children}</div>
+
 const LogoContainer = ({isMobile}) => {
     return (
-        <div style={{
-            ...styles.sectionContainer,
-            flexGrow: 0.5,
-            alignItems: isMobile ? 'center' : 'flex-end'
-        }}>
+        <div
+            style={{
+                ...styles.sectionContainer,
+                flexGrow: 0.5,
+                alignItems: isMobile ? 'center' : 'flex-end'
+           }}
+        >
                 <Link to='/'>
                     <img height={40} src={Logo} style={{ marginBottom: 0, fill: '#000000' }}/>
                 </Link>
@@ -21,14 +25,11 @@ const LogoContainer = ({isMobile}) => {
 }
 
 export const Footer = ({}) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
     return (
         <footer
+            className='footer'
             style={{
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: isMobile ? 'center' : 'unset',
                 fontSize: 12,
                 paddingTop: VERTICAL_PADDING,
                 paddingBottom: VERTICAL_HALF_PADDING,
@@ -45,24 +46,27 @@ export const Footer = ({}) => {
                 style={{
                     display: 'flex',
                     flex: 1,
-                    alignItems: isMobile ? 'center' : 'flex-start',
                     justifyContent: 'space-between',
                 }}
             >
-                {
-                    isMobile && <LogoContainer isMobile={isMobile} />
-                }
+                <MobileOnly>
+                    <LogoContainer isMobile={true} />
+                </MobileOnly>
+
                 <Menu
-                    sectionContainerStyle={{
-                        ...styles.sectionContainer,
-                        paddingTop: isMobile ? 20 : 0,
-                    }}
+                    sectionContainerStyle={styles.sectionContainer}
                     sectionTitleStyle={styles.sectionTitle}
                     sectionContentStyle={styles.sectionContent}
                 />
-                {
-                    !isMobile && <LogoContainer isMobile={isMobile} />
-                }
+
+                <DesktopOnly
+                    style={{
+                        flexGrow: 0.5,
+                    }}
+                >
+                    <LogoContainer isMobile={false} />
+                </DesktopOnly>
+
             </div>
         </footer>
     );
@@ -87,7 +91,7 @@ const styles = {
         lineHeight: 1.5,
     },
     sectionTitle: {
-        paddingBottom: 5,
+        paddingBottom: 8,
         fontFamily: 'Jost',
         fontWeight: 500,
     },

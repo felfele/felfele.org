@@ -20,3 +20,8 @@ export const NICHE_VERTICAL_PADDING = `calc((${PADDING_CSS_EXPRESSION}) * 1.5)`
 export const MIN_SECTION_PADDING = 20
 
 export const QUERY_FOR_MOBILE_AND_TABLET = `(max-width: ${WIDTH_THRESHOLD}px)`
+
+export const FONT_SIZE_D18_M14 = 'calc(0.77rem + 0.53vmin)'
+export const FONT_SIZE_D18_M12 = 'calc(0.59rem + 0.80vmin)'
+export const FONT_SIZE_D14_M12 = 'calc(0.67rem + 0.53vmin)'
+export const FONT_SIZE_D14_M10 = 'calc(0.52rem + 0.53vmin)'

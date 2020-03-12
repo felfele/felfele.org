@@ -9,7 +9,14 @@ import {
 import { subscribeEmail } from '../utils/subscribe'
 
 
-export const SubscribeInput = ({ id, style, inputStyle, buttonStyle }) => (
+export const SubscribeInput = ({
+    id,
+    style,
+    inputStyle,
+    buttonStyle,
+    label = 'Subscribe',
+    height = 43,
+}) => (
     <div
         className='layout'
         style={{
@@ -37,7 +44,7 @@ export const SubscribeInput = ({ id, style, inputStyle, buttonStyle }) => (
                 borderLeftWidth: 1,
                 borderTopWidth: 1,
                 borderRightWidth: 0,
-                height: 43,
+                height,
                 maxWidth: '80vw',
                 minWidth: 160,
                 flex: 0.7,
@@ -46,7 +53,7 @@ export const SubscribeInput = ({ id, style, inputStyle, buttonStyle }) => (
                 paddingLeft: MIN_SECTION_PADDING,
                 fontFamily: 'Karla',
                 fontSize: 18,
-                color: '#00000077',
+                color: '#000000',
                 ...inputStyle,
             }}
             placeholder='Your email address'
@@ -56,7 +63,7 @@ export const SubscribeInput = ({ id, style, inputStyle, buttonStyle }) => (
             style={{
                 maxWidth: '10vw',
                 minWidth: 100,
-                height: 45,
+                height: height + 2,
                 fontFamily: 'Karla',
                 fontSize: 18,
                 backgroundColor: Colors.NICHE_PINK,
@@ -75,6 +82,6 @@ export const SubscribeInput = ({ id, style, inputStyle, buttonStyle }) => (
                 ...buttonStyle,
             }}
             onClick={() => subscribeEmail(id)}
-        >Subscribe</div>
+        >{label}</div>
     </div>
 )

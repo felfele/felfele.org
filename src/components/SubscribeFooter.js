@@ -53,7 +53,6 @@ const SubscribeBox = ({}) => (
                 fontFamily: 'Jost',
                 fontSize: 10,
                 backgroundColor: Colors.SUBSCRIBE_FOOTER_BACKGROUND_COLOR,
-                marginLeft: calcVerticalSize(10),
                 color: 'white',
                 borderColor: 'white',
                 borderWidth: 1,
@@ -66,6 +65,7 @@ const SubscribeBox = ({}) => (
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginLeft: 10,
             }}
             onClick={() => subscribeEmail('subscribe-box-input')}
         >SUBSCRIBE</div>
@@ -119,7 +119,6 @@ export const SubscribeFooter = ({}) => (
                 maxWidth: CONTENT_MAX_WIDTH,
                 display: 'flex',
                 justifyContent: 'space-between',
-                // alignItems: 'flex-end',
             }}
         >
             <div

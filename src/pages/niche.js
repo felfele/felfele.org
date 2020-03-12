@@ -12,6 +12,8 @@ import {
     VERTICAL_PADDING,
     PADDING_CSS_EXPRESSION,
     MIN_SECTION_PADDING,
+    FONT_SIZE_D14_M12,
+    FONT_SIZE_D18_M14,
 } from '../data/style';
 import { Ruler } from '../components/Ruler';
 import { HelmetWithMetadata } from '../components/TopPart'
@@ -36,13 +38,15 @@ import 'typeface-youngserif'
 import 'typeface-karla'
 
 const Section = ({ icon, title, body }) => (
-    <div style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        maxWidth: '84vw',
-    }}>
+    <div
+        className='para'
+        style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+        }}
+    >
         <div style={{
             width: 60,
             height: 60,
@@ -85,6 +89,8 @@ const MainSection = ({title, body}) => (
             maxWidth: CONTENT_MAX_WIDTH,
             marginLeft: 'auto',
             marginRight: 'auto',
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
         }}
     >
         <H1 style={{
@@ -92,14 +98,12 @@ const MainSection = ({title, body}) => (
             marginTop: VERTICAL_PADDING,
             marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
             fontSize: 'calc(1.2rem + 2.86vmin)',
-            maxWidth: '84vw',
         }}>{title}
         </H1>
 
         <H2 style={{
             color: 'black',
-            marginTop: 0,
-            marginBottom: 0,
+            margin: 0,
         }}>{body}
         </H2>
 
@@ -140,6 +144,8 @@ const TopText = ({title, body}) => (
             color: 'white',
             marginTop: calcVerticalSize(40),
             marginBottom: calcVerticalSize(10),
+            marginLeft: 0,
+            marginRight: 0,
             maxWidth: '84vw',
             fontSize: 'calc(1.7rem + 4.0vmin)',
         }}>{title}
@@ -149,6 +155,8 @@ const TopText = ({title, body}) => (
             color: Colors.NICHE_PINK,
             fontSize: 'calc(0.81rem + 1.58vmin)',
             marginTop: 0,
+            marginLeft: 0,
+            marginRigth: 0,
         }}>{body}
         </H2>
     </div>
@@ -165,6 +173,8 @@ const Top = ({}) => (
             style={{
                 flex: 1,
                 flexDirection: 'column',
+                paddingLeft: MIN_SECTION_PADDING,
+                paddingRight: MIN_SECTION_PADDING,
             }}
         >
             <div
@@ -181,7 +191,6 @@ const Top = ({}) => (
                 <div style={{
                     padding: 0,
                     margin: 0,
-                    paddingLeft: MIN_SECTION_PADDING,
                 }}>
                     <Link to='/niche'>
                         <img src={NichePinkLogo} className='niche-image' />
@@ -198,7 +207,7 @@ const Top = ({}) => (
                 </div>
             </div>
             <div
-                className='layout'
+                className='image-layout'
                 style={{
                     display: 'flex',
                     marginTop: VERTICAL_PADDING,
@@ -269,9 +278,6 @@ const HeroImage = ({ fluidImage }) => (
     </div>
 )
 
-const FONT_SIZE_D18_M14 = 'calc(0.77rem + 0.53vmin)'
-const FONT_SIZE_D14_M12 = 'calc(0.67rem + 0.53vmin)'
-
 const SubscribeTop = () => (
     <div
         style={{
@@ -288,10 +294,6 @@ const SubscribeTop = () => (
                 fontFamily: 'Karla',
                 fontSize: FONT_SIZE_D18_M14,
                 color: '#F9F9F9',
-                maxWidth: '84vw',
-                width: 760,
-                marginLeft: 'auto',
-                marginRight: 'auto',
                 marginTop: calcVerticalSize(48),
                 marginBottom: calcVerticalSize(20),
             }}
@@ -310,60 +312,16 @@ const SubscribeTop = () => (
         />
 
         <p
-            className='para layout'
+            className='para'
             style={{
                 fontFamily: 'Karla',
                 fontSize: FONT_SIZE_D14_M12,
                 color: '#9B9B9B',
-                maxWidth: 760,
-                marginLeft: 'auto',
-                marginRight: 'auto',
                 marginTop: calcVerticalSize(20),
                 marginBottom: NICHE_VERTICAL_PADDING,
+                paddingLeft: 0,
+                paddingRight: 0,
             }}>We will never spam or share your email.
-        </p>
-    </div>
-)
-
-const SubscribeBottom = () => (
-    <div
-        style={{
-            flexDirection: 'column',
-            alignItems: 'center',
-            maxWidth: CONTENT_MAX_WIDTH,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-        }}
-    >
-        <p
-            className='para'
-            style={{
-                fontFamily: 'Karla',
-                fontSize: 18,
-                color: 'black',
-                maxWidth: '84vw',
-                width: 760,
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                marginTop: NICHE_VERTICAL_PADDING,
-                marginBottom: calcVerticalSize(50),
-            }}
-        >Niche is currently under development by Felfele, a non-profit foundation building decentralized social apps with an emphasis on freedom and privacy. If you’d like to be notified about releases and get early access you can subscribe to our mailing list.
-        </p>
-
-        <SubscribeInput id='niche-bottom-subscribe' />
-
-        <p style={{
-            fontFamily: 'Karla',
-            fontSize: 14,
-            color: 'black',
-            maxWidth: 760,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: calcVerticalSize(25),
-            marginBottom: 0,
-            textAlign: 'center',
-        }}>We will never spam or share your email with anyone else.
         </p>
     </div>
 )
@@ -378,7 +336,7 @@ const Footer = () => (
             marginLeft: 'auto',
             marginRight: 'auto',
             marginTop: VERTICAL_HALF_PADDING,
-            marginBottom: VERTICAL_PADDING,
+            marginBottom: VERTICAL_HALF_PADDING,
             paddingLeft: MIN_SECTION_PADDING,
             paddingRight: MIN_SECTION_PADDING,
             maxWidth: CONTENT_MAX_WIDTH,
@@ -475,14 +433,6 @@ const Niche = ({ data }) => (
                     body='Everything shared with Niche is end-to-end encrypted, meaning that no one can ever access your content, except the people you explicitly share it with.'
                 />
             </Row>
-
-            <Ruler
-                style={{
-                    marginTop: NICHE_VERTICAL_PADDING,
-                }}
-            />
-
-            <SubscribeBottom />
 
             <Ruler
                 style={{

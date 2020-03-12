@@ -20,7 +20,6 @@ const ContactSection = ({icon, text, link, label}) => (
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        maxWidth: 260,
         alignItems: 'flex-start',
     }}>
         <img

@@ -5,12 +5,11 @@
 <url> <loc>https://felfele.org/blog/alpha/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://felfele.org/blog/manual-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://felfele.org/blog/hackathon/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://felfele.org/app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://felfele.org/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://felfele.org/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://felfele.org/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://felfele.org/donate/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://felfele.org/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://felfele.org/lab/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://felfele.org/legal/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://felfele.org/team/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://felfele.org/volunteer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://felfele.org/niche/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

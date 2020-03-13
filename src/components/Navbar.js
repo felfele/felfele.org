@@ -10,6 +10,7 @@ import { Button } from './Button';
 import { CONTENT_MAX_WIDTH, MIN_SECTION_PADDING } from '../data/style';
 import MobileMenu from './MobileMenu';
 import Tool from '../assets/tool.svg';
+import { DesktopOnly } from './Responsive';
 
 const Navbar = ({textColor = '#000000'}) => {
     const isMobile = useMediaQuery({ maxWidth: 767 })
@@ -49,10 +50,10 @@ const Navbar = ({textColor = '#000000'}) => {
                 >
                     <img src={Logo} style={{ width: 118, marginBottom: 0, fill: textColor }}/>
                 </Link>
-                {isMobile
-                ?
+                {isMobile &&
                     <MobileMenu />
-                :
+                }
+                <DesktopOnly>
                     <div
                         style={{
                             display: 'flex',
@@ -83,7 +84,7 @@ const Navbar = ({textColor = '#000000'}) => {
                             }}
                         />
                     </div>
-                }
+                </DesktopOnly>
             </div>
         </div>
     )

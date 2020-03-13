@@ -40,7 +40,6 @@ import { MobileOnly, DesktopOnly } from '../components/Responsive';
 
 const Section = ({ icon, title, body }) => (
     <div
-        className='para'
         style={{
             flex: 1,
             display: 'flex',

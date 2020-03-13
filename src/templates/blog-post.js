@@ -39,7 +39,6 @@ class BlogPostTemplate extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`${post.frontmatter.title} | ${siteTitle}`}
                 />
-                <Link to="/blog">&larr; Blog</Link>
                 <div
                     style={{
                         display: 'flex',
@@ -48,6 +47,7 @@ class BlogPostTemplate extends React.Component {
                         flexBasis: 'auto',
                     }}
                 >
+                    <Link to="/blog">&larr; Back to blog</Link>
                     <h1>{post.frontmatter.title}</h1>
                     <p>
                         {post.frontmatter.date}
@@ -58,7 +58,6 @@ class BlogPostTemplate extends React.Component {
                             justifyItems: 'center',
                             maxWidth: 800,
                             width: this.state.width - 20,
-                            color: '#21004F',
                         }}
                         dangerouslySetInnerHTML={{ __html: post.html }}
                     />

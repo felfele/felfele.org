@@ -1,16 +1,231 @@
+* {
+    font-family: 'Nunito Sans';
+    color: black;
+}
+
+html {
+    font-size: 100%;
+    padding: 10;
+}
+
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    all: unset;
+}
+
 a { /* Unvisited link  */
-    color:#6200EA;
+    color:#000000;
 }
 a:visited { /* Visited link  */
-    color:#6200EA;
+    color:#000000;
 }
 a:hover { /* Mouse over link  */
-    color:#6200EA;
+    color:#000000;
 }
 a:active { /* Selected link  */
-    color:#6200EA;
+    color:#000000;
 }
 
 .twitter-tweet.twitter-tweet-rendered {
     margin: auto !important;
 }
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Responsive classes ***********************************************/
+
+.grid {
+    flex-direction: row;
+    align-items: unset;
+}
+
+.footer {
+    flex-direction: row;
+    align-items: unset;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.section-image {
+    width: 46vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.subscribe-footer {
+    align-items: flex-end;
+}
+
+.niche-footer {
+    align-items: center;
+}
+
+.para {
+    text-align: center;
+}
+
+.image {
+    zoom: 100%;
+}
+
+.niche-image {
+    width: 110px;
+}
+
+.about-logo-image {
+    width: 300px;
+}
+
+.layout {
+    justify-content: center;
+}
+
+.image-layout {
+    justify-content: center;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+input.subscribe {
+    height: 43px;
+}
+
+div.subscribe {
+    height: 45px;
+}
+
+@media all and (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .image {
+        zoom: 70%;
+    }
+
+    .niche-image {
+        width: 80px;
+    }
+
+    .by-felfele-image {
+        width: 68px;
+    }
+
+    .niche-logo-image {
+        width: 85px;
+    }
+
+    .about-logo-image {
+        width: 150px;
+    }
+
+    .donate-image {
+        zoom: 50%;
+    }
+
+    .layout {
+        justify-content: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .image-layout {
+        justify-content: flex-start;
+    }
+
+    .subscribe-footer {
+        align-items: flex-start;
+    }
+
+    .niche-footer {
+        align-items: flex-start;
+    }
+
+    .para {
+        text-align: start;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-padding-top-10 {
+        padding-top: 10px;
+    }
+
+    input.subscribe {
+        height: 34px;
+    }
+
+    div.subscribe {
+        height: 36px;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .section-image {
+        width: 100vw;
+    }
+}
+

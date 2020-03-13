@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 
 export const UniversalLink = (props) => {
@@ -24,6 +24,7 @@ const ExternalLink = (props) => {
                 ...style,
             }}
             {...rest}
+            target="_new"
         >
             {children}
         </a>
@@ -31,47 +32,50 @@ const ExternalLink = (props) => {
 }
 
 export const Button = (props) => {
-    if (/^\/(?!\/)/.test(props.link)) {
+    const {link, style, border, ...rest} = props
+    const linkStyle = {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        whiteSpace: 'nowrap',
+        border: border ? 'solid 1px rgb(0, 0, 0)' : '',
+        padding: border ? 12 : 0,
+        fontWeight: 500,
+        fontSize: 14,
+        fontFamily: 'Jost',
+        ...style,
+    }
+    const className = border ? 'button' : undefined
+    if (/^\/(?!\/)/.test(link)) {
         return (
-            <InternalLink link={props.link}>
-                <InnerButton {...props}/>
+            <InternalLink className={className} link={link} style={linkStyle}>
+                <InnerButton {...rest}/>
             </InternalLink>
         )
     } else {
         return (
-            <WeblinkWrapper link={props.link}>
-                <InnerButton {...props}/>
+            <WeblinkWrapper className={className} link={link} style={linkStyle}>
+                <InnerButton {...rest}/>
             </WeblinkWrapper>
         )
     }
 }
 
-const InnerButton = ({ icon, label, border, style }) => {
+const InnerButton = ({ icon, label }) => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                whiteSpace: 'nowrap',
-                border: border ? 'solid 1px rgba(98, 0, 234, 0.25)' : '',
-                padding: border ? 12 : 0,
-                fontWeight: 600,
-                margin: 6,
-                fontSize: 16,
-                ...style,
-            }}
-        >
-            <img src={icon} height={16} style={{ paddingRight: 4, margin: 0, color: '#6200EA' }}/>
+        <Fragment>
+            <img src={icon} height={16} style={{ paddingRight: 4, margin: 0, color: '#000000' }}/>
             {label}
-        </div>
+        </Fragment>
     );
 }
 
 const WeblinkWrapper = (props) => {
+    const { link, children, ...rest } = props;
     return (
-        <ExternalLink href={props.link}>
-            {props.children}
+        <ExternalLink className={props.className} href={link} {...rest}>
+            {children}
         </ExternalLink>
     )
 }
@@ -79,6 +83,7 @@ const WeblinkWrapper = (props) => {
 const InternalLink = (props) => {
     return (
         <Link
+            className={props.className}
             to={props.link}
             style={{
                 textDecoration: 'none',

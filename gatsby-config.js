@@ -15,6 +15,20 @@ module.exports = {
             },
         },
         {
+          resolve: "gatsby-source-filesystem",
+          options: {
+            name: "fonts",
+            path: `${__dirname}/src/fonts/`
+          }
+        },
+        {
+          resolve: "gatsby-source-filesystem",
+          options: {
+            name: "images",
+            path: `${__dirname}/src/assets/images/`
+          }
+        },
+        {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
@@ -107,10 +121,10 @@ module.exports = {
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: "src/assets/images/logo.png",
+                icon: "src/assets/images/felfele-logo.png",
             },
         },
-        `gatsby-plugin-offline`,
+        `gatsby-plugin-remove-serviceworker`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sitemap`,
     ],

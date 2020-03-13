@@ -1,29 +1,29 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import get from 'lodash/get';
+import React, { Fragment } from 'react';
+import { TopPart } from '../components/TopPart';
+import { BottomPart } from '../components/BottomPart';
+import { CONTENT_MAX_WIDTH } from '../data/style';
+import { Footer } from '../components/Footer';
+import { Ruler } from '../components/Ruler';
 
-import Layout from '../components/Layout';
-
-class Volunteer extends React.Component {
-    render() {
-        const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-        const siteDescription = get(
-            this,
-            'props.data.site.siteMetadata.description'
-        );
-
-        return (
-            <Layout>
-                <Helmet
-                    htmlAttributes={{ lang: 'en' }}
-                    meta={[{ name: 'description', content: siteDescription }]}
-                    title={`Volunteer | ${siteTitle}`}
-                />
-                <h1>Felfele Terms & Privacy Policy</h1>
+const Legal = ({}) => (
+    <Fragment>
+        <TopPart
+            pageTitle='Legal'
+            subTitle='Felfele Terms & Privacy Policy'
+        />
+        <BottomPart>
+            <div
+                style={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    maxWidth: CONTENT_MAX_WIDTH,
+                    padding: 20,
+                }}
+            >
                 <p style={{
-                        textAlign: 'left',
-                    }}>
+                    textAlign: 'left',
+                    padding: 20,
+                }}>
                     Felfele is designed to never collect or store any sensitive information.
                     User-generated content in Felfele cannot be accessed by us or other third
                     parties because it is always end-to-end encrypted, private, and secure.
@@ -237,20 +237,11 @@ class Volunteer extends React.Component {
                     Updated August 26, 2019
 
                 </p>
-            </Layout>
-        );
-    }
-}
 
-export default Volunteer;
+            </div>
+        </BottomPart>
+    </Fragment>
+);
 
-export const query = graphql`
-    query {
-        site {
-            siteMetadata {
-                title
-                description
-            }
-        }
-    }
-`;
+
+export default Legal;

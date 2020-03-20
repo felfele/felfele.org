@@ -23,8 +23,9 @@ const P = ({ children, style }) => (
     }}>{children}</p>
 )
 
-const SectionBase = ({children, style}) => (
+const SectionBase = ({children, style, className}) => (
     <section
+        className={className}
         style={{
             flex: 1,
             display: 'flex',

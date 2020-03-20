@@ -2,9 +2,15 @@ import axios from "axios"
 
 const SERVER_URL = 'https://api.felfele.org'
 
+export const isEmail = (email) => /.+\@.+\..+/.test(email)
+
 export const subscribeEmail = async (id) => {
     const elem = document.getElementById(id)
     const email = elem.value
+    if (!isEmail(email)) {
+        alert(`Invalid email address!\n\n` + 'The email has to be the format like name@example.com')
+        return
+    }
     try {
         const resp = await axios({
             method: 'post',

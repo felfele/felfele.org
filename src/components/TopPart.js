@@ -80,6 +80,16 @@ export const HelmetWithMetadata = ({pageTitle, link}) => {
                    description
                 }
             }
+            felfeleImage: file(
+                relativePath: { eq: "felfele-illustration.png" },
+                sourceInstanceName: { eq: "images" }
+                ) {
+                childImageSharp {
+                    sizes(maxWidth: 1000) {
+                        src
+                    }
+                }
+            }
         }
     `)
     const htmlTitle = pageTitle != null
@@ -90,6 +100,16 @@ export const HelmetWithMetadata = ({pageTitle, link}) => {
             <title>{htmlTitle}</title>
             <meta name="description" content={data.site.siteMetadata.description} />
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+            <meta property="og:title" content={htmlTitle}/>
+            <meta property="og:site_name" content={data.site.siteMetadata.title}/>
+            <meta property="og:description" content={data.site.siteMetadata.description}/>
+            <meta property="og:image" content={`${data.felfeleImage.childImageSharp.sizes.src}`}/>
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="summary"/>
+            <meta name="twitter:site" content="@FelfeleOrg"/>
+            <meta name="twitter:title" content={htmlTitle}/>
+            <meta name="twitter:description" content={data.site.siteMetadata.description}/>
+            <meta name="twitter:image" content={`${data.felfeleImage.childImageSharp.sizes.src}`}/>
         </Helmet>
     )
 }

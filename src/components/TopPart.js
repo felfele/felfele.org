@@ -71,7 +71,7 @@ const SubTitle = ({ subTitle, style }) => (
     </Fragment>
 )
 
-export const HelmetWithMetadata = ({pageTitle, link}) => {
+export const HelmetWithMetadata = ({pageTitle, link, imageSrc}) => {
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -95,6 +95,9 @@ export const HelmetWithMetadata = ({pageTitle, link}) => {
     const htmlTitle = pageTitle != null
         ? pageTitle + ' | ' + data.site.siteMetadata.title
         : data.site.siteMetadata.title
+    const image = imageSrc != null
+        ? imageSrc
+        : data.felfeleImage.childImageSharp.sizes.src
     return (
         <Helmet link={link}>
             <title>{htmlTitle}</title>
@@ -103,13 +106,13 @@ export const HelmetWithMetadata = ({pageTitle, link}) => {
             <meta property="og:title" content={htmlTitle}/>
             <meta property="og:site_name" content={data.site.siteMetadata.title}/>
             <meta property="og:description" content={data.site.siteMetadata.description}/>
-            <meta property="og:image" content={`${data.felfeleImage.childImageSharp.sizes.src}`}/>
+            <meta property="og:image" content={image}/>
             <meta property="og:type" content="website" />
             <meta name="twitter:card" content="summary"/>
             <meta name="twitter:site" content="@FelfeleOrg"/>
             <meta name="twitter:title" content={htmlTitle}/>
             <meta name="twitter:description" content={data.site.siteMetadata.description}/>
-            <meta name="twitter:image" content={`${data.felfeleImage.childImageSharp.sizes.src}`}/>
+            <meta name="twitter:image" content={image}/>
         </Helmet>
     )
 }

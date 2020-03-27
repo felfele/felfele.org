@@ -401,7 +401,7 @@ const Niche = ({ data }) => (
                 <Section
                     icon={FocusIcon}
                     title='Focus on content'
-                    body='See what’s shared without being distracted by comments or obstrusive interface. Each page showcases a collection of pure content that’s a joy to browse.'
+                    body='See what’s shared without being distracted by comments or obtrusive interface. Each page showcases a collection of pure content that’s a joy to browse.'
                 />
                 <SectionSeparator/>
                 <Section

@@ -8,6 +8,12 @@ module.exports = {
     pathPrefix: '/',
     plugins: [
         {
+          resolve:`gatsby-plugin-goatcounter`,
+          options: {
+            code: 'felfele',
+          },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/pages`,

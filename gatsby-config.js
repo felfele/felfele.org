@@ -1,18 +1,12 @@
 module.exports = {
     siteMetadata: {
         title: 'Felfele Foundation',
-        author: 'Mark Vujevits',
+        author: 'Felfele Foundation',
         description: 'Official website of the Felfele Foundation',
         siteUrl: 'https://felfele.org',
     },
     pathPrefix: '/',
     plugins: [
-        {
-          resolve:`gatsby-plugin-goatcounter`,
-          options: {
-            code: 'felfele',
-          },
-        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {

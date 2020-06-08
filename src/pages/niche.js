@@ -34,6 +34,8 @@ import ByFelfeleLogo from '../assets/by-felfele.svg'
 import NichePinkBigIcon from '../assets/niche-pink-big-icon.svg'
 import FelfeleLogo from '../assets/images/felfele-logo.svg'
 
+import GirlWithBalloonImage from '../assets/images/girl-with-balloon.png'
+
 import 'typeface-youngserif'
 import 'typeface-karla'
 import { MobileOnly, DesktopOnly } from '../components/Responsive';
@@ -56,7 +58,7 @@ const Section = ({ icon, title, body }) => (
         <h3 style={{
             fontFamily: 'YoungSerif',
             fontSize: 24,
-            color: Colors.NICHE_PINK,
+            color: Colors.NICHE_BLUE,
             marginTop: 10,
             marginBottom: 0,
         }}>
@@ -65,20 +67,27 @@ const Section = ({ icon, title, body }) => (
         <p style={{
             fontFamily: 'Karla',
             fontSize: 18,
-            color: 'black',
+            color: Colors.NICHE_BLUE,
         }}>{body}</p>
     </div>
 )
 
-const ResponsiveDiv = ({style, children}) => (
+const ResponsiveDiv = ({style, children, id}) => (
     <div
+        id={id}
+        style={{
+            margin: 0,
+            padding: 0,
+            ...style,
+        }}
+    ><div
         style={{
             maxWidth: CONTENT_MAX_WIDTH,
             marginLeft: 'auto',
             marginRight: 'auto',
             ...style,
         }}
-    >{children}</div>
+    >{children}</div></div>
 )
 
 const MainSection = ({title, body}) => (
@@ -140,7 +149,7 @@ const TopText = ({title, body}) => (
     <div>
         <H1 style={{
             color: 'white',
-            marginTop: calcVerticalSize(40),
+            marginTop: calcVerticalSize(210),
             marginBottom: calcVerticalSize(10),
             marginLeft: 0,
             marginRight: 0,
@@ -149,7 +158,7 @@ const TopText = ({title, body}) => (
         </H1>
 
         <H2 style={{
-            color: Colors.NICHE_PINK,
+            color: 'white',
             fontSize: 'calc(0.81rem + 1.58vmin)',
             marginTop: 0,
             marginLeft: 0,
@@ -213,7 +222,7 @@ const Top = ({}) => (
                 <img src={NichePinkBigIcon} className='niche-logo-image' />
             </div>
             <TopText
-                title='Socialize without compromise'
+                title='Barely social media'
                 body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them.'
             />
             <SubscribeTop />
@@ -221,7 +230,7 @@ const Top = ({}) => (
     </div>
 )
 
-const HeroImage = ({ fluidImage }) => (
+const HeroImageOriginal = ({ fluidImage }) => (
     <div style={{
         position: 'relative',
     }}>
@@ -323,58 +332,187 @@ const SubscribeTop = () => (
     </div>
 )
 
-const Footer = () => (
-    <div
-        style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: VERTICAL_HALF_PADDING,
-            marginBottom: VERTICAL_HALF_PADDING,
-            paddingLeft: MIN_SECTION_PADDING,
-            paddingRight: MIN_SECTION_PADDING,
-            maxWidth: CONTENT_MAX_WIDTH,
-        }}
-    >
-        <div
-            className='footer niche-footer'
+const HeroImage = ({backgroundImage}) => (
+    <div style={{
+        margin: 0,
+        padding: 0,
+        backgroundColor: Colors.NICHE_BLACK,
+        display: 'flex',
+        flex: 1,
+        flexGrow: 1,
+        backgroundImage: `url(${GirlWithBalloonImage})`,
+        backgroundPositionX: 'center',
+        backgroundPositionY: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '70vh',
+        minWidth: '100%',
+        minHeight: '100%',
+    }}>
+        <ResponsiveDiv
             style={{
-                display: 'flex',
-                width: '100%',
-                justifyContent: 'space-between',
+                flex: 1,
+                flexDirection: 'column',
+                paddingLeft: MIN_SECTION_PADDING,
+                paddingRight: MIN_SECTION_PADDING,
             }}
         >
-            <Link to='/niche'>
-                <img src={NichePinkLogo} style={{ width: 91, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
-            </Link>
-            <p
+            <div
                 style={{
-                    fontFamily: 'Karla',
-                    fontSize: 14,
-                    alignSelf: 'flex-end',
-                    padding: 0,
-                    paddingTop: 20,
-                    paddingBottom: 20,
-                    margin: 0,
+                    flexDirection: 'row',
+                    flex: 1,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'flex-end',
+                    height: 40,
+                    marginTop: '4vmax',
                 }}
-            >Niche is an open-source project supported by the&nbsp;
-                <a
-                    href='https://felfele.org/'
-                    style={{
-                        fontFamily: 'Karla',
-                        fontSize: 14,
-                    }}
-                >Felfele Foundation</a>
-            .
-            </p>
-            <Link to='/'>
-                <img src={FelfeleLogo} style={{ height: 40, marginBottom: 0, fill: Colors.NICHE_PINK }}/>
-            </Link>
-        </div>
+            >
+                <div style={{
+                    padding: 0,
+                    margin: 0,
+                }}>
+                    <Link to='/niche'>
+                        <img src={NichePinkLogo} className='niche-image' />
+                    </Link>
+                </div>
+                <div style={{
+                    padding: 0,
+                    margin: 0,
+                    paddingRight: MIN_SECTION_PADDING,
+                }}>
+                    <Link to='/'>
+                        <img src={ByFelfeleLogo} className='by-felfele-image' />
+                    </Link>
+                </div>
+            </div>
+            {/* <div
+                className='image-layout'
+                style={{
+                    display: 'flex',
+                    marginTop: VERTICAL_PADDING,
+                }}
+            >
+                <img src={NichePinkBigIcon} className='niche-logo-image' />
+            </div> */}
+            <TopText
+                title='Barely social media'
+                body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them.'
+            />
+            {/* <SubscribeTop /> */}
+        </ResponsiveDiv>
     </div>
+
+)
+
+const ComingSoonBanner = () => (
+    <div
+        style={{
+            backgroundColor: Colors.NICHE_GREEN,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '8vh',
+        }}
+    >
+        <p
+            style={{
+                color: Colors.NICHE_BLUE,
+            }}
+        ><b>Coming soon!</b> Niche is currently in private beta. We’ll be announcing cool stuff soon, <a href='#stayintouch'>stay in touch!</a></p>
+    </div>
+)
+
+const Carousel = () => (
+    <ResponsiveDiv
+        style={{
+            backgroundColor: 'white',
+            height: '92vh'
+        }}
+    >
+
+    </ResponsiveDiv>
+)
+
+const SubscribeBanner = ({title, body}) => (
+    <ResponsiveDiv
+        id='stayintouch'
+        style={{
+            backgroundColor: Colors.NICHE_GREEN,
+            paddingBottom: VERTICAL_HALF_PADDING,
+        }}
+    >
+        <H1 style={{
+            color: Colors.NICHE_BLUE,
+            paddingTop: VERTICAL_PADDING,
+            marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
+            fontSize: 'calc(1.2rem + 2.86vmin)',
+        }}>{title}
+        </H1>
+
+        <H2 style={{
+            color: Colors.NICHE_BLUE,
+            margin: 0,
+            paddingBottom: VERTICAL_HALF_PADDING,
+        }}>{body}
+        </H2>
+
+        <SubscribeInput
+            id='niche-subscribe'
+            inputStyle={{
+                borderColor: 'white',
+                fontSize: FONT_SIZE_D18_M14,
+            }}
+            buttonStyle={{
+                fontSize: FONT_SIZE_D18_M14,
+                backgroundColor: Colors.NICHE_BLUE,
+                color: 'white',
+            }}
+        />
+
+        <p
+            className='para'
+            style={{
+                fontFamily: 'Karla',
+                fontSize: FONT_SIZE_D14_M12,
+                color: Colors.NICHE_BLUE,
+                marginTop: calcVerticalSize(20),
+                paddingLeft: 0,
+                paddingRight: 0,
+            }}>We will never spam or share your email.
+        </p>
+    </ResponsiveDiv>
+)
+
+const SpreadTheWordBanner = () => (
+    <div
+        style={{
+            backgroundColor: '#29235C',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '8vh',
+        }}
+    >
+        <p
+            style={{
+                color: 'white',
+            }}
+        ><b>Like this?</b> Help us spread the word!</p>
+    </div>
+)
+
+const Footer = () => (
+    <ResponsiveDiv
+        style={{
+            backgroundColor: Colors.NICHE_BLUE,
+            paddingBottom: VERTICAL_HALF_PADDING,
+        }}
+    >
+    </ResponsiveDiv>
 )
 
 const Niche = ({ data }) => (
@@ -382,15 +520,12 @@ const Niche = ({ data }) => (
         <HelmetWithMetadata
             pageTitle='Niche'
         />
-        <Top />
-        <HeroImage fluidImage={data.nichePhoneMockups.childImageSharp.fluid} />
+        <HeroImage backgroundImage={'../assets/images/girl-with-balloon.png'} />
+        <ComingSoonBanner/>
+        <Carousel/>
         <div style={{
             backgroundColor: Colors.BACKGROUND_COLOR,
         }}>
-            <MainSection
-                title='Share meaningfully'
-                body='Create dedicated pages for events, trips, parties, or any particular interest, and assemble visually-pleasing collections of curated content.'
-            />
             <Row>
                 <Section
                     icon={TidyIcon}
@@ -430,16 +565,13 @@ const Niche = ({ data }) => (
                     body='Everything shared with Niche is end-to-end encrypted, meaning that no one can ever access your content, except the people you explicitly share it with.'
                 />
             </Row>
-
-            <Ruler
-                style={{
-                    marginTop: NICHE_VERTICAL_PADDING,
-                }}
-            />
-
-            <Footer />
         </div>
-        <SubscribeFooter/>
+        <SubscribeBanner
+            title='Stay in touch!'
+            body='We’re going to launch our Kickstarter campaign and release our public beta in the coming weeks. Subscribe to our private mailing list for early access and news!'
+        />
+        <SpreadTheWordBanner/>
+        <Footer/>
     </Fragment>
 )
 
@@ -449,6 +581,16 @@ export const query = graphql`
     query {
         nichePhoneMockups: file(
             relativePath: { eq: "niche-phone-mockups.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        heroImage: file(
+            relativePath: { eq: "girl-with-balloon.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

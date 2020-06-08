@@ -7,6 +7,8 @@ export const Colors = {
     DONATE_PAGE_BACKGROUND: '#CEFFA5',
     NICHE_PINK: '#FF9E9E',
     NICHE_BLACK: '#212121',
+    NICHE_GREEN: '#34DFB6',
+    NICHE_BLUE: '#141033',
     SUBSCRIBE_FOOTER_BACKGROUND_COLOR: 'black',
 }
 

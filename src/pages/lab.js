@@ -27,10 +27,14 @@ export const Lab = ({data}) => (
                     title='NICHE BETA (Next release)'
                     text='Work-in-progress for the next release of Niche.'
                     image={data.nicheBetaImage.childImageSharp.fluid}
-                    link='https://github.com/felfele/felfele'
+                    link='/niche'
                     buttons={[
                         {
-                            link: 'https://github.com/felfele/felfele',
+                            link: '/niche',
+                            label: 'WEBSITE',
+                        },
+                        {
+                            link: 'https://github.com/felfele/niche',
                             label: 'GITHUB',
                         },
                     ]}

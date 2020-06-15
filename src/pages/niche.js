@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
@@ -32,11 +34,20 @@ import TwitterIcon from '../assets/twitter_white.svg'
 import InstagramIcon from '../assets/instagram.svg'
 import GithubIcon from '../assets/github_white.svg'
 import EmailIcon from '../assets/email.svg'
+import LeftArrow from '../assets/left-arrow.svg'
+import RightArrow from '../assets/right-arrow.svg'
 
 import NicheLogo from '../assets/niche-green-logo.svg'
 import ByFelfeleLogo from '../assets/by-felfele-white.svg'
 
 import GirlWithBalloonImage from '../assets/images/girl-with-balloon.png'
+
+import CarouselImage1 from '../assets/images/carousel_1.png'
+import CarouselImage2 from '../assets/images/carousel_2.png'
+import CarouselImage3 from '../assets/images/carousel_3.png'
+import CarouselImage4 from '../assets/images/carousel_4.png'
+import CarouselImage5 from '../assets/images/carousel_5.png'
+import CarouselImage6 from '../assets/images/carousel_6.png'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
@@ -139,6 +150,7 @@ const TopText = ({title, body}) => (
             marginTop: 0,
             marginLeft: 0,
             marginRight: 0,
+            fontWeight: 300,
         }}>{body}
         </H2>
     </div>
@@ -231,14 +243,145 @@ const ComingSoonBanner = () => (
     </div>
 )
 
-const Carousel = () => (
+const CarouselPage = ({image, title, text}) => (
+    <div
+        style={{
+            flexDirection: 'row',
+            display: 'flex',
+            backgroundColor: 'white',
+            paddingBottom: VERTICAL_PADDING,
+            paddingLeft: 100,
+            paddingRight: 100,
+        }}
+    >
+        <img
+            style={{
+                display: 'flex',
+                paddingLeft: 10,
+                width: 360,
+            }}
+            src={image}
+            height={700}
+        />
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+                paddingLeft: 44,
+            }}
+        >
+            <H1
+                style={{
+                    color: Colors.NICHE_BLUE,
+                    textAlign: 'left',
+                    marginLeft: 0,
+                    fontSize: 'calc(0.81rem + 1.88vmin)',
+                }}
+            >{title}</H1>
+            <p style={{
+                fontFamily: 'Space Text',
+                fontSize: FONT_SIZE_D18_M14,
+                color: Colors.NICHE_BLUE,
+                textAlign: 'left',
+            }}
+            >{text}</p>
+        </div>
+
+    </div>
+)
+
+const CarouselArrow = ({image, style, onClick}) => (
+    <img
+        style={{
+            position: 'absolute',
+            top: '40%',
+            zIndex: 1,
+            width: 62,
+            pointerEvents: 'all',
+            cursor: 'pointer',
+            ...style,
+        }}
+        src={image}
+        width={62}
+        height={62}
+        onClick={onClick}
+    />
+)
+
+const CarouselIndicator = ({isSelected, onClick}) => (
+    <li
+        className='dot'
+        style={{
+            width: 14,
+            height: 14,
+            backgroundColor: isSelected ? Colors.NICHE_BLUE : 'white',
+            borderColor: Colors.NICHE_BLUE,
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderRadius: '50%',
+            pointerEvents: 'all',
+            cursor: 'pointer',
+            boxShadow: 'unset',
+            opacity: 'unset',
+            transition: 'revert',
+        }}
+        onClick={onClick}
+    />
+)
+
+const ProductCarousel = () => (
     <ResponsiveDiv
         style={{
             backgroundColor: 'white',
-            height: '92vh'
+            paddingTop: VERTICAL_PADDING,
         }}
     >
 
+        <Carousel
+            showStatus={false}
+            showThumbs={false}
+            showArrows={true}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={10 * 1000}
+            swipeable={true}
+            renderArrowPrev={(clickHandler) => <CarouselArrow image={LeftArrow} style={{left: 0}} onClick={clickHandler} />}
+            renderArrowNext={(clickHandler) => <CarouselArrow image={RightArrow} style={{right: 0}} onClick={clickHandler} />}
+            renderIndicator={(clickHandler, isSelected) => <CarouselIndicator isSelected={isSelected} onClick={clickHandler} />}
+        >
+            <CarouselPage
+                image={CarouselImage1}
+                title='Dedicated spaces to share what matters'
+                text='Niche allows you to share the important things safetly, with those who matter most. With end to end encryption and decentralised data, you can rest easy knowing your data is safe and confidential. '
+            />
+            <CarouselPage
+                image={CarouselImage2}
+                title='Perfect for families'
+                text={`Let's face it, the internet can be a scary place. With Niche, you can share intimate family moments with your partner, your kids, and even your mother in law (or not?). You choose who can see what. `}
+            />
+            <CarouselPage
+                image={CarouselImage3}
+                title='Limitless posibilities'
+                text='Spaces can be designed however you see fit. Plan an event, collect line up information, remember your good times... '
+            />
+            <CarouselPage
+                image={CarouselImage4}
+                title='For sharing music'
+                text={`Remember that song someone messaged you last week that you forgot to listen to? Exactly... Niche is not chat, when you share something, it won't get lost into the endless chat abyss, and can be found at a moment's notice.`}
+            />
+            <CarouselPage
+                image={CarouselImage5}
+                title='Perfect for sharing holiday snaps'
+                text='The line between work and play these days is blurred, and we all have that aunt or collegue that knows a little bit too much about your personal life... With Niche, just make a space, upload your stuff, and choose who sees. No more creepers. '
+            />
+            <CarouselPage
+                image={CarouselImage6}
+                title='Curate your hobbies'
+                text='Love to cook? Have a green thumb? Converting a campervan? Niche is designed so that you can collect content (in whatever form that may take) which displays intuitively and beautifully. Focus on what matters most. '
+            />
+        </Carousel>
     </ResponsiveDiv>
 )
 
@@ -399,7 +542,7 @@ const Footer = () => (
         >
             <FooterIcon link='https://twitter.com/@FelfeleOrg' icon={TwitterIcon} />
             <FooterIcon link='https://facebook.com/WeAreNiche' icon={FacebookIcon} />
-            <FooterIcon link='https://instagram.com/WeAreNiche' icon={InstagramIcon} />
+            <FooterIcon link='https://instagram.com/We_Are_Niche' icon={InstagramIcon} />
             <FooterIcon link='https://github.com/felfele/niche' icon={GithubIcon} />
             <FooterIcon link='mailto: hello@felfele.org' icon={EmailIcon} />
             <p
@@ -443,7 +586,7 @@ const Niche = ({ data }) => (
         />
         <HeroImage backgroundImage={'../assets/images/girl-with-balloon.png'} />
         <ComingSoonBanner/>
-        <Carousel/>
+        <ProductCarousel/>
         <div style={{
             backgroundColor: Colors.BACKGROUND_COLOR,
             paddingBottom: VERTICAL_HALF_PADDING,

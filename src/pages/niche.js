@@ -348,7 +348,7 @@ const HeroImage = ({backgroundImage}) => (
         left: 0,
         top: 0,
         width: '100%',
-        height: '70vh',
+        height: '92vh',
         minWidth: '100%',
         minHeight: '100%',
     }}>

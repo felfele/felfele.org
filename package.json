@@ -43,6 +43,7 @@
         "react-vertical-timeline-component": "^2.5.0",
         "typeface-karla": "0.0.72",
         "typeface-nunito-sans": "0.0.72",
+        "typeface-spacegrotesk": "0.0.66",
         "typeface-youngserif": "0.0.75"
     },
     "devDependencies": {

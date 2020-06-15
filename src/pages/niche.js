@@ -7,17 +7,15 @@ import { SectionSeparator } from '../components/Section';
 import {
     Colors,
     CONTENT_MAX_WIDTH,
-    NICHE_VERTICAL_PADDING,
     VERTICAL_HALF_PADDING,
     VERTICAL_PADDING,
     PADDING_CSS_EXPRESSION,
     MIN_SECTION_PADDING,
     FONT_SIZE_D14_M12,
     FONT_SIZE_D18_M14,
+    FONT_SIZE_D14_M10,
 } from '../data/style';
-import { Ruler } from '../components/Ruler';
 import { HelmetWithMetadata } from '../components/TopPart'
-import { SubscribeFooter } from '../components/SubscribeFooter';
 import { SubscribeInput } from '../components/SubscribeInput'
 
 import { calcVerticalSize } from '../utils/calc'
@@ -28,17 +26,21 @@ import InspiredIcon from '../assets/inspired.svg'
 import RetrieveIcon from '../assets/retrieve.svg'
 import ControlIcon from '../assets/control.svg'
 import LockIcon from '../assets/lock.svg'
+import FacebookIcon from '../assets/facebook.svg'
+import LikeIcon from '../assets/like.svg'
+import TwitterIcon from '../assets/twitter_white.svg'
+import InstagramIcon from '../assets/instagram.svg'
+import GithubIcon from '../assets/github_white.svg'
+import EmailIcon from '../assets/email.svg'
 
-import NichePinkLogo from '../assets/niche-pink-logo.svg'
-import ByFelfeleLogo from '../assets/by-felfele.svg'
-import NichePinkBigIcon from '../assets/niche-pink-big-icon.svg'
-import FelfeleLogo from '../assets/images/felfele-logo.svg'
+import NicheLogo from '../assets/niche-green-logo.svg'
+import ByFelfeleLogo from '../assets/by-felfele-white.svg'
 
 import GirlWithBalloonImage from '../assets/images/girl-with-balloon.png'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
-import { MobileOnly, DesktopOnly } from '../components/Responsive';
+import 'typeface-spacegrotesk'
 
 const Section = ({ icon, title, body }) => (
     <div
@@ -56,7 +58,8 @@ const Section = ({ icon, title, body }) => (
             <img src={icon} />
         </div>
         <h3 style={{
-            fontFamily: 'YoungSerif',
+            fontFamily: 'Space Text',
+            fontWeight: 700,
             fontSize: 24,
             color: Colors.NICHE_BLUE,
             marginTop: 10,
@@ -65,60 +68,33 @@ const Section = ({ icon, title, body }) => (
             {title}
         </h3>
         <p style={{
-            fontFamily: 'Karla',
+            fontFamily: 'Space Text',
             fontSize: 18,
             color: Colors.NICHE_BLUE,
         }}>{body}</p>
     </div>
 )
 
-const ResponsiveDiv = ({style, children, id}) => (
-    <div
-        id={id}
-        style={{
-            margin: 0,
-            padding: 0,
-            ...style,
-        }}
-    ><div
-        style={{
-            maxWidth: CONTENT_MAX_WIDTH,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            ...style,
-        }}
-    >{children}</div></div>
-)
-
-const MainSection = ({title, body}) => (
-    <div
-        style={{
-            flexDirection: 'column',
-            alignItems: 'center',
-            maxWidth: CONTENT_MAX_WIDTH,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            paddingLeft: MIN_SECTION_PADDING,
-            paddingRight: MIN_SECTION_PADDING,
-        }}
-    >
-        <H1 style={{
-            color: 'black',
-            marginTop: VERTICAL_PADDING,
-            marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
-            fontSize: 'calc(1.2rem + 2.86vmin)',
-        }}>{title}
-        </H1>
-
-        <H2 style={{
-            color: 'black',
-            margin: 0,
-        }}>{body}
-        </H2>
-
-    </div>
-)
-
+const ResponsiveDiv = ({style, children, id}) => {
+    const { backgroundColor } = style
+    return (
+        <div
+            id={id}
+            style={{
+                margin: 0,
+                padding: 0,
+                ...style,
+            }}
+        ><div
+            style={{
+                maxWidth: CONTENT_MAX_WIDTH,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                ...backgroundColor,
+            }}
+        >{children}</div></div>
+    )
+}
 const H1 = ({style, children}) => (
     <h1 style={{
         fontFamily: 'YoungSerif',
@@ -134,8 +110,8 @@ const H1 = ({style, children}) => (
 
 const H2 = ({style, children}) => (
     <h2 style={{
-        fontFamily: 'Karla',
-        fontWeight: 500,
+        fontFamily: 'Space Text',
+        fontWeight: 300,
         fontSize: 'calc(1.1rem + 1.0vmin)',
         color: Colors.NICHE_PINK,
         marginLeft: 'auto',
@@ -149,17 +125,17 @@ const TopText = ({title, body}) => (
     <div>
         <H1 style={{
             color: 'white',
-            marginTop: calcVerticalSize(210),
+            marginTop: calcVerticalSize(90),
             marginBottom: calcVerticalSize(10),
             marginLeft: 0,
             marginRight: 0,
-            fontSize: 'calc(1.7rem + 4.0vmin)',
+            fontSize: 'calc(2.0rem + 5.4vmin)',
         }}>{title}
         </H1>
 
         <H2 style={{
             color: 'white',
-            fontSize: 'calc(0.81rem + 1.58vmin)',
+            fontSize: 'calc(0.91rem + 1.98vmin)',
             marginTop: 0,
             marginLeft: 0,
             marginRight: 0,
@@ -168,175 +144,11 @@ const TopText = ({title, body}) => (
     </div>
 )
 
-const Top = ({}) => (
-    <div style={{
-        margin: 0,
-        padding: 0,
-        backgroundColor: Colors.NICHE_BLACK,
-        display: 'flex',
-    }}>
-        <ResponsiveDiv
-            style={{
-                flex: 1,
-                flexDirection: 'column',
-                paddingLeft: MIN_SECTION_PADDING,
-                paddingRight: MIN_SECTION_PADDING,
-            }}
-        >
-            <div
-                style={{
-                    flexDirection: 'row',
-                    flex: 1,
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-end',
-                    height: 40,
-                    marginTop: '4vmax',
-                }}
-            >
-                <div style={{
-                    padding: 0,
-                    margin: 0,
-                }}>
-                    <Link to='/niche'>
-                        <img src={NichePinkLogo} className='niche-image' />
-                    </Link>
-                </div>
-                <div style={{
-                    padding: 0,
-                    margin: 0,
-                    paddingRight: MIN_SECTION_PADDING,
-                }}>
-                    <Link to='/'>
-                        <img src={ByFelfeleLogo} className='by-felfele-image' />
-                    </Link>
-                </div>
-            </div>
-            <div
-                className='image-layout'
-                style={{
-                    display: 'flex',
-                    marginTop: VERTICAL_PADDING,
-                }}
-            >
-                <img src={NichePinkBigIcon} className='niche-logo-image' />
-            </div>
-            <TopText
-                title='Barely social media'
-                body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them.'
-            />
-            <SubscribeTop />
-        </ResponsiveDiv>
-    </div>
-)
-
-const HeroImageOriginal = ({ fluidImage }) => (
-    <div style={{
-        position: 'relative',
-    }}>
-        <div>
-            <div style={{
-                margin: 0,
-                padding: 0,
-                backgroundColor: Colors.NICHE_BLACK,
-                display: 'flex',
-                height: '14.1vmin',
-            }}></div>
-            <div style={{
-                margin: 0,
-                padding: 0,
-                backgroundColor: Colors.NICHE_PINK,
-                display: 'flex',
-                height: '55vmin',
-            }}></div>
-            <div style={{
-                margin: 0,
-                padding: 0,
-                backgroundColor: Colors.BACKGROUND_COLOR,
-                display: 'flex',
-                height: '14vmin',
-            }}></div>
-        </div>
-        <div style={{
-            zIndex: 1,
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-        }}>
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-            }}
-            >
-                <Image
-                    fluid={fluidImage}
-                    style={{
-                        width: '80vmin',
-                    }}
-                    imgStyle={{
-                        objectFit: 'contain',
-                    }}
-                />
-            </div>
-        </div>
-    </div>
-)
-
-const SubscribeTop = () => (
-    <div
-        style={{
-            flexDirection: 'column',
-            alignItems: 'center',
-            maxWidth: CONTENT_MAX_WIDTH,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-        }}
-    >
-        <p
-            className='para'
-            style={{
-                fontFamily: 'Karla',
-                fontSize: FONT_SIZE_D18_M14,
-                color: '#F9F9F9',
-                marginTop: calcVerticalSize(48),
-                marginBottom: calcVerticalSize(20),
-            }}
-        >GET NEWS &amp; EARLY ACCESS
-        </p>
-
-        <SubscribeInput
-            id='niche-top-subscribe'
-            inputStyle={{
-                borderColor: 'white',
-                fontSize: FONT_SIZE_D18_M14,
-            }}
-            buttonStyle={{
-                fontSize: FONT_SIZE_D18_M14,
-            }}
-        />
-
-        <p
-            className='para'
-            style={{
-                fontFamily: 'Karla',
-                fontSize: FONT_SIZE_D14_M12,
-                color: '#9B9B9B',
-                marginTop: calcVerticalSize(20),
-                marginBottom: NICHE_VERTICAL_PADDING,
-                paddingLeft: 0,
-                paddingRight: 0,
-            }}>We will never spam or share your email.
-        </p>
-    </div>
-)
-
 const HeroImage = ({backgroundImage}) => (
     <div style={{
         margin: 0,
         padding: 0,
-        backgroundColor: Colors.NICHE_BLACK,
+        backgroundColor: Colors.NICHE_BLACK + '40',
         display: 'flex',
         flex: 1,
         flexGrow: 1,
@@ -345,10 +157,11 @@ const HeroImage = ({backgroundImage}) => (
         backgroundPositionY: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        backgroundBlendMode: 'overlay',
         left: 0,
         top: 0,
         width: '100%',
-        height: '92vh',
+        height: '72vh',
         minWidth: '100%',
         minHeight: '100%',
     }}>
@@ -376,7 +189,7 @@ const HeroImage = ({backgroundImage}) => (
                     margin: 0,
                 }}>
                     <Link to='/niche'>
-                        <img src={NichePinkLogo} className='niche-image' />
+                        <img src={NicheLogo} className='niche-image' />
                     </Link>
                 </div>
                 <div style={{
@@ -389,20 +202,10 @@ const HeroImage = ({backgroundImage}) => (
                     </Link>
                 </div>
             </div>
-            {/* <div
-                className='image-layout'
-                style={{
-                    display: 'flex',
-                    marginTop: VERTICAL_PADDING,
-                }}
-            >
-                <img src={NichePinkBigIcon} className='niche-logo-image' />
-            </div> */}
             <TopText
                 title='Barely social media'
                 body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them.'
             />
-            {/* <SubscribeTop /> */}
         </ResponsiveDiv>
     </div>
 
@@ -421,8 +224,10 @@ const ComingSoonBanner = () => (
         <p
             style={{
                 color: Colors.NICHE_BLUE,
+                fontFamily: 'Space Text',
             }}
-        ><b>Coming soon!</b> Niche is currently in private beta. We’ll be announcing cool stuff soon, <a href='#stayintouch'>stay in touch!</a></p>
+        ><b style={{fontFamily: 'Space Text'}}
+        >Coming soon!</b> Niche is currently in private beta. We’ll be announcing cool stuff soon, <a style={{fontFamily: 'Space Text'}} href='#stayintouch'>stay in touch!</a></p>
     </div>
 )
 
@@ -442,14 +247,14 @@ const SubscribeBanner = ({title, body}) => (
         id='stayintouch'
         style={{
             backgroundColor: Colors.NICHE_GREEN,
-            paddingBottom: VERTICAL_HALF_PADDING,
+            paddingBottom: VERTICAL_PADDING,
         }}
     >
         <H1 style={{
             color: Colors.NICHE_BLUE,
             paddingTop: VERTICAL_PADDING,
             marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
-            fontSize: 'calc(1.2rem + 2.86vmin)',
+            fontSize: 'calc(0.91rem + 1.98vmin)',
         }}>{title}
         </H1>
 
@@ -457,6 +262,8 @@ const SubscribeBanner = ({title, body}) => (
             color: Colors.NICHE_BLUE,
             margin: 0,
             paddingBottom: VERTICAL_HALF_PADDING,
+            fontWeight: 350,
+            fontSize: 'calc(0.41rem + 1.58vmin)'
         }}>{body}
         </H2>
 
@@ -464,9 +271,11 @@ const SubscribeBanner = ({title, body}) => (
             id='niche-subscribe'
             inputStyle={{
                 borderColor: 'white',
+                fontFamily: 'Space Text',
                 fontSize: FONT_SIZE_D18_M14,
             }}
             buttonStyle={{
+                fontFamily: 'Space Text',
                 fontSize: FONT_SIZE_D18_M14,
                 backgroundColor: Colors.NICHE_BLUE,
                 color: 'white',
@@ -476,7 +285,7 @@ const SubscribeBanner = ({title, body}) => (
         <p
             className='para'
             style={{
-                fontFamily: 'Karla',
+                fontFamily: 'Space Text',
                 fontSize: FONT_SIZE_D14_M12,
                 color: Colors.NICHE_BLUE,
                 marginTop: calcVerticalSize(20),
@@ -495,23 +304,135 @@ const SpreadTheWordBanner = () => (
             justifyContent: 'center',
             alignItems: 'center',
             height: '8vh',
+            flexDirection: 'row',
         }}
     >
+        <b style={{
+            fontFamily: 'Space Text',
+            color: 'white',
+        }}>Like this?
+        </b>
         <p
             style={{
                 color: 'white',
+                fontFamily: 'Space Text',
             }}
-        ><b>Like this?</b> Help us spread the word!</p>
+        >
+        &nbsp;Help us spread the word!
+        </p>
+        <div
+            style={{
+                backgroundColor: Colors.NICHE_BLUE,
+                height: '3.5vh',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginLeft: 20,
+                paddingLeft: 10,
+                paddingRight: 13,
+            }}
+        >
+            <img src={FacebookIcon} width={22} height={22} />
+            <p
+                style={{
+                    color: 'white',
+                    fontFamily: 'Space Text',
+                    paddingLeft: 10,
+                }}
+            >Share on Facebook</p>
+        </div>
+        <div
+            style={{
+                backgroundColor: Colors.NICHE_BLUE,
+                height: '3vh',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginLeft: 20,
+                paddingHorizontal: 10,
+                paddingLeft: 10,
+                paddingRight: 13,
+            }}
+        >
+            <img src={LikeIcon} width={22} height={22} />
+            <p
+                style={{
+                    color: 'white',
+                    fontFamily: 'Space Text',
+                    paddingLeft: 10,
+                }}
+            >Like our page</p>
+        </div>
     </div>
+)
+
+const FooterIcon = ({link, icon, width = 26}) => (
+    <a
+        href={link}
+        style={{
+            paddingLeft: 30,
+        }}
+    ><img src={icon} width={width} /></a>
 )
 
 const Footer = () => (
     <ResponsiveDiv
         style={{
             backgroundColor: Colors.NICHE_BLUE,
-            paddingBottom: VERTICAL_HALF_PADDING,
+            paddingTop: VERTICAL_PADDING,
+            paddingBottom: VERTICAL_PADDING,
+            width: '100%',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            alignItems: 'center',
         }}
     >
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <FooterIcon link='https://twitter.com/@FelfeleOrg' icon={TwitterIcon} />
+            <FooterIcon link='https://facebook.com/WeAreNiche' icon={FacebookIcon} />
+            <FooterIcon link='https://instagram.com/WeAreNiche' icon={InstagramIcon} />
+            <FooterIcon link='https://github.com/felfele/niche' icon={GithubIcon} />
+            <FooterIcon link='mailto: hello@felfele.org' icon={EmailIcon} />
+            <p
+                style={{
+                    color: 'white',
+                    fontFamily: 'Space Text',
+                    fontSize: FONT_SIZE_D14_M10,
+                }}
+            >&nbsp;hello@felfele.org</p>
+        </div>
+        <div
+            style={{
+                paddingTop: VERTICAL_HALF_PADDING,
+                alignItems: 'center',
+                alignContent: 'center',
+            }}
+        >
+            <p style={{
+                fontFamily: 'Space Text',
+                fontSize: FONT_SIZE_D14_M10,
+                color: '#A2A2A2',
+                textAlign: 'center',
+            }}>
+                © 2020 Niche is a non-profit and open-source project supported by the&nbsp;
+                <a style={{
+                    fontFamily: 'Space Text',
+                    fontSize: FONT_SIZE_D14_M10,
+                    color: '#A2A2A2',
+                    }}
+                    href='/'
+                >Felfele Foundation.</a>
+            </p>
+        </div>
     </ResponsiveDiv>
 )
 
@@ -525,6 +446,7 @@ const Niche = ({ data }) => (
         <Carousel/>
         <div style={{
             backgroundColor: Colors.BACKGROUND_COLOR,
+            paddingBottom: VERTICAL_HALF_PADDING,
         }}>
             <Row>
                 <Section

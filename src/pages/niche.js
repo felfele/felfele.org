@@ -103,6 +103,8 @@ const ResponsiveDiv = ({style, children, id}) => {
                 maxWidth: CONTENT_MAX_WIDTH,
                 marginLeft: 'auto',
                 marginRight: 'auto',
+                paddingLeft: MIN_SECTION_PADDING,
+                paddingRight: MIN_SECTION_PADDING,
                 ...backgroundColor,
             }}
         >{children}</div></div>
@@ -183,8 +185,6 @@ const HeroImage = ({backgroundImage}) => (
             style={{
                 flex: 1,
                 flexDirection: 'column',
-                paddingLeft: MIN_SECTION_PADDING,
-                paddingRight: MIN_SECTION_PADDING,
             }}
         >
             <div
@@ -233,6 +233,8 @@ const ComingSoonBanner = () => (
             justifyContent: 'center',
             alignItems: 'center',
             height: '8vh',
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
         }}
     >
         <p
@@ -414,8 +416,8 @@ const SubscribeBanner = ({title, body}) => (
 
         <H2 style={{
             color: Colors.NICHE_BLUE,
-            margin: 0,
             paddingBottom: VERTICAL_HALF_PADDING,
+            margin: 0,
             fontWeight: 350,
             fontSize: 'calc(0.41rem + 1.58vmin)'
         }}>{body}
@@ -443,8 +445,6 @@ const SubscribeBanner = ({title, body}) => (
                 fontSize: FONT_SIZE_D14_M12,
                 color: Colors.NICHE_BLUE,
                 marginTop: calcVerticalSize(20),
-                paddingLeft: 0,
-                paddingRight: 0,
             }}>We will never spam or share your email.
         </p>
     </ResponsiveDiv>
@@ -459,6 +459,8 @@ const SpreadTheWordBanner = () => (
             alignItems: 'center',
             height: '8vh',
             flexDirection: 'row',
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
         }}
     >
         <b style={{

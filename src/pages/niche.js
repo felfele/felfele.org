@@ -474,7 +474,7 @@ const SpreadTheWordBanner = () => (
         >
         &nbsp;Help us spread the word!
         </p>
-        <div
+        <a
             style={{
                 backgroundColor: Colors.NICHE_BLUE,
                 height: '3.5vh',
@@ -486,6 +486,9 @@ const SpreadTheWordBanner = () => (
                 paddingLeft: 10,
                 paddingRight: 13,
             }}
+            href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffelfele.org%2Fniche'
+            target='_blank'
+            rel='nofollow'
         >
             <img src={FacebookIcon} width={22} height={22} />
             <p
@@ -495,30 +498,7 @@ const SpreadTheWordBanner = () => (
                     paddingLeft: 10,
                 }}
             >Share on Facebook</p>
-        </div>
-        <div
-            style={{
-                backgroundColor: Colors.NICHE_BLUE,
-                height: '3vh',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginLeft: 20,
-                paddingHorizontal: 10,
-                paddingLeft: 10,
-                paddingRight: 13,
-            }}
-        >
-            <img src={LikeIcon} width={22} height={22} />
-            <p
-                style={{
-                    color: 'white',
-                    fontFamily: 'Space Text',
-                    paddingLeft: 10,
-                }}
-            >Like our page</p>
-        </div>
+        </a>
     </div>
 )
 

@@ -16,6 +16,7 @@ import {
     FONT_SIZE_D14_M12,
     FONT_SIZE_D18_M14,
     FONT_SIZE_D14_M10,
+    FONT_SIZE_D24_M14,
 } from '../data/style';
 import { HelmetWithMetadata } from '../components/TopPart'
 import { SubscribeInput } from '../components/SubscribeInput'
@@ -48,6 +49,7 @@ import CarouselImage3 from '../assets/images/carousel_3.png'
 import CarouselImage4 from '../assets/images/carousel_4.png'
 import CarouselImage5 from '../assets/images/carousel_5.png'
 import CarouselImage6 from '../assets/images/carousel_6.png'
+import CarouselImage7 from '../assets/images/carousel_7.png'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
@@ -270,19 +272,23 @@ const CarouselPage = ({image, title, text}) => (
                 justifyContent: 'center',
                 alignItems: 'flex-start',
                 paddingLeft: 44,
+                paddingRigth: 40,
             }}
         >
             <H1
                 style={{
+                    fontSize: 'calc(0.81rem + 1.88vmin)',
                     color: Colors.NICHE_BLUE,
                     textAlign: 'left',
                     marginLeft: 0,
-                    fontSize: 'calc(0.81rem + 1.88vmin)',
+                    marginBottom: 0,
                 }}
             >{title}</H1>
             <p style={{
+                marginTop: 30,
                 fontFamily: 'Space Text',
-                fontSize: FONT_SIZE_D18_M14,
+                fontWeight: 300,
+                fontSize: FONT_SIZE_D24_M14,
                 color: Colors.NICHE_BLUE,
                 textAlign: 'left',
             }}
@@ -380,6 +386,11 @@ const ProductCarousel = () => (
                 image={CarouselImage6}
                 title='Curate your hobbies'
                 text='Love to cook? Have a green thumb? Converting a campervan? Niche is designed so that you can collect content (in whatever form that may take) which displays intuitively and beautifully. Focus on what matters most. '
+            />
+            <CarouselPage
+                image={CarouselImage7}
+                title='Back to the good ole days'
+                text='Remember walls? Since Niche will never push notifications at you, messages are there for whenever you feel like checking. No rush, man. '
             />
         </Carousel>
     </ResponsiveDiv>

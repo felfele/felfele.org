@@ -501,11 +501,12 @@ const SpreadTheWordBanner = () => (
     </div>
 )
 
-const FooterIcon = ({link, icon, width = 26}) => (
+const FooterIcon = ({link, icon, width = 26, style}) => (
     <a
         href={link}
         style={{
-            paddingLeft: 30,
+            paddingRight: 30,
+            ...style,
         }}
     ><img src={icon} width={width} /></a>
 )
@@ -534,7 +535,7 @@ const Footer = () => (
             <FooterIcon link='https://facebook.com/WeAreNiche' icon={FacebookIcon} />
             <FooterIcon link='https://instagram.com/We_Are_Niche' icon={InstagramIcon} />
             <FooterIcon link='https://github.com/felfele/niche' icon={GithubIcon} />
-            <FooterIcon link='mailto: hello@felfele.org' icon={EmailIcon} />
+            <FooterIcon link='mailto: hello@felfele.org' icon={EmailIcon} style={{paddingRight: 0}} />
             <p
                 style={{
                     color: 'white',

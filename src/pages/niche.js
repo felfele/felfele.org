@@ -11,6 +11,7 @@ import {
     CONTENT_MAX_WIDTH,
     VERTICAL_HALF_PADDING,
     VERTICAL_PADDING,
+    NICHE_VERTICAL_PADDING,
     PADDING_CSS_EXPRESSION,
     MIN_SECTION_PADDING,
     FONT_SIZE_D14_M12,
@@ -251,7 +252,7 @@ const CarouselPage = ({image, title, text}) => (
             flexDirection: 'row',
             display: 'flex',
             backgroundColor: 'white',
-            paddingBottom: VERTICAL_PADDING,
+            paddingBottom: NICHE_VERTICAL_PADDING,
             paddingLeft: 100,
             paddingRight: 100,
         }}
@@ -263,6 +264,7 @@ const CarouselPage = ({image, title, text}) => (
                 width: 360,
             }}
             src={image}
+            width={360}
             height={700}
         />
         <div
@@ -342,6 +344,7 @@ const ProductCarousel = () => (
         style={{
             backgroundColor: 'white',
             paddingTop: VERTICAL_PADDING,
+            paddingBottom: MIN_SECTION_PADDING,
         }}
     >
         <Carousel

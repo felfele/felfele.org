@@ -88,28 +88,26 @@ const Section = ({ icon, title, body }) => (
     </div>
 )
 
-const ResponsiveDiv = ({style, children, id}) => {
-    const { backgroundColor } = style
-    return (
-        <div
-            id={id}
-            style={{
-                margin: 0,
-                padding: 0,
-                ...style,
-            }}
-        ><div
-            style={{
-                maxWidth: CONTENT_MAX_WIDTH,
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                paddingLeft: MIN_SECTION_PADDING,
-                paddingRight: MIN_SECTION_PADDING,
-                ...backgroundColor,
-            }}
-        >{children}</div></div>
-    )
-}
+const ResponsiveDiv = ({style, children, id}) => (
+    <div
+        id={id}
+        style={{
+            margin: 0,
+            padding: 0,
+            ...style,
+        }}
+    ><div
+        style={{
+            maxWidth: CONTENT_MAX_WIDTH,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            paddingLeft: MIN_SECTION_PADDING,
+            paddingRight: MIN_SECTION_PADDING,
+        }}
+    >{children}</div></div>
+)
+
+
 const H1 = ({style, children}) => (
     <h1 style={{
         fontFamily: 'YoungSerif',
@@ -346,7 +344,6 @@ const ProductCarousel = () => (
             paddingTop: VERTICAL_PADDING,
         }}
     >
-
         <Carousel
             showStatus={false}
             showThumbs={false}

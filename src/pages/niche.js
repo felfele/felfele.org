@@ -261,7 +261,7 @@ const CarouselPage = ({image, title, text}) => (
             style={{
                 display: 'flex',
                 paddingLeft: 10,
-                width: 360,
+                minWidth: 360,
             }}
             src={image}
             width={360}

@@ -18,6 +18,14 @@ hr {
     all: unset;
 }
 
+
+/*
+ * override react-responsive-carousel default styles
+ */
+/* .carousel .control-dots {
+    padding-inline-start: 0;
+} */
+
 a { /* Unvisited link  */
     color:#000000;
 }
@@ -128,6 +136,10 @@ div.subscribe {
     height: 45px;
 }
 
+.flex-layout {
+    flex-direction: row;
+}
+
 @media all and (max-width: 767px) {
     .footer {
         flex-direction: column;
@@ -206,6 +218,10 @@ div.subscribe {
 
     div.subscribe {
         height: 36px;
+    }
+
+    .flex-layout {
+        flex-direction: column;
     }
 }
 

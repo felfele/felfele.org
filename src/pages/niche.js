@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import '../styles/carousel.css'
 import { Carousel } from 'react-responsive-carousel';
 
 import { Row } from '../components/Row';
@@ -16,8 +16,9 @@ import {
     MIN_SECTION_PADDING,
     FONT_SIZE_D14_M12,
     FONT_SIZE_D18_M14,
+    FONT_SIZE_D18_M16,
     FONT_SIZE_D14_M10,
-    FONT_SIZE_D24_M14,
+    FONT_SIZE_D24_M16,
 } from '../data/style';
 import { HelmetWithMetadata } from '../components/TopPart'
 import { SubscribeInput } from '../components/SubscribeInput'
@@ -83,7 +84,7 @@ const Section = ({ icon, title, body }) => (
         </h3>
         <p style={{
             fontFamily: 'Space Text',
-            fontSize: 18,
+            fontSize: FONT_SIZE_D18_M16,
             color: Colors.NICHE_BLUE,
         }}>{body}</p>
     </div>
@@ -139,18 +140,18 @@ const TopText = ({title, body}) => (
     <div>
         <H1 style={{
             color: 'white',
-            marginTop: calcVerticalSize(90),
+            marginTop: calcVerticalSize(120),
             marginBottom: calcVerticalSize(10),
             marginLeft: 0,
             marginRight: 0,
-            fontSize: 'calc(2.0rem + 5.4vmin)',
+            fontSize: 'calc(1.2rem + 6.6vmin)',
         }}>{title}
         </H1>
 
         <H2 style={{
             color: 'white',
-            fontSize: 'calc(0.91rem + 1.98vmin)',
-            marginTop: 0,
+            fontSize: 'calc(0.8rem + 1.98vmin)',
+            marginTop: calcVerticalSize(15),
             marginLeft: 0,
             marginRight: 0,
             fontWeight: 300,
@@ -176,7 +177,7 @@ const HeroImage = ({backgroundImage}) => (
         left: 0,
         top: 0,
         width: '100%',
-        height: '72vh',
+        height: '76vh',
         minWidth: '100%',
         minHeight: '100%',
     }}>
@@ -208,7 +209,6 @@ const HeroImage = ({backgroundImage}) => (
                 <div style={{
                     padding: 0,
                     margin: 0,
-                    paddingRight: MIN_SECTION_PADDING,
                 }}>
                     <Link to='/'>
                         <img src={ByFelfeleLogo} className='by-felfele-image' />
@@ -217,7 +217,7 @@ const HeroImage = ({backgroundImage}) => (
             </div>
             <TopText
                 title='Barely social media'
-                body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them.'
+                body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them, safely.'
             />
         </ResponsiveDiv>
     </div>
@@ -231,15 +231,17 @@ const ComingSoonBanner = () => (
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '8vh',
             paddingLeft: MIN_SECTION_PADDING,
             paddingRight: MIN_SECTION_PADDING,
+            paddingTop: calcVerticalSize(30),
+            paddingBottom: calcVerticalSize(30),
         }}
     >
         <p
             style={{
                 color: Colors.NICHE_BLUE,
                 fontFamily: 'Space Text',
+                margin: 0,
             }}
         ><b style={{fontFamily: 'Space Text'}}
         >Coming soon!</b> Niche is currently in private beta. We’ll be announcing cool stuff soon, <a style={{fontFamily: 'Space Text'}} href='#stayintouch'>stay in touch!</a></p>
@@ -248,33 +250,54 @@ const ComingSoonBanner = () => (
 
 const CarouselPage = ({image, title, text}) => (
     <div
+        className='flex-layout'
         style={{
-            flexDirection: 'row',
             display: 'flex',
             backgroundColor: 'white',
-            paddingBottom: NICHE_VERTICAL_PADDING,
-            paddingLeft: 100,
-            paddingRight: 100,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: VERTICAL_PADDING,
         }}
     >
-        <img
+        <div
             style={{
-                display: 'flex',
-                paddingLeft: 10,
-                minWidth: 360,
+                marginLeft: '10vmin',
             }}
-            src={image}
-            width={360}
-            height={700}
         />
         <div
             style={{
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'row',
                 justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <img
+                style={{
+                    display: 'flex',
+                    width: '27vh',
+                }}
+                src={image}
+            />
+        </div>
+        <div
+            style={{
+                marginLeft: '2vmin',
+            }}
+        />
+        <div
+            style={{
+                width: '1vmax',
+                height: '1.5vmax',
+            }}
+        />
+        <div
+            className='layout'
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'flex-start',
-                paddingLeft: 44,
-                paddingRigth: 40,
+                padding: 0,
             }}
         >
             <H1
@@ -287,16 +310,20 @@ const CarouselPage = ({image, title, text}) => (
                 }}
             >{title}</H1>
             <p style={{
-                marginTop: 30,
+                marginTop: calcVerticalSize(30),
                 fontFamily: 'Space Text',
                 fontWeight: 300,
-                fontSize: FONT_SIZE_D24_M14,
+                fontSize: FONT_SIZE_D24_M16,
                 color: Colors.NICHE_BLUE,
                 textAlign: 'left',
             }}
             >{text}</p>
         </div>
-
+        <div
+            style={{
+                marginRight: '10vmin',
+            }}
+        />
     </div>
 )
 
@@ -306,27 +333,26 @@ const CarouselArrow = ({image, style, onClick}) => (
             position: 'absolute',
             top: '40%',
             zIndex: 1,
-            width: 62,
+            width: '6vh',
             pointerEvents: 'all',
             cursor: 'pointer',
             ...style,
         }}
         src={image}
-        width={62}
-        height={62}
         onClick={onClick}
     />
 )
 
+const INDICATOR_SIZE = (mul = 1) => `${Math.floor(100 * (mul * 1)) / 100}vh`
 const CarouselIndicator = ({isSelected, onClick}) => (
     <li
         className='dot'
         style={{
-            width: 14,
-            height: 14,
+            width: INDICATOR_SIZE(),
+            height: INDICATOR_SIZE(),
             backgroundColor: isSelected ? Colors.NICHE_BLUE : 'white',
             borderColor: Colors.NICHE_BLUE,
-            borderWidth: 1,
+            borderWidth: 0.9,
             borderStyle: 'solid',
             borderRadius: '50%',
             pointerEvents: 'all',
@@ -334,6 +360,8 @@ const CarouselIndicator = ({isSelected, onClick}) => (
             boxShadow: 'unset',
             opacity: 'unset',
             transition: 'revert',
+            marginLeft: INDICATOR_SIZE(0.5),
+            marginRight: INDICATOR_SIZE(0.5),
         }}
         onClick={onClick}
     />
@@ -353,8 +381,9 @@ const ProductCarousel = () => (
             showArrows={true}
             infiniteLoop={true}
             autoPlay={true}
+            stopOnHover={true}
+            swipeable={false}
             interval={10 * 1000}
-            swipeable={true}
             renderArrowPrev={(clickHandler) => <CarouselArrow image={LeftArrow} style={{left: 0}} onClick={clickHandler} />}
             renderArrowNext={(clickHandler) => <CarouselArrow image={RightArrow} style={{right: 0}} onClick={clickHandler} />}
             renderIndicator={(clickHandler, isSelected) => <CarouselIndicator isSelected={isSelected} onClick={clickHandler} />}
@@ -409,8 +438,8 @@ const SubscribeBanner = ({title, body}) => (
         <H1 style={{
             color: Colors.NICHE_BLUE,
             paddingTop: VERTICAL_PADDING,
-            marginBottom: `calc((${PADDING_CSS_EXPRESSION}) / 8)`,
-            fontSize: 'calc(0.91rem + 1.98vmin)',
+            marginBottom: VERTICAL_HALF_PADDING,
+            fontSize: 'calc(0.92rem + 1.98vmin)',
         }}>{title}
         </H1>
 
@@ -419,7 +448,7 @@ const SubscribeBanner = ({title, body}) => (
             paddingBottom: VERTICAL_HALF_PADDING,
             margin: 0,
             fontWeight: 350,
-            fontSize: 'calc(0.41rem + 1.58vmin)'
+            fontSize: FONT_SIZE_D24_M16
         }}>{body}
         </H2>
 
@@ -452,66 +481,105 @@ const SubscribeBanner = ({title, body}) => (
 
 const SpreadTheWordBanner = () => (
     <div
+        className='flex-layout'
         style={{
             backgroundColor: '#29235C',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '8vh',
-            flexDirection: 'row',
             paddingLeft: MIN_SECTION_PADDING,
             paddingRight: MIN_SECTION_PADDING,
+            paddingTop: calcVerticalSize(30),
+            paddingBottom: calcVerticalSize(30),
         }}
     >
-        <b style={{
-            fontFamily: 'Space Text',
-            color: 'white',
-        }}>Like this?
-        </b>
-        <p
+        <div
             style={{
-                color: 'white',
-                fontFamily: 'Space Text',
+                height: calcVerticalSize(30),
             }}
-        >
-        &nbsp;Help us spread the word!
-        </p>
-        <a
+        />
+
+        <div
             style={{
-                backgroundColor: Colors.NICHE_BLUE,
-                height: '3.5vh',
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginLeft: 20,
-                paddingLeft: 10,
-                paddingRight: 13,
             }}
-            href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffelfele.org%2Fniche'
-            target='_blank'
-            rel='nofollow'
         >
-            <img src={FacebookIcon} width={22} height={22} />
+            <b style={{
+                fontFamily: 'Space Text',
+                color: 'white',
+            }}>Like this?
+            </b>
             <p
                 style={{
                     color: 'white',
                     fontFamily: 'Space Text',
-                    paddingLeft: 10,
+                    marginTop: 0,
+                    marginBottom: 0,
                 }}
-            >Share on Facebook</p>
-        </a>
+            >
+            &nbsp;Help us spread the word!
+            </p>
+        </div>
+        <div
+            style={{
+                width: 20,
+                height: 10,
+            }}
+        />
+        <div
+        >
+            <a
+                style={{
+                    backgroundColor: Colors.NICHE_BLUE,
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    paddingLeft: 10,
+                    paddingRight: 13,
+
+                }}
+                href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffelfele.org%2Fniche'
+                target='_blank'
+                rel='nofollow'
+            >
+                <img src={FacebookIcon} width={22} height={22} />
+                <p
+                    style={{
+                        color: 'white',
+                        fontFamily: 'Space Text',
+                        paddingLeft: 10,
+                        marginTop: 5,
+                        marginBottom: 5,
+                    }}
+                >Share on Facebook</p>
+            </a>
+        </div>
+        <div
+            style={{
+                height: calcVerticalSize(30),
+            }}
+        />
     </div>
 )
 
 const FooterIcon = ({link, icon, width = 26, style}) => (
-    <a
-        href={link}
+    <div
         style={{
             paddingRight: 30,
             ...style,
         }}
-    ><img src={icon} width={width} /></a>
+    >
+        <a
+            href={link}
+        >
+            <img
+                src={icon}
+                width={width}
+            />
+        </a>
+    </div>
 )
 
 const Footer = () => (
@@ -527,25 +595,46 @@ const Footer = () => (
         }}
     >
         <div
+            className='flex-layout niche-footer layout'
             style={{
                 display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
+                padding: 0,
             }}
         >
-            <FooterIcon link='https://twitter.com/@FelfeleOrg' icon={TwitterIcon} />
-            <FooterIcon link='https://facebook.com/WeAreNiche' icon={FacebookIcon} />
-            <FooterIcon link='https://instagram.com/We_Are_Niche' icon={InstagramIcon} />
-            <FooterIcon link='https://github.com/felfele/niche' icon={GithubIcon} />
-            <FooterIcon link='mailto: hello@felfele.org' icon={EmailIcon} style={{paddingRight: 0}} />
-            <p
+            <div
                 style={{
-                    color: 'white',
-                    fontFamily: 'Space Text',
-                    fontSize: FONT_SIZE_D14_M10,
+                    flexDirection: 'row',
+                    display: 'flex',
+                    justifyContent: 'center',
                 }}
-            >&nbsp;hello@felfele.org</p>
+            >
+                <FooterIcon link='https://twitter.com/@FelfeleOrg' icon={TwitterIcon} style={{paddingTop: 2}}/>
+                <FooterIcon link='https://facebook.com/WeAreNiche' icon={FacebookIcon} />
+                <FooterIcon link='https://instagram.com/We_Are_Niche' icon={InstagramIcon} />
+                <FooterIcon link='https://github.com/felfele/niche' icon={GithubIcon} />
+            </div>
+            <div
+                style={{
+                    height: 30,
+                    width: 0,
+                }}
+            />
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                }}
+            >
+                <FooterIcon link='mailto: hello@felfele.org' icon={EmailIcon} style={{paddingRight: 10}} />
+                <p
+                    style={{
+                        color: 'white',
+                        fontFamily: 'Space Text',
+                        fontSize: 14,
+                        margin: 0,
+                    }}
+                >hello@felfele.org</p>
+            </div>
         </div>
         <div
             style={{

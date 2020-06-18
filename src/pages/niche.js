@@ -273,16 +273,16 @@ const CarouselPage = ({image, title, text}) => (
             }}
         >
             <img
+                className='carousel-screenshot'
                 style={{
                     display: 'flex',
-                    width: '27vh',
                 }}
                 src={image}
             />
         </div>
         <div
             style={{
-                marginLeft: '2vmin',
+                marginLeft: '4vmin',
             }}
         />
         <div

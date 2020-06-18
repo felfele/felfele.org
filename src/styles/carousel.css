@@ -79,7 +79,6 @@
 }
 
 .carousel img {
-    width: 100%;
     display: inline-block;
     pointer-events: none;
 }
@@ -230,7 +229,6 @@
 }
 
 .carousel .slide img {
-    width: 100%;
     vertical-align: top;
     border: 0;
 }

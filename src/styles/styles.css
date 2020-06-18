@@ -19,13 +19,6 @@ hr {
 }
 
 
-/*
- * override react-responsive-carousel default styles
- */
-/* .carousel .control-dots {
-    padding-inline-start: 0;
-} */
-
 a { /* Unvisited link  */
     color:#000000;
 }
@@ -140,6 +133,10 @@ div.subscribe {
     flex-direction: row;
 }
 
+.carousel-screenshot {
+    width: 33vh;
+}
+
 @media all and (max-width: 767px) {
     .footer {
         flex-direction: column;
@@ -222,6 +219,10 @@ div.subscribe {
 
     .flex-layout {
         flex-direction: column;
+    }
+
+    .carousel-screenshot {
+        width: 30vh;
     }
 }
 

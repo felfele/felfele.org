@@ -6,6 +6,7 @@
 html {
     font-size: 100%;
     padding: 10;
+    scroll-behavior: smooth;
 }
 
 body {

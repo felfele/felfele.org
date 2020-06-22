@@ -243,8 +243,14 @@ const ComingSoonBanner = () => (
                 fontFamily: 'Space Text',
                 margin: 0,
             }}
-        ><b style={{fontFamily: 'Space Text'}}
-        >Coming soon!</b> Niche is currently in private beta. We’ll be announcing cool stuff soon, <a style={{fontFamily: 'Space Text'}} href='#stayintouch'>stay in touch!</a></p>
+        >
+            <b style={{fontFamily: 'Space Text'}}>Coming soon!</b>&nbsp;
+            Niche is currently in private beta. We’ll be announcing cool stuff soon,&nbsp;
+            <a
+                style={{fontFamily: 'Space Text'}}
+                href='#stayintouch'
+            >stay in touch!</a>
+        </p>
     </div>
 )
 

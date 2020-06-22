@@ -71,13 +71,14 @@ const SubTitle = ({ subTitle, style }) => (
     </Fragment>
 )
 
-export const HelmetWithMetadata = ({pageTitle, link, imageSrc}) => {
-    const data = useStaticQuery(graphql`
+export const HelmetWithMetadata = ({pageTitle, link, imageSrc, siteMetadata}) => {
+    const {site, felfeleImage} = useStaticQuery(graphql`
         query {
             site {
                 siteMetadata {
                    title
                    description
+                   siteUrl
                 }
             }
             felfeleImage: file(
@@ -92,26 +93,33 @@ export const HelmetWithMetadata = ({pageTitle, link, imageSrc}) => {
             }
         }
     `)
+    const meta = {
+        ...site.siteMetadata,
+        ...siteMetadata,
+    }
     const htmlTitle = pageTitle != null
-        ? pageTitle + ' | ' + data.site.siteMetadata.title
-        : data.site.siteMetadata.title
-    const image = imageSrc != null
+        ? pageTitle + ' | ' + meta.title
+        : meta.title
+    const name = meta.name != null
+        ? meta.name
+        : meta.title
+    const image = meta.siteUrl + imageSrc != null
         ? imageSrc
-        : data.felfeleImage.childImageSharp.sizes.src
+        : felfeleImage.childImageSharp.sizes.src
     return (
         <Helmet link={link}>
             <title>{htmlTitle}</title>
-            <meta name="description" content={data.site.siteMetadata.description} />
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+            <meta name="description" content={meta.description} />
             <meta property="og:title" content={htmlTitle}/>
-            <meta property="og:site_name" content={data.site.siteMetadata.title}/>
-            <meta property="og:description" content={data.site.siteMetadata.description}/>
+            <meta property="og:site_name" content={name}/>
+            <meta property="og:description" content={meta.description}/>
             <meta property="og:image" content={image}/>
             <meta property="og:type" content="website" />
-            <meta name="twitter:card" content="summary"/>
+            <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:site" content="@FelfeleOrg"/>
             <meta name="twitter:title" content={htmlTitle}/>
-            <meta name="twitter:description" content={data.site.siteMetadata.description}/>
+            <meta name="twitter:description" content={meta.description}/>
             <meta name="twitter:image" content={image}/>
         </Helmet>
     )

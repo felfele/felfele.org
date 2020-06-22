@@ -663,7 +663,13 @@ const Footer = () => (
 const Niche = ({ data }) => (
     <Fragment>
         <HelmetWithMetadata
-            pageTitle='Niche'
+            imageSrc={data.metaImage.childImageSharp.sizes.src}
+            siteMetadata={{
+                title: 'Barely social media',
+                description: 'Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them, safely.',
+                siteUrl: 'https://new.felfele.org',
+                name: 'Niche',
+            }}
         />
         <HeroImage backgroundImage={data.heroImage.childImageSharp.fluid} />
         <ComingSoonBanner/>
@@ -732,6 +738,16 @@ export const query = graphql`
             childImageSharp {
                 fluid(maxWidth: 560, quality: 100) {
                     ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        metaImage: file(
+            relativePath: { eq: "NicheMetadata.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                sizes(maxWidth: 1200, quality: 100) {
+                    src
                 }
             }
         }

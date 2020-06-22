@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
 import '../styles/carousel.css'
 import { Carousel } from 'react-responsive-carousel';
+import BackgroundImage from 'gatsby-background-image'
 
 import { Row } from '../components/Row';
 import { SectionSeparator } from '../components/Section';
@@ -32,7 +33,6 @@ import RetrieveIcon from '../assets/retrieve.svg'
 import ControlIcon from '../assets/control.svg'
 import LockIcon from '../assets/lock.svg'
 import FacebookIcon from '../assets/facebook.svg'
-import LikeIcon from '../assets/like.svg'
 import TwitterIcon from '../assets/twitter_white.svg'
 import InstagramIcon from '../assets/instagram.svg'
 import GithubIcon from '../assets/github_white.svg'
@@ -44,14 +44,6 @@ import NicheLogo from '../assets/niche-green-logo.svg'
 import ByFelfeleLogo from '../assets/by-felfele-white.svg'
 
 import GirlWithBalloonImage from '../assets/images/girl-with-balloon.png'
-
-import CarouselImage1 from '../assets/images/carousel_1.png'
-import CarouselImage2 from '../assets/images/carousel_2.png'
-import CarouselImage3 from '../assets/images/carousel_3.png'
-import CarouselImage4 from '../assets/images/carousel_4.png'
-import CarouselImage5 from '../assets/images/carousel_5.png'
-import CarouselImage6 from '../assets/images/carousel_6.png'
-import CarouselImage7 from '../assets/images/carousel_7.png'
 
 import 'typeface-youngserif'
 import 'typeface-karla'
@@ -162,25 +154,28 @@ const TopText = ({title, body}) => (
 )
 
 const HeroImage = ({backgroundImage}) => (
-    <div style={{
-        margin: 0,
-        padding: 0,
-        backgroundColor: Colors.NICHE_BLACK + '40',
-        display: 'flex',
-        flex: 1,
-        flexGrow: 1,
-        backgroundImage: `url(${GirlWithBalloonImage})`,
-        backgroundPositionX: 'center',
-        backgroundPositionY: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundBlendMode: 'overlay',
-        left: 0,
-        top: 0,
-        width: '100%',
-        minHeight: '76vmin',
-        minWidth: '100%',
-    }}>
+    <BackgroundImage
+        style={{
+            margin: 0,
+            padding: 0,
+            backgroundColor: Colors.NICHE_BLACK + '40',
+            display: 'flex',
+            flex: 1,
+            flexGrow: 1,
+            // backgroundImage: `url(${GirlWithBalloonImage})`,
+            backgroundPositionX: 'center',
+            backgroundPositionY: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundBlendMode: 'overlay',
+            left: 0,
+            top: 0,
+            width: '100%',
+            minHeight: '76vmin',
+            minWidth: '100%',
+        }}
+        fluid={backgroundImage}
+    >
         <ResponsiveDiv
             style={{
                 flex: 1,
@@ -220,7 +215,7 @@ const HeroImage = ({backgroundImage}) => (
                 body='Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them, safely.'
             />
         </ResponsiveDiv>
-    </div>
+    </BackgroundImage>
 
 )
 
@@ -673,7 +668,7 @@ const Niche = ({ data }) => (
         <HelmetWithMetadata
             pageTitle='Niche'
         />
-        <HeroImage backgroundImage={'../assets/images/girl-with-balloon.png'} />
+        <HeroImage backgroundImage={data.heroImage.childImageSharp.fluid} />
         <ComingSoonBanner/>
         <ProductCarousel data={data} />
         <div style={{
@@ -734,7 +729,7 @@ export default Niche;
 export const query = graphql`
     query {
         heroImage: file(
-            relativePath: { eq: "girl-with-balloon.png" },
+            relativePath: { eq: "NicheHeader1.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

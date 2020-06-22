@@ -43,10 +43,7 @@ import RightArrow from '../assets/right-arrow.svg'
 import NicheLogo from '../assets/niche-green-logo.svg'
 import ByFelfeleLogo from '../assets/by-felfele-white.svg'
 
-import GirlWithBalloonImage from '../assets/images/girl-with-balloon.png'
-
 import 'typeface-youngserif'
-import 'typeface-karla'
 import 'typeface-spacegrotesk'
 
 const Section = ({ icon, title, body }) => (
@@ -729,7 +726,7 @@ export default Niche;
 export const query = graphql`
     query {
         heroImage: file(
-            relativePath: { eq: "NicheHeader1.png" },
+            relativePath: { eq: "girl-with-balloon.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

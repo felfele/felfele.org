@@ -337,7 +337,7 @@ const CarouselArrow = ({image, style, onClick}) => (
     <img
         style={{
             position: 'absolute',
-            top: '40%',
+            top: '28vh',
             zIndex: 1,
             width: '6vh',
             pointerEvents: 'all',

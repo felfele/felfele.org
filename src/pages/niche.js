@@ -152,6 +152,7 @@ const TopText = ({title, body}) => (
             color: 'white',
             fontSize: 'calc(0.8rem + 1.98vmin)',
             marginTop: calcVerticalSize(15),
+            marginBottom: 30,
             marginLeft: 0,
             marginRight: 0,
             fontWeight: 300,
@@ -177,9 +178,8 @@ const HeroImage = ({backgroundImage}) => (
         left: 0,
         top: 0,
         width: '100%',
-        height: '76vh',
+        minHeight: '76vmin',
         minWidth: '100%',
-        minHeight: '100%',
     }}>
         <ResponsiveDiv
             style={{

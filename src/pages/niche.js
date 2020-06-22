@@ -278,12 +278,12 @@ const CarouselPage = ({image, title, text}) => (
                 alignItems: 'center',
             }}
         >
-            <img
+            <Image
                 className='carousel-screenshot'
                 style={{
                     display: 'flex',
                 }}
-                src={image}
+                fluid={image}
             />
         </div>
         <div
@@ -373,7 +373,7 @@ const CarouselIndicator = ({isSelected, onClick}) => (
     />
 )
 
-const ProductCarousel = () => (
+const ProductCarousel = ({data}) => (
     <ResponsiveDiv
         style={{
             backgroundColor: 'white',
@@ -395,37 +395,37 @@ const ProductCarousel = () => (
             renderIndicator={(clickHandler, isSelected) => <CarouselIndicator isSelected={isSelected} onClick={clickHandler} />}
         >
             <CarouselPage
-                image={CarouselImage1}
+                image={data.carousel1.childImageSharp.fluid}
                 title='Dedicated spaces to share what matters'
                 text='Niche allows you to share the important things safetly, with those who matter most. With end to end encryption and decentralised data, you can rest easy knowing your data is safe and confidential. '
             />
             <CarouselPage
-                image={CarouselImage2}
+                image={data.carousel2.childImageSharp.fluid}
                 title='Perfect for families'
                 text={`Let's face it, the internet can be a scary place. With Niche, you can share intimate family moments with your partner, your kids, and even your mother in law (or not?). You choose who can see what. `}
             />
             <CarouselPage
-                image={CarouselImage3}
+                image={data.carousel3.childImageSharp.fluid}
                 title='Limitless posibilities'
                 text='Spaces can be designed however you see fit. Plan an event, collect line up information, remember your good times... '
             />
             <CarouselPage
-                image={CarouselImage4}
+                image={data.carousel4.childImageSharp.fluid}
                 title='For sharing music'
                 text={`Remember that song someone messaged you last week that you forgot to listen to? Exactly... Niche is not chat, when you share something, it won't get lost into the endless chat abyss, and can be found at a moment's notice.`}
             />
             <CarouselPage
-                image={CarouselImage5}
+                image={data.carousel5.childImageSharp.fluid}
                 title='Perfect for sharing holiday snaps'
                 text='The line between work and play these days is blurred, and we all have that aunt or collegue that knows a little bit too much about your personal life... With Niche, just make a space, upload your stuff, and choose who sees. No more creepers. '
             />
             <CarouselPage
-                image={CarouselImage6}
+                image={data.carousel6.childImageSharp.fluid}
                 title='Curate your hobbies'
                 text='Love to cook? Have a green thumb? Converting a campervan? Niche is designed so that you can collect content (in whatever form that may take) which displays intuitively and beautifully. Focus on what matters most. '
             />
             <CarouselPage
-                image={CarouselImage7}
+                image={data.carousel7.childImageSharp.fluid}
                 title='Back to the good ole days'
                 text='Remember walls? Since Niche will never push notifications at you, messages are there for whenever you feel like checking. No rush, man. '
             />
@@ -675,7 +675,7 @@ const Niche = ({ data }) => (
         />
         <HeroImage backgroundImage={'../assets/images/girl-with-balloon.png'} />
         <ComingSoonBanner/>
-        <ProductCarousel/>
+        <ProductCarousel data={data} />
         <div style={{
             backgroundColor: Colors.BACKGROUND_COLOR,
             paddingBottom: VERTICAL_HALF_PADDING,
@@ -733,8 +733,8 @@ export default Niche;
 
 export const query = graphql`
     query {
-        nichePhoneMockups: file(
-            relativePath: { eq: "niche-phone-mockups.png" },
+        heroImage: file(
+            relativePath: { eq: "girl-with-balloon.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {
@@ -743,8 +743,68 @@ export const query = graphql`
                 }
             }
         }
-        heroImage: file(
-            relativePath: { eq: "girl-with-balloon.png" },
+        carousel1: file(
+            relativePath: { eq: "carousel_1.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        carousel2: file(
+            relativePath: { eq: "carousel_2.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        carousel3: file(
+            relativePath: { eq: "carousel_3.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        carousel4: file(
+            relativePath: { eq: "carousel_4.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        carousel5: file(
+            relativePath: { eq: "carousel_5.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        carousel6: file(
+            relativePath: { eq: "carousel_6.png" },
+            sourceInstanceName: { eq: "images" }
+            ) {
+            childImageSharp {
+                fluid(maxWidth: 560, quality: 100) {
+                    ...GatsbyImageSharpFluid_noBase64
+                }
+            }
+        }
+        carousel7: file(
+            relativePath: { eq: "carousel_7.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

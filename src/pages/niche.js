@@ -21,7 +21,7 @@ import {
     FONT_SIZE_D14_M10,
     FONT_SIZE_D24_M16,
 } from '../data/style';
-import { HelmetWithMetadata } from '../components/TopPart'
+import { HelmetWithMetadata } from "../components/HelmetWithMetadata";
 import { SubscribeInput } from '../components/SubscribeInput'
 
 import { calcVerticalSize } from '../utils/calc'
@@ -664,6 +664,7 @@ const Niche = ({ data }) => (
     <Fragment>
         <HelmetWithMetadata
             imageSrc={data.metaImage.childImageSharp.sizes.src}
+            pageTitle='Niche — Barely social media'
             siteMetadata={{
                 title: 'Barely social media',
                 description: 'Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them, safely.',

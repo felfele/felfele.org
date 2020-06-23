@@ -113,8 +113,8 @@ export const TopPart = ({
         <Fragment>
             <HelmetWithMetadata
                 pageTitle={pageTitleWithMeta}
-                siteMetadata
-                imageSrc
+                siteMetadata={siteMetadata}
+                imageSrc={imageSrc}
             />
 
             <div

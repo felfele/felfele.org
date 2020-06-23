@@ -6,6 +6,7 @@ import { Row } from '../components/Row';
 import { SectionWithImageAndLink, SectionSeparator } from '../components/Section';
 import { UniversalLink } from '../components/Button';
 import { Ruler } from '../components/Ruler'
+import { CONTENT_MAX_WIDTH } from '../data/style'
 
 import GithubIcon from '../assets/github.png';
 import TwitterIcon from '../assets/twitter.svg';
@@ -21,6 +22,7 @@ const ContactSection = ({icon, text, link, label}) => (
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
+        maxWidth: (CONTENT_MAX_WIDTH - 40) / 2,
     }}>
         <img
             src={icon}
@@ -35,6 +37,7 @@ const ContactSection = ({icon, text, link, label}) => (
             fontFamily: 'Nunito Sans',
             fontWeight: 'normal',
             marginBottom: 12,
+            minHeight: 40,
         }}>
             {text}
         </h3>
@@ -102,7 +105,7 @@ export const About = ({}) => (
                 <SectionSeparator/>
                 <ContactSection
                     icon={TwitterIcon}
-                    text='You can find us on Twitter if you are into that.'
+                    text='You can find us on Twitter if you are into that.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
                     link='https://twitter.com/FelfeleOrg'
                     label='@FelfeleOrg'
                 />

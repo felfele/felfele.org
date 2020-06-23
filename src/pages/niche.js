@@ -379,7 +379,6 @@ const ProductCarousel = ({data}) => (
             showArrows={true}
             infiniteLoop={true}
             autoPlay={true}
-            stopOnHover={true}
             swipeable={false}
             interval={10 * 1000}
             renderArrowPrev={(clickHandler) => <CarouselArrow image={LeftArrow} style={{left: 0}} onClick={clickHandler} />}
@@ -753,7 +752,7 @@ export const query = graphql`
             }
         }
         metaImage: file(
-            relativePath: { eq: "NicheMetadata.png" },
+            relativePath: { eq: "NicheMetadata.jpg" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

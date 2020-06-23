@@ -65,6 +65,7 @@ const SectionWithImage = ({title, text, image, link, children}) => {
         <SectionBase
             style={{
                 alignItems: 'flex-start',
+                maxWidth,
             }}
         >
             {image &&

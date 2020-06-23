@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
-import Helmet from 'react-helmet';
 
 import '../styles/styles.css';
 import '../styles/fonts.css';
 
+import 'typeface-karla'
+
 import Navbar from './Navbar';
 import { useStaticQuery, graphql } from "gatsby"
 import { VERTICAL_PADDING, CONTENT_MAX_WIDTH, Colors } from '../data/style'
+import { HelmetWithMetadata } from './HelmetWithMetadata';
 
 
 const TitleContainer = ({ children, style }) => (
@@ -71,13 +73,23 @@ const SubTitle = ({ subTitle, style }) => (
     </Fragment>
 )
 
-export const HelmetWithMetadata = ({pageTitle, link, imageSrc}) => {
-    const data = useStaticQuery(graphql`
+export const TopPart = ({
+    icon,
+    iconStyle,
+    pageTitle,
+    title,
+    subTitle,
+    style,
+    textColor,
+    titleStyle,
+}) => {
+    const {site, felfeleImage} = useStaticQuery(graphql`
         query {
             site {
                 siteMetadata {
-                   title
-                   description
+                title
+                description
+                siteUrl
                 }
             }
             felfeleImage: file(
@@ -92,71 +104,47 @@ export const HelmetWithMetadata = ({pageTitle, link, imageSrc}) => {
             }
         }
     `)
-    const htmlTitle = pageTitle != null
-        ? pageTitle + ' | ' + data.site.siteMetadata.title
-        : data.site.siteMetadata.title
-    const image = imageSrc != null
-        ? imageSrc
-        : data.felfeleImage.childImageSharp.sizes.src
+    const { siteMetadata } = site
+    const imageSrc = felfeleImage.childImageSharp.sizes.src
+    const pageTitleWithMeta = pageTitle != null
+        ? pageTitle + ' | ' + siteMetadata.title
+        : siteMetadata.title
     return (
-        <Helmet link={link}>
-            <title>{htmlTitle}</title>
-            <meta name="description" content={data.site.siteMetadata.description} />
-            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-            <meta property="og:title" content={htmlTitle}/>
-            <meta property="og:site_name" content={data.site.siteMetadata.title}/>
-            <meta property="og:description" content={data.site.siteMetadata.description}/>
-            <meta property="og:image" content={image}/>
-            <meta property="og:type" content="website" />
-            <meta name="twitter:card" content="summary"/>
-            <meta name="twitter:site" content="@FelfeleOrg"/>
-            <meta name="twitter:title" content={htmlTitle}/>
-            <meta name="twitter:description" content={data.site.siteMetadata.description}/>
-            <meta name="twitter:image" content={image}/>
-        </Helmet>
+        <Fragment>
+            <HelmetWithMetadata
+                pageTitle={pageTitleWithMeta}
+                siteMetadata={siteMetadata}
+                imageSrc={imageSrc}
+            />
+
+            <div
+                style={{
+                    width: '100%',
+                    backgroundColor: 'white',
+                    paddingBottom: VERTICAL_PADDING,
+                    ...style,
+                }}
+            >
+                <Navbar textColor={textColor} />
+                <Title title={title} style={titleStyle} />
+                {
+                    icon &&
+                        <div style={{
+                            flex: 1,
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginTop: VERTICAL_PADDING,
+                            ...iconStyle,
+                        }}>
+                            <div>
+                                {icon}
+                            </div>
+                        </div>
+                }
+                <SubTitle subTitle={subTitle} style={titleStyle} />
+            </div>
+        </Fragment>
     )
 }
-
-export const TopPart = ({
-    icon,
-    iconStyle,
-    pageTitle,
-    title,
-    subTitle,
-    style,
-    textColor,
-    titleStyle,
-}) => (
-    <Fragment>
-        <HelmetWithMetadata pageTitle={pageTitle} />
-
-        <div
-            style={{
-                width: '100%',
-                backgroundColor: 'white',
-                paddingBottom: VERTICAL_PADDING,
-                ...style,
-            }}
-        >
-            <Navbar textColor={textColor} />
-            <Title title={title} style={titleStyle} />
-            {
-                icon &&
-                    <div style={{
-                        flex: 1,
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        marginTop: VERTICAL_PADDING,
-                        ...iconStyle,
-                    }}>
-                        <div>
-                            {icon}
-                        </div>
-                    </div>
-            }
-            <SubTitle subTitle={subTitle} style={titleStyle} />
-        </div>
-    </Fragment>
-)

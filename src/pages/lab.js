@@ -132,7 +132,7 @@ export const query = graphql`
             }
         }
         nicheBetaImage: file(
-            relativePath: { eq: "niche-beta-image.png" },
+            relativePath: { eq: "niche-logo-image2.png" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {

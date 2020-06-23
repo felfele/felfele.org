@@ -85,11 +85,6 @@ export const Donate = ({data}) => (
         <BottomPart>
             <Row>
                 <DonateInfo
-                    title='BANK TRANSFER (EUR)'
-                    data={bankingData}
-                />
-                <SectionSeparator/>
-                <DonateInfo
                     title='ETHEREUM TRANSACTION'
                     data={ethereumData}
                 />

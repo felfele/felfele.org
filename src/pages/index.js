@@ -198,11 +198,11 @@ export default SiteIndex;
 export const query = graphql`
     query {
         nicheLogoImage: file(
-            relativePath: { eq: "niche-logo-image2.png" },
+            relativePath: { eq: "niche-logo-image2.jpg" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
+                fluid(maxWidth: 560, quality: 70) {
                     ...GatsbyImageSharpFluid_noBase64
                 }
             }

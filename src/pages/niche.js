@@ -733,7 +733,7 @@ export const carouselImage = graphql`
     fragment carouselImage on File {
         childImageSharp {
             fluid(maxWidth: 560, quality: 70) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_noBase64,
             }
         }
     }

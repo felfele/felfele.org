@@ -729,15 +729,25 @@ const Niche = ({ data }) => (
 
 export default Niche;
 
+export const carouselImage = graphql`
+    fragment carouselImage on File {
+        childImageSharp {
+            fluid(maxWidth: 560, quality: 70) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+`
+
 export const query = graphql`
     query {
         heroImage: file(
-            relativePath: { eq: "girl-with-balloon.png" },
+            relativePath: { eq: "girl-with-balloon.jpg" },
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
+                fluid(maxWidth: 1200, quality: 50) {
+                    ...GatsbyImageSharpFluid,
                 }
             }
         }
@@ -751,75 +761,48 @@ export const query = graphql`
                 }
             }
         }
-        carousel1: file(
-            relativePath: { eq: "carousel_1.png" },
-            sourceInstanceName: { eq: "images" }
+        carousel1: file
+            (
+                relativePath: { eq: "carousel_1.png" },
+                sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
         carousel2: file(
-            relativePath: { eq: "carousel_2.png" },
-            sourceInstanceName: { eq: "images" }
+                relativePath: { eq: "carousel_2.png" },
+                sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
         carousel3: file(
-            relativePath: { eq: "carousel_3.png" },
-            sourceInstanceName: { eq: "images" }
+                relativePath: { eq: "carousel_3.png" },
+                sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
         carousel4: file(
             relativePath: { eq: "carousel_4.png" },
             sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
         carousel5: file(
             relativePath: { eq: "carousel_5.png" },
             sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
         carousel6: file(
             relativePath: { eq: "carousel_6.png" },
             sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
         carousel7: file(
             relativePath: { eq: "carousel_7.png" },
             sourceInstanceName: { eq: "images" }
             ) {
-            childImageSharp {
-                fluid(maxWidth: 560, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
-                }
-            }
+            ...carouselImage
         }
     }
 `;

@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: 'Felfele Foundation',
         author: 'Felfele Foundation',
-        description: 'Official website of the Felfele Foundation',
+        description: 'We build products that let people connect and inspire each other, without being exploited by technology.',
         siteUrl: 'https://felfele.org',
     },
     pathPrefix: '/',
@@ -122,6 +122,18 @@ module.exports = {
                 theme_color: `#663399`,
                 display: `minimal-ui`,
                 icon: "src/assets/images/felfele-logo.png",
+                localize: [
+                  {
+                    start_url: '/niche',
+                    lang: 'niche',
+                    name: 'niche',
+                    short_name: 'niche',
+                    display: `minimal-ui`,
+                    background_color: `#141033`,
+                    theme_color: `#34DFB6`,
+                    icon: 'src/assets/images/niche-icon.png',
+                  },
+                ],
             },
         },
         `gatsby-plugin-remove-serviceworker`,

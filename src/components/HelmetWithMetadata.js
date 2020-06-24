@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-export const HelmetWithMetadata = ({ pageTitle, link, imageSrc, siteMetadata }) => {
+export const HelmetWithMetadata = ({ pageTitle, imageSrc, siteMetadata }) => {
     const meta = siteMetadata;
     const htmlTitle = pageTitle != null
         ? pageTitle
@@ -11,7 +11,7 @@ export const HelmetWithMetadata = ({ pageTitle, link, imageSrc, siteMetadata }) 
         : meta.title;
     const image = meta.siteUrl + imageSrc;
     return (
-        <Helmet link={link}>
+        <Helmet>
             <title>{htmlTitle}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             <meta name="description" content={meta.description} />

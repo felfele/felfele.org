@@ -12,8 +12,6 @@ import {
     CONTENT_MAX_WIDTH,
     VERTICAL_HALF_PADDING,
     VERTICAL_PADDING,
-    NICHE_VERTICAL_PADDING,
-    PADDING_CSS_EXPRESSION,
     MIN_SECTION_PADDING,
     FONT_SIZE_D14_M12,
     FONT_SIZE_D18_M14,
@@ -159,7 +157,6 @@ const HeroImage = ({backgroundImage}) => (
             display: 'flex',
             flex: 1,
             flexGrow: 1,
-            // backgroundImage: `url(${GirlWithBalloonImage})`,
             backgroundPositionX: 'center',
             backgroundPositionY: 'center',
             backgroundRepeat: 'no-repeat',
@@ -476,7 +473,7 @@ const SubscribeBanner = ({title, body}) => (
     </ResponsiveDiv>
 )
 
-const SpreadTheWordBanner = () => (
+const SpreadTheWordBanner = ({ link }) => (
     <div
         className='flex-layout'
         style={{
@@ -537,7 +534,7 @@ const SpreadTheWordBanner = () => (
                     paddingRight: 13,
 
                 }}
-                href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffelfele.org%2Fniche'
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURI(link)}`}
                 target='_blank'
                 rel='nofollow'
             >
@@ -659,6 +656,9 @@ const Footer = () => (
     </ResponsiveDiv>
 )
 
+// Change this when releasing the site
+const siteUrl = 'https://new.felfele.org'
+
 const Niche = ({ data }) => (
     <Fragment>
         <HelmetWithMetadata
@@ -667,7 +667,7 @@ const Niche = ({ data }) => (
             siteMetadata={{
                 title: 'Barely social media',
                 description: 'Niche allows families, friends, or any group of people with a common interest to privately share, curate, and recall the things that matter to them, safely.',
-                siteUrl: 'https://new.felfele.org',
+                siteUrl,
                 name: 'Niche',
             }}
         />
@@ -722,7 +722,7 @@ const Niche = ({ data }) => (
             title='Stay in touch!'
             body='We’re going to launch our Kickstarter campaign and release our public beta in the coming weeks. Subscribe to our private mailing list for early access and news!'
         />
-        <SpreadTheWordBanner/>
+        <SpreadTheWordBanner link={siteUrl + '/niche'} />
         <Footer/>
     </Fragment>
 )

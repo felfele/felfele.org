@@ -87,9 +87,9 @@ export const TopPart = ({
         query {
             site {
                 siteMetadata {
-                title
-                description
-                siteUrl
+                    title
+                    description
+                    siteUrl
                 }
             }
             felfeleImage: file(

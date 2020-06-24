@@ -395,7 +395,7 @@ const ProductCarousel = ({data}) => (
             <CarouselPage
                 image={data.carousel3.childImageSharp.fluid}
                 title='Limitless posibilities'
-                text='Spaces can be designed however you see fit. Plan an event, collect line up information, remember your good times... '
+                text='Collect your best memories together. Niche offers private spaces to easily collect your shared memories of a party, a festival or any memorable event with friends, in a beautiful and safe manner.'
             />
             <CarouselPage
                 image={data.carousel4.childImageSharp.fluid}
@@ -405,7 +405,7 @@ const ProductCarousel = ({data}) => (
             <CarouselPage
                 image={data.carousel5.childImageSharp.fluid}
                 title='Perfect for sharing holiday snaps'
-                text='The line between work and play these days is blurred, and we all have that aunt or collegue that knows a little bit too much about your personal life... With Niche, just make a space, upload your stuff, and choose who sees. No more creepers. '
+                text="Capture beautiful memories of your trips in a private journal, just for you. With Niche's beautifully designed UI, it makes journalling an absolute joy. "
             />
             <CarouselPage
                 image={data.carousel6.childImageSharp.fluid}
@@ -415,7 +415,7 @@ const ProductCarousel = ({data}) => (
             <CarouselPage
                 image={data.carousel7.childImageSharp.fluid}
                 title='Back to the good ole days'
-                text='Remember walls? Since Niche will never push notifications at you, messages are there for whenever you feel like checking. No rush, man. '
+                text='Establish a wonderfully calm correspondence with your friends. Relive the snail mail days, and catch up with friends in a more relaxed way. '
             />
         </Carousel>
     </ResponsiveDiv>

@@ -756,7 +756,7 @@ export const query = graphql`
             sourceInstanceName: { eq: "images" }
             ) {
             childImageSharp {
-                sizes(maxWidth: 1200, quality: 100) {
+                sizes(maxWidth: 1200, quality: 70) {
                     src
                 }
             }

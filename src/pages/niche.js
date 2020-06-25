@@ -44,6 +44,8 @@ import ByFelfeleLogo from '../assets/by-felfele-white.svg'
 import 'typeface-youngserif'
 import 'typeface-spacegrotesk'
 
+const STAY_IN_TOUCH_ID = 'stayintouch'
+
 const Section = ({ icon, title, body }) => (
     <div
         style={{
@@ -213,6 +215,7 @@ const HeroImage = ({backgroundImage}) => (
 
 )
 
+
 const ComingSoonBanner = () => (
     <div
         style={{
@@ -236,8 +239,18 @@ const ComingSoonBanner = () => (
             <b style={{fontFamily: 'Space Text'}}>Coming soon!</b>&nbsp;
             Niche is currently in private beta. We’ll be announcing cool stuff soon,&nbsp;
             <a
-                style={{fontFamily: 'Space Text'}}
-                href='#stayintouch'
+                style={{
+                    fontFamily: 'Space Text',
+                    textDecoration: 'underline',
+                    pointerEvents: 'all',
+                    cursor: 'pointer',
+                }}
+                href={`#${STAY_IN_TOUCH_ID}`}
+                onClick={(e) => {
+                    e.preventDefault()
+                    document.getElementById(STAY_IN_TOUCH_ID)?.scrollIntoView({behavior: 'smooth'})
+                    setTimeout(() => window.location.hash = `#${STAY_IN_TOUCH_ID}`, 1000)
+                }}
             >stay in touch!</a>
         </p>
     </div>
@@ -423,7 +436,7 @@ const ProductCarousel = ({data}) => (
 
 const SubscribeBanner = ({title, body}) => (
     <ResponsiveDiv
-        id='stayintouch'
+        id={STAY_IN_TOUCH_ID}
         style={{
             backgroundColor: Colors.NICHE_GREEN,
             paddingBottom: VERTICAL_PADDING,
@@ -672,7 +685,7 @@ const Niche = ({ data }) => (
             }}
         />
         <HeroImage backgroundImage={data.heroImage.childImageSharp.fluid} />
-        <ComingSoonBanner/>
+        <ComingSoonBanner />
         <ProductCarousel data={data} />
         <div style={{
             backgroundColor: Colors.BACKGROUND_COLOR,

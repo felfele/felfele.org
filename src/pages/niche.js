@@ -669,8 +669,8 @@ const Footer = () => (
     </ResponsiveDiv>
 )
 
-// Change this when releasing the site
-const siteUrl = 'https://new.felfele.org'
+// Important: no trailing slash!
+const siteUrl = 'https://felfele.org'
 
 const Niche = ({ data }) => (
     <Fragment>
